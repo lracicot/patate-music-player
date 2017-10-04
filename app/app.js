@@ -1,28 +1,20 @@
-// ES6 Component
-// Import React and ReactDOM
+//React libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import Search Component
-import Search from './components/search.component';
+//Import Container component
+import AppContainer from './containers/app.container'
 
-// Import Details Component
-import Details from './components/details.component';
-
-// Component Class
 class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <Search />
-                <Details title={'Track title'} />
-            </div>
-        );
-    }
+  render () {
+    return (
+      <AppContainer />
+    );
+  }
 }
 
-// Render to ID content in the DOM
+// Render to index.html
 ReactDOM.render(
-    <App/ >,
-    document.getElementById('content')
+  <App />,
+  document.getElementById('content')
 );
