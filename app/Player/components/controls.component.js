@@ -5,9 +5,9 @@ import React from 'react';
 import ClassNames from 'classnames';
 
 // Player component class
-class Player extends React.Component {
+class Controls extends React.Component {
 
-  render(){
+  render() {
     // Dynamic class names with ClassNames
     const playPauseClass = ClassNames({
       'fa fa-play': this.props.playStatus == 'PLAYING' ? false : true,
@@ -31,7 +31,7 @@ class Player extends React.Component {
         </div>
         {/*Forward Button*/}
         <div className="player__forward">
-          <button onClick={this.props.forward}><i className="fa fa-forward"></i></button>
+          <button onClick={this.props.next}><i className="fa fa-step-forward"></i></button>
         </div>
       </div>
     )
@@ -39,5 +39,5 @@ class Player extends React.Component {
 
 }
 
-// Export Player
-export default Player
+// Export Controls
+export default Controls
