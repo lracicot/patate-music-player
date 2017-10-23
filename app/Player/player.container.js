@@ -1,12 +1,12 @@
-//React library
-import React from 'react';
+import React, { Component } from 'react';
 
 //Sound component
 import Sound from 'react-sound';
 
-//Flux dispatcher
-import AppDispatcher from '../dispatcher/app.dispatcher';
-import PlayerActions from './player.actions';
+// redux
+import { connect } from 'react-redux';
+// import * as AppActions from '../App/app.actions';
+import * as PlayerActions from './player.actions';
 
 //Custom components
 import Details from './components/details.component';
@@ -14,76 +14,40 @@ import Controls from './components/controls.component';
 import Progress from './components/progress.component';
 import Search from './components/search.component';
 import Footer from './components/footer.component';
-import Player from './player';
 
 // Utils
-import {formatMilliseconds} from '../utils/time';
+import { formatMilliseconds } from '../utils/time';
 
-class PlayerContainer extends React.Component {
+export class Player extends Component {
 
-  constructor(props) {
-    super(props);
+  getPlayStatus() {
+    return this.props.playStatus || 'STOPPED';
   }
 
-  update() {
-    this.setState(Player.getState());
+  getPlayFromPosition() {
+    return this.props.playFromPosition || 0;
   }
 
-  async componentDidMount() {
-    this.state = await Player.getInitialState();
-    Player.bind('change', this.update.bind(this));
+  getTrackTitle() {
+    return this.props.track ? this.props.track.title || 'untitled' : 'no track';
   }
 
-  componentWillUnmount() {
-    Player.unbind('change', this.update);
- }
-
-  prepareUrl(url) {
-    //Attach client id to stream url
-    return `${url}?client_id=${this.client_id}`
+  getStreamUrl() {
+    return this.props.track ? this.props.track.stream_url : '';
   }
 
   xlArtwork(url) {
-    if (url)
-    return url.replace(/large/, 't500x500');
-  }
-
-  togglePlay() {
-    if (this.state.playStatus === Sound.status.PLAYING) {
-      PlayerActions.pause();
-    } else {
-      PlayerActions.play();
+    if (url) {
+      return url.replace(/large/, 't500x500');
     }
   }
 
-  stop() {
-    PlayerActions.stop();
-  }
-
-  next(){
-    PlayerActions.next();
-  }
-
-  backward(){
-    this.setState({playFromPosition: this.state.playFromPosition-=1000*10});
-  }
-
-  handleSelect(value, item){
-    this.setState({ autoCompleteValue: value, track: item });
-  }
-
-  handleChange(event, value) {
-
-  }
-
-  toggleRandom() {
-
-  }
-
   handleSongPlaying(audio) {
-     this.setState({  elapsed: formatMilliseconds(audio.position),
-                      total: formatMilliseconds(audio.duration),
-                      position: audio.position / audio.duration })
+    this.props.playing({
+      elapsed: formatMilliseconds(audio.position),
+      total: formatMilliseconds(audio.duration),
+      position: audio.position / audio.duration
+    });
    }
 
   handleSongFinished () {
@@ -96,51 +60,63 @@ class PlayerContainer extends React.Component {
       height: '500px',
     };
 
-    if (this.state.track) {
+    if (this.props.track) {
       patateStyle.backgroundImage = `linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
       ),
-      url(${this.xlArtwork(this.state.track.artwork_url)})`;
+      url(${this.xlArtwork(this.props.track.artwork_url)})`;
     }
-
-    const title = this.state.track ? this.state.track.title : '';
-    const stream_url = this.state.track ? this.state.track.stream_url : '';
-
-    console.log(this.state);
 
     return (
       <div className="patate_music" style={patateStyle}>
-        <Details
-          title={title}/>
+        <Details title={ this.getTrackTitle() }/>
         <Sound
-           url={this.prepareUrl(stream_url)}
-           playStatus={this.state.playStatus}
-           onPlaying={this.handleSongPlaying.bind(this)}
-           playFromPosition={this.state.playFromPosition}
-           onFinishedPlaying={this.handleSongFinished.bind(this)}/>
+           url={ this.getStreamUrl() }
+           playStatus={ this.getPlayStatus() }
+           onPlaying={ this.handleSongPlaying.bind(this) }
+           playFromPosition={ this.getPlayFromPosition() }
+           onFinishedPlaying={ this.handleSongFinished.bind(this) }/>
+        { this.getPlayStatus() }
         <Controls
-          togglePlay={this.togglePlay.bind(this)}
-          stop={this.stop.bind(this)}
-          playStatus={this.state.playStatus}
-          next={this.next.bind(this)}
-          backward={this.backward.bind(this)}
-          random={this.toggleRandom.bind(this)}/>
+          togglePlay={ this.props.toggleplay }
+          stop={ this.props.stop }
+          playStatus={ this.getPlayStatus() }
+          next={ this.props.next }
+          backward={ this.props.prev }/>
         <Progress
-          elapsed={this.state.elapsed}
-          total={this.state.total}
-          position={this.state.position}/>
+          elapsed={ this.props.elapsed }
+          total={ this.props.total }
+          position={ this.props.position }/>
         <Footer />
       </div>
     );
   }
 }
-/*
-  <Search
-    clientId={this.state.client_id}
-    autoCompleteValue={this.state.autoCompleteValue}
-    tracks={this.state.tracks}
-    handleSelect={this.handleSelect.bind(this)}
-    handleChange={this.handleChange.bind(this)}/>*/
 
-export default PlayerContainer;
+export const PlayerContainer = connect(function (state) {
+  return {
+    track: state.get('queue').get(0),
+    playStatus: state.getIn(['playback', 'playStatus']),
+    playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),
+    elapsed: state.getIn(['playback', 'elapsed']),
+    total: state.getIn(['playback', 'total']),
+    position: state.getIn(['playback', 'position']),
+  };
+}, PlayerActions)(Player);
+
+
+// <Search
+//   clientId={this.state.client_id}
+//   autoCompleteValue={this.state.autoCompleteValue}
+//   tracks={this.state.tracks}
+//   handleSelect={this.handleSelect.bind(this)}
+//   handleChange={this.handleChange.bind(this)}/>*/
+
+/*
+export class Player extends Component {
+
+  handleSelect(value, item){
+    this.setState({ autoCompleteValue: value, track: item });
+  }
+}*/

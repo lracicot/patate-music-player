@@ -1,50 +1,38 @@
-import AppDispatcher from '../dispatcher/app.dispatcher';
-import PlayerConstants from './player.constants';
 
-const PlayerActions = {
-  play: function (data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.PLAY
-    });
-  },
-  
-  pause: function (data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.PAUSE,
-    });
-  },
+export function toggleplay() {
+  return {
+    type: 'TOGGLEPLAY',
+  };
+}
 
-  stop: function (data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.STOP,
-    });
-  },
+export function stop() {
+  return {
+    type: 'STOP',
+  };
+}
 
-  next: function (data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.NEXT,
-    });
-  },
+export function playing(audio_status) {
+  return {
+    type: 'PLAYING',
+    audio_status
+  };
+}
 
-  prev: function (data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.PREV,
-    });
-  },
+export function enqueue(tracks = null) {
+  return {
+    type: 'ENQUEUE',
+    tracks
+  };
+}
 
-  setTrack: function(data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.SET_TRACK,
-      data: data,
-    });
-  },
+export function next() {
+  return {
+    type: 'NEXT',
+  };
+}
 
-  addTracks: function(data) {
-    AppDispatcher.dispatch({
-      type: PlayerConstants.ADD_TRACKS,
-      data: data,
-    });
-  },
-};
-
-export default PlayerActions;
+export function prev() {
+  return {
+    type: 'PREV',
+  };
+}

@@ -7,6 +7,7 @@
 body{
   margin: 0;
   font-family: 'Exo 2', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .scotch_music{

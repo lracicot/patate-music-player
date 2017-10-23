@@ -1,7 +1,7 @@
-// Import React
-import React from 'react';
+import React, { PureComponent } from 'react';
 
-class Details extends React.Component {
+
+class Details extends PureComponent {
   // Render
   render(){
     return(

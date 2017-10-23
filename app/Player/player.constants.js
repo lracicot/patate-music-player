@@ -1,11 +1,7 @@
-const ActionTypes = {
-  PLAY: 'PLAY',
-  PAUSE: 'PAUSE',
-  STOP: 'STOP',
-  NEXT: 'NEXT',
-  PREV: 'PREV',
-  SET_TRACK: 'SET_TRACK',
-  ADD_TRACKS: 'ADD_TRACKS',
-};
-
-export default ActionTypes;
+export const PLAY = 'PLAY';
+export const PAUSE = 'PAUSE';
+export const STOP = 'STOP';
+export const NEXT = 'NEXT';
+export const PREV = 'PREV';
+//export const SET_TRACK = 'SET_TRACK';
+//export const ADD_TRACKS = 'ADD_TRACKS';

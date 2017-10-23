@@ -1,15 +1,16 @@
-//React library
-import React from 'react';
+import React, { Component } from 'react';
+import type { Children } from 'react';
 
-import PlayerContainer from '../Player/player.container';
+export default class App extends Component {
+  props: {
+    children: Children
+  };
 
-class AppContainer extends React.Component {
-
-  render () {
+  render() {
     return (
-      <PlayerContainer />
+      <div>
+        {this.props.children}
+      </div>
     );
   }
 }
-
-export default AppContainer

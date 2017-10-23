@@ -1,11 +1,10 @@
-// Import React
-import React from 'react';
+import React, { Component } from 'react';
 
 // Import React's Autocomplete component
 import Autocomplete from 'react-autocomplete';
 
 // Create Search component class
-class Search extends React.Component {
+class Search extends Component {
 
   handleRenderItem(item, isHighlighted){
     // Some basic style
