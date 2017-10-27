@@ -56,3 +56,8 @@ typings/
 
 # dotenv environment variables file
 .env
+PatateMusicPlayer.njsproj
+PatateMusicPlayer.sln
+package-lock.json
+public/js/bundle.js
+obj/

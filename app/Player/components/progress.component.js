@@ -14,7 +14,7 @@ class Progress extends PureComponent {
            max="1"></progress>
          <span className="player__time-total">{this.props.total}</span>
       </div>
-    )
+    );
   }
 
 }

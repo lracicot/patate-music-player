@@ -14,6 +14,8 @@ class Enqueue {
         state.get('queue').push(state.getIn(['tracks', 0]))
       );
     }
+
+    return null;
   }
 }
 
