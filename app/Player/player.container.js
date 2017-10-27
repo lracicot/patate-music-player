@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-//Sound component
+// Sound component
 import Sound from 'react-sound';
 
 // redux
@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 // import * as AppActions from '../App/app.actions';
 import * as PlayerActions from './player.actions';
 
-//Custom components
+// Custom components
 import Details from './components/details.component';
 import Controls from './components/controls.component';
 import Progress from './components/progress.component';
@@ -33,7 +33,8 @@ export class Player extends Component {
   }
 
   getStreamUrl() {
-    return this.props.track ? this.props.track.stream_url : '';
+    // return this.props.track ? this.props.track.streamUrl : '';
+    return 'https://api.deezer.com/track/17608152'
   }
 
   xlArtwork(url) {
@@ -50,11 +51,11 @@ export class Player extends Component {
     });
    }
 
-  handleSongFinished () {
+  handleSongFinished() {
     this.next();
-   }
+  }
 
-  render () {
+  render() {
     let patateStyle = {
       width: '500px',
       height: '500px',
@@ -65,18 +66,18 @@ export class Player extends Component {
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
       ),
-      url(${this.xlArtwork(this.props.track.artwork_url)})`;
+      url(${this.xlArtwork(this.props.track.artworkUrl)})`;
     }
 
     return (
       <div className="patate_music" style={patateStyle}>
         <Details title={ this.getTrackTitle() }/>
         <Sound
-           url={ this.getStreamUrl() }
-           playStatus={ this.getPlayStatus() }
-           onPlaying={ this.handleSongPlaying.bind(this) }
-           playFromPosition={ this.getPlayFromPosition() }
-           onFinishedPlaying={ this.handleSongFinished.bind(this) }/>
+          url={ this.getStreamUrl() }
+          playStatus={ this.getPlayStatus() }
+          onPlaying={ this.handleSongPlaying.bind(this) }
+          playFromPosition={ this.getPlayFromPosition() }
+          onFinishedPlaying={ this.handleSongFinished.bind(this) }/>
         { this.getPlayStatus() }
         <Controls
           togglePlay={ this.props.toggleplay }

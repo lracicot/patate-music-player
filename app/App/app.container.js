@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import type { Children } from 'react';
 
-export default class App extends Component {
+export default class App extends PureComponent {
   props: {
     children: Children
   };

@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils'
-import chai, {expect} from 'chai';
+import ReactTestUtils from 'react-dom/test-utils';
+import { expect } from 'chai';
 import Controls from '../../../app/Player/components/controls.component';
 
 
 describe('Controls', () => {
-
   let component;
   const backward = () => {};
   const togglePlay = () => {};
@@ -15,7 +13,6 @@ describe('Controls', () => {
   const next = () => {};
 
   beforeEach((done) => {
-
     component = ReactTestUtils.renderIntoDocument(
       <Controls
         playStatus='PLAYING'
@@ -47,15 +44,14 @@ describe('Controls', () => {
   });
 
   it('rendrers play button while playback is paused', () => {
-
-      const component = ReactTestUtils.renderIntoDocument(
-        <Controls
-          playStatus='PAUSED'
-          backward={backward}
-          togglePlay={togglePlay}
-          stop={stop}
-          next={next}
-        />
+    component = ReactTestUtils.renderIntoDocument(
+      <Controls
+        playStatus='PAUSED'
+        backward={backward}
+        togglePlay={togglePlay}
+        stop={stop}
+        next={next}
+      />
     );
     const buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
     expect(buttons[1].childNodes[0].className).equals('fa fa-play');
