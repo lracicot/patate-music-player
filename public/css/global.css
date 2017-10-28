@@ -114,6 +114,16 @@ body{
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
+.container{
+    display: flex;
+}
+.fixed{
+    width: 200px;
+}
+.flex-item{
+    flex-grow: 1;
+}
+
 .footer{
   color: white;
   position: absolute;

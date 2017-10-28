@@ -95,16 +95,17 @@ export class Player extends Component {
   }
 }
 
-export const PlayerContainer = connect(function (state) {
-  return {
-    track: state.get('queue').get(0),
-    playStatus: state.getIn(['playback', 'playStatus']),
-    playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),
-    elapsed: state.getIn(['playback', 'elapsed']),
-    total: state.getIn(['playback', 'total']),
-    position: state.getIn(['playback', 'position']),
-  };
-}, PlayerActions)(Player);
+const mapStateToProps = state => ({
+  track: state.get('queue').get(0),
+  playStatus: state.getIn(['playback', 'playStatus']),
+  playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),
+  elapsed: state.getIn(['playback', 'elapsed']),
+  total: state.getIn(['playback', 'total']),
+  position: state.getIn(['playback', 'position']),
+});
+
+
+export const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);
 
 
 // <Search
