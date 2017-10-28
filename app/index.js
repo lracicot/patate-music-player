@@ -25,6 +25,6 @@ import SoundCloudProxy from './../src/model/SoundCloudProxy';
 
   render(
     <Root store={store} history={history} />,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 })();
