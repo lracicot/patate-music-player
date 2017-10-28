@@ -118,7 +118,7 @@ body{
     display: flex;
 }
 .fixed{
-    width: 200px;
+    width: 250px;
 }
 .flex-item{
     flex-grow: 1;

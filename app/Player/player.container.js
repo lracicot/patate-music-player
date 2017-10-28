@@ -19,7 +19,6 @@ import Footer from './components/footer.component';
 import { formatMilliseconds } from '../utils/time';
 
 export class Player extends Component {
-
   getPlayStatus() {
     return this.props.playStatus || 'STOPPED';
   }
@@ -41,6 +40,7 @@ export class Player extends Component {
     if (url) {
       return url.replace(/large/, 't500x500');
     }
+    return null;
   }
 
   handleSongPlaying(audio) {
@@ -49,14 +49,14 @@ export class Player extends Component {
       total: formatMilliseconds(audio.duration),
       position: audio.position / audio.duration
     });
-   }
+  }
 
   handleSongFinished() {
     this.next();
   }
 
   render() {
-    let patateStyle = {
+    const patateStyle = {
       width: '500px',
       height: '500px',
     };
@@ -71,24 +71,27 @@ export class Player extends Component {
 
     return (
       <div className="patate_music" style={patateStyle}>
-        <Details title={ this.getTrackTitle() }/>
+        <Details title={this.getTrackTitle()} />
         <Sound
-          url={ this.getStreamUrl() }
-          playStatus={ this.getPlayStatus() }
-          onPlaying={ this.handleSongPlaying.bind(this) }
-          playFromPosition={ this.getPlayFromPosition() }
-          onFinishedPlaying={ this.handleSongFinished.bind(this) }/>
+          url={this.getStreamUrl()}
+          playStatus={this.getPlayStatus()}
+          onPlaying={this.handleSongPlaying.bind(this)}
+          playFromPosition={this.getPlayFromPosition()}
+          onFinishedPlaying={this.handleSongFinished.bind(this)}
+        />
         { this.getPlayStatus() }
         <Controls
-          togglePlay={ this.props.toggleplay }
-          stop={ this.props.stop }
-          playStatus={ this.getPlayStatus() }
-          next={ this.props.next }
-          backward={ this.props.prev }/>
+          togglePlay={this.props.toggleplay}
+          stop={this.props.stop}
+          playStatus={this.getPlayStatus()}
+          next={this.props.next}
+          backward={this.props.prev}
+        />
         <Progress
-          elapsed={ this.props.elapsed }
-          total={ this.props.total }
-          position={ this.props.position }/>
+          elapsed={this.props.elapsed}
+          total={this.props.total}
+          position={this.props.position}
+        />
         <Footer />
       </div>
     );
@@ -121,4 +124,5 @@ export class Player extends Component {
   handleSelect(value, item){
     this.setState({ autoCompleteValue: value, track: item });
   }
-}*/
+}
+*/
