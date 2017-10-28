@@ -11,17 +11,17 @@ export function stop() {
   };
 }
 
-export function playing(audio_status) {
+export function playing(audioStatus) {
   return {
     type: 'PLAYING',
-    audio_status
+    audioStatus,
   };
 }
 
 export function enqueue(tracks = null) {
   return {
     type: 'ENQUEUE',
-    tracks
+    tracks,
   };
 }
 

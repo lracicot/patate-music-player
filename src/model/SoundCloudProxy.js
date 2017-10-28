@@ -6,6 +6,18 @@ import Song from './Song';
 const clientId = '2f98992c40b8edf17423d93bda2e04ab';
 
 export default class SoundCloudProxy {
+  constructor() {
+    this.name = 'SoundCloud';
+    this.logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';
+    this.status = 'DISCONNECTED';
+  }
+
+  setStatus(status) {
+    const proxy = new SoundCloudProxy();
+    proxy.status = status;
+    return proxy;
+  }
+
   prepareUrl(url) {
     return `${url}?client_id=${clientId}`;
   }

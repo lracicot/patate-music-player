@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { List as UIList } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import { List } from 'immutable';
 
 // redux
 import { connect } from 'react-redux';
@@ -11,25 +14,29 @@ import Source from './components/source.component';
 
 export class SourceList extends Component {
   render() {
+    const mapSourceToComponent = source => (
+      <Source
+        proxy={source}
+        key={source.name}
+        connectSource={this.props.connectSource}
+      />
+    );
+    const listSources = this.props.sources.map(mapSourceToComponent);
     return (
-      <div className="source_list">
-        <Source />
-          <Source />
-      </div>
+      <UIList divided verticalAlign="middle">
+        {listSources}
+      </UIList>
     );
   }
 }
 
-/*
-const mapStateToProps = state => ({
-  track: state.get('queue').get(0),
-  playStatus: state.getIn(['playback', 'playStatus']),
-  playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),
-  elapsed: state.getIn(['playback', 'elapsed']),
-  total: state.getIn(['playback', 'total']),
-  position: state.getIn(['playback', 'position']),
-});
-*/
+SourceList.propTypes = {
+  sources: PropTypes.instanceOf(List).isRequired,
+  connectSource: PropTypes.func.isRequired,
+};
 
-// export const SourceContainer = connect(mapStateToProps, SourceActions)(Source);
-export const SourceListContainer = connect(null, SourceListActions)(SourceList);
+const mapStateToProps = state => ({
+  sources: state.get('sources'),
+});
+
+export const SourceListContainer = connect(mapStateToProps, SourceListActions)(SourceList);

@@ -1,9 +1,9 @@
 
 class Playing {
-  execute(state, audio_status) {
-    return state.setIn(['playback', 'elapsed'], audio_status.elapsed)
-      .setIn(['playback', 'total'], audio_status.total)
-      .setIn(['playback', 'position'], audio_status.position);
+  execute(state, audioStatus) {
+    return state.setIn(['playback', 'elapsed'], audioStatus.elapsed)
+      .setIn(['playback', 'total'], audioStatus.total)
+      .setIn(['playback', 'position'], audioStatus.position);
   }
 }
 
