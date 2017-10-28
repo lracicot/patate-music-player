@@ -33,8 +33,8 @@ export class Player extends Component {
   }
 
   getStreamUrl() {
-    // return this.props.track ? this.props.track.streamUrl : '';
-    return 'https://api.deezer.com/track/17608152'
+    return this.props.track ? this.props.track.streamUrl : '';
+    // return 'https://api.deezer.com/track/17608152'
   }
 
   xlArtwork(url) {

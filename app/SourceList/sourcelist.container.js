@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 
 // redux
 import { connect } from 'react-redux';
-import * as SourceActions from './source.actions';
+
+
+import * as SourceListActions from './sourcelist.actions';
 
 // Custom components
-// import Details from './components/details.component';
+import Source from './components/source.component';
 
-export class Source extends Component {
+export class SourceList extends Component {
   render() {
     return (
       <div className="source_list">
-        Ici je vais placer une liste avec SoundCloud, Deezer, etc.
+        <Source />
+          <Source />
       </div>
     );
   }
@@ -29,4 +32,4 @@ const mapStateToProps = state => ({
 */
 
 // export const SourceContainer = connect(mapStateToProps, SourceActions)(Source);
-export const SourceContainer = connect(null, SourceActions)(Source);
+export const SourceListContainer = connect(null, SourceListActions)(SourceList);
