@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import { connect } from 'react-redux';
 
-import { SourceContainer } from './../Source/source.container';
+import { SourceListContainer } from './../SourceList/sourcelist.container';
 import { PlayerContainer } from './../Player/player.container';
 
 export class Layout extends PureComponent {
@@ -10,7 +10,7 @@ export class Layout extends PureComponent {
     return (
       <div className="container">
         <div className="fixed">
-          <SourceContainer />
+          <SourceListContainer />
         </div>
         <div className="flex-item">
           <PlayerContainer />
