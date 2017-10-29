@@ -3,7 +3,6 @@ import { List as UIList } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
 
 import { enqueue } from '.././Player/player.actions';
 import * as SourceListActions from './sourcelist.actions';
@@ -49,8 +48,7 @@ SourceList.propTypes = {
   connectSource: PropTypes.func.isRequired,
 };
 
-// Juste en attendant
-/*
+/* Juste en attendant
 SourceList.defaultProps = {
   sources: new List(),
   connectSource: () => {},
@@ -65,8 +63,7 @@ const mapDispatchToProps = (dispatch) => {
   const customActions = {
     enqueue: tracks => dispatch(enqueue(tracks)),
   };
-  const classActions = bindActionCreators(SourceListActions, dispatch);
-  return Object.assign(customActions, classActions);
+  return Object.assign(customActions, SourceListActions);
 };
 
 export const SourceListContainer = connect(
