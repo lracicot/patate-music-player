@@ -21,6 +21,10 @@ export default function (state = Map(), action) {
     return PlayerActions.Prev.execute(state);
   case 'CONNECTSOURCE':
     return SourceListActions.ConnectSource.execute(state, action.proxyName);
+  case 'TEST':
+    return (dispatch) => {
+      dispatch({ type: 'STOP' });
+    };
   default:
     console.log(action);
   }

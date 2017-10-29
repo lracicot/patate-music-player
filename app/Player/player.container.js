@@ -47,7 +47,7 @@ export class Player extends Component {
     this.props.playing({
       elapsed: formatMilliseconds(audio.position),
       total: formatMilliseconds(audio.duration),
-      position: audio.position / audio.duration
+      position: audio.position / audio.duration,
     });
   }
 

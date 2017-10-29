@@ -2,11 +2,15 @@ import { Map, fromJS } from 'immutable';
 import { expect } from 'chai';
 import Sound from 'react-sound';
 import { Stack, List } from 'immutable';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 
 import reducer from '../app/reducer';
 
-describe('reducer', () => {
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
 
+describe('reducer', () => {
   it('handles SET_STATE', () => {
     const initialState = Map();
     const action = {
@@ -33,7 +37,7 @@ describe('reducer', () => {
       state: {
         playback: {
           playStatus: Sound.status.STOPPED,
-        }
+        },
       },
     };
     const nextState = reducer(initialState, action);
@@ -94,7 +98,7 @@ describe('reducer', () => {
       playback: {
         playStatus: Sound.status.STOPPED,
       },
-      queue: List()
+      queue: List(),
     });
     const action = { type: 'PLAY' };
     const nextState = reducer(state, action);
@@ -152,10 +156,13 @@ describe('reducer', () => {
       ],
       queue: List(),
     });
-    const action = { type: 'ENQUEUE', tracks: fromJS([
-      { title: 'Test3' },
-      { title: 'Test4' },
-    ]) };
+    const action = {
+      type: 'ENQUEUE',
+      tracks: fromJS([
+        { title: 'Test3' },
+        { title: 'Test4' },
+      ]),
+    };
     const nextState = reducer(state, action);
 
     expect(nextState.get('queue').size).to.equal(2);
@@ -234,5 +241,4 @@ describe('reducer', () => {
     expect(nextState.get('queue').get(0).title).to.equal('Test1');
     expect(nextState.get('queue').get(1).title).to.equal('Test2');
   });
-
 });

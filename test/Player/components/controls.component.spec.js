@@ -15,12 +15,12 @@ describe('Controls', () => {
   beforeEach((done) => {
     component = ReactTestUtils.renderIntoDocument(
       <Controls
-        playStatus='PLAYING'
+        playStatus="PLAYING"
         backward={backward}
         togglePlay={togglePlay}
         stop={stop}
         next={next}
-      />
+      />,
     );
     done();
   });
@@ -46,12 +46,12 @@ describe('Controls', () => {
   it('rendrers play button while playback is paused', () => {
     component = ReactTestUtils.renderIntoDocument(
       <Controls
-        playStatus='PAUSED'
+        playStatus="PAUSED"
         backward={backward}
         togglePlay={togglePlay}
         stop={stop}
         next={next}
-      />
+      />,
     );
     const buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
     expect(buttons[1].childNodes[0].className).equals('fa fa-play');

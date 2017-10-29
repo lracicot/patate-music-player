@@ -57,7 +57,7 @@ class ConnectSource {
     Axios.post(tokenUri, null, { headers })
       .then((response) => {
         console.log(response.data.access_token);
-        dispatch("foo");
+        dispatch('foo');
       })
       .catch((error) => {
         console.log(error);
