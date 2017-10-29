@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 // Sound component
 import Sound from 'react-sound';
 
-// redux
+import { autobind } from 'core-decorators';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 // import * as AppActions from '../App/app.actions';
 import * as PlayerActions from './player.actions';
 
@@ -12,28 +14,16 @@ import * as PlayerActions from './player.actions';
 import Details from './components/details.component';
 import Controls from './components/controls.component';
 import Progress from './components/progress.component';
-import Search from './components/search.component';
+//  import Search from './components/search.component';
 import Footer from './components/footer.component';
 
 // Utils
 import { formatMilliseconds } from '../utils/time';
 
+@autobind
 export class Player extends Component {
-  getPlayStatus() {
-    return this.props.playStatus || 'STOPPED';
-  }
-
   getPlayFromPosition() {
     return this.props.playFromPosition || 0;
-  }
-
-  getTrackTitle() {
-    return this.props.track ? this.props.track.title || 'untitled' : 'no track';
-  }
-
-  getStreamUrl() {
-    return this.props.track ? this.props.track.streamUrl : '';
-    // return 'https://api.deezer.com/track/17608152'
   }
 
   xlArtwork(url) {
@@ -61,29 +51,27 @@ export class Player extends Component {
       height: '500px',
     };
 
-    if (this.props.track) {
-      patateStyle.backgroundImage = `linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-      ),
-      url(${this.xlArtwork(this.props.track.artworkUrl)})`;
-    }
+    patateStyle.backgroundImage = `linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(${this.xlArtwork(this.props.trackArtworkUrl)})`;
 
     return (
       <div className="patate_music" style={patateStyle}>
-        <Details title={this.getTrackTitle()} />
+        <Details title={this.props.trackTitle} />
         <Sound
-          url={this.getStreamUrl()}
-          playStatus={this.getPlayStatus()}
-          onPlaying={this.handleSongPlaying.bind(this)}
+          url={this.props.trackStreamUrl}
+          playStatus={this.props.playStatus}
+          onPlaying={this.handleSongPlaying}
           playFromPosition={this.getPlayFromPosition()}
-          onFinishedPlaying={this.handleSongFinished.bind(this)}
+          onFinishedPlaying={this.handleSongFinished}
         />
-        { this.getPlayStatus() }
+        { this.props.playStatus }
         <Controls
           togglePlay={this.props.toggleplay}
           stop={this.props.stop}
-          playStatus={this.getPlayStatus()}
+          playStatus={this.props.playStatus}
           next={this.props.next}
           backward={this.props.prev}
         />
@@ -98,15 +86,43 @@ export class Player extends Component {
   }
 }
 
+Player.propTypes = {
+  toggleplay: PropTypes.func.isRequired,
+  stop: PropTypes.func.isRequired,
+  next: PropTypes.func.isRequired,
+  prev: PropTypes.func.isRequired,
+  playing: PropTypes.func.isRequired,
+  elapsed: PropTypes.string,
+  total: PropTypes.string,
+  position: PropTypes.number,
+  playStatus: PropTypes.string,
+  playFromPosition: PropTypes.number.isRequired,
+  trackTitle: PropTypes.string,
+  trackStreamUrl: PropTypes.string,
+  trackArtworkUrl: PropTypes.string,
+};
+
+Player.defaultProps = {
+  trackArtworkUrl: '',
+  trackTitle: 'no title',
+  trackStreamUrl: '',
+  playStatus: Sound.status.STOPPED,
+  position: 0,
+  elapsed: '',
+  total: '',
+};
+
 const mapStateToProps = state => ({
   track: state.get('queue').get(0),
+  trackArtworkUrl: state.get('queue').get(0) ? state.get('queue').get(0).artworkUrl : '',
+  trackTitle: state.get('queue').get(0) ? state.get('queue').get(0).title : '',
+  trackStreamUrl: state.get('queue').get(0) ? state.get('queue').get(0).streamUrl : '',
   playStatus: state.getIn(['playback', 'playStatus']),
   playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),
   elapsed: state.getIn(['playback', 'elapsed']),
   total: state.getIn(['playback', 'total']),
   position: state.getIn(['playback', 'position']),
 });
-
 
 export const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);
 
