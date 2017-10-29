@@ -44,26 +44,29 @@ export class SourceList extends Component {
 }
 
 SourceList.propTypes = {
-  sources: PropTypes.instanceOf(List), // .isRequired
-  connectSource: PropTypes.func, // .isRequired
+  sources: PropTypes.instanceOf(List).isRequired,
+  connectSource: PropTypes.func.isRequired,
 };
 
-// Juste en attendant
+/* Juste en attendant
 SourceList.defaultProps = {
   sources: new List(),
   connectSource: () => {},
 };
+*/
 
 const mapStateToProps = state => ({
   sources: state.get('sources'),
 });
 
-const mapDispatchToProps = dispatch => ({
-  enqueue: tracks => dispatch(enqueue(tracks)),
-});
+const mapDispatchToProps = (dispatch) => {
+  const customActions = {
+    enqueue: tracks => dispatch(enqueue(tracks)),
+  };
+  return Object.assign(customActions, SourceListActions);
+};
 
 export const SourceListContainer = connect(
   mapStateToProps,
-  SourceListActions,
   mapDispatchToProps,
 )(SourceList);
