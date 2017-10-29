@@ -3,6 +3,7 @@ import { List as UIList } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
 import { enqueue } from '.././Player/player.actions';
 import * as SourceListActions from './sourcelist.actions';
@@ -44,26 +45,31 @@ export class SourceList extends Component {
 }
 
 SourceList.propTypes = {
-  sources: PropTypes.instanceOf(List), // .isRequired
-  connectSource: PropTypes.func, // .isRequired
+  sources: PropTypes.instanceOf(List).isRequired,
+  connectSource: PropTypes.func.isRequired,
 };
 
 // Juste en attendant
+/*
 SourceList.defaultProps = {
   sources: new List(),
   connectSource: () => {},
 };
+*/
 
 const mapStateToProps = state => ({
   sources: state.get('sources'),
 });
 
-const mapDispatchToProps = dispatch => ({
-  enqueue: tracks => dispatch(enqueue(tracks)),
-});
+const mapDispatchToProps = (dispatch) => {
+  const customActions = {
+    enqueue: tracks => dispatch(enqueue(tracks)),
+  };
+  const classActions = bindActionCreators(SourceListActions, dispatch);
+  return Object.assign(customActions, classActions);
+};
 
 export const SourceListContainer = connect(
   mapStateToProps,
-  SourceListActions,
   mapDispatchToProps,
 )(SourceList);
