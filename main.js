@@ -2,8 +2,7 @@ const electron = require('electron');
 require('electron-reload')(__dirname);
 require('babel-polyfill');
 // Module to control application life.
-const { app } = electron.app;
-console.log(app);
+const { app } = electron;
 // Module to create native browser window.
 const { BrowserWindow } = electron.BrowserWindow;
 
