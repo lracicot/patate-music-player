@@ -16,8 +16,8 @@ const { BrowserWindow } = electron.BrowserWindow;
 
 class ConnectSource {
   test(source, authUrl, authCompleted) {
-    const remote = window.require('electron').remote;
-    const BrowserWindow = remote.BrowserWindow;
+    const { remote } = window.require('electron');
+    const { BrowserWindow } = remote;
 
     let authWindow = new BrowserWindow({
       width: 800,
@@ -71,13 +71,6 @@ class ConnectSource {
     // console.log(source.setStatus('CONNECTED'));
 
     sources = sources.set(sourceKey, source.setStatus('CONNECTED'));
-
-    // TODO:: Je ne sais pas comment faire
-    /*
-    source.loadRandomPlaylist().then(tracks => {
-      dispatch(enqueue(List(tracks)));
-    });
-    */
 
     if (source.authorizationUrl !== null) {
       this.test(source, source.authorizationUrl, this.onAuthorizationCompleted);
