@@ -10,6 +10,7 @@ export default class SoundCloudProxy {
     this.name = 'SoundCloud';
     this.logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';
     this.status = 'DISCONNECTED';
+    this.authorizationUrl = null;
   }
 
   setStatus(status) {
