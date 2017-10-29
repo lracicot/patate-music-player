@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils'
+import ReactTestUtils from 'react-dom/test-utils';
 import chai, { expect } from 'chai';
 import { Player } from '../../app/Player/player.container';
 
 
 describe('PlayerContainer', () => {
-
   let component;
 
   beforeEach((done) => {
     component = ReactTestUtils.renderIntoDocument(
-      <Player />
+      <Player />,
     );
     done();
   });

@@ -2,7 +2,7 @@ import { JSDOM } from 'jsdom';
 import chai from 'chai';
 import chaiImmutable from 'chai-immutable';
 
-const {document , window } = (new JSDOM('')).window;
+const { document, window } = (new JSDOM('')).window;
 
 global.document = document;
 global.window = window;

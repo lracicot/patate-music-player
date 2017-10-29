@@ -39,4 +39,8 @@ const mapStateToProps = state => ({
   sources: state.get('sources'),
 });
 
+const mapDispatchToProps = dispatch => ({
+  fetchData: url => dispatch(itemsFetchData(url)),
+});
+
 export const SourceListContainer = connect(mapStateToProps, SourceListActions)(SourceList);
