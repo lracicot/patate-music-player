@@ -30,10 +30,10 @@ class ConnectSource {
     authWindow.show();
     // 'will-navigate' is an event emitted when the window.location changes
     // newUrl should contain the tokens you need
-    authWindow.webContents.on('will-navigate', (event, newUrl) => {
+    authWindow.webContents.on('will-navigate', async (event, newUrl) => {
       if (newUrl.startsWith('https://www.foo.bar/oauth2/callback')) {
         authCompleted(source, newUrl);
-        authWindow.close();
+        await authWindow.close();
       }
     });
 
