@@ -2,6 +2,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Stack, List } from 'immutable';
+import { push } from 'react-router-redux';
 
 import Root from './App/root.container';
 import { setState } from './App/app.actions';
@@ -30,8 +31,20 @@ import SpotifyProxy from './../src/model/SpotifyProxy';
   }));
 
   store.dispatch(enqueue(List(tracks)));
+
   render(
     <Root store={store} history={history} />,
     document.getElementById('root'),
   );
+
+
+  if (module.hot) {
+    module.hot.accept('./containers/Root', () => {
+      const NextRoot = require('./App/root.container'); // eslint-disable-line global-require
+      render(
+        <NextRoot store={store} history={history} />,
+        document.getElementById('root'),
+      );
+    });
+  }
 })();
