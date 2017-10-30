@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .; exit 0",
     "start": "electron main.js",
-    "watch": "watchify app/index.js -t babelify -o public/js/bundle.js --debug --verbose & electron main.js",
+    "watch": "watchify app/index.js -t babelify -o public/js/bundle.js --debug --verbose & electron .",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test:watch": "npm run test -- --watch"
   },
@@ -53,6 +53,7 @@
     "babel-regenerator-runtime": "^6.5.0",
     "chai": "^4.1.2",
     "chai-immutable": "^1.6.0",
+    "electron-devtools-installer": "^2.2.1",
     "electron-react-devtools": "^0.4.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",

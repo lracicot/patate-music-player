@@ -31,4 +31,15 @@ import JamendoProxy from './../src/model/JamendoProxy';
     <Root store={store} history={history} />,
     document.getElementById('root'),
   );
+
+
+  if (module.hot) {
+    module.hot.accept('./containers/Root', () => {
+      const NextRoot = require('./App/root.container'); // eslint-disable-line global-require
+      render(
+        <NextRoot store={store} history={history} />,
+        document.getElementById('root'),
+      );
+    });
+  }
 })();
