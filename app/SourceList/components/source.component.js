@@ -6,6 +6,7 @@ import { toggleSourceConnexion } from '../sourcelist.actions';
 
 import SoundCloudProxy from './../../../src/model/SoundCloudProxy';
 import SpotifyProxy from './../../../src/model/SpotifyProxy';
+import JamendoProxy from './../../../src/model/JamendoProxy';
 
 class Source extends PureComponent {
   getButtonInteraction() {
@@ -41,6 +42,7 @@ Source.propTypes = {
     [
       PropTypes.instanceOf(SoundCloudProxy),
       PropTypes.instanceOf(SpotifyProxy),
+      PropTypes.instanceOf(JamendoProxy),
     ],
   ).isRequired,
   dispatch: PropTypes.func.isRequired,

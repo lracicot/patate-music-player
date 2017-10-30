@@ -1,7 +1,7 @@
 // Axios for Ajax
-// import Axios from 'axios';
+import Axios from 'axios';
 
-// import Song from './Song';
+import Song from './Song';
 
 const clientId = '749ab993d24b4717afaeccd5308edbdc';
 
@@ -11,9 +11,15 @@ export default class SpotifyProxy {
     this.logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.png';
     this.status = 'DISCONNECTED';
     this.redirectUri = 'https://www.foo.bar/oauth2/callback';
-    this.authorizationHeader = 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=';
     this.authorizationUrl = 'https://accounts.spotify.com/authorize?client_id='.concat(clientId, '&response_type=code&redirect_uri=', this.redirectUri);
     this.accessToken = null;
+
+    const headers = {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Authorization: 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=',
+    };
+
+    this.requestConfig = { headers };
   }
 
   getToken(code) {
@@ -29,7 +35,7 @@ export default class SpotifyProxy {
 
   setAccessToken(token) {
     const proxy = new SpotifyProxy();
-    proxy.accessToken = token;
+    proxy.accessToken = `Bearer ${token}`;
     proxy.status = 'CONNECTED';
     return proxy;
   }
@@ -46,7 +52,44 @@ export default class SpotifyProxy {
     return this.search('pop');
   }
 
-  async search() {
-    return null;
+  async search(query) {
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: this.accessToken,
+    };
+
+    let response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });
+
+    const playlists = response.data.playlists.items;
+    if (playlists.length === 0) {
+      return null;
+    }
+
+    const tracksUrl = playlists[0].tracks.href;
+
+    response = await Axios.get(tracksUrl, { headers });
+    const songs = [];
+
+    Object.keys(response.data.items).forEach((key) => {
+      const { track } = response.data.items[key];
+
+      let artworkUrl = '';
+      const { images } = track.album;
+      if (images.length > 0) {
+        artworkUrl = images[0].url;
+      }
+
+      const song = new Song(
+        track.name,
+        track.preview_url,
+        artworkUrl,
+      );
+
+      if (track.preview_url !== null) {
+        songs.push(song);
+      }
+    });
+
+    return songs;
   }
 }

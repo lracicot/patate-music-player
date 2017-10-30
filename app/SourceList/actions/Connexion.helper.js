@@ -44,11 +44,8 @@ export async function fetchTokenCode(source, strUrl) {
   const tokenUri = source.getToken(code);
   console.log(tokenUri);
 
-  const headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    Authorization: source.authorizationHeader,
-  };
+  const { requestConfig } = source;
 
-  const response = await Axios.post(tokenUri, null, { headers });
+  const response = await Axios.post(tokenUri, null, requestConfig);
   return response.data.access_token;
 }

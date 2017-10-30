@@ -9,11 +9,13 @@ import { configureStore, history } from './configureStore';
 
 import SoundCloudProxy from './../src/model/SoundCloudProxy';
 import SpotifyProxy from './../src/model/SpotifyProxy';
+import JamendoProxy from './../src/model/JamendoProxy';
 
 (async () => {
   const soundCloudProxy = new SoundCloudProxy();
   const spotifyProxy = new SpotifyProxy();
-  const sources = [soundCloudProxy, spotifyProxy];
+  const jamendoProxy = new JamendoProxy();
+  const sources = [soundCloudProxy, spotifyProxy, jamendoProxy];
 
   const store = configureStore();
 
