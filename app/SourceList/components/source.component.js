@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import { Button, Image, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
+import { toggleSourceConnexion } from '../sourcelist.actions';
+
 import SoundCloudProxy from './../../../src/model/SoundCloudProxy';
 import SpotifyProxy from './../../../src/model/SpotifyProxy';
 
@@ -10,13 +12,19 @@ class Source extends PureComponent {
     return this.props.proxy.status === 'DISCONNECTED' ? 'Connect' : 'Disconnect';
   }
 
+  isConnecting() {
+    return this.props.proxy.status === 'CONNECTING';
+  }
+
   render() {
     return (
       <List.Item>
         <List.Content floated="right">
           <Button
-            onClick={() => this.props.connectSource(this.props.proxy.name)}
+            onClick={() => this.props.dispatch(toggleSourceConnexion(this.props.proxy))}
             content={this.getButtonInteraction()}
+            loading={this.isConnecting()}
+            disabled={this.isConnecting()}
           />
         </List.Content>
         <Image avatar src={this.props.proxy.logo} />
@@ -35,7 +43,7 @@ Source.propTypes = {
       PropTypes.instanceOf(SpotifyProxy),
     ],
   ).isRequired,
-  connectSource: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default Source;

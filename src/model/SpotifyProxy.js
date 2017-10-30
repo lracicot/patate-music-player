@@ -13,6 +13,7 @@ export default class SpotifyProxy {
     this.redirectUri = 'https://www.foo.bar/oauth2/callback';
     this.authorizationHeader = 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=';
     this.authorizationUrl = 'https://accounts.spotify.com/authorize?client_id='.concat(clientId, '&response_type=code&redirect_uri=', this.redirectUri);
+    this.accessToken = null;
   }
 
   getToken(code) {
@@ -22,7 +23,23 @@ export default class SpotifyProxy {
   setStatus(status) {
     const proxy = new SpotifyProxy();
     proxy.status = status;
+    this.accessToken = null;
     return proxy;
+  }
+
+  setAccessToken(token) {
+    const proxy = new SpotifyProxy();
+    proxy.accessToken = token;
+    proxy.status = 'CONNECTED';
+    return proxy;
+  }
+
+  needsAuthentification() {
+    return true;
+  }
+
+  isConnected() {
+    return this.status === 'CONNECTED';
   }
 
   async loadRandomPlaylist() {

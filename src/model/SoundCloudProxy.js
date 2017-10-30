@@ -19,6 +19,20 @@ export default class SoundCloudProxy {
     return proxy;
   }
 
+  setAccessToken() {
+    const proxy = new SoundCloudProxy();
+    proxy.status = 'CONNECTED';
+    return proxy;
+  }
+
+  needsAuthentification() {
+    return false;
+  }
+
+  isConnected() {
+    return this.status === 'CONNECTED';
+  }
+
   prepareUrl(url) {
     return `${url}?client_id=${clientId}`;
   }

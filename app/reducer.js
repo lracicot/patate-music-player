@@ -19,8 +19,12 @@ export default function (state = Map(), action) {
     return PlayerActions.Next.execute(state);
   case 'PREV':
     return PlayerActions.Prev.execute(state);
-  case 'CONNECTSOURCE':
-    return SourceListActions.ConnectSource.execute(state, action.proxyName);
+  case 'CONNECTINGSOURCE':
+    return SourceListActions.ConnectingSource.execute(state, action.proxy);
+  case 'CONNECTEDSOURCE':
+    return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);
+  case 'CONNEXIONFAILEDSOURCE':
+    return SourceListActions.ConnexionFailedSource.execute(state, action.proxy, action.error);
   case 'TEST':
     return (dispatch) => {
       dispatch({ type: 'STOP' });

@@ -21,9 +21,11 @@ export class SourceList extends Component {
 
   loadPlaylists() {
     const { props } = this;
-    props.sources.map(source => source.loadRandomPlaylist().then((tracks) => {
-      props.enqueue(List(tracks));
-    }));
+    props.sources
+      .filter(source => source.isConnected())
+      .map(source => source.loadRandomPlaylist().then((tracks) => {
+        props.enqueue(List(tracks));
+      }));
   }
 
   render() {
@@ -31,7 +33,7 @@ export class SourceList extends Component {
       <Source
         proxy={source}
         key={source.name}
-        connectSource={this.props.connectSource}
+        dispatch={this.props.dispatch}
       />
     );
     const listSources = this.props.sources.map(mapSourceToComponent);
@@ -45,7 +47,7 @@ export class SourceList extends Component {
 
 SourceList.propTypes = {
   sources: PropTypes.instanceOf(List).isRequired,
-  connectSource: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 /* Juste en attendant
@@ -62,6 +64,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => {
   const customActions = {
     enqueue: tracks => dispatch(enqueue(tracks)),
+    dispatch,
   };
   return Object.assign(customActions, SourceListActions);
 };
