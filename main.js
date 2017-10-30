@@ -1,5 +1,4 @@
 const electron = require('electron');
-require('electron-reload')(__dirname);
 require('babel-polyfill');
 // Module to control application life.
 const { app } = electron;
@@ -9,13 +8,21 @@ const { BrowserWindow } = electron;
 const path = require('path');
 const url = require('url');
 
+require('electron-reload')(__dirname, { electron: path.join(__dirname, 'node_modules', '.bin', 'electron') });
+
+
+const { default: installExtension, REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } = require('electron-devtools-installer');
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({ width: 800, height: 600 });
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+  });
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -34,6 +41,14 @@ function createWindow() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
+  installExtension(REACT_DEVELOPER_TOOLS)
+    .then(name => console.log(`Added Extension:  ${name}`))
+    .catch(err => console.log('An error occurred: ', err));
+
+  installExtension(REDUX_DEVTOOLS)
+    .then(name => console.log(`Added Extension:  ${name}`))
+    .catch(err => console.log('An error occurred: ', err));
 }
 
 // This method will be called when Electron has finished

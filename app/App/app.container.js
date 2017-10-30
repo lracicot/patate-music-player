@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import type { Children } from 'react';
+import { Grid } from 'semantic-ui-react';
+
+import MainMenu from '../Layout/components/mainMenu.component';
+
 
 export default class App extends Component {
   props: {
@@ -8,9 +12,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        {this.props.children}
-      </div>
+      <Grid>
+        <Grid.Row>
+          <Grid.Column width={4}>
+            <MainMenu />
+          </Grid.Column>
+          <Grid.Column width={12}>
+            {this.props.children}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
   }
 }
