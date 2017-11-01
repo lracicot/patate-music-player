@@ -28,10 +28,21 @@ export default class MainMenu extends PureComponent {
       </Menu.Item>
     ));
 
+    const PlaylistsLink = withRouter(({ history }) => (
+      <Menu.Item
+        name="home"
+        active={activeItem === 'playlists'}
+        onClick={() => { history.push('/playlists'); }}
+      >
+        Playlists
+      </Menu.Item>
+    ));
+
     return (
       <Menu vertical>
         <HomeLink />
         <SourceLink />
+        <PlaylistsLink />
         <Menu.Item>
           <Input icon="search" placeholder="Search song..." />
         </Menu.Item>
