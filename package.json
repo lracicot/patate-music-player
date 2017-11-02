@@ -32,6 +32,7 @@
     "react": "^16.0.0",
     "react-autocomplete": "^1.7.1",
     "react-dom": "^16.0.0",
+    "react-immutable-proptypes": "^2.1.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

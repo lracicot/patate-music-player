@@ -1,11 +1,25 @@
 import React, { PureComponent } from 'react';
-
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { List } from 'immutable';
 
 import { SourceListContainer } from './../SourceList/sourcelist.container';
 import { PlayerContainer } from './../Player/player.container';
 
 export class Layout extends PureComponent {
+  componentDidUpdate() {
+    this.loadSearchResults();
+  }
+
+  loadSearchResults() {
+    // clearSearchResults();
+    this.props.sources
+      .filter(source => source.isConnected());
+    // .map(source => source.searchTracks().then((tracks) => {
+    //   appendSearchResults(List(tracks));
+    // }));
+  }
+
   render() {
     return (
       <div className="container">
@@ -20,12 +34,14 @@ export class Layout extends PureComponent {
   }
 }
 
-/*
-const mapStateToProps = (state, ownProps) => {
-  return {
-  }
-}
-*/
+Layout.propTypes = {
+  sources: PropTypes.instanceOf(List).isRequired,
+};
 
-// export const LayoutContainer = connect(mapStateToProps, LayoutActions)(Layout);
-export const LayoutContainer = connect(null, null)(Layout);
+const mapStateToProps = state => ({
+  sources: state.get('sources'),
+  search: state.get('search'),
+  searchResults: state.get('searchResults'),
+});
+
+export const LayoutContainer = connect(mapStateToProps)(Layout);

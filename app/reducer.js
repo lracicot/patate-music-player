@@ -3,6 +3,7 @@ import * as AppActions from './App/actions';
 import * as PlayerActions from './Player/actions';
 import * as SourceListActions from './SourceList/actions';
 import * as PlaylistsListActions from './PlaylistsList/actions';
+import * as LayoutActions from './Layout/actions';
 
 export default function (state = Map(), action) {
   switch (action.type) {
@@ -20,6 +21,16 @@ export default function (state = Map(), action) {
     return PlayerActions.Next.execute(state);
   case 'PREV':
     return PlayerActions.Prev.execute(state);
+  case 'SEARCH':
+    return LayoutActions.Search.execute(state, action.keywords);
+  case 'ENDSEARCH':
+    return LayoutActions.EndSearch.execute(state);
+  case 'APPEND_SEARCH_RESULTS':
+    return LayoutActions.AppendSearchResults.execute(state, action.results);
+  case 'CLEAR_SEARCH_RESULTS':
+    return LayoutActions.ClearSearchResults.execute(state);
+  case 'CLEAR_QUEUE':
+    return PlayerActions.ClearQueue.execute(state);
   case 'CONNECTINGSOURCE':
     return SourceListActions.ConnectingSource.execute(state, action.proxy);
   case 'CONNECTEDSOURCE':

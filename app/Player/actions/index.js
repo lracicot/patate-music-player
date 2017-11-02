@@ -1,4 +1,5 @@
 export Enqueue from './Enqueue.action';
+export ClearQueue from './ClearQueue.action';
 export TogglePlay from './TogglePlay.action';
 export Stop from './Stop.action';
 export Playing from './Playing.action';

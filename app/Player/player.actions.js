@@ -25,6 +25,12 @@ export function enqueue(tracks = null) {
   };
 }
 
+export function clearQueue() {
+  return {
+    type: 'CLEAR_QUEUE',
+  };
+}
+
 export function next() {
   return {
     type: 'NEXT',

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import type { Children } from 'react';
 import { Grid } from 'semantic-ui-react';
 
-import MainMenu from '../Layout/components/mainMenu.component';
+import { MainMenuContainer } from '../Layout/MainMenu.container';
 
 
 export default class App extends Component {
@@ -15,7 +15,7 @@ export default class App extends Component {
       <Grid>
         <Grid.Row>
           <Grid.Column width={4}>
-            <MainMenu />
+            <MainMenuContainer />
           </Grid.Column>
           <Grid.Column width={12}>
             {this.props.children}
