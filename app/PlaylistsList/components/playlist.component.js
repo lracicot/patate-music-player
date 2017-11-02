@@ -2,12 +2,14 @@ import React, { PureComponent } from 'react';
 import { List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
+import Playlist from './../../../src/model/Playlist';
+
 class PlaylistItem extends PureComponent {
   render() {
     return (
       <List.Item>
         <List.Content>
-          {this.props.name}
+          {this.props.playlist.name}
         </List.Content>
       </List.Item>
     );
@@ -15,7 +17,7 @@ class PlaylistItem extends PureComponent {
 }
 
 PlaylistItem.propTypes = {
-  name: PropTypes.string.isRequired,
+  playlist: PropTypes.instanceOf(Playlist).isRequired,
 };
 
 export default PlaylistItem;

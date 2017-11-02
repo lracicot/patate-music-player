@@ -1,7 +1,10 @@
 // Axios for Ajax
 import Axios from 'axios';
+import List from 'immutable';
 
 import Song from './Song';
+
+import Playlist from './Playlist';
 
 const clientId = '58c2e328';
 
@@ -39,22 +42,24 @@ export default class JamendoProxy {
   }
 
   async loadRandomPlaylist() {
-    return this.search('pop');
+    return this.searchPlaylists('pop').get(0);
   }
 
-  async search(query) {
+  async searchPlaylists(query) {
+    const playlists = [];
+
     try {
       const response = await
         Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&name=${query}&track_type=albumtrack`);
 
-      const playlists = response.data.results;
-      if (playlists.length === 0) {
-        return null;
+      const playlistsData = response.data.results;
+      if (playlistsData.length === 0) {
+        return playlists;
       }
 
       const songs = [];
 
-      const { tracks } = playlists[0];
+      const { tracks } = playlistsData[0];
 
       Object.keys(tracks).forEach((key) => {
         const track = tracks[key];
@@ -66,11 +71,14 @@ export default class JamendoProxy {
         songs.push(song);
       });
 
-      return songs;
+      const playlist = new Playlist('Foo', this.name, List(songs));
+      playlists.append(playlist);
+
+      return playlist;
     } catch (e) {
       console.log(e);
     }
 
-    return null;
+    return playlists;
   }
 }

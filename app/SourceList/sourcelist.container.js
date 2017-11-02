@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { List as UIList } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 
 import { enqueue } from '.././Player/player.actions';
@@ -66,7 +67,7 @@ const mapDispatchToProps = (dispatch) => {
     enqueue: tracks => dispatch(enqueue(tracks)),
     dispatch,
   };
-  return Object.assign(customActions, SourceListActions);
+  return Object.assign(customActions, bindActionCreators(SourceListActions, dispatch));
 };
 
 export const SourceListContainer = connect(
