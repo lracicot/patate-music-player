@@ -3,7 +3,7 @@ import { List, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { autobind } from 'core-decorators';
 
-import { enqueue } from '../.././Player/player.actions';
+import { enqueue, clearQueue } from '../.././Player/player.actions';
 import Playlist from './../../../src/model/Playlist';
 
 @autobind
@@ -18,6 +18,7 @@ class PlaylistItem extends PureComponent {
   }
 
   handleOnClick() {
+    this.props.dispatch(clearQueue());
     this.props.dispatch(enqueue(this.props.playlist.songs));
   }
 
