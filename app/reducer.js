@@ -30,6 +30,8 @@ export default function (state = Map(), action) {
     return LayoutActions.ClearSearchResults.execute(state);
   case 'CLEAR_QUEUE':
     return PlayerActions.ClearQueue.execute(state);
+  case 'CONNECTINGSOURCE':
+    return SourceListActions.ConnectingSource.execute(state, action.proxy);
   case 'CONNECTEDSOURCE':
     return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);
   case 'CONNEXIONFAILEDSOURCE':
