@@ -27,18 +27,22 @@ function connexionFailedSource(proxy, error) {
 }
 
 export function toggleSourceConnexion(proxy) {
-  return (dispatch) => {
+  return async (dispatch) => {
     if (proxy.isConnected()) {
       return dispatch(connexionFailedSource(proxy, null));
     }
 
-
     if (proxy.needsAuthentification()) {
       dispatch(connectingSource(proxy));
-      return fetchAuthorizationCode(proxy)
-        .then(authCode => fetchTokenCode(proxy, authCode))
-        .then(accessToken => dispatch(connectedSource(proxy, accessToken)))
-        .catch(error => dispatch(connexionFailedSource(proxy, error)));
+
+      try {
+        const authCode = await fetchAuthorizationCode(proxy);
+        const accessToken = await fetchTokenCode(proxy, authCode);
+
+        return dispatch(connectedSource(proxy, accessToken));
+      } catch (error) {
+        return dispatch(connexionFailedSource(proxy, error));
+      }
     }
 
     return dispatch(connectedSource(proxy, null));

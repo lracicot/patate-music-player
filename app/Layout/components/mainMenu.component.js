@@ -1,10 +1,21 @@
 import React, { PureComponent } from 'react';
-import { Input, Menu } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import Search from './search.component';
+
+import * as LayoutActions from '../layout.actions';
 
 
 export default class MainMenu extends PureComponent {
+  onResultSelect() {
+
+  }
+
+  onSearchChange() {
+
+  }
+
   render() {
     const { activeItem } = this.props;
 
@@ -33,7 +44,11 @@ export default class MainMenu extends PureComponent {
         <HomeLink />
         <SourceLink />
         <Menu.Item>
-          <Input icon="search" placeholder="Search song..." />
+          <Search
+            onResultSelect={this.onResultSelect}
+            onSearchChange={this.onSearchChange}
+            {...this.props}
+          />
         </Menu.Item>
       </Menu>
     );

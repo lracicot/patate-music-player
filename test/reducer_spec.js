@@ -1,14 +1,8 @@
-import { Map, fromJS } from 'immutable';
+import { Map, fromJS, Stack, List } from 'immutable';
 import { expect } from 'chai';
 import Sound from 'react-sound';
-import { Stack, List } from 'immutable';
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-
 import reducer from '../app/reducer';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
 
 describe('reducer', () => {
   it('handles SET_STATE', () => {
@@ -133,21 +127,6 @@ describe('reducer', () => {
     expect(nextState.get('queue').get(0).get('title')).to.equal('Test1');
   });
 
-  it('handles ENQUEUE by adding the given track to the play queue ', () => {
-    const state = fromJS({
-      tracks: [
-        { title: 'Test1' },
-        { title: 'Test2' },
-      ],
-      queue: List(),
-    });
-    const action = { type: 'ENQUEUE', tracks: fromJS({ title: 'Test3' }) };
-    const nextState = reducer(state, action);
-
-    expect(nextState.get('queue').size).to.equal(1);
-    expect(nextState.get('queue').get(0).get('title')).to.equal('Test3');
-  });
-
   it('handles ENQUEUE by adding the given tracks to the play queue ', () => {
     const state = fromJS({
       tracks: [
@@ -240,5 +219,66 @@ describe('reducer', () => {
     expect(nextState.get('queue').size).to.equal(2);
     expect(nextState.get('queue').get(0).title).to.equal('Test1');
     expect(nextState.get('queue').get(1).title).to.equal('Test2');
+  });
+
+  it('handles SEARCH by setting search to the right string', () => {
+    const state = fromJS({
+      search: '',
+    });
+    const action = { type: 'SEARCH', keywords: 'patate' };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('search')).to.equal('patate');
+  });
+
+  it('handles ENDSEARCH by setting search to the empty string', () => {
+    const state = fromJS({
+      search: 'patate',
+    });
+    const action = { type: 'ENDSEARCH' };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('search')).to.equal('');
+  });
+
+  it('handles APPEND_SEARCH_RESULTS by adding tracks to the searchResults state', () => {
+    const state = fromJS({
+      searchResults: List(),
+    });
+
+    const action = {
+      type: 'APPEND_SEARCH_RESULTS',
+      results: [
+        { title: 'Test1' },
+        { title: 'Test2' },
+      ],
+    };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('searchResults').get(0).title).to.equal('Test1');
+    expect(nextState.get('searchResults').get(1).title).to.equal('Test2');
+  });
+
+  it('handles CLEAR_SEARCH_RESULTS by emptying searchResults', () => {
+    const state = fromJS({
+      searchResults: List.of({ title: 'Test1' }),
+    });
+
+    const action = {
+      type: 'CLEAR_SEARCH_RESULTS',
+    };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('searchResults').size).to.equal(0);
+  });
+
+  it('handles CLEAR_QUEUE by emptying the play queue ', () => {
+    const state = fromJS({
+      queue: List.of({ title: 'Test2' }),
+    });
+    const action = { type: 'CLEAR_QUEUE' };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('queue').size).to.equal(0);
   });
 });
