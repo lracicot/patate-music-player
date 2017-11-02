@@ -38,6 +38,35 @@ export default class JamendoProxy {
     return `${url}?client_id=${clientId}`;
   }
 
+  async searchTracks(keywords) {
+    try {
+      const response = await
+        Axios.get(`https://api.jamendo.com/v3.0/tracks/?namesearch=${keywords}&client_id=${clientId}&format=jsonpretty&limit=200`);
+
+      const tracks = response.data.results;
+
+      if (tracks.length === 0) {
+        return null;
+      }
+
+      const songs = [];
+
+      tracks.forEach((track) => {
+        songs.push(new Song(
+          track.name,
+          track.audio,
+          track.album_image,
+        ));
+      });
+
+      return songs;
+    } catch (e) {
+      console.log(e);
+    }
+
+    return null;
+  }
+
   async loadRandomPlaylist() {
     return this.search('pop');
   }

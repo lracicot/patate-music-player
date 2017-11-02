@@ -1,7 +1,7 @@
 
 class EndSearch {
   execute(state) {
-    return state.set('search', '');
+    return state.set('searchQuery', '');
   }
 }
 

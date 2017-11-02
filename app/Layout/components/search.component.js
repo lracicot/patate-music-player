@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 
 
 export default class MainMenu extends PureComponent {
-  handleResultSelect = () => {};
-  handleSearchChange = () => {};
-
   render() {
     const { searchResults } = this.props;
 
@@ -15,7 +12,7 @@ export default class MainMenu extends PureComponent {
       <Search
         onResultSelect={this.props.onResultSelect}
         onSearchChange={this.props.onSearchChange}
-        results={searchResults}
+        results={searchResults.toArray()}
       />
     );
   }
@@ -28,5 +25,5 @@ MainMenu.propTypes = {
 };
 
 MainMenu.defaultProps = {
-  searchResults: [],
+  searchResults: List(),
 };

@@ -4,18 +4,8 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import Search from './search.component';
 
-import * as LayoutActions from '../layout.actions';
 
-
-export default class MainMenu extends PureComponent {
-  onResultSelect() {
-
-  }
-
-  onSearchChange() {
-
-  }
-
+export default class mainMenu extends PureComponent {
   render() {
     const { activeItem } = this.props;
 
@@ -45,8 +35,8 @@ export default class MainMenu extends PureComponent {
         <SourceLink />
         <Menu.Item>
           <Search
-            onResultSelect={this.onResultSelect}
-            onSearchChange={this.onSearchChange}
+            onResultSelect={this.props.onResultSelect}
+            onSearchChange={this.props.onSearchChange}
             {...this.props}
           />
         </Menu.Item>
@@ -55,10 +45,12 @@ export default class MainMenu extends PureComponent {
   }
 }
 
-MainMenu.propTypes = {
+mainMenu.propTypes = {
   activeItem: PropTypes.string,
+  onResultSelect: PropTypes.func.isRequired,
+  onSearchChange: PropTypes.func.isRequired,
 };
 
-MainMenu.defaultProps = {
+mainMenu.defaultProps = {
   activeItem: 'home',
 };

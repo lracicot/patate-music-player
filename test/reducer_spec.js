@@ -221,24 +221,24 @@ describe('reducer', () => {
     expect(nextState.get('queue').get(1).title).to.equal('Test2');
   });
 
-  it('handles SEARCH by setting search to the right string', () => {
+  it('handles SEARCH by setting searchQuery to the right string', () => {
     const state = fromJS({
-      search: '',
+      searchQuery: '',
     });
     const action = { type: 'SEARCH', keywords: 'patate' };
     const nextState = reducer(state, action);
 
-    expect(nextState.get('search')).to.equal('patate');
+    expect(nextState.get('searchQuery')).to.equal('patate');
   });
 
-  it('handles ENDSEARCH by setting search to the empty string', () => {
+  it('handles ENDSEARCH by setting searchQuery to the empty string', () => {
     const state = fromJS({
-      search: 'patate',
+      searchQuery: 'patate',
     });
     const action = { type: 'ENDSEARCH' };
     const nextState = reducer(state, action);
 
-    expect(nextState.get('search')).to.equal('');
+    expect(nextState.get('searchQuery')).to.equal('');
   });
 
   it('handles APPEND_SEARCH_RESULTS by adding tracks to the searchResults state', () => {
