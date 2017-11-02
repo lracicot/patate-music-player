@@ -1,7 +1,11 @@
+import { List } from 'immutable';
+
 export default class Playlist {
-  constructor(name, origin, songs) {
+  constructor(name, origin, uri, art, songs) {
     this.name = name;
     this.origin = origin;
-    this.songs = songs;
+    this.uri = uri;
+    this.art = art;
+    this.songs = List(songs);
   }
 }

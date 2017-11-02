@@ -4,21 +4,26 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { List } from 'immutable';
+import { autobind } from 'core-decorators';
 
 import * as PlaylistsListActions from './playlistslist.actions';
 
 // Custom components
 import PlaylistItem from './components/playlist.component';
 
+@autobind
 export class PlaylistsList extends Component {
   handleSearchChange = (e, { value }) => {
-    this.props.updateSearch(value);
+    this.props.dispatch(PlaylistsListActions.updateSearch(this.props.sources, value));
   }
 
   render() {
     const mapPlaylistToComponent = playlist => (
       <PlaylistItem
+        key={playlist.uri}
         playlist={playlist}
+        onClick={this.handleOnItemClick}
+        dispatch={this.props.dispatch}
       />
     );
     const listPlaylists = this.props.playlists.map(mapPlaylistToComponent);
@@ -29,7 +34,10 @@ export class PlaylistsList extends Component {
           onSearchChange={this.handleSearchChange}
           value={this.props.currentSearch}
         />
-        <UIList divided verticalAlign="middle">
+        <UIList
+          divided
+          verticalAlign="middle"
+        >
           { listPlaylists }
         </UIList>
       </div>
@@ -39,8 +47,9 @@ export class PlaylistsList extends Component {
 
 PlaylistsList.propTypes = {
   currentSearch: PropTypes.string,
-  updateSearch: PropTypes.func.isRequired,
   playlists: PropTypes.instanceOf(List).isRequired,
+  sources: PropTypes.instanceOf(List).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 PlaylistsList.defaultProps = {
@@ -50,10 +59,12 @@ PlaylistsList.defaultProps = {
 const mapStateToProps = state => ({
   currentSearch: state.get('playlistSearch'),
   playlists: state.get('playlistsFound'),
+  sources: state.get('sources'),
 });
 
 const mapDispatchToProps = (dispatch) => {
   const customActions = {
+    dispatch,
   };
 
   return Object.assign(customActions, bindActionCreators(PlaylistsListActions, dispatch));

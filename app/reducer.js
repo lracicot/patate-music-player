@@ -26,8 +26,10 @@ export default function (state = Map(), action) {
     return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);
   case 'CONNEXIONFAILEDSOURCE':
     return SourceListActions.ConnexionFailedSource.execute(state, action.proxy, action.error);
-  case 'PLAYLISTUPDATESEARCH':
-    return PlaylistsListActions.UpdateSearch.execute(state, action.searchValue);
+  case 'PLAYLIST_UPDATE_SEARCH_FIELD':
+    return PlaylistsListActions.UpdateSearchField.execute(state, action.searchValue);
+  case 'PLAYLIST_UPDATE_SEARCH_RESULTS':
+    return PlaylistsListActions.UpdateSearchResults.execute(state, action.searchResults);
   default:
     console.log(action);
   }

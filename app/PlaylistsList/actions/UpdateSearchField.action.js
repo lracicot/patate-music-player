@@ -1,7 +1,7 @@
-class UpdateSearch {
+class UpdateSearchField {
   execute(state, searchValue) {
     return state.set('playlistSearch', searchValue);
   }
 }
 
-export default new UpdateSearch();
+export default new UpdateSearchField();

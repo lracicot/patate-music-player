@@ -1,6 +1,7 @@
-// Axios for Ajax
+import { autobind } from 'core-decorators';
 import Axios from 'axios';
 
+import Playlist from './Playlist';
 import Song from './Song';
 
 const clientId = '2f98992c40b8edf17423d93bda2e04ab';
@@ -38,29 +39,44 @@ export default class SoundCloudProxy {
   }
 
   async loadRandomPlaylist() {
-    return this.search('');
+    return this.searchPlaylists('pop');
   }
 
-  async search(query) {
+  @autobind
+  async fetchPlaylistDetails(playlist) {
+    const { tracks_uri, title, uri } = playlist;
+
+    const response = await Axios.get(this.prepareUrl(tracks_uri));
+
+    if (response.data === undefined
+      || response.data.length === 0) {
+      return null;
+    }
+
+    const tracks = response.data;
+
+    const songs = tracks.map(track =>
+      new Song(
+        track.title,
+        this.prepareUrl(track.stream_url),
+        track.artwork_url,
+      ));
+
+    return new Playlist(title, this.name, uri, this.logo, songs);
+  }
+
+  async searchPlaylists(query) {
+    let playlists = [];
     try {
-      const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${query}`);
-      const songs = [];
+      const response = await
+        Axios.get(`https://api.soundcloud.com/playlists?client_id=${clientId}&q=${query}`);
 
-      Object.keys(response.data).forEach((key) => {
-        const track = response.data[key];
-        const song = new Song(
-          track.title,
-          this.prepareUrl(track.stream_url),
-          track.artwork_url,
-        );
-        songs.push(song);
-      });
-
-      return songs;
+      const playlistsData = response.data;
+      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));
     } catch (e) {
       console.log(e);
     }
 
-    return null;
+    return playlists;
   }
 }

@@ -1,6 +1,7 @@
-// Axios for Ajax
+import { autobind } from 'core-decorators';
 import Axios from 'axios';
 
+import Playlist from './Playlist';
 import Song from './Song';
 
 const clientId = '749ab993d24b4717afaeccd5308edbdc';
@@ -49,10 +50,65 @@ export default class SpotifyProxy {
   }
 
   async loadRandomPlaylist() {
-    return this.search('pop');
+    return this.searchPlaylists('pop');
   }
 
-  async search(query) {
+  @autobind
+  async fetchPlaylistDetails(playlist) {
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: this.accessToken,
+    };
+    console.log(playlist);
+
+    const tracksUrl = playlist.tracks.href;
+    const { name } = playlist;
+    const response = await Axios.get(tracksUrl, { headers });
+    const songs = [];
+
+    Object.keys(response.data.items).forEach((key) => {
+      const { track } = response.data.items[key];
+
+      let artworkUrl = '';
+      const { images } = track.album;
+      if (images.length > 0) {
+        artworkUrl = images[0].url;
+      }
+
+      const song = new Song(
+        track.name,
+        track.preview_url,
+        artworkUrl,
+      );
+
+      if (track.preview_url !== null) {
+        songs.push(song);
+      }
+    });
+
+    return new Playlist(name, this.name, tracksUrl, this.logo, songs);
+  }
+
+  async searchPlaylists(query) {
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: this.accessToken,
+    };
+
+    let playlists = [];
+    try {
+      const response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });
+
+      const playlistsData = response.data.playlists.items;
+      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));
+    } catch (e) {
+      console.log(e);
+    }
+
+    return playlists;
+  }
+
+  async oldSearch(query) {
     const headers = {
       'Content-Type': 'application/json',
       Authorization: this.accessToken,
