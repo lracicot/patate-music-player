@@ -22,7 +22,6 @@ export class PlaylistsList extends Component {
       <PlaylistItem
         key={playlist.uri}
         playlist={playlist}
-        onClick={this.handleOnItemClick}
         dispatch={this.props.dispatch}
       />
     );

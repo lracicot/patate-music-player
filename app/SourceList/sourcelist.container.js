@@ -33,13 +33,6 @@ SourceList.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-/* Juste en attendant
-SourceList.defaultProps = {
-  sources: new List(),
-  connectSource: () => {},
-};
-*/
-
 const mapStateToProps = state => ({
   sources: state.get('sources'),
 });
