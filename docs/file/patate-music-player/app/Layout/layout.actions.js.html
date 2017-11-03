@@ -124,14 +124,20 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">patate-music-player/app/Layout/layout.actions.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+/**
+ * This function creates an action named &quot;APPEND_SEARCH_RESULTS&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator The action creator
+ */
 export function appendSearchResults(results) {
   return {
     type: &apos;APPEND_SEARCH_RESULTS&apos;,
@@ -139,12 +145,24 @@ export function appendSearchResults(results) {
   };
 }
 
+/**
+ * This function creates an action named &quot;CLEAR_SEARCH_RESULTS&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator The action creator
+ */
 export function clearSearchResults() {
   return {
     type: &apos;CLEAR_SEARCH_RESULTS&apos;,
   };
 }
 
+/**
+ * This function creates an action named &quot;SEARCH&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator The action creator
+ */
 export function search(keywords) {
   return {
     type: &apos;SEARCH&apos;,
@@ -152,7 +170,12 @@ export function search(keywords) {
   };
 }
 
-
+/**
+ * This function creates an action named &quot;ENDSEARCH&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator The action creator
+ */
 export function endSearch() {
   return {
     type: &apos;ENDSEARCH&apos;,

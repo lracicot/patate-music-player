@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4142,
+  "end": 3742,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 145,
+      "line": 128,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4142,
+    "end": 3742,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 145,
+        "line": 128,
         "column": 0
       }
     },
@@ -9833,236 +9833,9 @@
             }
           ],
           "kind": "const",
-          "trailingComments": [
-            {
-              "type": "CommentLine",
-              "value": " <Search",
-              "start": 3746,
-              "end": 3756,
-              "loc": {
-                "start": {
-                  "line": 130,
-                  "column": 0
-                },
-                "end": {
-                  "line": 130,
-                  "column": 10
-                }
-              }
-            },
-            {
-              "type": "CommentLine",
-              "value": "   clientId={this.state.client_id}",
-              "start": 3758,
-              "end": 3794,
-              "loc": {
-                "start": {
-                  "line": 131,
-                  "column": 0
-                },
-                "end": {
-                  "line": 131,
-                  "column": 36
-                }
-              }
-            },
-            {
-              "type": "CommentLine",
-              "value": "   autoCompleteValue={this.state.autoCompleteValue}",
-              "start": 3796,
-              "end": 3849,
-              "loc": {
-                "start": {
-                  "line": 132,
-                  "column": 0
-                },
-                "end": {
-                  "line": 132,
-                  "column": 53
-                }
-              }
-            },
-            {
-              "type": "CommentLine",
-              "value": "   tracks={this.state.tracks}",
-              "start": 3851,
-              "end": 3882,
-              "loc": {
-                "start": {
-                  "line": 133,
-                  "column": 0
-                },
-                "end": {
-                  "line": 133,
-                  "column": 31
-                }
-              }
-            },
-            {
-              "type": "CommentLine",
-              "value": "   handleSelect={this.handleSelect.bind(this)}",
-              "start": 3884,
-              "end": 3932,
-              "loc": {
-                "start": {
-                  "line": 134,
-                  "column": 0
-                },
-                "end": {
-                  "line": 134,
-                  "column": 48
-                }
-              }
-            },
-            {
-              "type": "CommentLine",
-              "value": "   handleChange={this.handleChange.bind(this)}/>*/",
-              "start": 3934,
-              "end": 3986,
-              "loc": {
-                "start": {
-                  "line": 135,
-                  "column": 0
-                },
-                "end": {
-                  "line": 135,
-                  "column": 52
-                }
-              }
-            },
-            {
-              "type": "CommentBlock",
-              "value": "\r\nexport class Player extends Component {\r\n\r\n  handleSelect(value, item){\r\n    this.setState({ autoCompleteValue: value, track: item });\r\n  }\r\n}\r\n",
-              "start": 3990,
-              "end": 4140,
-              "loc": {
-                "start": {
-                  "line": 137,
-                  "column": 0
-                },
-                "end": {
-                  "line": 144,
-                  "column": 2
-                }
-              }
-            }
-          ],
-          "leadingComments": []
+          "leadingComments": [],
+          "trailingComments": []
         },
-        "trailingComments": [
-          {
-            "type": "CommentLine",
-            "value": " <Search",
-            "start": 3746,
-            "end": 3756,
-            "loc": {
-              "start": {
-                "line": 130,
-                "column": 0
-              },
-              "end": {
-                "line": 130,
-                "column": 10
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   clientId={this.state.client_id}",
-            "start": 3758,
-            "end": 3794,
-            "loc": {
-              "start": {
-                "line": 131,
-                "column": 0
-              },
-              "end": {
-                "line": 131,
-                "column": 36
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   autoCompleteValue={this.state.autoCompleteValue}",
-            "start": 3796,
-            "end": 3849,
-            "loc": {
-              "start": {
-                "line": 132,
-                "column": 0
-              },
-              "end": {
-                "line": 132,
-                "column": 53
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   tracks={this.state.tracks}",
-            "start": 3851,
-            "end": 3882,
-            "loc": {
-              "start": {
-                "line": 133,
-                "column": 0
-              },
-              "end": {
-                "line": 133,
-                "column": 31
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   handleSelect={this.handleSelect.bind(this)}",
-            "start": 3884,
-            "end": 3932,
-            "loc": {
-              "start": {
-                "line": 134,
-                "column": 0
-              },
-              "end": {
-                "line": 134,
-                "column": 48
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   handleChange={this.handleChange.bind(this)}/>*/",
-            "start": 3934,
-            "end": 3986,
-            "loc": {
-              "start": {
-                "line": 135,
-                "column": 0
-              },
-              "end": {
-                "line": 135,
-                "column": 52
-              }
-            }
-          },
-          {
-            "type": "CommentBlock",
-            "value": "\r\nexport class Player extends Component {\r\n\r\n  handleSelect(value, item){\r\n    this.setState({ autoCompleteValue: value, track: item });\r\n  }\r\n}\r\n",
-            "start": 3990,
-            "end": 4140,
-            "loc": {
-              "start": {
-                "line": 137,
-                "column": 0
-              },
-              "end": {
-                "line": 144,
-                "column": 2
-              }
-            }
-          }
-        ],
         "exportKind": "value"
       }
     ],
@@ -10146,118 +9919,6 @@
         "end": {
           "line": 20,
           "column": 8
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " <Search",
-      "start": 3746,
-      "end": 3756,
-      "loc": {
-        "start": {
-          "line": 130,
-          "column": 0
-        },
-        "end": {
-          "line": 130,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   clientId={this.state.client_id}",
-      "start": 3758,
-      "end": 3794,
-      "loc": {
-        "start": {
-          "line": 131,
-          "column": 0
-        },
-        "end": {
-          "line": 131,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   autoCompleteValue={this.state.autoCompleteValue}",
-      "start": 3796,
-      "end": 3849,
-      "loc": {
-        "start": {
-          "line": 132,
-          "column": 0
-        },
-        "end": {
-          "line": 132,
-          "column": 53
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   tracks={this.state.tracks}",
-      "start": 3851,
-      "end": 3882,
-      "loc": {
-        "start": {
-          "line": 133,
-          "column": 0
-        },
-        "end": {
-          "line": 133,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   handleSelect={this.handleSelect.bind(this)}",
-      "start": 3884,
-      "end": 3932,
-      "loc": {
-        "start": {
-          "line": 134,
-          "column": 0
-        },
-        "end": {
-          "line": 134,
-          "column": 48
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   handleChange={this.handleChange.bind(this)}/>*/",
-      "start": 3934,
-      "end": 3986,
-      "loc": {
-        "start": {
-          "line": 135,
-          "column": 0
-        },
-        "end": {
-          "line": 135,
-          "column": 52
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "\r\nexport class Player extends Component {\r\n\r\n  handleSelect(value, item){\r\n    this.setState({ autoCompleteValue: value, track: item });\r\n  }\r\n}\r\n",
-      "start": 3990,
-      "end": 4140,
-      "loc": {
-        "start": {
-          "line": 137,
-          "column": 0
-        },
-        "end": {
-          "line": 144,
-          "column": 2
         }
       }
     }
@@ -29011,118 +28672,6 @@
       }
     },
     {
-      "type": "CommentLine",
-      "value": " <Search",
-      "start": 3746,
-      "end": 3756,
-      "loc": {
-        "start": {
-          "line": 130,
-          "column": 0
-        },
-        "end": {
-          "line": 130,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   clientId={this.state.client_id}",
-      "start": 3758,
-      "end": 3794,
-      "loc": {
-        "start": {
-          "line": 131,
-          "column": 0
-        },
-        "end": {
-          "line": 131,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   autoCompleteValue={this.state.autoCompleteValue}",
-      "start": 3796,
-      "end": 3849,
-      "loc": {
-        "start": {
-          "line": 132,
-          "column": 0
-        },
-        "end": {
-          "line": 132,
-          "column": 53
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   tracks={this.state.tracks}",
-      "start": 3851,
-      "end": 3882,
-      "loc": {
-        "start": {
-          "line": 133,
-          "column": 0
-        },
-        "end": {
-          "line": 133,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   handleSelect={this.handleSelect.bind(this)}",
-      "start": 3884,
-      "end": 3932,
-      "loc": {
-        "start": {
-          "line": 134,
-          "column": 0
-        },
-        "end": {
-          "line": 134,
-          "column": 48
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   handleChange={this.handleChange.bind(this)}/>*/",
-      "start": 3934,
-      "end": 3986,
-      "loc": {
-        "start": {
-          "line": 135,
-          "column": 0
-        },
-        "end": {
-          "line": 135,
-          "column": 52
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "\r\nexport class Player extends Component {\r\n\r\n  handleSelect(value, item){\r\n    this.setState({ autoCompleteValue: value, track: item });\r\n  }\r\n}\r\n",
-      "start": 3990,
-      "end": 4140,
-      "loc": {
-        "start": {
-          "line": 137,
-          "column": 0
-        },
-        "end": {
-          "line": 144,
-          "column": 2
-        }
-      }
-    },
-    {
       "type": {
         "label": "eof",
         "beforeExpr": false,
@@ -29135,15 +28684,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4142,
-      "end": 4142,
+      "start": 3742,
+      "end": 3742,
       "loc": {
         "start": {
-          "line": 145,
+          "line": 128,
           "column": 0
         },
         "end": {
-          "line": 145,
+          "line": 128,
           "column": 0
         }
       }

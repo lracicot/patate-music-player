@@ -124,20 +124,20 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Song from &apos;<span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber1">sandwich-player/patate-music-player/src/model/Song.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Song from &apos;<span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber4">sandwich-player/patate-music-player/src/model/Song.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber1">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber4">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -157,7 +157,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Song - This song is a data structure holding information for a track</p>
+</div>
   
 
   
@@ -189,13 +190,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(title: <span>string</span>, streamUrl: <span>string</span>, artworkUrl: <span>string</span>): <span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>constructor - Construct a song</p>
+</div>
       </div>
     </td>
     <td>
@@ -313,25 +315,70 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(title: <span>string</span>, streamUrl: <span>string</span>, artworkUrl: <span>string</span>): <span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber2">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber14">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
-
-  
-
-  <div data-ice="properties">
+  <div data-ice="description"><p>constructor - Construct a song</p>
 </div>
 
   
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">title</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Title of the song</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">streamUrl</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Downloadable link of the song</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">artworkUrl</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Url of the picture linked to this song</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The constructed object</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -363,7 +410,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
@@ -406,7 +453,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
@@ -449,7 +496,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/Song.js.html#lineNumber15">source</a></span></span>
     </span>
   </h3>
 

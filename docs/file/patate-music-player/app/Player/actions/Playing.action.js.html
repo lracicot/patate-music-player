@@ -124,8 +124,8 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -133,6 +133,9 @@
 <div class="content" data-ice="content"><h1 data-ice="title">patate-music-player/app/Player/actions/Playing.action.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
 class Playing {
+  /**
+   * Reduce the state
+   */
   execute(state, audioStatus) {
     return state.setIn([&apos;playback&apos;, &apos;elapsed&apos;], audioStatus.elapsed)
       .setIn([&apos;playback&apos;, &apos;total&apos;], audioStatus.total)

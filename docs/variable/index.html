@@ -124,8 +124,8 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -513,13 +513,15 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span></span><span class="code" data-ice="signature">: <span>string</span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span></span><span class="code" data-ice="signature">: <span>*</span>: <span>string</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>This function creates an action named &quot;SET_STATE&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1687,25 +1689,40 @@
     
     
     
-    <span class="code" data-ice="name">SET_STATE</span><span class="code" data-ice="signature">: <span>string</span></span>
+    <span class="code" data-ice="name">SET_STATE</span><span class="code" data-ice="signature">: <span>*</span>: <span>string</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/App/app.actions.js.html#lineNumber1">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/App/app.actions.js.html#lineNumber8">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SET_STATE} from &apos;<span><a href="file/patate-music-player/app/App/app.actions.js.html#lineNumber1">sandwich-player/patate-music-player/app/App/app.actions.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SET_STATE} from &apos;<span><a href="file/patate-music-player/app/App/app.actions.js.html#lineNumber8">sandwich-player/patate-music-player/app/App/app.actions.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>This function creates an action named &quot;SET_STATE&quot; with
+the required data to execute the reducer action.</p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator The action creator</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1820,11 +1837,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/AppendSearchResults.action.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/AppendSearchResults.action.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import appendSearchResults from &apos;<span><a href="file/patate-music-player/app/Layout/actions/AppendSearchResults.action.js.html#lineNumber15">sandwich-player/patate-music-player/app/Layout/actions/AppendSearchResults.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import appendSearchResults from &apos;<span><a href="file/patate-music-player/app/Layout/actions/AppendSearchResults.action.js.html#lineNumber18">sandwich-player/patate-music-player/app/Layout/actions/AppendSearchResults.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1863,11 +1880,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/ClearQueue.action.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/ClearQueue.action.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import clearQueue from &apos;<span><a href="file/patate-music-player/app/Player/actions/ClearQueue.action.js.html#lineNumber9">sandwich-player/patate-music-player/app/Player/actions/ClearQueue.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import clearQueue from &apos;<span><a href="file/patate-music-player/app/Player/actions/ClearQueue.action.js.html#lineNumber12">sandwich-player/patate-music-player/app/Player/actions/ClearQueue.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1906,11 +1923,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/ClearSearchResults.action.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/ClearSearchResults.action.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import clearSearchResults from &apos;<span><a href="file/patate-music-player/app/Layout/actions/ClearSearchResults.action.js.html#lineNumber9">sandwich-player/patate-music-player/app/Layout/actions/ClearSearchResults.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import clearSearchResults from &apos;<span><a href="file/patate-music-player/app/Layout/actions/ClearSearchResults.action.js.html#lineNumber12">sandwich-player/patate-music-player/app/Layout/actions/ClearSearchResults.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2078,11 +2095,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/EndSearch.action.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/EndSearch.action.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import endSearch from &apos;<span><a href="file/patate-music-player/app/Layout/actions/EndSearch.action.js.html#lineNumber8">sandwich-player/patate-music-player/app/Layout/actions/EndSearch.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import endSearch from &apos;<span><a href="file/patate-music-player/app/Layout/actions/EndSearch.action.js.html#lineNumber11">sandwich-player/patate-music-player/app/Layout/actions/EndSearch.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2121,11 +2138,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Enqueue.action.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Enqueue.action.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import enqueue from &apos;<span><a href="file/patate-music-player/app/Player/actions/Enqueue.action.js.html#lineNumber25">sandwich-player/patate-music-player/app/Player/actions/Enqueue.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import enqueue from &apos;<span><a href="file/patate-music-player/app/Player/actions/Enqueue.action.js.html#lineNumber28">sandwich-player/patate-music-player/app/Player/actions/Enqueue.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2207,11 +2224,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Next.action.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Next.action.js.html#lineNumber24">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import next from &apos;<span><a href="file/patate-music-player/app/Player/actions/Next.action.js.html#lineNumber21">sandwich-player/patate-music-player/app/Player/actions/Next.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import next from &apos;<span><a href="file/patate-music-player/app/Player/actions/Next.action.js.html#lineNumber24">sandwich-player/patate-music-player/app/Player/actions/Next.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2250,11 +2267,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Play.action.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Play.action.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import play from &apos;<span><a href="file/patate-music-player/app/Player/actions/Play.action.js.html#lineNumber13">sandwich-player/patate-music-player/app/Player/actions/Play.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import play from &apos;<span><a href="file/patate-music-player/app/Player/actions/Play.action.js.html#lineNumber16">sandwich-player/patate-music-player/app/Player/actions/Play.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2293,11 +2310,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Playing.action.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Playing.action.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import playing from &apos;<span><a href="file/patate-music-player/app/Player/actions/Playing.action.js.html#lineNumber10">sandwich-player/patate-music-player/app/Player/actions/Playing.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import playing from &apos;<span><a href="file/patate-music-player/app/Player/actions/Playing.action.js.html#lineNumber13">sandwich-player/patate-music-player/app/Player/actions/Playing.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2336,11 +2353,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Prev.action.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Prev.action.js.html#lineNumber19">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import prev from &apos;<span><a href="file/patate-music-player/app/Player/actions/Prev.action.js.html#lineNumber16">sandwich-player/patate-music-player/app/Player/actions/Prev.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import prev from &apos;<span><a href="file/patate-music-player/app/Player/actions/Prev.action.js.html#lineNumber19">sandwich-player/patate-music-player/app/Player/actions/Prev.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2379,11 +2396,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/Search.action.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Layout/actions/Search.action.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import search from &apos;<span><a href="file/patate-music-player/app/Layout/actions/Search.action.js.html#lineNumber8">sandwich-player/patate-music-player/app/Layout/actions/Search.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import search from &apos;<span><a href="file/patate-music-player/app/Layout/actions/Search.action.js.html#lineNumber11">sandwich-player/patate-music-player/app/Layout/actions/Search.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2422,11 +2439,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/App/actions/SetState.action.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/App/actions/SetState.action.js.html#lineNumber15">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import setState from &apos;<span><a href="file/patate-music-player/app/App/actions/SetState.action.js.html#lineNumber8">sandwich-player/patate-music-player/app/App/actions/SetState.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import setState from &apos;<span><a href="file/patate-music-player/app/App/actions/SetState.action.js.html#lineNumber15">sandwich-player/patate-music-player/app/App/actions/SetState.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2465,11 +2482,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Stop.action.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/Stop.action.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import stop from &apos;<span><a href="file/patate-music-player/app/Player/actions/Stop.action.js.html#lineNumber9">sandwich-player/patate-music-player/app/Player/actions/Stop.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import stop from &apos;<span><a href="file/patate-music-player/app/Player/actions/Stop.action.js.html#lineNumber12">sandwich-player/patate-music-player/app/Player/actions/Stop.action.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2508,11 +2525,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/TogglePlay.action.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/Player/actions/TogglePlay.action.js.html#lineNumber19">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import togglePlay from &apos;<span><a href="file/patate-music-player/app/Player/actions/TogglePlay.action.js.html#lineNumber16">sandwich-player/patate-music-player/app/Player/actions/TogglePlay.action.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import togglePlay from &apos;<span><a href="file/patate-music-player/app/Player/actions/TogglePlay.action.js.html#lineNumber19">sandwich-player/patate-music-player/app/Player/actions/TogglePlay.action.js</a></span>&apos;</code></pre></div>
   
   
   

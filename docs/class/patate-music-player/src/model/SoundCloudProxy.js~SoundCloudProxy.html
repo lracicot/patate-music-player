@@ -33,8 +33,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-routes">routes</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-history">history</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-app">app/App</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-app">app</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-app">app/App</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/App/app.container.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-app">app</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setState">setState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Root">Root</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-app-actions">app/App/actions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/App/actions/SetState.action.js~SetState.html">SetState</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-setState">setState</a></span></span></li>
@@ -129,13 +131,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import SoundCloudProxy from &apos;<span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber9">sandwich-player/patate-music-player/src/model/SoundCloudProxy.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import SoundCloudProxy from &apos;<span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber12">sandwich-player/patate-music-player/src/model/SoundCloudProxy.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber9">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber12">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -155,7 +157,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>SoundCloudProxy - Proxy interface to SoundCloud API (This class is immutable)</p>
+</div>
   
 
   
@@ -369,41 +372,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-isConnected">isConnected</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-isConnected">isConnected</a></span></span><span class="code" data-ice="signature">(): <span>boolean</span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          <span data-ice="async">async</span>
-          
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-loadRandomPlaylist">loadRandomPlaylist</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>isConnected - Check if the proxy is connected </p>
+</div>
       </div>
     </td>
     <td>
@@ -431,7 +407,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>needsAuthentification - SoundCloud does not need a authentifation process </p>
+</div>
       </div>
     </td>
     <td>
@@ -453,41 +430,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-prepareUrl">prepareUrl</a></span></span><span class="code" data-ice="signature">(url: <span>*</span>): <span>string</span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-prepareUrl">prepareUrl</a></span></span><span class="code" data-ice="signature">(url: <span>string</span>): <span>string</span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          <span data-ice="async">async</span>
-          
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists">searchPlaylists</a></span></span><span class="code" data-ice="signature">(query: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>prepareUrl - Append the client id to an URL query </p>
+</div>
       </div>
     </td>
     <td>
@@ -509,13 +459,43 @@
           
           <span data-ice="async">async</span>
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchTracks">searchTracks</a></span></span><span class="code" data-ice="signature">(keywords: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists">searchPlaylists</a></span></span><span class="code" data-ice="signature">(query: <span>string</span>): <span>Array</span></span>
         </p>
       </div>
       <div>
         
         
+        <div data-ice="description"><p>searchPlaylists - Search a set of playlists from a query </p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchTracks">searchTracks</a></span></span><span class="code" data-ice="signature">(keywords: <span>string</span>): <span>Array</span></span>
+        </p>
+      </div>
+      <div>
         
+        
+        <div data-ice="description"><p>searchTracks - Async function to get an array of tracks from keywords </p>
+</div>
       </div>
     </td>
     <td>
@@ -537,13 +517,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setAccessToken">setAccessToken</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setAccessToken">setAccessToken</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>setAccessToken - Set the status to connected </p>
+</div>
       </div>
     </td>
     <td>
@@ -565,13 +546,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setStatus">setStatus</a></span></span><span class="code" data-ice="signature">(status: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setStatus">setStatus</a></span></span><span class="code" data-ice="signature">(status: <span>string</span>): <span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>setStatus - Change the status of the proxy to a new state </p>
+</div>
       </div>
     </td>
     <td>
@@ -601,7 +583,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
@@ -647,7 +629,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
@@ -690,7 +672,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber15">source</a></span></span>
     </span>
   </h3>
 
@@ -733,7 +715,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber14">source</a></span></span>
     </span>
   </h3>
 
@@ -776,7 +758,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
@@ -822,7 +804,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber73">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber115">source</a></span></span>
     </span>
   </h3>
 
@@ -889,18 +871,19 @@
     
     
     
-    <span class="code" data-ice="name">isConnected</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isConnected</span><span class="code" data-ice="signature">(): <span>boolean</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber33">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber58">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>isConnected - Check if the proxy is connected </p>
+</div>
 
   
 
@@ -912,63 +895,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-loadRandomPlaylist">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    <span data-ice="async">async</span>
-    
-    <span class="code" data-ice="name">loadRandomPlaylist</span><span class="code" data-ice="signature">(): <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber68">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span>boolean</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Is proxy connected</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1003,14 +932,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber49">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>needsAuthentification - SoundCloud does not need a authentifation process </p>
+</div>
 
   
 
@@ -1023,7 +953,8 @@
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>boolean</span></td>
-          
+          <td class="return-desc" data-ice="returnDescription"><p>false</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1054,18 +985,19 @@
     
     
     
-    <span class="code" data-ice="name">prepareUrl</span><span class="code" data-ice="signature">(url: <span>*</span>): <span>string</span></span>
+    <span class="code" data-ice="name">prepareUrl</span><span class="code" data-ice="signature">(url: <span>string</span>): <span>string</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber37">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber69">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>prepareUrl - Append the client id to an URL query </p>
+</div>
 
   
 
@@ -1079,9 +1011,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">url</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>string</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The URL which will be appended</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1094,7 +1027,8 @@
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>string</span></td>
-          
+          <td class="return-desc" data-ice="returnDescription"><p>The appended URL</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1125,18 +1059,19 @@
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">searchPlaylists</span><span class="code" data-ice="signature">(query: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">searchPlaylists</span><span class="code" data-ice="signature">(query: <span>string</span>): <span>Array</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber95">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber144">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>searchPlaylists - Search a set of playlists from a query </p>
+</div>
 
   
 
@@ -1150,9 +1085,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">query</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>string</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The query of the search</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1164,8 +1100,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span>Array</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The set of playlists</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1196,18 +1133,19 @@
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">searchTracks</span><span class="code" data-ice="signature">(keywords: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">searchTracks</span><span class="code" data-ice="signature">(keywords: <span>string</span>): <span>Array</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber41">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber80">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>searchTracks - Async function to get an array of tracks from keywords </p>
+</div>
 
   
 
@@ -1221,9 +1159,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">keywords</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>string</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The searched name for the tracks</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1235,8 +1174,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span>Array</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>An array of tracks</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1267,18 +1207,19 @@
     
     
     
-    <span class="code" data-ice="name">setAccessToken</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">setAccessToken</span><span class="code" data-ice="signature">(): <span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber23">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>setAccessToken - Set the status to connected </p>
+</div>
 
   
 
@@ -1290,8 +1231,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Return the new connected proxy</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1322,18 +1264,19 @@
     
     
     
-    <span class="code" data-ice="name">setStatus</span><span class="code" data-ice="signature">(status: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">setStatus</span><span class="code" data-ice="signature">(status: <span>string</span>): <span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>setStatus - Change the status of the proxy to a new state </p>
+</div>
 
   
 
@@ -1347,9 +1290,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">status</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>string</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The new status</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1361,8 +1305,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The new proxy with the new status</p>
+</td>
         </tr>
       </tbody>
     </table>

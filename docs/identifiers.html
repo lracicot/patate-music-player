@@ -124,8 +124,8 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -390,13 +390,15 @@
           <span data-ice="kind-icon" class="kind-variable">V</span>
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span></span><span class="code" data-ice="signature">: <span>string</span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span></span><span class="code" data-ice="signature">: <span>*</span>: <span>string</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>This function creates an action named &quot;SET_STATE&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -434,7 +436,9 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>This classe represent an action to replace the whole
+application state with a new one.</p>
+</div>
       </div>
     </td>
     <td>
@@ -550,13 +554,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-appendSearchResults">appendSearchResults</a></span></span><span class="code" data-ice="signature">(results: <span>*</span>): {&quot;type&quot;: <span>string</span>, &quot;results&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-appendSearchResults">appendSearchResults</a></span></span><span class="code" data-ice="signature">(results: <span>*</span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>This function creates an action named &quot;APPEND_SEARCH_RESULTS&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -578,13 +584,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-clearSearchResults">clearSearchResults</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-clearSearchResults">clearSearchResults</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>This function creates an action named &quot;CLEAR_SEARCH_RESULTS&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -606,13 +614,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-endSearch">endSearch</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-endSearch">endSearch</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>This function creates an action named &quot;ENDSEARCH&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -634,13 +644,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-search">search</a></span></span><span class="code" data-ice="signature">(keywords: <span>*</span>): {&quot;type&quot;: <span>string</span>, &quot;keywords&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-search">search</a></span></span><span class="code" data-ice="signature">(keywords: <span>*</span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>This function creates an action named &quot;SEARCH&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1056,13 +1068,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-clearQueue">clearQueue</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-clearQueue">clearQueue</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;CLEAR_QUEUE&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1084,7 +1098,7 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-enqueue">enqueue</a></span></span><span class="code" data-ice="signature">(tracks: <span>*</span>): {&quot;type&quot;: <span>string</span>, &quot;tracks&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-enqueue">enqueue</a></span></span><span class="code" data-ice="signature">(tracks: <span>List</span>): <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1113,13 +1127,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-next">next</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-next">next</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;NEXT&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1141,13 +1157,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-play">play</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-play">play</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;PLAY&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1169,13 +1187,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-playing">playing</a></span></span><span class="code" data-ice="signature">(audioStatus: <span>*</span>): {&quot;type&quot;: <span>string</span>, &quot;audioStatus&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-playing">playing</a></span></span><span class="code" data-ice="signature">(audioStatus: <span>*</span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;PLAYING&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1197,13 +1217,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-prev">prev</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-prev">prev</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;PREV&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1225,13 +1247,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-stop">stop</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-stop">stop</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;STOP&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -1253,13 +1277,15 @@
           <span data-ice="kind-icon" class="kind-function">F</span>
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-toggleplay">toggleplay</a></span></span><span class="code" data-ice="signature">(): {&quot;type&quot;: <span>string</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-toggleplay">toggleplay</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates an action named &quot;TOGGLEPLAY&quot; with
+the required data to execute the reducer action.</p>
+</div>
       </div>
     </td>
     <td>
@@ -2899,7 +2925,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>JamendoProxy - Proxy interface to Jamendo API (This class is immutable)</p>
+</div>
       </div>
     </td>
     <td>
@@ -2927,7 +2954,9 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>This class is a data structure to hold all relevant information
+about a playlist</p>
+</div>
       </div>
     </td>
     <td>
@@ -2955,7 +2984,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Song - This song is a data structure holding information for a track</p>
+</div>
       </div>
     </td>
     <td>
@@ -2977,13 +3007,14 @@
           <span data-ice="kind-icon" class="kind-class">C</span>
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>SoundCloudProxy - Proxy interface to SoundCloud API (This class is immutable)</p>
+</div>
       </div>
     </td>
     <td>
@@ -3005,13 +3036,14 @@
           <span data-ice="kind-icon" class="kind-class">C</span>
           
           
-          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>SpotifyProxy - Proxy interface to Jamendo API (This class is immutable)</p>
+</div>
       </div>
     </td>
     <td>

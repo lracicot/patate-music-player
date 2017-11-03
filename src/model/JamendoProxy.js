@@ -7,7 +7,15 @@ import Playlist from './Playlist';
 
 const clientId = '58c2e328';
 
+/**
+  * JamendoProxy - Proxy interface to Jamendo API (This class is immutable)
+  */
 export default class JamendoProxy {
+  /**
+   * constructor - Construct the proxy
+   *
+   * @return {JamendoProxy} Returns the proxy
+   */
   constructor() {
     this.name = 'Jamendo';
     this.logo = 'http://www.userlogos.org/files/logos/43932_aleksandr009/jamendo_1_1.png';
@@ -15,6 +23,13 @@ export default class JamendoProxy {
     this.authorizationUrl = null;
   }
 
+  /**
+   * setStatus - Change the status of the proxy to a new state
+   *
+   * @param {string} status The new status
+   *
+   * @return {JamendoProxy} The new proxy with the new status
+   */
   setStatus(status) {
     const proxy = new JamendoProxy();
     proxy.status = status;
@@ -22,24 +37,53 @@ export default class JamendoProxy {
     return proxy;
   }
 
+  /**
+   * setAccessToken - Set the status to connected
+   *
+   * @return {JamendoProxy} Return the new connected proxy
+   */
   setAccessToken() {
     const proxy = new JamendoProxy();
     proxy.status = 'CONNECTED';
     return proxy;
   }
 
+  /**
+   * needsAuthentification - Jamendo does not need a authentifation process
+   *
+   * @return {boolean} false
+   */
   needsAuthentification() {
     return false;
   }
 
+  /**
+   * isConnected - Check if the proxy is connected
+   *
+   * @return {boolean} Is proxy connected
+   */
   isConnected() {
     return this.status === 'CONNECTED';
   }
 
+  /**
+   * prepareUrl - Append the client id to an URL query
+   *
+   * @param {string} url The URL which will be appended
+   *
+   * @return {string} The appended URL
+   */
   prepareUrl(url) {
     return `${url}?client_id=${clientId}`;
   }
 
+  /**
+   * searchTracks - Async function to get an array of tracks from keywords
+   *
+   * @param {string} keywords The searched name for the tracks
+   *
+   * @return {Array} An array of tracks
+   */
   async searchTracks(keywords) {
     try {
       const response = await
@@ -69,10 +113,13 @@ export default class JamendoProxy {
     return null;
   }
 
-  async loadRandomPlaylist() {
-    return this.searchPlaylists('pop').get(0);
-  }
-
+  /**
+   * fetchPlaylistDetails - Fetch a playlist from an playlist ID
+   *
+   * @param {string} playlist The playlist ID
+   *
+   * @return {Playlist} The playlist
+   */
   @autobind
   async fetchPlaylistDetails(playlist) {
     const { id } = playlist;
@@ -99,6 +146,13 @@ export default class JamendoProxy {
     return new Playlist(name, this.name, zip, this.logo, songs);
   }
 
+  /**
+   * searchPlaylists - Search a set of playlists from a query
+   *
+   * @param {string} query The query of the search
+   *
+   * @return {Array} The set of playlists
+   */
   async searchPlaylists(query) {
     let playlists = [];
     try {

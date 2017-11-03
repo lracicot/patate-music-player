@@ -25,7 +25,7 @@
     "__docId__": 2,
     "kind": "file",
     "name": "patate-music-player/app/App/actions/SetState.action.js",
-    "content": "\r\nclass SetState {\r\n  execute(state, newState) {\r\n    return state.merge(newState);\r\n  }\r\n}\r\n\r\nexport default new SetState();\r\n",
+    "content": "\r\n/**\r\n * This classe represent an action to replace the whole\r\n * application state with a new one.\r\n */\r\nclass SetState {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, newState) {\r\n    return state.merge(newState);\r\n  }\r\n}\r\n\r\nexport default new SetState();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/App/actions/SetState.action.js",
     "access": "public",
@@ -43,10 +43,9 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/App/actions/SetState.action.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 2,
+    "description": "This classe represent an action to replace the whole\napplication state with a new one.",
+    "lineNumber": 6,
     "pseudoExport": true,
-    "undocument": true,
     "interface": false
   },
   {
@@ -59,8 +58,8 @@
     "static": false,
     "longname": "patate-music-player/app/App/actions/SetState.action.js~SetState#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 3,
+    "description": "Reduce the state ",
+    "lineNumber": 10,
     "params": [
       {
         "nullable": null,
@@ -101,7 +100,7 @@
     "importPath": "sandwich-player/patate-music-player/app/App/actions/SetState.action.js",
     "importStyle": "setState",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 15,
     "undocument": true,
     "type": {
       "types": [
@@ -113,7 +112,7 @@
     "__docId__": 6,
     "kind": "file",
     "name": "patate-music-player/app/App/app.actions.js",
-    "content": "export const SET_STATE = 'SET_STATE';\r\nexport function setState(state) {\r\n  return {\r\n    type: SET_STATE,\r\n    state,\r\n  };\r\n}\r\n",
+    "content": "\r\n/**\r\n * This function creates an action named \"SET_STATE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator The action creator\r\n */\r\nexport const SET_STATE = 'SET_STATE';\r\nexport function setState(state) {\r\n  return {\r\n    type: SET_STATE,\r\n    state,\r\n  };\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/App/app.actions.js",
     "access": "public",
@@ -131,9 +130,16 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/App/app.actions.js",
     "importStyle": "{SET_STATE}",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "This function creates an action named \"SET_STATE\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 8,
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator The action creator"
+    },
     "type": {
       "types": [
         "string"
@@ -154,7 +160,7 @@
     "importPath": "sandwich-player/patate-music-player/app/App/app.actions.js",
     "importStyle": "{setState}",
     "description": "",
-    "lineNumber": 2,
+    "lineNumber": 9,
     "params": [
       {
         "nullable": null,
@@ -457,7 +463,7 @@
     "__docId__": 24,
     "kind": "file",
     "name": "patate-music-player/app/Layout/actions/AppendSearchResults.action.js",
-    "content": "import { List } from 'immutable';\r\n\r\nclass AppendSearchResults {\r\n  execute(state, results) {\r\n    let searchResults = List(results);\r\n\r\n    if (state.get('searchResults')) {\r\n      searchResults = state.get('searchResults').merge(searchResults);\r\n    }\r\n\r\n    return state.set('searchResults', searchResults);\r\n  }\r\n}\r\n\r\nexport default new AppendSearchResults();\r\n",
+    "content": "import { List } from 'immutable';\r\n\r\nclass AppendSearchResults {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, results) {\r\n    let searchResults = List(results);\r\n\r\n    if (state.get('searchResults')) {\r\n      searchResults = state.get('searchResults').merge(searchResults);\r\n    }\r\n\r\n    return state.set('searchResults', searchResults);\r\n  }\r\n}\r\n\r\nexport default new AppendSearchResults();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Layout/actions/AppendSearchResults.action.js",
     "access": "public",
@@ -491,8 +497,8 @@
     "static": false,
     "longname": "patate-music-player/app/Layout/actions/AppendSearchResults.action.js~AppendSearchResults#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -533,7 +539,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Layout/actions/AppendSearchResults.action.js",
     "importStyle": "appendSearchResults",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 18,
     "undocument": true,
     "type": {
       "types": [
@@ -545,7 +551,7 @@
     "__docId__": 28,
     "kind": "file",
     "name": "patate-music-player/app/Layout/actions/ClearSearchResults.action.js",
-    "content": "import { List } from 'immutable';\r\n\r\nclass ClearSearchResults {\r\n  execute(state) {\r\n    return state.set('searchResults', List());\r\n  }\r\n}\r\n\r\nexport default new ClearSearchResults();\r\n",
+    "content": "import { List } from 'immutable';\r\n\r\nclass ClearSearchResults {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    return state.set('searchResults', List());\r\n  }\r\n}\r\n\r\nexport default new ClearSearchResults();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Layout/actions/ClearSearchResults.action.js",
     "access": "public",
@@ -579,8 +585,8 @@
     "static": false,
     "longname": "patate-music-player/app/Layout/actions/ClearSearchResults.action.js~ClearSearchResults#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -611,7 +617,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Layout/actions/ClearSearchResults.action.js",
     "importStyle": "clearSearchResults",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 12,
     "undocument": true,
     "type": {
       "types": [
@@ -623,7 +629,7 @@
     "__docId__": 32,
     "kind": "file",
     "name": "patate-music-player/app/Layout/actions/EndSearch.action.js",
-    "content": "\r\nclass EndSearch {\r\n  execute(state) {\r\n    return state.set('searchQuery', '');\r\n  }\r\n}\r\n\r\nexport default new EndSearch();\r\n",
+    "content": "\r\nclass EndSearch {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    return state.set('searchQuery', '');\r\n  }\r\n}\r\n\r\nexport default new EndSearch();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Layout/actions/EndSearch.action.js",
     "access": "public",
@@ -657,8 +663,8 @@
     "static": false,
     "longname": "patate-music-player/app/Layout/actions/EndSearch.action.js~EndSearch#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 3,
+    "description": "Reduce the state ",
+    "lineNumber": 6,
     "params": [
       {
         "nullable": null,
@@ -689,7 +695,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Layout/actions/EndSearch.action.js",
     "importStyle": "endSearch",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 11,
     "undocument": true,
     "type": {
       "types": [
@@ -712,7 +718,7 @@
     "__docId__": 37,
     "kind": "file",
     "name": "patate-music-player/app/Layout/actions/Search.action.js",
-    "content": "\r\nclass Search {\r\n  execute(state, keywords) {\r\n    return state.set('searchQuery', keywords);\r\n  }\r\n}\r\n\r\nexport default new Search();\r\n",
+    "content": "\r\nclass Search {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, keywords) {\r\n    return state.set('searchQuery', keywords);\r\n  }\r\n}\r\n\r\nexport default new Search();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Layout/actions/Search.action.js",
     "access": "public",
@@ -746,8 +752,8 @@
     "static": false,
     "longname": "patate-music-player/app/Layout/actions/Search.action.js~Search#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 3,
+    "description": "Reduce the state ",
+    "lineNumber": 6,
     "params": [
       {
         "nullable": null,
@@ -788,7 +794,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Layout/actions/Search.action.js",
     "importStyle": "search",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 11,
     "undocument": true,
     "type": {
       "types": [
@@ -898,7 +904,7 @@
     "__docId__": 47,
     "kind": "file",
     "name": "patate-music-player/app/Layout/layout.actions.js",
-    "content": "\r\nexport function appendSearchResults(results) {\r\n  return {\r\n    type: 'APPEND_SEARCH_RESULTS',\r\n    results,\r\n  };\r\n}\r\n\r\nexport function clearSearchResults() {\r\n  return {\r\n    type: 'CLEAR_SEARCH_RESULTS',\r\n  };\r\n}\r\n\r\nexport function search(keywords) {\r\n  return {\r\n    type: 'SEARCH',\r\n    keywords,\r\n  };\r\n}\r\n\r\n\r\nexport function endSearch() {\r\n  return {\r\n    type: 'ENDSEARCH',\r\n  };\r\n}\r\n",
+    "content": "\r\n/**\r\n * This function creates an action named \"APPEND_SEARCH_RESULTS\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator The action creator\r\n */\r\nexport function appendSearchResults(results) {\r\n  return {\r\n    type: 'APPEND_SEARCH_RESULTS',\r\n    results,\r\n  };\r\n}\r\n\r\n/**\r\n * This function creates an action named \"CLEAR_SEARCH_RESULTS\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator The action creator\r\n */\r\nexport function clearSearchResults() {\r\n  return {\r\n    type: 'CLEAR_SEARCH_RESULTS',\r\n  };\r\n}\r\n\r\n/**\r\n * This function creates an action named \"SEARCH\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator The action creator\r\n */\r\nexport function search(keywords) {\r\n  return {\r\n    type: 'SEARCH',\r\n    keywords,\r\n  };\r\n}\r\n\r\n/**\r\n * This function creates an action named \"ENDSEARCH\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator The action creator\r\n */\r\nexport function endSearch() {\r\n  return {\r\n    type: 'ENDSEARCH',\r\n  };\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Layout/layout.actions.js",
     "access": "public",
@@ -918,25 +924,24 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Layout/layout.actions.js",
     "importStyle": "{appendSearchResults}",
-    "description": "",
-    "lineNumber": 2,
+    "description": "This function creates an action named \"APPEND_SEARCH_RESULTS\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 8,
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator The action creator"
+    },
     "params": [
       {
-        "nullable": null,
+        "name": "results",
         "types": [
           "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "results",
-        "description": ""
+        ]
       }
-    ],
-    "return": {
-      "types": [
-        "{\"type\": string, \"results\": *}"
-      ]
-    }
+    ]
   },
   {
     "__docId__": 49,
@@ -951,14 +956,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Layout/layout.actions.js",
     "importStyle": "{clearSearchResults}",
-    "description": "",
-    "lineNumber": 9,
-    "params": [],
+    "description": "This function creates an action named \"CLEAR_SEARCH_RESULTS\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 21,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator The action creator"
+    },
+    "params": []
   },
   {
     "__docId__": 50,
@@ -973,25 +981,24 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Layout/layout.actions.js",
     "importStyle": "{search}",
-    "description": "",
-    "lineNumber": 15,
+    "description": "This function creates an action named \"SEARCH\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 33,
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator The action creator"
+    },
     "params": [
       {
-        "nullable": null,
+        "name": "keywords",
         "types": [
           "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "keywords",
-        "description": ""
+        ]
       }
-    ],
-    "return": {
-      "types": [
-        "{\"type\": string, \"keywords\": *}"
-      ]
-    }
+    ]
   },
   {
     "__docId__": 51,
@@ -1006,14 +1013,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Layout/layout.actions.js",
     "importStyle": "{endSearch}",
-    "description": "",
-    "lineNumber": 23,
-    "params": [],
+    "description": "This function creates an action named \"ENDSEARCH\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 46,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator The action creator"
+    },
+    "params": []
   },
   {
     "__docId__": 52,
@@ -1360,7 +1370,7 @@
     "__docId__": 68,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/ClearQueue.action.js",
-    "content": "import { List } from 'immutable';\r\n\r\nclass ClearQueue {\r\n  execute(state) {\r\n    return state.set('queue', List());\r\n  }\r\n}\r\n\r\nexport default new ClearQueue();\r\n",
+    "content": "import { List } from 'immutable';\r\n\r\nclass ClearQueue {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    return state.set('queue', List());\r\n  }\r\n}\r\n\r\nexport default new ClearQueue();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/ClearQueue.action.js",
     "access": "public",
@@ -1394,8 +1404,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/ClearQueue.action.js~ClearQueue#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -1426,7 +1436,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/ClearQueue.action.js",
     "importStyle": "clearQueue",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 12,
     "undocument": true,
     "type": {
       "types": [
@@ -1438,7 +1448,7 @@
     "__docId__": 72,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/Enqueue.action.js",
-    "content": "import { List } from 'immutable';\r\n\r\nclass Enqueue {\r\n  execute(state, tracks) {\r\n    if (tracks) {\r\n      let localTracks = tracks;\r\n      if (!List.isList(localTracks)) {\r\n        localTracks = List.of(localTracks);\r\n      }\r\n      return state.set(\r\n        'queue',\r\n        state.get('queue').concat(localTracks),\r\n      );\r\n    } else if (state.get('tracks').size > 0) {\r\n      return state.set(\r\n        'queue',\r\n        state.get('queue').push(state.getIn(['tracks', 0])),\r\n      );\r\n    }\r\n\r\n    return null;\r\n  }\r\n}\r\n\r\nexport default new Enqueue();\r\n",
+    "content": "import { List } from 'immutable';\r\n\r\nclass Enqueue {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, tracks) {\r\n    if (tracks) {\r\n      let localTracks = tracks;\r\n      if (!List.isList(localTracks)) {\r\n        localTracks = List.of(localTracks);\r\n      }\r\n      return state.set(\r\n        'queue',\r\n        state.get('queue').concat(localTracks),\r\n      );\r\n    } else if (state.get('tracks').size > 0) {\r\n      return state.set(\r\n        'queue',\r\n        state.get('queue').push(state.getIn(['tracks', 0])),\r\n      );\r\n    }\r\n\r\n    return null;\r\n  }\r\n}\r\n\r\nexport default new Enqueue();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/Enqueue.action.js",
     "access": "public",
@@ -1472,8 +1482,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/Enqueue.action.js~Enqueue#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -1514,7 +1524,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/Enqueue.action.js",
     "importStyle": "enqueue",
     "description": null,
-    "lineNumber": 25,
+    "lineNumber": 28,
     "undocument": true,
     "type": {
       "types": [
@@ -1537,7 +1547,7 @@
     "__docId__": 77,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/Next.action.js",
-    "content": "import Sound from 'react-sound';\r\n\r\nclass Next {\r\n  execute(state) {\r\n    const currentTrack = state.get('queue').get(0);\r\n\r\n    if (state.get('queue').size === 1) {\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.STOPPED);\r\n    }\r\n\r\n    return state.set(\r\n      'queue',\r\n      state.get('queue').shift(),\r\n    ).set(\r\n      'history',\r\n      state.get('history').push(currentTrack),\r\n    );\r\n  }\r\n}\r\n\r\nexport default new Next();\r\n",
+    "content": "import Sound from 'react-sound';\r\n\r\nclass Next {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    const currentTrack = state.get('queue').get(0);\r\n\r\n    if (state.get('queue').size === 1) {\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.STOPPED);\r\n    }\r\n\r\n    return state.set(\r\n      'queue',\r\n      state.get('queue').shift(),\r\n    ).set(\r\n      'history',\r\n      state.get('history').push(currentTrack),\r\n    );\r\n  }\r\n}\r\n\r\nexport default new Next();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/Next.action.js",
     "access": "public",
@@ -1571,8 +1581,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/Next.action.js~Next#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -1603,7 +1613,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/Next.action.js",
     "importStyle": "next",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 24,
     "undocument": true,
     "type": {
       "types": [
@@ -1615,7 +1625,7 @@
     "__docId__": 81,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/Play.action.js",
-    "content": "import Sound from 'react-sound';\r\n\r\nclass Play {\r\n  execute(state) {\r\n    if (state.get('queue').size > 0) {\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.PLAYING);\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new Play();\r\n",
+    "content": "import Sound from 'react-sound';\r\n\r\nclass Play {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    if (state.get('queue').size > 0) {\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.PLAYING);\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new Play();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/Play.action.js",
     "access": "public",
@@ -1649,8 +1659,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/Play.action.js~Play#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -1681,7 +1691,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/Play.action.js",
     "importStyle": "play",
     "description": null,
-    "lineNumber": 13,
+    "lineNumber": 16,
     "undocument": true,
     "type": {
       "types": [
@@ -1693,7 +1703,7 @@
     "__docId__": 85,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/Playing.action.js",
-    "content": "\r\nclass Playing {\r\n  execute(state, audioStatus) {\r\n    return state.setIn(['playback', 'elapsed'], audioStatus.elapsed)\r\n      .setIn(['playback', 'total'], audioStatus.total)\r\n      .setIn(['playback', 'position'], audioStatus.position);\r\n  }\r\n}\r\n\r\nexport default new Playing();\r\n",
+    "content": "\r\nclass Playing {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, audioStatus) {\r\n    return state.setIn(['playback', 'elapsed'], audioStatus.elapsed)\r\n      .setIn(['playback', 'total'], audioStatus.total)\r\n      .setIn(['playback', 'position'], audioStatus.position);\r\n  }\r\n}\r\n\r\nexport default new Playing();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/Playing.action.js",
     "access": "public",
@@ -1727,8 +1737,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/Playing.action.js~Playing#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 3,
+    "description": "Reduce the state ",
+    "lineNumber": 6,
     "params": [
       {
         "nullable": null,
@@ -1769,7 +1779,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/Playing.action.js",
     "importStyle": "playing",
     "description": null,
-    "lineNumber": 10,
+    "lineNumber": 13,
     "undocument": true,
     "type": {
       "types": [
@@ -1781,7 +1791,7 @@
     "__docId__": 89,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/Prev.action.js",
-    "content": "\r\nclass Prev {\r\n  execute(state) {\r\n    if (state.get('history').size > 0) {\r\n      const prevTrack = state.get('history').peek();\r\n\r\n      return state.set('history',\r\n        state.get('history').shift()).set('queue',\r\n        state.get('queue').insert(0, prevTrack));\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new Prev();\r\n",
+    "content": "\r\nclass Prev {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    if (state.get('history').size > 0) {\r\n      const prevTrack = state.get('history').peek();\r\n\r\n      return state.set('history',\r\n        state.get('history').shift()).set('queue',\r\n        state.get('queue').insert(0, prevTrack));\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new Prev();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/Prev.action.js",
     "access": "public",
@@ -1815,8 +1825,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/Prev.action.js~Prev#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 3,
+    "description": "Reduce the state ",
+    "lineNumber": 6,
     "params": [
       {
         "nullable": null,
@@ -1847,7 +1857,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/Prev.action.js",
     "importStyle": "prev",
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 19,
     "undocument": true,
     "type": {
       "types": [
@@ -1859,7 +1869,7 @@
     "__docId__": 93,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/Stop.action.js",
-    "content": "import Sound from 'react-sound';\r\n\r\nclass Stop {\r\n  execute(state) {\r\n    return state.setIn(['playback', 'playStatus'], Sound.status.STOPPED);\r\n  }\r\n}\r\n\r\nexport default new Stop();\r\n",
+    "content": "import Sound from 'react-sound';\r\n\r\nclass Stop {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    return state.setIn(['playback', 'playStatus'], Sound.status.STOPPED);\r\n  }\r\n}\r\n\r\nexport default new Stop();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/Stop.action.js",
     "access": "public",
@@ -1893,8 +1903,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/Stop.action.js~Stop#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -1925,7 +1935,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/Stop.action.js",
     "importStyle": "stop",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 12,
     "undocument": true,
     "type": {
       "types": [
@@ -1937,7 +1947,7 @@
     "__docId__": 97,
     "kind": "file",
     "name": "patate-music-player/app/Player/actions/TogglePlay.action.js",
-    "content": "import Sound from 'react-sound';\r\n\r\nclass TogglePlay {\r\n  execute(state) {\r\n    if (state.get('queue').size > 0) {\r\n      if (state.getIn(['playback', 'playStatus']) === Sound.status.PLAYING) {\r\n        return state.setIn(['playback', 'playStatus'], Sound.status.PAUSED);\r\n      }\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.PLAYING);\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new TogglePlay();\r\n",
+    "content": "import Sound from 'react-sound';\r\n\r\nclass TogglePlay {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    if (state.get('queue').size > 0) {\r\n      if (state.getIn(['playback', 'playStatus']) === Sound.status.PLAYING) {\r\n        return state.setIn(['playback', 'playStatus'], Sound.status.PAUSED);\r\n      }\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.PLAYING);\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new TogglePlay();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/actions/TogglePlay.action.js",
     "access": "public",
@@ -1971,8 +1981,8 @@
     "static": false,
     "longname": "patate-music-player/app/Player/actions/TogglePlay.action.js~TogglePlay#execute",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
+    "description": "Reduce the state ",
+    "lineNumber": 7,
     "params": [
       {
         "nullable": null,
@@ -2003,7 +2013,7 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/actions/TogglePlay.action.js",
     "importStyle": "togglePlay",
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 19,
     "undocument": true,
     "type": {
       "types": [
@@ -2302,7 +2312,7 @@
     "__docId__": 117,
     "kind": "file",
     "name": "patate-music-player/app/Player/player.actions.js",
-    "content": "\r\nexport function toggleplay() {\r\n  return {\r\n    type: 'TOGGLEPLAY',\r\n  };\r\n}\r\nexport function play() {\r\n  return {\r\n    type: 'PLAY',\r\n  };\r\n}\r\n\r\nexport function stop() {\r\n  return {\r\n    type: 'STOP',\r\n  };\r\n}\r\n\r\nexport function playing(audioStatus) {\r\n  return {\r\n    type: 'PLAYING',\r\n    audioStatus,\r\n  };\r\n}\r\n\r\n/**\r\n   * Create an action to enqueue a list of tracks\r\n   * @param tracks - List of tracks to enqueue.\r\n   */\r\nexport function enqueue(tracks = null) {\r\n  return {\r\n    type: 'ENQUEUE',\r\n    tracks,\r\n  };\r\n}\r\n\r\nexport function clearQueue() {\r\n  return {\r\n    type: 'CLEAR_QUEUE',\r\n  };\r\n}\r\n\r\nexport function next() {\r\n  return {\r\n    type: 'NEXT',\r\n  };\r\n}\r\n\r\nexport function prev() {\r\n  return {\r\n    type: 'PREV',\r\n  };\r\n}\r\n",
+    "content": "\r\n/**\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function toggleplay() {\r\n  return {\r\n    type: 'TOGGLEPLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function play() {\r\n  return {\r\n    type: 'PLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function stop() {\r\n  return {\r\n    type: 'STOP',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n */\r\nexport function playing(audioStatus) {\r\n  return {\r\n    type: 'PLAYING',\r\n    audioStatus,\r\n  };\r\n}\r\n\r\n/**\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n */\r\nexport function enqueue(tracks = null) {\r\n  return {\r\n    type: 'ENQUEUE',\r\n    tracks,\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function clearQueue() {\r\n  return {\r\n    type: 'CLEAR_QUEUE',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function next() {\r\n  return {\r\n    type: 'NEXT',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function prev() {\r\n  return {\r\n    type: 'PREV',\r\n  };\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/player.actions.js",
     "access": "public",
@@ -2322,14 +2332,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{toggleplay}",
-    "description": "",
-    "lineNumber": 2,
-    "params": [],
+    "description": "Creates an action named \"TOGGLEPLAY\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 8,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
   },
   {
     "__docId__": 119,
@@ -2344,14 +2357,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{play}",
-    "description": "",
-    "lineNumber": 7,
-    "params": [],
+    "description": "Creates an action named \"PLAY\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 20,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
   },
   {
     "__docId__": 120,
@@ -2366,14 +2382,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{stop}",
-    "description": "",
-    "lineNumber": 13,
-    "params": [],
+    "description": "Creates an action named \"STOP\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 32,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
   },
   {
     "__docId__": 121,
@@ -2388,8 +2407,8 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{playing}",
-    "description": "",
-    "lineNumber": 19,
+    "description": "Creates an action named \"PLAYING\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 45,
     "params": [
       {
         "nullable": null,
@@ -2399,13 +2418,16 @@
         "spread": false,
         "optional": false,
         "name": "audioStatus",
-        "description": ""
+        "description": "The currect status (time elapsed, etc.) of the dom player"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string, \"audioStatus\": *}"
-      ]
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
     }
   },
   {
@@ -2422,23 +2444,26 @@
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{enqueue}",
     "description": "Create an action to enqueue a list of tracks",
-    "lineNumber": 30,
+    "lineNumber": 57,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "List"
         ],
         "spread": false,
         "optional": false,
         "name": "tracks",
-        "description": "List of tracks to enqueue."
+        "description": "List of tracks to enqueue"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string, \"tracks\": *}"
-      ]
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
     }
   },
   {
@@ -2454,14 +2479,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{clearQueue}",
-    "description": "",
-    "lineNumber": 37,
-    "params": [],
+    "description": "Creates an action named \"CLEAR_QUEUE\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 70,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
   },
   {
     "__docId__": 124,
@@ -2476,14 +2504,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{next}",
-    "description": "",
-    "lineNumber": 43,
-    "params": [],
+    "description": "Creates an action named \"NEXT\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 82,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
   },
   {
     "__docId__": 125,
@@ -2498,14 +2529,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/Player/player.actions.js",
     "importStyle": "{prev}",
-    "description": "",
-    "lineNumber": 49,
-    "params": [],
+    "description": "Creates an action named \"PREV\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 94,
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string}"
-      ]
-    }
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
   },
   {
     "__docId__": 126,
@@ -2622,7 +2656,7 @@
     "__docId__": 132,
     "kind": "file",
     "name": "patate-music-player/app/Player/player.container.js",
-    "content": "import React, { Component } from 'react';\r\n\r\n// Sound component\r\nimport Sound from 'react-sound';\r\n\r\nimport { autobind } from 'core-decorators';\r\nimport { connect } from 'react-redux';\r\nimport PropTypes from 'prop-types';\r\n\r\n// import * as AppActions from '../App/app.actions';\r\nimport * as PlayerActions from './player.actions';\r\n\r\n// Custom components\r\nimport Details from './components/details.component';\r\nimport Controls from './components/controls.component';\r\nimport Progress from './components/progress.component';\r\n//  import Search from './components/search.component';\r\nimport Footer from './components/footer.component';\r\n\r\n// Utils\r\nimport { formatMilliseconds } from '../utils/time';\r\n\r\n@autobind\r\nexport class Player extends Component {\r\n  getPlayFromPosition() {\r\n    return this.props.playFromPosition || 0;\r\n  }\r\n\r\n  xlArtwork(url) {\r\n    if (url) {\r\n      return url.replace(/large/, 't500x500');\r\n    }\r\n    return null;\r\n  }\r\n\r\n  handleSongPlaying(audio) {\r\n    this.props.playing({\r\n      elapsed: formatMilliseconds(audio.position),\r\n      total: formatMilliseconds(audio.duration),\r\n      position: audio.position / audio.duration,\r\n    });\r\n  }\r\n\r\n  handleSongFinished() {\r\n    this.next();\r\n  }\r\n\r\n  render() {\r\n    const patateStyle = {\r\n      width: '500px',\r\n      height: '500px',\r\n    };\r\n\r\n    patateStyle.backgroundImage = `linear-gradient(\r\n      rgba(0, 0, 0, 0.7),\r\n      rgba(0, 0, 0, 0.7)\r\n    ),\r\n    url(${this.xlArtwork(this.props.trackArtworkUrl)})`;\r\n\r\n    return (\r\n      <div className=\"patate_music\" style={patateStyle}>\r\n        <Details title={this.props.trackTitle} />\r\n        <Sound\r\n          url={this.props.trackStreamUrl}\r\n          playStatus={this.props.playStatus}\r\n          onPlaying={this.handleSongPlaying}\r\n          playFromPosition={this.getPlayFromPosition()}\r\n          onFinishedPlaying={this.handleSongFinished}\r\n        />\r\n        { this.props.playStatus }\r\n        <Controls\r\n          togglePlay={this.props.toggleplay}\r\n          stop={this.props.stop}\r\n          playStatus={this.props.playStatus}\r\n          next={this.props.next}\r\n          backward={this.props.prev}\r\n        />\r\n        <Progress\r\n          elapsed={this.props.elapsed}\r\n          total={this.props.total}\r\n          position={this.props.position}\r\n        />\r\n        <Footer />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nPlayer.propTypes = {\r\n  toggleplay: PropTypes.func.isRequired,\r\n  stop: PropTypes.func.isRequired,\r\n  next: PropTypes.func.isRequired,\r\n  prev: PropTypes.func.isRequired,\r\n  playing: PropTypes.func.isRequired,\r\n  elapsed: PropTypes.string,\r\n  total: PropTypes.string,\r\n  position: PropTypes.number,\r\n  playStatus: PropTypes.string,\r\n  playFromPosition: PropTypes.number.isRequired,\r\n  trackTitle: PropTypes.string,\r\n  trackStreamUrl: PropTypes.string,\r\n  trackArtworkUrl: PropTypes.string,\r\n};\r\n\r\nPlayer.defaultProps = {\r\n  trackArtworkUrl: '',\r\n  trackTitle: 'no title',\r\n  trackStreamUrl: '',\r\n  playStatus: Sound.status.STOPPED,\r\n  position: 0,\r\n  elapsed: '',\r\n  total: '',\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  track: state.get('queue').get(0),\r\n  trackArtworkUrl: state.get('queue').get(0) ? state.get('queue').get(0).artworkUrl : '',\r\n  trackTitle: state.get('queue').get(0) ? state.get('queue').get(0).title : '',\r\n  trackStreamUrl: state.get('queue').get(0) ? state.get('queue').get(0).streamUrl : '',\r\n  playStatus: state.getIn(['playback', 'playStatus']),\r\n  playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),\r\n  elapsed: state.getIn(['playback', 'elapsed']),\r\n  total: state.getIn(['playback', 'total']),\r\n  position: state.getIn(['playback', 'position']),\r\n});\r\n\r\nexport const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);\r\n\r\n\r\n// <Search\r\n//   clientId={this.state.client_id}\r\n//   autoCompleteValue={this.state.autoCompleteValue}\r\n//   tracks={this.state.tracks}\r\n//   handleSelect={this.handleSelect.bind(this)}\r\n//   handleChange={this.handleChange.bind(this)}/>*/\r\n\r\n/*\r\nexport class Player extends Component {\r\n\r\n  handleSelect(value, item){\r\n    this.setState({ autoCompleteValue: value, track: item });\r\n  }\r\n}\r\n*/\r\n",
+    "content": "import React, { Component } from 'react';\r\n\r\n// Sound component\r\nimport Sound from 'react-sound';\r\n\r\nimport { autobind } from 'core-decorators';\r\nimport { connect } from 'react-redux';\r\nimport PropTypes from 'prop-types';\r\n\r\n// import * as AppActions from '../App/app.actions';\r\nimport * as PlayerActions from './player.actions';\r\n\r\n// Custom components\r\nimport Details from './components/details.component';\r\nimport Controls from './components/controls.component';\r\nimport Progress from './components/progress.component';\r\n//  import Search from './components/search.component';\r\nimport Footer from './components/footer.component';\r\n\r\n// Utils\r\nimport { formatMilliseconds } from '../utils/time';\r\n\r\n@autobind\r\nexport class Player extends Component {\r\n  getPlayFromPosition() {\r\n    return this.props.playFromPosition || 0;\r\n  }\r\n\r\n  xlArtwork(url) {\r\n    if (url) {\r\n      return url.replace(/large/, 't500x500');\r\n    }\r\n    return null;\r\n  }\r\n\r\n  handleSongPlaying(audio) {\r\n    this.props.playing({\r\n      elapsed: formatMilliseconds(audio.position),\r\n      total: formatMilliseconds(audio.duration),\r\n      position: audio.position / audio.duration,\r\n    });\r\n  }\r\n\r\n  handleSongFinished() {\r\n    this.next();\r\n  }\r\n\r\n  render() {\r\n    const patateStyle = {\r\n      width: '500px',\r\n      height: '500px',\r\n    };\r\n\r\n    patateStyle.backgroundImage = `linear-gradient(\r\n      rgba(0, 0, 0, 0.7),\r\n      rgba(0, 0, 0, 0.7)\r\n    ),\r\n    url(${this.xlArtwork(this.props.trackArtworkUrl)})`;\r\n\r\n    return (\r\n      <div className=\"patate_music\" style={patateStyle}>\r\n        <Details title={this.props.trackTitle} />\r\n        <Sound\r\n          url={this.props.trackStreamUrl}\r\n          playStatus={this.props.playStatus}\r\n          onPlaying={this.handleSongPlaying}\r\n          playFromPosition={this.getPlayFromPosition()}\r\n          onFinishedPlaying={this.handleSongFinished}\r\n        />\r\n        { this.props.playStatus }\r\n        <Controls\r\n          togglePlay={this.props.toggleplay}\r\n          stop={this.props.stop}\r\n          playStatus={this.props.playStatus}\r\n          next={this.props.next}\r\n          backward={this.props.prev}\r\n        />\r\n        <Progress\r\n          elapsed={this.props.elapsed}\r\n          total={this.props.total}\r\n          position={this.props.position}\r\n        />\r\n        <Footer />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nPlayer.propTypes = {\r\n  toggleplay: PropTypes.func.isRequired,\r\n  stop: PropTypes.func.isRequired,\r\n  next: PropTypes.func.isRequired,\r\n  prev: PropTypes.func.isRequired,\r\n  playing: PropTypes.func.isRequired,\r\n  elapsed: PropTypes.string,\r\n  total: PropTypes.string,\r\n  position: PropTypes.number,\r\n  playStatus: PropTypes.string,\r\n  playFromPosition: PropTypes.number.isRequired,\r\n  trackTitle: PropTypes.string,\r\n  trackStreamUrl: PropTypes.string,\r\n  trackArtworkUrl: PropTypes.string,\r\n};\r\n\r\nPlayer.defaultProps = {\r\n  trackArtworkUrl: '',\r\n  trackTitle: 'no title',\r\n  trackStreamUrl: '',\r\n  playStatus: Sound.status.STOPPED,\r\n  position: 0,\r\n  elapsed: '',\r\n  total: '',\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  track: state.get('queue').get(0),\r\n  trackArtworkUrl: state.get('queue').get(0) ? state.get('queue').get(0).artworkUrl : '',\r\n  trackTitle: state.get('queue').get(0) ? state.get('queue').get(0).title : '',\r\n  trackStreamUrl: state.get('queue').get(0) ? state.get('queue').get(0).streamUrl : '',\r\n  playStatus: state.getIn(['playback', 'playStatus']),\r\n  playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),\r\n  elapsed: state.getIn(['playback', 'elapsed']),\r\n  total: state.getIn(['playback', 'total']),\r\n  position: state.getIn(['playback', 'position']),\r\n});\r\n\r\nexport const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/player.container.js",
     "access": "public",
@@ -4433,7 +4467,7 @@
     "__docId__": 212,
     "kind": "file",
     "name": "patate-music-player/src/model/JamendoProxy.js",
-    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Song from './Song';\r\n\r\nimport Playlist from './Playlist';\r\n\r\nconst clientId = '58c2e328';\r\n\r\nexport default class JamendoProxy {\r\n  constructor() {\r\n    this.name = 'Jamendo';\r\n    this.logo = 'http://www.userlogos.org/files/logos/43932_aleksandr009/jamendo_1_1.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.authorizationUrl = null;\r\n  }\r\n\r\n  setStatus(status) {\r\n    const proxy = new JamendoProxy();\r\n    proxy.status = status;\r\n    this.accessToken = null;\r\n    return proxy;\r\n  }\r\n\r\n  setAccessToken() {\r\n    const proxy = new JamendoProxy();\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  needsAuthentification() {\r\n    return false;\r\n  }\r\n\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  prepareUrl(url) {\r\n    return `${url}?client_id=${clientId}`;\r\n  }\r\n\r\n  async searchTracks(keywords) {\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.jamendo.com/v3.0/tracks/?namesearch=${keywords}&client_id=${clientId}&format=jsonpretty&limit=200`);\r\n\r\n      const tracks = response.data.results;\r\n\r\n      if (tracks.length === 0) {\r\n        return null;\r\n      }\r\n\r\n      const songs = [];\r\n\r\n      tracks.forEach((track) => {\r\n        songs.push(new Song(\r\n          track.name,\r\n          track.audio,\r\n          track.album_image,\r\n        ));\r\n      });\r\n\r\n      return songs;\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return null;\r\n  }\r\n\r\n  async loadRandomPlaylist() {\r\n    return this.searchPlaylists('pop').get(0);\r\n  }\r\n\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const { id } = playlist;\r\n\r\n    const response = await Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&id=${id}&track_type=albumtrack`);\r\n\r\n    if (response.data.results === undefined\r\n      || response.data.results.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const playlistData = response.data.results[0];\r\n    const { tracks, zip, name } = playlistData;\r\n\r\n    const songs = Object.keys(tracks).map((key) => {\r\n      const track = tracks[key];\r\n      return new Song(\r\n        track.name,\r\n        track.audio,\r\n        track.album_image,\r\n      );\r\n    });\r\n\r\n    return new Playlist(name, this.name, zip, this.logo, songs);\r\n  }\r\n\r\n  async searchPlaylists(query) {\r\n    let playlists = [];\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.jamendo.com/v3.0/playlists/?client_id=${clientId}&format=jsonpretty&limit=10&namesearch=${query}&track_type=albumtrack`);\r\n\r\n      const playlistsData = response.data.results;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
+    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Song from './Song';\r\n\r\nimport Playlist from './Playlist';\r\n\r\nconst clientId = '58c2e328';\r\n\r\n/**\r\n  * JamendoProxy - Proxy interface to Jamendo API (This class is immutable)\r\n  */\r\nexport default class JamendoProxy {\r\n  /**\r\n   * constructor - Construct the proxy\r\n   *\r\n   * @return {JamendoProxy} Returns the proxy\r\n   */\r\n  constructor() {\r\n    this.name = 'Jamendo';\r\n    this.logo = 'http://www.userlogos.org/files/logos/43932_aleksandr009/jamendo_1_1.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.authorizationUrl = null;\r\n  }\r\n\r\n  /**\r\n   * setStatus - Change the status of the proxy to a new state\r\n   *\r\n   * @param {string} status The new status\r\n   *\r\n   * @return {JamendoProxy} The new proxy with the new status\r\n   */\r\n  setStatus(status) {\r\n    const proxy = new JamendoProxy();\r\n    proxy.status = status;\r\n    this.accessToken = null;\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * setAccessToken - Set the status to connected\r\n   *\r\n   * @return {JamendoProxy} Return the new connected proxy\r\n   */\r\n  setAccessToken() {\r\n    const proxy = new JamendoProxy();\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * needsAuthentification - Jamendo does not need a authentifation process\r\n   *\r\n   * @return {boolean} false\r\n   */\r\n  needsAuthentification() {\r\n    return false;\r\n  }\r\n\r\n  /**\r\n   * isConnected - Check if the proxy is connected\r\n   *\r\n   * @return {boolean} Is proxy connected\r\n   */\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  /**\r\n   * prepareUrl - Append the client id to an URL query\r\n   *\r\n   * @param {string} url The URL which will be appended\r\n   *\r\n   * @return {string} The appended URL\r\n   */\r\n  prepareUrl(url) {\r\n    return `${url}?client_id=${clientId}`;\r\n  }\r\n\r\n  /**\r\n   * searchTracks - Async function to get an array of tracks from keywords\r\n   *\r\n   * @param {string} keywords The searched name for the tracks\r\n   *\r\n   * @return {Array} An array of tracks\r\n   */\r\n  async searchTracks(keywords) {\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.jamendo.com/v3.0/tracks/?namesearch=${keywords}&client_id=${clientId}&format=jsonpretty&limit=200`);\r\n\r\n      const tracks = response.data.results;\r\n\r\n      if (tracks.length === 0) {\r\n        return null;\r\n      }\r\n\r\n      const songs = [];\r\n\r\n      tracks.forEach((track) => {\r\n        songs.push(new Song(\r\n          track.name,\r\n          track.audio,\r\n          track.album_image,\r\n        ));\r\n      });\r\n\r\n      return songs;\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return null;\r\n  }\r\n\r\n  /**\r\n   * fetchPlaylistDetails - Fetch a playlist from an playlist ID\r\n   *\r\n   * @param {string} playlist The playlist ID\r\n   *\r\n   * @return {Playlist} The playlist\r\n   */\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const { id } = playlist;\r\n\r\n    const response = await Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&id=${id}&track_type=albumtrack`);\r\n\r\n    if (response.data.results === undefined\r\n      || response.data.results.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const playlistData = response.data.results[0];\r\n    const { tracks, zip, name } = playlistData;\r\n\r\n    const songs = Object.keys(tracks).map((key) => {\r\n      const track = tracks[key];\r\n      return new Song(\r\n        track.name,\r\n        track.audio,\r\n        track.album_image,\r\n      );\r\n    });\r\n\r\n    return new Playlist(name, this.name, zip, this.logo, songs);\r\n  }\r\n\r\n  /**\r\n   * searchPlaylists - Search a set of playlists from a query\r\n   *\r\n   * @param {string} query The query of the search\r\n   *\r\n   * @return {Array} The set of playlists\r\n   */\r\n  async searchPlaylists(query) {\r\n    let playlists = [];\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.jamendo.com/v3.0/playlists/?client_id=${clientId}&format=jsonpretty&limit=10&namesearch=${query}&track_type=albumtrack`);\r\n\r\n      const playlistsData = response.data.results;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/src/model/JamendoProxy.js",
     "access": "public",
@@ -4472,9 +4506,8 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/src/model/JamendoProxy.js",
     "importStyle": "JamendoProxy",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
+    "description": "JamendoProxy - Proxy interface to Jamendo API (This class is immutable)",
+    "lineNumber": 13,
     "interface": false
   },
   {
@@ -4487,9 +4520,16 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true
+    "description": "constructor - Construct the proxy",
+    "lineNumber": 19,
+    "return": {
+      "nullable": null,
+      "types": [
+        "JamendoProxy"
+      ],
+      "spread": false,
+      "description": "Returns the proxy"
+    }
   },
   {
     "__docId__": 216,
@@ -4500,7 +4540,7 @@
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#name",
     "access": "public",
     "description": null,
-    "lineNumber": 12,
+    "lineNumber": 20,
     "undocument": true,
     "type": {
       "types": [
@@ -4517,7 +4557,7 @@
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#logo",
     "access": "public",
     "description": null,
-    "lineNumber": 13,
+    "lineNumber": 21,
     "undocument": true,
     "type": {
       "types": [
@@ -4534,7 +4574,7 @@
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#status",
     "access": "public",
     "description": null,
-    "lineNumber": 14,
+    "lineNumber": 22,
     "undocument": true,
     "type": {
       "types": [
@@ -4551,7 +4591,7 @@
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#authorizationUrl",
     "access": "public",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 23,
     "undocument": true,
     "type": {
       "types": [
@@ -4569,24 +4609,27 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#setStatus",
     "access": "public",
-    "description": "",
-    "lineNumber": 18,
+    "description": "setStatus - Change the status of the proxy to a new state ",
+    "lineNumber": 33,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "status",
-        "description": ""
+        "description": "The new status"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "JamendoProxy"
+      ],
+      "spread": false,
+      "description": "The new proxy with the new status"
     }
   },
   {
@@ -4598,7 +4641,7 @@
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#accessToken",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 36,
     "undocument": true,
     "type": {
       "types": [
@@ -4616,14 +4659,17 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#setAccessToken",
     "access": "public",
-    "description": "",
-    "lineNumber": 25,
-    "params": [],
+    "description": "setAccessToken - Set the status to connected ",
+    "lineNumber": 45,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "JamendoProxy"
+      ],
+      "spread": false,
+      "description": "Return the new connected proxy"
+    },
+    "params": []
   },
   {
     "__docId__": 223,
@@ -4635,14 +4681,17 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#needsAuthentification",
     "access": "public",
-    "description": "",
-    "lineNumber": 31,
-    "params": [],
+    "description": "needsAuthentification - Jamendo does not need a authentifation process ",
+    "lineNumber": 56,
     "return": {
+      "nullable": null,
       "types": [
         "boolean"
-      ]
-    }
+      ],
+      "spread": false,
+      "description": "false"
+    },
+    "params": []
   },
   {
     "__docId__": 224,
@@ -4654,14 +4703,17 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#isConnected",
     "access": "public",
-    "description": "",
-    "lineNumber": 35,
-    "params": [],
+    "description": "isConnected - Check if the proxy is connected ",
+    "lineNumber": 65,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Is proxy connected"
+    },
+    "params": []
   },
   {
     "__docId__": 225,
@@ -4673,24 +4725,27 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#prepareUrl",
     "access": "public",
-    "description": "",
-    "lineNumber": 39,
+    "description": "prepareUrl - Append the client id to an URL query ",
+    "lineNumber": 76,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "url",
-        "description": ""
+        "description": "The URL which will be appended"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
         "string"
-      ]
+      ],
+      "spread": false,
+      "description": "The appended URL"
     }
   },
   {
@@ -4703,47 +4758,31 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#searchTracks",
     "access": "public",
-    "description": "",
-    "lineNumber": 43,
+    "description": "searchTracks - Async function to get an array of tracks from keywords ",
+    "lineNumber": 87,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "keywords",
-        "description": ""
+        "description": "The searched name for the tracks"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "An array of tracks"
     }
   },
   {
     "__docId__": 227,
-    "kind": "method",
-    "name": "loadRandomPlaylist",
-    "memberof": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#loadRandomPlaylist",
-    "access": "public",
-    "description": "",
-    "lineNumber": 72,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 228,
     "kind": "method",
     "name": "fetchPlaylistDetails",
     "memberof": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4753,7 +4792,7 @@
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#fetchPlaylistDetails",
     "access": "public",
     "description": "",
-    "lineNumber": 77,
+    "lineNumber": 124,
     "params": [
       {
         "nullable": null,
@@ -4779,7 +4818,7 @@
     }
   },
   {
-    "__docId__": 229,
+    "__docId__": 228,
     "kind": "method",
     "name": "searchPlaylists",
     "memberof": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4788,31 +4827,34 @@
     "static": false,
     "longname": "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#searchPlaylists",
     "access": "public",
-    "description": "",
-    "lineNumber": 102,
+    "description": "searchPlaylists - Search a set of playlists from a query ",
+    "lineNumber": 156,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "query",
-        "description": ""
+        "description": "The query of the search"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "The set of playlists"
     }
   },
   {
-    "__docId__": 230,
+    "__docId__": 229,
     "kind": "file",
     "name": "patate-music-player/src/model/Playlist.js",
-    "content": "import { List } from 'immutable';\r\n\r\nexport default class Playlist {\r\n  constructor(name, origin, uri, art, songs) {\r\n    this.name = name;\r\n    this.origin = origin;\r\n    this.uri = uri;\r\n    this.art = art;\r\n    this.songs = List(songs);\r\n  }\r\n}\r\n",
+    "content": "import { List } from 'immutable';\r\n\r\n/**\r\n * This class is a data structure to hold all relevant information\r\n * about a playlist\r\n */\r\nexport default class Playlist {\r\n  /**\r\n   * constructor - The constructor of this class\r\n   *\r\n   * @param  {string} name   The name of the playlist\r\n   * @param  {string} origin The name of the service\r\n   * @param  {string} uri    Unique ID of the playlist\r\n   * @param  {string} art    URL of the logo\r\n   * @param  {List} songs    List of songs\r\n   * @return {Playlist}      The constructed object\r\n   */\r\n  constructor(name, origin, uri, art, songs) {\r\n    this.name = name;\r\n    this.origin = origin;\r\n    this.uri = uri;\r\n    this.art = art;\r\n    this.songs = List(songs);\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/src/model/Playlist.js",
     "access": "public",
@@ -4820,7 +4862,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 231,
+    "__docId__": 230,
     "kind": "class",
     "name": "Playlist",
     "memberof": "patate-music-player/src/model/Playlist.js",
@@ -4830,13 +4872,12 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/src/model/Playlist.js",
     "importStyle": "Playlist",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "This class is a data structure to hold all relevant information\nabout a playlist",
+    "lineNumber": 7,
     "interface": false
   },
   {
-    "__docId__": 232,
+    "__docId__": 231,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
@@ -4845,12 +4886,71 @@
     "static": false,
     "longname": "patate-music-player/src/model/Playlist.js~Playlist#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true
+    "description": "constructor - The constructor of this class",
+    "lineNumber": 18,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "The name of the playlist"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "origin",
+        "description": "The name of the service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uri",
+        "description": "Unique ID of the playlist"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "art",
+        "description": "URL of the logo"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "List"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "songs",
+        "description": "List of songs"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Playlist"
+      ],
+      "spread": false,
+      "description": "The constructed object"
+    }
   },
   {
-    "__docId__": 233,
+    "__docId__": 232,
     "kind": "member",
     "name": "name",
     "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
@@ -4858,7 +4958,24 @@
     "longname": "patate-music-player/src/model/Playlist.js~Playlist#name",
     "access": "public",
     "description": null,
-    "lineNumber": 5,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 233,
+    "kind": "member",
+    "name": "origin",
+    "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
+    "static": false,
+    "longname": "patate-music-player/src/model/Playlist.js~Playlist#origin",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
     "undocument": true,
     "type": {
       "types": [
@@ -4869,13 +4986,13 @@
   {
     "__docId__": 234,
     "kind": "member",
-    "name": "origin",
+    "name": "uri",
     "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
     "static": false,
-    "longname": "patate-music-player/src/model/Playlist.js~Playlist#origin",
+    "longname": "patate-music-player/src/model/Playlist.js~Playlist#uri",
     "access": "public",
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 21,
     "undocument": true,
     "type": {
       "types": [
@@ -4886,13 +5003,13 @@
   {
     "__docId__": 235,
     "kind": "member",
-    "name": "uri",
+    "name": "art",
     "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
     "static": false,
-    "longname": "patate-music-player/src/model/Playlist.js~Playlist#uri",
+    "longname": "patate-music-player/src/model/Playlist.js~Playlist#art",
     "access": "public",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 22,
     "undocument": true,
     "type": {
       "types": [
@@ -4903,13 +5020,13 @@
   {
     "__docId__": 236,
     "kind": "member",
-    "name": "art",
+    "name": "songs",
     "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
     "static": false,
-    "longname": "patate-music-player/src/model/Playlist.js~Playlist#art",
+    "longname": "patate-music-player/src/model/Playlist.js~Playlist#songs",
     "access": "public",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 23,
     "undocument": true,
     "type": {
       "types": [
@@ -4919,26 +5036,9 @@
   },
   {
     "__docId__": 237,
-    "kind": "member",
-    "name": "songs",
-    "memberof": "patate-music-player/src/model/Playlist.js~Playlist",
-    "static": false,
-    "longname": "patate-music-player/src/model/Playlist.js~Playlist#songs",
-    "access": "public",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 238,
     "kind": "file",
     "name": "patate-music-player/src/model/Song.js",
-    "content": "export default class Song {\r\n  constructor(title, streamUrl, artworkUrl) {\r\n    this.title = title;\r\n    this.streamUrl = streamUrl;\r\n    this.artworkUrl = artworkUrl;\r\n  }\r\n}\r\n",
+    "content": "/**\r\n* Song - This song is a data structure holding information for a track\r\n*/\r\nexport default class Song {\r\n  /**\r\n   * constructor - Construct a song\r\n   *\r\n   * @param {string} title      Title of the song\r\n   * @param {string} streamUrl  Downloadable link of the song\r\n   * @param {string} artworkUrl Url of the picture linked to this song\r\n   *\r\n   * @return {Song} The constructed object\r\n   */\r\n  constructor(title, streamUrl, artworkUrl) {\r\n    this.title = title;\r\n    this.streamUrl = streamUrl;\r\n    this.artworkUrl = artworkUrl;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/src/model/Song.js",
     "access": "public",
@@ -4946,7 +5046,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 239,
+    "__docId__": 238,
     "kind": "class",
     "name": "Song",
     "memberof": "patate-music-player/src/model/Song.js",
@@ -4956,13 +5056,12 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/src/model/Song.js",
     "importStyle": "Song",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "Song - This song is a data structure holding information for a track",
+    "lineNumber": 4,
     "interface": false
   },
   {
-    "__docId__": 240,
+    "__docId__": 239,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "patate-music-player/src/model/Song.js~Song",
@@ -4971,12 +5070,51 @@
     "static": false,
     "longname": "patate-music-player/src/model/Song.js~Song#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true
+    "description": "constructor - Construct a song",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "title",
+        "description": "Title of the song"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "streamUrl",
+        "description": "Downloadable link of the song"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "artworkUrl",
+        "description": "Url of the picture linked to this song"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Song"
+      ],
+      "spread": false,
+      "description": "The constructed object"
+    }
   },
   {
-    "__docId__": 241,
+    "__docId__": 240,
     "kind": "member",
     "name": "title",
     "memberof": "patate-music-player/src/model/Song.js~Song",
@@ -4984,7 +5122,24 @@
     "longname": "patate-music-player/src/model/Song.js~Song#title",
     "access": "public",
     "description": null,
-    "lineNumber": 3,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 241,
+    "kind": "member",
+    "name": "streamUrl",
+    "memberof": "patate-music-player/src/model/Song.js~Song",
+    "static": false,
+    "longname": "patate-music-player/src/model/Song.js~Song#streamUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
     "undocument": true,
     "type": {
       "types": [
@@ -4995,13 +5150,13 @@
   {
     "__docId__": 242,
     "kind": "member",
-    "name": "streamUrl",
+    "name": "artworkUrl",
     "memberof": "patate-music-player/src/model/Song.js~Song",
     "static": false,
-    "longname": "patate-music-player/src/model/Song.js~Song#streamUrl",
+    "longname": "patate-music-player/src/model/Song.js~Song#artworkUrl",
     "access": "public",
     "description": null,
-    "lineNumber": 4,
+    "lineNumber": 17,
     "undocument": true,
     "type": {
       "types": [
@@ -5011,26 +5166,9 @@
   },
   {
     "__docId__": 243,
-    "kind": "member",
-    "name": "artworkUrl",
-    "memberof": "patate-music-player/src/model/Song.js~Song",
-    "static": false,
-    "longname": "patate-music-player/src/model/Song.js~Song#artworkUrl",
-    "access": "public",
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 244,
     "kind": "file",
     "name": "patate-music-player/src/model/SoundCloudProxy.js",
-    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '749ab993d24b4717afaeccd5308edbdc';\r\n\r\nexport default class SpotifyProxy {\r\n  constructor() {\r\n    this.name = 'Spotify';\r\n    this.logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.redirectUri = 'https://www.foo.bar/oauth2/callback';\r\n    this.authorizationUrl = 'https://accounts.spotify.com/authorize?client_id='.concat(clientId, '&response_type=code&redirect_uri=', this.redirectUri);\r\n    this.accessToken = null;\r\n\r\n    const headers = {\r\n      'Content-Type': 'application/x-www-form-urlencoded',\r\n      Authorization: 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=',\r\n    };\r\n\r\n    this.requestConfig = { headers };\r\n  }\r\n\r\n  getToken(code) {\r\n    return 'https://accounts.spotify.com/api/token?grant_type=authorization_code&code='.concat(code, '&redirect_uri=', this.redirectUri);\r\n  }\r\n\r\n  setStatus(status) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.status = status;\r\n    this.accessToken = null;\r\n    return proxy;\r\n  }\r\n\r\n  setAccessToken(token) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.accessToken = `Bearer ${token}`;\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  needsAuthentification() {\r\n    return true;\r\n  }\r\n\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  async searchTracks(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });\r\n\r\n    const tracks = response.data.tracks.items;\r\n    if (tracks.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const songs = [];\r\n\r\n    tracks.forEach((track) => {\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      console.log(track.preview_url);\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(new Song(\r\n          track.name,\r\n          track.preview_url,\r\n          artworkUrl,\r\n        ));\r\n      }\r\n    });\r\n\r\n    return songs;\r\n  }\r\n\r\n  async loadRandomPlaylist() {\r\n    return this.searchPlaylists('pop');\r\n  }\r\n\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n    console.log(playlist);\r\n\r\n    const tracksUrl = playlist.tracks.href;\r\n    const { name } = playlist;\r\n    const response = await Axios.get(tracksUrl, { headers });\r\n    const songs = [];\r\n\r\n    Object.keys(response.data.items).forEach((key) => {\r\n      const { track } = response.data.items[key];\r\n\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      const song = new Song(\r\n        track.name,\r\n        track.preview_url,\r\n        artworkUrl,\r\n      );\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(song);\r\n      }\r\n    });\r\n\r\n    return new Playlist(name, this.name, tracksUrl, this.logo, songs);\r\n  }\r\n\r\n  async searchPlaylists(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    let playlists = [];\r\n    try {\r\n      const response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });\r\n\r\n      const playlistsData = response.data.playlists.items;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
+    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '2f98992c40b8edf17423d93bda2e04ab';\r\n\r\n/**\r\n  * SoundCloudProxy - Proxy interface to SoundCloud API (This class is immutable)\r\n  */\r\nexport default class SoundCloudProxy {\r\n  constructor() {\r\n    this.name = 'SoundCloud';\r\n    this.logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.authorizationUrl = null;\r\n  }\r\n\r\n  /**\r\n   * setStatus - Change the status of the proxy to a new state\r\n   *\r\n   * @param {string} status The new status\r\n   *\r\n   * @return {SoundCloudProxy} The new proxy with the new status\r\n   */\r\n  setStatus(status) {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = status;\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * setAccessToken - Set the status to connected\r\n   *\r\n   * @return {SoundCloudProxy} Return the new connected proxy\r\n   */\r\n  setAccessToken() {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * needsAuthentification - SoundCloud does not need a authentifation process\r\n   *\r\n   * @return {boolean} false\r\n   */\r\n  needsAuthentification() {\r\n    return false;\r\n  }\r\n\r\n  /**\r\n   * isConnected - Check if the proxy is connected\r\n   *\r\n   * @return {boolean} Is proxy connected\r\n   */\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  /**\r\n   * prepareUrl - Append the client id to an URL query\r\n   *\r\n   * @param {string} url The URL which will be appended\r\n   *\r\n   * @return {string} The appended URL\r\n   */\r\n  prepareUrl(url) {\r\n    return `${url}?client_id=${clientId}`;\r\n  }\r\n\r\n  /**\r\n   * searchTracks - Async function to get an array of tracks from keywords\r\n   *\r\n   * @param {string} keywords The searched name for the tracks\r\n   *\r\n   * @return {Array} An array of tracks\r\n   */\r\n  async searchTracks(keywords) {\r\n    try {\r\n      const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);\r\n\r\n      const tracks = response.data;\r\n\r\n      console.log(tracks);\r\n      const songs = [];\r\n\r\n      tracks.forEach((track) => {\r\n        if (track.sharing === 'public') {\r\n          songs.push(new Song(\r\n            track.title,\r\n            this.prepareUrl(track.stream_url),\r\n            track.artwork_url,\r\n          ));\r\n        }\r\n      });\r\n\r\n      return songs;\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return null;\r\n  }\r\n\r\n  /**\r\n   * fetchPlaylistDetails - Fetch a playlist from an playlist ID\r\n   *\r\n   * @param {string} playlist The playlist ID\r\n   *\r\n   * @return {Playlist} The playlist\r\n   */\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const { tracks_uri, title, uri } = playlist;\r\n\r\n    const response = await Axios.get(this.prepareUrl(tracks_uri));\r\n\r\n    if (response.data === undefined\r\n      || response.data.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const tracks = response.data;\r\n\r\n    const songs = tracks.map(track =>\r\n      new Song(\r\n        track.title,\r\n        this.prepareUrl(track.stream_url),\r\n        track.artwork_url,\r\n      ));\r\n\r\n    return new Playlist(title, this.name, uri, this.logo, songs);\r\n  }\r\n\r\n  /**\r\n   * searchPlaylists - Search a set of playlists from a query\r\n   *\r\n   * @param {string} query The query of the search\r\n   *\r\n   * @return {Array} The set of playlists\r\n   */\r\n  async searchPlaylists(query) {\r\n    let playlists = [];\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.soundcloud.com/playlists?client_id=${clientId}&q=${query}`);\r\n\r\n      const playlistsData = response.data;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/src/model/SoundCloudProxy.js",
     "access": "public",
@@ -5038,7 +5176,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 245,
+    "__docId__": 244,
     "kind": "variable",
     "name": "clientId",
     "memberof": "patate-music-player/src/model/SoundCloudProxy.js",
@@ -5059,93 +5197,41 @@
     "ignore": true
   },
   {
-    "__docId__": 246,
+    "__docId__": 245,
     "kind": "class",
-    "name": "SpotifyProxy",
+    "name": "SoundCloudProxy",
     "memberof": "patate-music-player/src/model/SoundCloudProxy.js",
     "static": true,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "access": "public",
     "export": true,
     "importPath": "sandwich-player/patate-music-player/src/model/SoundCloudProxy.js",
-    "importStyle": "SpotifyProxy",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "importStyle": "SoundCloudProxy",
+    "description": "SoundCloudProxy - Proxy interface to SoundCloud API (This class is immutable)",
+    "lineNumber": 12,
     "interface": false
   },
   {
-    "__docId__": 247,
+    "__docId__": 246,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#constructor",
-    "access": "public",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true
-  },
-  {
-    "__docId__": 248,
-    "kind": "member",
-    "name": "name",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#name",
-    "access": "public",
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 249,
-    "kind": "member",
-    "name": "logo",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#logo",
-    "access": "public",
-    "description": null,
-    "lineNumber": 12,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 250,
-    "kind": "member",
-    "name": "status",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#status",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#constructor",
     "access": "public",
     "description": null,
     "lineNumber": 13,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
+    "undocument": true
   },
   {
-    "__docId__": 251,
+    "__docId__": 247,
     "kind": "member",
-    "name": "redirectUri",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "name",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#redirectUri",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#name",
     "access": "public",
     "description": null,
     "lineNumber": 14,
@@ -5157,245 +5243,233 @@
     }
   },
   {
-    "__docId__": 252,
+    "__docId__": 248,
     "kind": "member",
-    "name": "authorizationUrl",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "logo",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#authorizationUrl",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#logo",
     "access": "public",
     "description": null,
     "lineNumber": 15,
     "undocument": true,
     "type": {
       "types": [
-        "*"
+        "string"
       ]
     }
   },
   {
-    "__docId__": 253,
+    "__docId__": 249,
     "kind": "member",
-    "name": "accessToken",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "status",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#accessToken",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#status",
     "access": "public",
     "description": null,
     "lineNumber": 16,
     "undocument": true,
     "type": {
       "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 250,
+    "kind": "member",
+    "name": "authorizationUrl",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#authorizationUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
         "*"
       ]
     }
   },
   {
-    "__docId__": 254,
-    "kind": "member",
-    "name": "requestConfig",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#requestConfig",
-    "access": "public",
-    "description": null,
-    "lineNumber": 23,
-    "undocument": true,
-    "type": {
-      "types": [
-        "{\"headers\": *}"
-      ]
-    }
-  },
-  {
-    "__docId__": 255,
+    "__docId__": 251,
     "kind": "method",
-    "name": "getToken",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "setStatus",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#getToken",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setStatus",
     "access": "public",
-    "description": "",
-    "lineNumber": 26,
+    "description": "setStatus - Change the status of the proxy to a new state ",
+    "lineNumber": 27,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
-        "name": "code",
-        "description": ""
+        "name": "status",
+        "description": "The new status"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "SoundCloudProxy"
+      ],
+      "spread": false,
+      "description": "The new proxy with the new status"
+    }
+  },
+  {
+    "__docId__": 252,
+    "kind": "method",
+    "name": "setAccessToken",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setAccessToken",
+    "access": "public",
+    "description": "setAccessToken - Set the status to connected ",
+    "lineNumber": 38,
+    "return": {
+      "nullable": null,
+      "types": [
+        "SoundCloudProxy"
+      ],
+      "spread": false,
+      "description": "Return the new connected proxy"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 253,
+    "kind": "method",
+    "name": "needsAuthentification",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#needsAuthentification",
+    "access": "public",
+    "description": "needsAuthentification - SoundCloud does not need a authentifation process ",
+    "lineNumber": 49,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "false"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 254,
+    "kind": "method",
+    "name": "isConnected",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#isConnected",
+    "access": "public",
+    "description": "isConnected - Check if the proxy is connected ",
+    "lineNumber": 58,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Is proxy connected"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 255,
+    "kind": "method",
+    "name": "prepareUrl",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#prepareUrl",
+    "access": "public",
+    "description": "prepareUrl - Append the client id to an URL query ",
+    "lineNumber": 69,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "The URL which will be appended"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The appended URL"
     }
   },
   {
     "__docId__": 256,
     "kind": "method",
-    "name": "setStatus",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#setStatus",
-    "access": "public",
-    "description": "",
-    "lineNumber": 30,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "status",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 258,
-    "kind": "method",
-    "name": "setAccessToken",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#setAccessToken",
-    "access": "public",
-    "description": "",
-    "lineNumber": 37,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "token",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 259,
-    "kind": "method",
-    "name": "needsAuthentification",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#needsAuthentification",
-    "access": "public",
-    "description": "",
-    "lineNumber": 44,
-    "params": [],
-    "return": {
-      "types": [
-        "boolean"
-      ]
-    }
-  },
-  {
-    "__docId__": 260,
-    "kind": "method",
-    "name": "isConnected",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#isConnected",
-    "access": "public",
-    "description": "",
-    "lineNumber": 48,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 261,
-    "kind": "method",
     "name": "searchTracks",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchTracks",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchTracks",
     "access": "public",
-    "description": "",
-    "lineNumber": 52,
+    "description": "searchTracks - Async function to get an array of tracks from keywords ",
+    "lineNumber": 80,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
-        "name": "query",
-        "description": ""
+        "name": "keywords",
+        "description": "The searched name for the tracks"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "An array of tracks"
     }
   },
   {
-    "__docId__": 262,
-    "kind": "method",
-    "name": "loadRandomPlaylist",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#loadRandomPlaylist",
-    "access": "public",
-    "description": "",
-    "lineNumber": 89,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 263,
+    "__docId__": 257,
     "kind": "method",
     "name": "fetchPlaylistDetails",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#fetchPlaylistDetails",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#fetchPlaylistDetails",
     "access": "public",
     "description": "",
-    "lineNumber": 94,
+    "lineNumber": 115,
     "params": [
       {
         "nullable": null,
@@ -5421,40 +5495,43 @@
     }
   },
   {
-    "__docId__": 264,
+    "__docId__": 258,
     "kind": "method",
     "name": "searchPlaylists",
-    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchPlaylists",
+    "longname": "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchPlaylists",
     "access": "public",
-    "description": "",
-    "lineNumber": 129,
+    "description": "searchPlaylists - Search a set of playlists from a query ",
+    "lineNumber": 144,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "query",
-        "description": ""
+        "description": "The query of the search"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "The set of playlists"
     }
   },
   {
-    "__docId__": 265,
+    "__docId__": 259,
     "kind": "file",
     "name": "patate-music-player/src/model/SpotifyProxy.js",
-    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '2f98992c40b8edf17423d93bda2e04ab';\r\n\r\nexport default class SoundCloudProxy {\r\n  constructor() {\r\n    this.name = 'SoundCloud';\r\n    this.logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.authorizationUrl = null;\r\n  }\r\n\r\n  setStatus(status) {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = status;\r\n    return proxy;\r\n  }\r\n\r\n  setAccessToken() {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  needsAuthentification() {\r\n    return false;\r\n  }\r\n\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  prepareUrl(url) {\r\n    return `${url}?client_id=${clientId}`;\r\n  }\r\n\r\n  async searchTracks(keywords) {\r\n    try {\r\n      const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);\r\n\r\n      const tracks = response.data;\r\n\r\n      console.log(tracks);\r\n      const songs = [];\r\n\r\n      tracks.forEach((track) => {\r\n        if (track.sharing === 'public') {\r\n          songs.push(new Song(\r\n            track.title,\r\n            this.prepareUrl(track.stream_url),\r\n            track.artwork_url,\r\n          ));\r\n        }\r\n      });\r\n\r\n      return songs;\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return null;\r\n  }\r\n\r\n  async loadRandomPlaylist() {\r\n    return this.searchPlaylists('pop');\r\n  }\r\n\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const { tracks_uri, title, uri } = playlist;\r\n\r\n    const response = await Axios.get(this.prepareUrl(tracks_uri));\r\n\r\n    if (response.data === undefined\r\n      || response.data.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const tracks = response.data;\r\n\r\n    const songs = tracks.map(track =>\r\n      new Song(\r\n        track.title,\r\n        this.prepareUrl(track.stream_url),\r\n        track.artwork_url,\r\n      ));\r\n\r\n    return new Playlist(title, this.name, uri, this.logo, songs);\r\n  }\r\n\r\n  async searchPlaylists(query) {\r\n    let playlists = [];\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.soundcloud.com/playlists?client_id=${clientId}&q=${query}`);\r\n\r\n      const playlistsData = response.data;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
+    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '749ab993d24b4717afaeccd5308edbdc';\r\n\r\n/**\r\n  * SpotifyProxy - Proxy interface to Jamendo API (This class is immutable)\r\n  */\r\nexport default class SpotifyProxy {\r\n  /**\r\n   * constructor - Construct the proxy\r\n   *\r\n   * @return {SpotifyProxy} Returns the proxy\r\n   */\r\n  constructor() {\r\n    this.name = 'Spotify';\r\n    this.logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.redirectUri = 'https://www.foo.bar/oauth2/callback';\r\n    this.authorizationUrl = 'https://accounts.spotify.com/authorize?client_id='.concat(clientId, '&response_type=code&redirect_uri=', this.redirectUri);\r\n    this.accessToken = null;\r\n\r\n    const headers = {\r\n      'Content-Type': 'application/x-www-form-urlencoded',\r\n      Authorization: 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=',\r\n    };\r\n\r\n    this.requestConfig = { headers };\r\n  }\r\n\r\n  /**\r\n   * getToken - Get the url to ask access token\r\n   *\r\n   * @param {string} code Authorization code\r\n   *\r\n   * @return {string} URL for get access token\r\n   */\r\n  getToken(code) {\r\n    return 'https://accounts.spotify.com/api/token?grant_type=authorization_code&code='.concat(code, '&redirect_uri=', this.redirectUri);\r\n  }\r\n\r\n  /**\r\n   * setStatus - Change the status of the proxy to a new state\r\n   *\r\n   * @param {string} status The new status\r\n   *\r\n   * @return {SpotifyProxy} The new proxy with the new status\r\n   */\r\n  setStatus(status) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.status = status;\r\n    this.accessToken = null;\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * setAccessToken - Set the status to connected\r\n   *\r\n   * @param {string} token Access token\r\n   *\r\n   * @return {SpotifyProxy} Return the new connected proxy\r\n   */\r\n  setAccessToken(token) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.accessToken = `Bearer ${token}`;\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * needsAuthentification - Spotify need an authentifation process\r\n   *\r\n   * @return {boolean} true\r\n   */\r\n  needsAuthentification() {\r\n    return true;\r\n  }\r\n\r\n  /**\r\n   * isConnected - Check if the proxy is connected\r\n   *\r\n   * @return {boolean} Is proxy connected\r\n   */\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  /**\r\n   * searchTracks - Async function to get an array of tracks from keywords\r\n   *\r\n   * @param {string} query The searched name for the tracks\r\n   *\r\n   * @return {Array} An array of tracks\r\n   */\r\n  async searchTracks(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });\r\n\r\n    const tracks = response.data.tracks.items;\r\n    if (tracks.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const songs = [];\r\n\r\n    tracks.forEach((track) => {\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      console.log(track.preview_url);\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(new Song(\r\n          track.name,\r\n          track.preview_url,\r\n          artworkUrl,\r\n        ));\r\n      }\r\n    });\r\n\r\n    return songs;\r\n  }\r\n\r\n  /**\r\n   * fetchPlaylistDetails - Fetch a playlist from an playlist ID\r\n   *\r\n   * @param {string} playlist The playlist ID\r\n   *\r\n   * @return {Playlist} The playlist\r\n   */\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n    console.log(playlist);\r\n\r\n    const tracksUrl = playlist.tracks.href;\r\n    const { name } = playlist;\r\n    const response = await Axios.get(tracksUrl, { headers });\r\n    const songs = [];\r\n\r\n    Object.keys(response.data.items).forEach((key) => {\r\n      const { track } = response.data.items[key];\r\n\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      const song = new Song(\r\n        track.name,\r\n        track.preview_url,\r\n        artworkUrl,\r\n      );\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(song);\r\n      }\r\n    });\r\n\r\n    return new Playlist(name, this.name, tracksUrl, this.logo, songs);\r\n  }\r\n\r\n  /**\r\n   * searchPlaylists - Search a set of playlists from a query\r\n   *\r\n   * @param {string} query The query of the search\r\n   *\r\n   * @return {Array} The set of playlists\r\n   */\r\n  async searchPlaylists(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    let playlists = [];\r\n    try {\r\n      const response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });\r\n\r\n      const playlistsData = response.data.playlists.items;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/src/model/SpotifyProxy.js",
     "access": "public",
@@ -5462,7 +5539,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 266,
+    "__docId__": 260,
     "kind": "variable",
     "name": "clientId",
     "memberof": "patate-music-player/src/model/SpotifyProxy.js",
@@ -5483,281 +5560,348 @@
     "ignore": true
   },
   {
-    "__docId__": 267,
+    "__docId__": 261,
     "kind": "class",
-    "name": "SoundCloudProxy",
+    "name": "SpotifyProxy",
     "memberof": "patate-music-player/src/model/SpotifyProxy.js",
     "static": true,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "access": "public",
     "export": true,
     "importPath": "sandwich-player/patate-music-player/src/model/SpotifyProxy.js",
-    "importStyle": "SoundCloudProxy",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "importStyle": "SpotifyProxy",
+    "description": "SpotifyProxy - Proxy interface to Jamendo API (This class is immutable)",
+    "lineNumber": 12,
     "interface": false
   },
   {
-    "__docId__": 268,
+    "__docId__": 262,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#constructor",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true
+    "description": "constructor - Construct the proxy",
+    "lineNumber": 18,
+    "return": {
+      "nullable": null,
+      "types": [
+        "SpotifyProxy"
+      ],
+      "spread": false,
+      "description": "Returns the proxy"
+    }
   },
   {
-    "__docId__": 269,
+    "__docId__": 263,
     "kind": "member",
     "name": "name",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#name",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#name",
     "access": "public",
     "description": null,
-    "lineNumber": 11,
+    "lineNumber": 19,
     "undocument": true,
     "type": {
       "types": [
         "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 264,
+    "kind": "member",
+    "name": "logo",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#logo",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 265,
+    "kind": "member",
+    "name": "status",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#status",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 266,
+    "kind": "member",
+    "name": "redirectUri",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#redirectUri",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 267,
+    "kind": "member",
+    "name": "authorizationUrl",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#authorizationUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 268,
+    "kind": "member",
+    "name": "accessToken",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#accessToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 269,
+    "kind": "member",
+    "name": "requestConfig",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#requestConfig",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"headers\": *}"
       ]
     }
   },
   {
     "__docId__": 270,
-    "kind": "member",
-    "name": "logo",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#logo",
-    "access": "public",
-    "description": null,
-    "lineNumber": 12,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 271,
-    "kind": "member",
-    "name": "status",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#status",
-    "access": "public",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 272,
-    "kind": "member",
-    "name": "authorizationUrl",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#authorizationUrl",
-    "access": "public",
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 273,
     "kind": "method",
-    "name": "setStatus",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "name": "getToken",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#setStatus",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#getToken",
     "access": "public",
-    "description": "",
-    "lineNumber": 17,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "status",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 274,
-    "kind": "method",
-    "name": "setAccessToken",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#setAccessToken",
-    "access": "public",
-    "description": "",
-    "lineNumber": 23,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 275,
-    "kind": "method",
-    "name": "needsAuthentification",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#needsAuthentification",
-    "access": "public",
-    "description": "",
-    "lineNumber": 29,
-    "params": [],
-    "return": {
-      "types": [
-        "boolean"
-      ]
-    }
-  },
-  {
-    "__docId__": 276,
-    "kind": "method",
-    "name": "isConnected",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#isConnected",
-    "access": "public",
-    "description": "",
-    "lineNumber": 33,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 277,
-    "kind": "method",
-    "name": "prepareUrl",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#prepareUrl",
-    "access": "public",
-    "description": "",
-    "lineNumber": 37,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "url",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 278,
-    "kind": "method",
-    "name": "searchTracks",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchTracks",
-    "access": "public",
-    "description": "",
+    "description": "getToken - Get the url to ask access token ",
     "lineNumber": 41,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
-        "name": "keywords",
-        "description": ""
+        "name": "code",
+        "description": "Authorization code"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "string"
+      ],
+      "spread": false,
+      "description": "URL for get access token"
     }
   },
   {
-    "__docId__": 279,
+    "__docId__": 271,
     "kind": "method",
-    "name": "loadRandomPlaylist",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "name": "setStatus",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#setStatus",
+    "access": "public",
+    "description": "setStatus - Change the status of the proxy to a new state ",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "status",
+        "description": "The new status"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "SpotifyProxy"
+      ],
+      "spread": false,
+      "description": "The new proxy with the new status"
+    }
+  },
+  {
+    "__docId__": 273,
+    "kind": "method",
+    "name": "setAccessToken",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#setAccessToken",
+    "access": "public",
+    "description": "setAccessToken - Set the status to connected ",
+    "lineNumber": 66,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": "Access token"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "SpotifyProxy"
+      ],
+      "spread": false,
+      "description": "Return the new connected proxy"
+    }
+  },
+  {
+    "__docId__": 274,
+    "kind": "method",
+    "name": "needsAuthentification",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#needsAuthentification",
+    "access": "public",
+    "description": "needsAuthentification - Spotify need an authentifation process ",
+    "lineNumber": 78,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "true"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 275,
+    "kind": "method",
+    "name": "isConnected",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#isConnected",
+    "access": "public",
+    "description": "isConnected - Check if the proxy is connected ",
+    "lineNumber": 87,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Is proxy connected"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 276,
+    "kind": "method",
+    "name": "searchTracks",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#loadRandomPlaylist",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#searchTracks",
     "access": "public",
-    "description": "",
-    "lineNumber": 68,
-    "params": [],
+    "description": "searchTracks - Async function to get an array of tracks from keywords ",
+    "lineNumber": 98,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "query",
+        "description": "The searched name for the tracks"
+      }
+    ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "An array of tracks"
     }
   },
   {
-    "__docId__": 280,
+    "__docId__": 277,
     "kind": "method",
     "name": "fetchPlaylistDetails",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#fetchPlaylistDetails",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#fetchPlaylistDetails",
     "access": "public",
     "description": "",
-    "lineNumber": 73,
+    "lineNumber": 143,
     "params": [
       {
         "nullable": null,
@@ -5783,33 +5927,36 @@
     }
   },
   {
-    "__docId__": 281,
+    "__docId__": 278,
     "kind": "method",
     "name": "searchPlaylists",
-    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchPlaylists",
+    "longname": "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#searchPlaylists",
     "access": "public",
-    "description": "",
-    "lineNumber": 95,
+    "description": "searchPlaylists - Search a set of playlists from a query ",
+    "lineNumber": 185,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "query",
-        "description": ""
+        "description": "The query of the search"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "The set of playlists"
     }
   },
   {

@@ -270,9 +270,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "sandwich-player/patate-music-player/src/model/spotifyproxy.js~soundcloudproxy",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html",
-    "<span>SoundCloudProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/SpotifyProxy.js</span>",
+    "sandwich-player/patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html",
+    "<span>SoundCloudProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/SoundCloudProxy.js</span>",
     "class"
   ],
   [
@@ -294,9 +294,9 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "sandwich-player/patate-music-player/src/model/soundcloudproxy.js~spotifyproxy",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html",
-    "<span>SpotifyProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/SoundCloudProxy.js</span>",
+    "sandwich-player/patate-music-player/src/model/spotifyproxy.js~spotifyproxy",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html",
+    "<span>SpotifyProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/SpotifyProxy.js</span>",
     "class"
   ],
   [
@@ -1242,12 +1242,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#loadrandomplaylist",
-    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-loadRandomPlaylist",
-    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#loadRandomPlaylist",
-    "method"
-  ],
-  [
     "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#logo",
     "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-logo",
     "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#logo",
@@ -1380,105 +1374,81 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#accesstoken",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-accessToken",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#accessToken",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#authorizationurl",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-authorizationUrl",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#authorizationUrl",
     "member"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#authorizationurl",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-authorizationUrl",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#authorizationUrl",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#constructor",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-constructor-constructor",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#fetchplaylistdetails",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-fetchPlaylistDetails",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#isconnected",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-isConnected",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#isConnected",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#logo",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-logo",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#logo",
     "member"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#constructor",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-constructor-constructor",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#constructor",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#fetchplaylistdetails",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-fetchPlaylistDetails",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#fetchPlaylistDetails",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#gettoken",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-getToken",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#getToken",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#isconnected",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-isConnected",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#isConnected",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#loadrandomplaylist",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-loadRandomPlaylist",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#loadRandomPlaylist",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#logo",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-logo",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#logo",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#name",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-name",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#name",
     "member"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#name",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-name",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#name",
-    "member"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#needsauthentification",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-needsAuthentification",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#needsAuthentification",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#needsauthentification",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-needsAuthentification",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#needsAuthentification",
     "method"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#redirecturi",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-redirectUri",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#redirectUri",
-    "member"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#requestconfig",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-requestConfig",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#requestConfig",
-    "member"
-  ],
-  [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#searchplaylists",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-searchPlaylists",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchPlaylists",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#prepareurl",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-prepareUrl",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#prepareUrl",
     "method"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#searchtracks",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-searchTracks",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchTracks",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#searchplaylists",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchPlaylists",
     "method"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#setaccesstoken",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-setAccessToken",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#setAccessToken",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#searchtracks",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchTracks",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchTracks",
     "method"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#setstatus",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-setStatus",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#setStatus",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#setaccesstoken",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setAccessToken",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setAccessToken",
     "method"
   ],
   [
-    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#status",
-    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-status",
-    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#status",
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#setstatus",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setStatus",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setStatus",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~soundcloudproxy#status",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-status",
+    "patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy#status",
     "member"
   ],
   [
@@ -1488,87 +1458,99 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#authorizationurl",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-authorizationUrl",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#authorizationUrl",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#accesstoken",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-accessToken",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#accessToken",
     "member"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#constructor",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-constructor-constructor",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#constructor",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#fetchplaylistdetails",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-fetchPlaylistDetails",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#fetchPlaylistDetails",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#isconnected",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-isConnected",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#isConnected",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#loadrandomplaylist",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-loadRandomPlaylist",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#loadRandomPlaylist",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#logo",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-logo",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#logo",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#authorizationurl",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-authorizationUrl",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#authorizationUrl",
     "member"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#name",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-name",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#name",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#constructor",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-constructor-constructor",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#fetchplaylistdetails",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-fetchPlaylistDetails",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#gettoken",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-getToken",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#getToken",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#isconnected",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-isConnected",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#isConnected",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#logo",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-logo",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#logo",
     "member"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#needsauthentification",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-needsAuthentification",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#needsAuthentification",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#name",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-name",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#name",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#needsauthentification",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-needsAuthentification",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#needsAuthentification",
     "method"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#prepareurl",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-prepareUrl",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#prepareUrl",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#redirecturi",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-redirectUri",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#redirectUri",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#requestconfig",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-requestConfig",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#requestConfig",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#searchplaylists",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-searchPlaylists",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#searchPlaylists",
     "method"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#searchplaylists",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchPlaylists",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#searchtracks",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-searchTracks",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#searchTracks",
     "method"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#searchtracks",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-searchTracks",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchTracks",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#setaccesstoken",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-setAccessToken",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#setAccessToken",
     "method"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#setaccesstoken",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-setAccessToken",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#setAccessToken",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#setstatus",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-setStatus",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#setStatus",
     "method"
   ],
   [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#setstatus",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-setStatus",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#setStatus",
-    "method"
-  ],
-  [
-    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#status",
-    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-status",
-    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#status",
+    "patate-music-player/src/model/spotifyproxy.js~spotifyproxy#status",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-status",
+    "patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy#status",
     "member"
   ]
 ]

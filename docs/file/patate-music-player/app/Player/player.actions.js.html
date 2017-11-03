@@ -124,31 +124,57 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">patate-music-player/app/Player/player.actions.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+/**
+ * Creates an action named &quot;TOGGLEPLAY&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator the action creater
+ */
 export function toggleplay() {
   return {
     type: &apos;TOGGLEPLAY&apos;,
   };
 }
+
+/**
+ * Creates an action named &quot;PLAY&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator the action creater
+ */
 export function play() {
   return {
     type: &apos;PLAY&apos;,
   };
 }
 
+/**
+ * Creates an action named &quot;STOP&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator the action creater
+ */
 export function stop() {
   return {
     type: &apos;STOP&apos;,
   };
 }
 
+/**
+ * Creates an action named &quot;PLAYING&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @param audioStatus The currect status (time elapsed, etc.) of the dom player
+ * @return ActionCreator the action creater
+ */
 export function playing(audioStatus) {
   return {
     type: &apos;PLAYING&apos;,
@@ -157,9 +183,10 @@ export function playing(audioStatus) {
 }
 
 /**
-   * Create an action to enqueue a list of tracks
-   * @param tracks - List of tracks to enqueue.
-   */
+ * Create an action to enqueue a list of tracks
+ * @param {List} tracks - List of tracks to enqueue
+ * @return ActionCreator the action creater
+ */
 export function enqueue(tracks = null) {
   return {
     type: &apos;ENQUEUE&apos;,
@@ -167,18 +194,36 @@ export function enqueue(tracks = null) {
   };
 }
 
+/**
+ * Creates an action named &quot;CLEAR_QUEUE&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator the action creater
+ */
 export function clearQueue() {
   return {
     type: &apos;CLEAR_QUEUE&apos;,
   };
 }
 
+/**
+ * Creates an action named &quot;NEXT&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator the action creater
+ */
 export function next() {
   return {
     type: &apos;NEXT&apos;,
   };
 }
 
+/**
+ * Creates an action named &quot;PREV&quot; with
+ * the required data to execute the reducer action.
+ *
+ * @return ActionCreator the action creater
+ */
 export function prev() {
   return {
     type: &apos;PREV&apos;,
