@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 
 class Details extends PureComponent {
-  // Render
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     return (
       <div className="details">

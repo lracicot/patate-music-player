@@ -26,6 +26,9 @@ export class Player extends Component {
     return this.props.playFromPosition || 0;
   }
 
+  /**
+   * Return the url for the artwork is there is one
+   */
   xlArtwork(url) {
     if (url) {
       return url.replace(/large/, 't500x500');
@@ -33,6 +36,9 @@ export class Player extends Component {
     return null;
   }
 
+  /**
+   * Dispatch the playing action while song is playing
+   */
   handleSongPlaying(audio) {
     this.props.playing({
       elapsed: formatMilliseconds(audio.position),
@@ -41,10 +47,18 @@ export class Player extends Component {
     });
   }
 
+  /**
+   * Dispatch the next action when song finish
+   */
   handleSongFinished() {
     this.next();
   }
 
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     const patateStyle = {
       width: '500px',

@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import ClassNames from 'classnames';
 
 class Controls extends PureComponent {
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     const playPauseClass = ClassNames({
       'fa fa-play': this.props.playStatus !== 'PLAYING',

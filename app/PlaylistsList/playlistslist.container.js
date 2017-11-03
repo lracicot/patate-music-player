@@ -17,6 +17,11 @@ export class PlaylistsList extends Component {
     this.props.dispatch(PlaylistsListActions.updateSearch(this.props.sources, value));
   }
 
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     const mapPlaylistToComponent = playlist => (
       <PlaylistItem

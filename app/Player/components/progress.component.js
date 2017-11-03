@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 // Create Progress component class
 class Progress extends PureComponent {
-  // Render method
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     return (
       <div className="progress">

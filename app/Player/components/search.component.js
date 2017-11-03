@@ -32,6 +32,11 @@ class Search extends Component {
     );
   }
 
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     // Return JSX via render()
     return (

@@ -11,15 +11,11 @@ export class Layout extends PureComponent {
     this.loadSearchResults();
   }
 
-  loadSearchResults() {
-    // clearSearchResults();
-    this.props.sources
-      .filter(source => source.isConnected());
-    // .map(source => source.searchTracks().then((tracks) => {
-    //   appendSearchResults(List(tracks));
-    // }));
-  }
-
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     return (
       <div className="container">

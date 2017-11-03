@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 126,
+  "end": 124,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 126,
+    "end": 124,
     "loc": {
       "start": {
         "line": 1,
@@ -100,8 +100,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 61,
-        "end": 124,
+        "start": 60,
+        "end": 123,
         "loc": {
           "start": {
             "line": 2,
@@ -115,8 +115,8 @@
         "specifiers": [
           {
             "type": "ExportDefaultSpecifier",
-            "start": 68,
-            "end": 87,
+            "start": 67,
+            "end": 86,
             "loc": {
               "start": {
                 "line": 2,
@@ -129,8 +129,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 68,
-              "end": 87,
+              "start": 67,
+              "end": 86,
               "loc": {
                 "start": {
                   "line": 2,
@@ -148,8 +148,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 93,
-          "end": 123,
+          "start": 92,
+          "end": 122,
           "loc": {
             "start": {
               "line": 2,
@@ -321,8 +321,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 61,
-      "end": 67,
+      "start": 60,
+      "end": 66,
       "loc": {
         "start": {
           "line": 2,
@@ -347,8 +347,8 @@
         "binop": null
       },
       "value": "UpdateSearchResults",
-      "start": 68,
-      "end": 87,
+      "start": 67,
+      "end": 86,
       "loc": {
         "start": {
           "line": 2,
@@ -373,8 +373,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 88,
-      "end": 92,
+      "start": 87,
+      "end": 91,
       "loc": {
         "start": {
           "line": 2,
@@ -400,8 +400,8 @@
         "updateContext": null
       },
       "value": "./UpdateSearchResults.action",
-      "start": 93,
-      "end": 123,
+      "start": 92,
+      "end": 122,
       "loc": {
         "start": {
           "line": 2,
@@ -426,8 +426,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 123,
-      "end": 124,
+      "start": 122,
+      "end": 123,
       "loc": {
         "start": {
           "line": 2,
@@ -452,8 +452,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 126,
-      "end": 126,
+      "start": 124,
+      "end": 124,
       "loc": {
         "start": {
           "line": 3,
