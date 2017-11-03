@@ -144,45 +144,4 @@ export default class SpotifyProxy {
 
     return playlists;
   }
-
-  async oldSearch(query) {
-    const headers = {
-      'Content-Type': 'application/json',
-      Authorization: this.accessToken,
-    };
-
-    let response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });
-
-    const playlists = response.data.playlists.items;
-    if (playlists.length === 0) {
-      return null;
-    }
-
-    const tracksUrl = playlists[0].tracks.href;
-
-    response = await Axios.get(tracksUrl, { headers });
-    const songs = [];
-
-    Object.keys(response.data.items).forEach((key) => {
-      const { track } = response.data.items[key];
-
-      let artworkUrl = '';
-      const { images } = track.album;
-      if (images.length > 0) {
-        artworkUrl = images[0].url;
-      }
-
-      const song = new Song(
-        track.name,
-        track.preview_url,
-        artworkUrl,
-      );
-
-      if (track.preview_url !== null) {
-        songs.push(song);
-      }
-    });
-
-    return songs;
-  }
 }

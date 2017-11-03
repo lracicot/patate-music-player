@@ -51,7 +51,7 @@ export default class SoundCloudProxy {
         if (track.sharing === 'public') {
           songs.push(new Song(
             track.title,
-            track.stream_url,
+            this.prepareUrl(track.stream_url),
             track.artwork_url,
           ));
         }
