@@ -1,6 +1,9 @@
 import Sound from 'react-sound';
 
 class TogglePlay {
+  /**
+   * Reduce the state
+   */
   execute(state) {
     if (state.get('queue').size > 0) {
       if (state.getIn(['playback', 'playStatus']) === Sound.status.PLAYING) {

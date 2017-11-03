@@ -125,20 +125,3 @@ const mapStateToProps = state => ({
 });
 
 export const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);
-
-
-// <Search
-//   clientId={this.state.client_id}
-//   autoCompleteValue={this.state.autoCompleteValue}
-//   tracks={this.state.tracks}
-//   handleSelect={this.handleSelect.bind(this)}
-//   handleChange={this.handleChange.bind(this)}/>*/
-
-/*
-export class Player extends Component {
-
-  handleSelect(value, item){
-    this.setState({ autoCompleteValue: value, track: item });
-  }
-}
-*/

@@ -1,6 +1,9 @@
 import { List } from 'immutable';
 
 class Enqueue {
+  /**
+   * Reduce the state
+   */
   execute(state, tracks) {
     if (tracks) {
       let localTracks = tracks;

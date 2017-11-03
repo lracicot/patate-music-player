@@ -1,5 +1,8 @@
 
 class Prev {
+  /**
+   * Reduce the state
+   */
   execute(state) {
     if (state.get('history').size > 0) {
       const prevTrack = state.get('history').peek();

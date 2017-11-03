@@ -1,6 +1,9 @@
 import { List } from 'immutable';
 
 class AppendSearchResults {
+  /**
+   * Reduce the state
+   */
   execute(state, results) {
     let searchResults = List(results);
 

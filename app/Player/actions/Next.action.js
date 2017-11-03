@@ -1,6 +1,9 @@
 import Sound from 'react-sound';
 
 class Next {
+  /**
+   * Reduce the state
+   */
   execute(state) {
     const currentTrack = state.get('queue').get(0);
 
