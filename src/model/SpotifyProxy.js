@@ -118,8 +118,6 @@ export default class SpotifyProxy {
         artworkUrl = images[0].url;
       }
 
-      console.log(track.preview_url);
-
       if (track.preview_url !== null) {
         songs.push(new Song(
           track.name,

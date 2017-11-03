@@ -14,6 +14,10 @@ import * as PlayerActions from '../Player/player.actions';
   */
 @autobind
 export class MainMenu extends Component {
+  static contextTypes = {
+    router: PropTypes.object,
+  }
+
   /**
    * componentDidUpdate - Refresh on update
    */
@@ -36,6 +40,8 @@ export class MainMenu extends Component {
     this.props.enqueue(song);
     this.props.endSearch();
     this.props.play();
+
+    this.context.router.history.push('/');
   }
 
   /**

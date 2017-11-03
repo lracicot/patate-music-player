@@ -82,8 +82,6 @@ export default class SoundCloudProxy {
       const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);
 
       const tracks = response.data;
-
-      console.log(tracks);
       const songs = [];
 
       tracks.forEach((track) => {

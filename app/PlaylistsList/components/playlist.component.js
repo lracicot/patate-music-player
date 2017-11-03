@@ -3,7 +3,7 @@ import { List, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { autobind } from 'core-decorators';
 
-import { enqueue, clearQueue } from '../.././Player/player.actions';
+import { enqueue, clearQueue, play } from '../.././Player/player.actions';
 import Playlist from './../../../src/model/Playlist';
 
 /**
@@ -12,6 +12,10 @@ import Playlist from './../../../src/model/Playlist';
  */
 @autobind
 class PlaylistItem extends PureComponent {
+  static contextTypes = {
+    router: PropTypes.object,
+  }
+
   /**
    * getDescription - Get the description which is the number of tracks
    *
@@ -32,6 +36,9 @@ class PlaylistItem extends PureComponent {
   handleOnClick() {
     this.props.dispatch(clearQueue());
     this.props.dispatch(enqueue(this.props.playlist.songs));
+    this.props.dispatch(play());
+
+    this.context.router.history.push('/');
   }
 
   /**
