@@ -332,7 +332,7 @@
     "__docId__": 17,
     "kind": "file",
     "name": "patate-music-player/app/configureStore.js",
-    "content": "import { createStore, applyMiddleware, compose } from 'redux';\r\nimport thunk from 'redux-thunk';\r\nimport { createBrowserHistory } from 'history';\r\nimport { routerMiddleware } from 'react-router-redux';\r\nimport reducer from './reducer';\r\nimport actionMiddleware from './App/app.action_middleware';\r\n\r\nexport const history = createBrowserHistory();\r\nconst router = routerMiddleware(history);\r\n\r\n/* eslint-disable no-underscore-dangle */\r\nconst composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;\r\n/* eslint-enable */\r\nconst enhancer = composeEnhancers(applyMiddleware(thunk, router, actionMiddleware));\r\n\r\nexport const configureStore = initialState =>\r\n  createStore(reducer, initialState, enhancer);\r\n",
+    "content": "import { createStore, applyMiddleware, compose } from 'redux';\r\nimport thunk from 'redux-thunk';\r\nimport { createBrowserHistory } from 'history';\r\nimport { routerMiddleware } from 'react-router-redux';\r\nimport reducer from './reducer';\r\nimport actionMiddleware from './App/app.action_middleware';\r\n\r\nexport const history = createBrowserHistory();\r\nconst router = routerMiddleware(history);\r\n\r\n/* eslint-disable no-underscore-dangle */\r\nconst composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;\r\n/* eslint-enable */\r\nconst enhancer = composeEnhancers(applyMiddleware(thunk, router, actionMiddleware));\r\n\r\n/**\r\n * configureStore - Create a store and set the correct configurations\r\n *\r\n * @param {Map} initialState The initial state of the application\r\n *\r\n * @return {Store} The store holding the state (Redux)\r\n */\r\nexport const configureStore = initialState =>\r\n  createStore(reducer, initialState, enhancer);\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/configureStore.js",
     "access": "public",
@@ -435,24 +435,34 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/configureStore.js",
     "importStyle": "{configureStore}",
-    "description": null,
-    "lineNumber": 16,
-    "undocument": true,
+    "description": "configureStore - Create a store and set the correct configurations",
+    "lineNumber": 23,
     "params": [
       {
-        "name": "initialState",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Map"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "initialState",
+        "description": "The initial state of the application"
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Store"
+      ],
+      "spread": false,
+      "description": "The store holding the state (Redux)"
+    }
   },
   {
     "__docId__": 23,
     "kind": "file",
     "name": "patate-music-player/app/index.js",
-    "content": "// React libraries\r\nimport React from 'react';\r\nimport { render } from 'react-dom';\r\nimport { Stack, List } from 'immutable';\r\n\r\nimport Root from './App/root.container';\r\nimport { setState } from './App/app.actions';\r\nimport { configureStore, history } from './configureStore';\r\n\r\nimport SoundCloudProxy from './../src/model/SoundCloudProxy';\r\nimport SpotifyProxy from './../src/model/SpotifyProxy';\r\nimport JamendoProxy from './../src/model/JamendoProxy';\r\n\r\n(async () => {\r\n  const soundCloudProxy = new SoundCloudProxy();\r\n  const spotifyProxy = new SpotifyProxy();\r\n  const jamendoProxy = new JamendoProxy();\r\n  const sources = [soundCloudProxy, spotifyProxy, jamendoProxy];\r\n\r\n  const store = configureStore();\r\n\r\n  store.dispatch(setState({\r\n    playStatus: 'STOPPED',\r\n    tracks: List(),\r\n    history: Stack(),\r\n    queue: List(),\r\n    sources: List(sources),\r\n    playlistsFound: List(),\r\n  }));\r\n\r\n  render(\r\n    <Root store={store} history={history} />,\r\n    document.getElementById('root'),\r\n  );\r\n\r\n\r\n  if (module.hot) {\r\n    module.hot.accept('./containers/Root', () => {\r\n      const NextRoot = require('./App/root.container'); // eslint-disable-line global-require\r\n      render(\r\n        <NextRoot store={store} history={history} />,\r\n        document.getElementById('root'),\r\n      );\r\n    });\r\n  }\r\n})();\r\n",
+    "content": "// React libraries\r\nimport React from 'react';\r\nimport { render } from 'react-dom';\r\nimport { Stack, List } from 'immutable';\r\n\r\nimport Root from './App/root.container';\r\nimport { setState } from './App/app.actions';\r\nimport { configureStore, history } from './configureStore';\r\n\r\nimport SoundCloudProxy from './../src/model/SoundCloudProxy';\r\nimport SpotifyProxy from './../src/model/SpotifyProxy';\r\nimport JamendoProxy from './../src/model/JamendoProxy';\r\n\r\n/**\r\n  * Index - Open the application\r\n  */\r\n(async () => {\r\n  const soundCloudProxy = new SoundCloudProxy();\r\n  const spotifyProxy = new SpotifyProxy();\r\n  const jamendoProxy = new JamendoProxy();\r\n  const sources = [soundCloudProxy, spotifyProxy, jamendoProxy];\r\n\r\n  const store = configureStore();\r\n\r\n  store.dispatch(setState({\r\n    playStatus: 'STOPPED',\r\n    tracks: List(),\r\n    history: Stack(),\r\n    queue: List(),\r\n    sources: List(sources),\r\n    playlistsFound: List(),\r\n  }));\r\n\r\n  render(\r\n    <Root store={store} history={history} />,\r\n    document.getElementById('root'),\r\n  );\r\n\r\n\r\n  if (module.hot) {\r\n    module.hot.accept('./containers/Root', () => {\r\n      const NextRoot = require('./App/root.container'); // eslint-disable-line global-require\r\n      render(\r\n        <NextRoot store={store} history={history} />,\r\n        document.getElementById('root'),\r\n      );\r\n    });\r\n  }\r\n})();\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/index.js",
     "access": "public",
@@ -2312,7 +2322,7 @@
     "__docId__": 117,
     "kind": "file",
     "name": "patate-music-player/app/Player/player.actions.js",
-    "content": "\r\n/**\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function toggleplay() {\r\n  return {\r\n    type: 'TOGGLEPLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function play() {\r\n  return {\r\n    type: 'PLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function stop() {\r\n  return {\r\n    type: 'STOP',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n */\r\nexport function playing(audioStatus) {\r\n  return {\r\n    type: 'PLAYING',\r\n    audioStatus,\r\n  };\r\n}\r\n\r\n/**\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n */\r\nexport function enqueue(tracks = null) {\r\n  return {\r\n    type: 'ENQUEUE',\r\n    tracks,\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function clearQueue() {\r\n  return {\r\n    type: 'CLEAR_QUEUE',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function next() {\r\n  return {\r\n    type: 'NEXT',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function prev() {\r\n  return {\r\n    type: 'PREV',\r\n  };\r\n}\r\n",
+    "content": "\r\n/**\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n */\r\nexport function toggleplay() {\r\n  return {\r\n    type: 'TOGGLEPLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n */\r\nexport function play() {\r\n  return {\r\n    type: 'PLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n */\r\nexport function stop() {\r\n  return {\r\n    type: 'STOP',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n */\r\nexport function playing(audioStatus) {\r\n  return {\r\n    type: 'PLAYING',\r\n    audioStatus,\r\n  };\r\n}\r\n\r\n/**\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n */\r\nexport function enqueue(tracks = null) {\r\n  return {\r\n    type: 'ENQUEUE',\r\n    tracks,\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n */\r\nexport function clearQueue() {\r\n  return {\r\n    type: 'CLEAR_QUEUE',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n */\r\nexport function next() {\r\n  return {\r\n    type: 'NEXT',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n */\r\nexport function prev() {\r\n  return {\r\n    type: 'PREV',\r\n  };\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/Player/player.actions.js",
     "access": "public",
@@ -2340,7 +2350,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     },
     "params": []
   },
@@ -2365,7 +2375,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     },
     "params": []
   },
@@ -2390,7 +2400,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     },
     "params": []
   },
@@ -2427,7 +2437,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     }
   },
   {
@@ -2463,7 +2473,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     }
   },
   {
@@ -2487,7 +2497,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     },
     "params": []
   },
@@ -2512,7 +2522,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     },
     "params": []
   },
@@ -2537,7 +2547,7 @@
         "*"
       ],
       "spread": false,
-      "description": "ActionCreator the action creater"
+      "description": "ActionCreator the action creator"
     },
     "params": []
   },
@@ -3514,7 +3524,7 @@
     "__docId__": 171,
     "kind": "file",
     "name": "patate-music-player/app/reducer.js",
-    "content": "import { Map } from 'immutable';\r\nimport * as AppActions from './App/actions';\r\nimport * as PlayerActions from './Player/actions';\r\nimport * as SourceListActions from './SourceList/actions';\r\nimport * as PlaylistsListActions from './PlaylistsList/actions';\r\nimport * as LayoutActions from './Layout/actions';\r\n\r\n/**\r\n   * Execute an action and return the new state\r\n   * @param {Map} state - Current state of the application\r\n   * @param action - The action to execute\r\n   * @return {Map} - The new state of the application\r\n   */\r\nexport default function (state = Map(), action) {\r\n  switch (action.type) {\r\n  case 'SET_STATE':\r\n    return AppActions.SetState.execute(state, action.state);\r\n  case 'ENQUEUE':\r\n    return PlayerActions.Enqueue.execute(state, action.tracks);\r\n  case 'TOGGLEPLAY':\r\n    return PlayerActions.TogglePlay.execute(state);\r\n  case 'PLAY':\r\n    return PlayerActions.Play.execute(state);\r\n  case 'STOP':\r\n    return PlayerActions.Stop.execute(state);\r\n  case 'PLAYING':\r\n    return PlayerActions.Playing.execute(state, action.audioStatus);\r\n  case 'NEXT':\r\n    return PlayerActions.Next.execute(state);\r\n  case 'PREV':\r\n    return PlayerActions.Prev.execute(state);\r\n  case 'SEARCH':\r\n    return LayoutActions.Search.execute(state, action.keywords);\r\n  case 'ENDSEARCH':\r\n    return LayoutActions.EndSearch.execute(state);\r\n  case 'APPEND_SEARCH_RESULTS':\r\n    return LayoutActions.AppendSearchResults.execute(state, action.results);\r\n  case 'CLEAR_SEARCH_RESULTS':\r\n    return LayoutActions.ClearSearchResults.execute(state);\r\n  case 'CLEAR_QUEUE':\r\n    return PlayerActions.ClearQueue.execute(state);\r\n  case 'CONNECTINGSOURCE':\r\n    return SourceListActions.ConnectingSource.execute(state, action.proxy);\r\n  case 'CONNECTEDSOURCE':\r\n    return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);\r\n  case 'CONNEXIONFAILEDSOURCE':\r\n    return SourceListActions.ConnexionFailedSource.execute(state, action.proxy, action.error);\r\n  case 'PLAYLIST_UPDATE_SEARCH_FIELD':\r\n    return PlaylistsListActions.UpdateSearchField.execute(state, action.searchValue);\r\n  case 'PLAYLIST_UPDATE_SEARCH_RESULTS':\r\n    return PlaylistsListActions.UpdateSearchResults.execute(state, action.searchResults);\r\n  default:\r\n    console.log(action);\r\n  }\r\n  return state;\r\n}\r\n",
+    "content": "import { Map } from 'immutable';\r\nimport * as AppActions from './App/actions';\r\nimport * as PlayerActions from './Player/actions';\r\nimport * as SourceListActions from './SourceList/actions';\r\nimport * as PlaylistsListActions from './PlaylistsList/actions';\r\nimport * as LayoutActions from './Layout/actions';\r\n\r\n/**\r\n * Reducer - Execute an action and return the new state\r\n *\r\n * @param {Map} state - Current state of the application\r\n * @param {ActionCreator} action - The action to execute\r\n *\r\n * @return {Map} - The new state of the application\r\n */\r\nexport default function (state = Map(), action) {\r\n  switch (action.type) {\r\n  case 'SET_STATE':\r\n    return AppActions.SetState.execute(state, action.state);\r\n  case 'ENQUEUE':\r\n    return PlayerActions.Enqueue.execute(state, action.tracks);\r\n  case 'TOGGLEPLAY':\r\n    return PlayerActions.TogglePlay.execute(state);\r\n  case 'PLAY':\r\n    return PlayerActions.Play.execute(state);\r\n  case 'STOP':\r\n    return PlayerActions.Stop.execute(state);\r\n  case 'PLAYING':\r\n    return PlayerActions.Playing.execute(state, action.audioStatus);\r\n  case 'NEXT':\r\n    return PlayerActions.Next.execute(state);\r\n  case 'PREV':\r\n    return PlayerActions.Prev.execute(state);\r\n  case 'SEARCH':\r\n    return LayoutActions.Search.execute(state, action.keywords);\r\n  case 'ENDSEARCH':\r\n    return LayoutActions.EndSearch.execute(state);\r\n  case 'APPEND_SEARCH_RESULTS':\r\n    return LayoutActions.AppendSearchResults.execute(state, action.results);\r\n  case 'CLEAR_SEARCH_RESULTS':\r\n    return LayoutActions.ClearSearchResults.execute(state);\r\n  case 'CLEAR_QUEUE':\r\n    return PlayerActions.ClearQueue.execute(state);\r\n  case 'CONNECTINGSOURCE':\r\n    return SourceListActions.ConnectingSource.execute(state, action.proxy);\r\n  case 'CONNECTEDSOURCE':\r\n    return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);\r\n  case 'CONNEXIONFAILEDSOURCE':\r\n    return SourceListActions.ConnexionFailedSource.execute(state, action.proxy, action.error);\r\n  case 'PLAYLIST_UPDATE_SEARCH_FIELD':\r\n    return PlaylistsListActions.UpdateSearchField.execute(state, action.searchValue);\r\n  case 'PLAYLIST_UPDATE_SEARCH_RESULTS':\r\n    return PlaylistsListActions.UpdateSearchResults.execute(state, action.searchResults);\r\n  default:\r\n    console.log(action);\r\n  }\r\n  return state;\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/reducer.js",
     "access": "public",
@@ -3534,8 +3544,8 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/reducer.js",
     "importStyle": "reducer",
-    "description": "Execute an action and return the new state",
-    "lineNumber": 14,
+    "description": "Reducer - Execute an action and return the new state",
+    "lineNumber": 16,
     "params": [
       {
         "nullable": null,
@@ -3550,7 +3560,7 @@
       {
         "nullable": null,
         "types": [
-          "*"
+          "ActionCreator"
         ],
         "spread": false,
         "optional": false,
@@ -3571,7 +3581,7 @@
     "__docId__": 173,
     "kind": "file",
     "name": "patate-music-player/app/routes.js",
-    "content": "import React from 'react';\r\nimport { Route, Switch } from 'react-router';\r\nimport App from './App/app.container';\r\nimport { PlayerContainer } from './Player/player.container';\r\nimport { SourceListContainer } from './SourceList/sourcelist.container';\r\nimport { PlaylistsListContainer } from './PlaylistsList/playlistslist.container';\r\n\r\nexport default () => (\r\n  <App>\r\n    <Switch>\r\n      <Route exact path=\"/\" component={PlayerContainer} />\r\n      <Route exact path=\"/sources\" component={SourceListContainer} />\r\n      <Route exact path=\"/playlists\" component={PlaylistsListContainer} />\r\n      <Route path=\"*\" component={PlayerContainer} />\r\n    </Switch>\r\n  </App>\r\n);\r\n",
+    "content": "import React from 'react';\r\nimport { Route, Switch } from 'react-router';\r\nimport App from './App/app.container';\r\nimport { PlayerContainer } from './Player/player.container';\r\nimport { SourceListContainer } from './SourceList/sourcelist.container';\r\nimport { PlaylistsListContainer } from './PlaylistsList/playlistslist.container';\r\n\r\n/**\r\n * Routes - Render the appplication and manage the routes\r\n *\r\n * @return {App} The application\r\n */\r\nexport default () => (\r\n  <App>\r\n    <Switch>\r\n      <Route exact path=\"/\" component={PlayerContainer} />\r\n      <Route exact path=\"/sources\" component={SourceListContainer} />\r\n      <Route exact path=\"/playlists\" component={PlaylistsListContainer} />\r\n      <Route path=\"*\" component={PlayerContainer} />\r\n    </Switch>\r\n  </App>\r\n);\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/routes.js",
     "access": "public",
@@ -3591,11 +3601,17 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/routes.js",
     "importStyle": "routes",
-    "description": null,
-    "lineNumber": 8,
-    "undocument": true,
-    "params": [],
-    "return": null
+    "description": "Routes - Render the appplication and manage the routes",
+    "lineNumber": 13,
+    "return": {
+      "nullable": null,
+      "types": [
+        "App"
+      ],
+      "spread": false,
+      "description": "The application"
+    },
+    "params": []
   },
   {
     "__docId__": 175,
@@ -4423,7 +4439,7 @@
     "__docId__": 210,
     "kind": "file",
     "name": "patate-music-player/app/utils/time.js",
-    "content": "\r\nexport function formatMilliseconds(milliseconds) {\r\n  const hours = Math.floor(milliseconds / 3600000);\r\n  milliseconds %= 3600000;\r\n\r\n  const minutes = Math.floor(milliseconds / 60000);\r\n  milliseconds %= 60000;\r\n\r\n  const seconds = Math.floor(milliseconds / 1000);\r\n  milliseconds = Math.floor(milliseconds % 1000);\r\n\r\n  return `${(minutes < 10 ? '0' : '') + minutes}:${\r\n    seconds < 10 ? '0' : ''}${seconds}`;\r\n}\r\n",
+    "content": "\r\n/**\r\n * formatMilliseconds - Format milliseconds to a string\r\n *\r\n * @param {number} milliseconds The milliseconds\r\n *\r\n * @return {string} A formatted string\r\n */\r\nexport function formatMilliseconds(milliseconds) {\r\n  const hours = Math.floor(milliseconds / 3600000);\r\n  milliseconds %= 3600000;\r\n\r\n  const minutes = Math.floor(milliseconds / 60000);\r\n  milliseconds %= 60000;\r\n\r\n  const seconds = Math.floor(milliseconds / 1000);\r\n  milliseconds = Math.floor(milliseconds % 1000);\r\n\r\n  return `${(minutes < 10 ? '0' : '') + minutes}:${\r\n    seconds < 10 ? '0' : ''}${seconds}`;\r\n}\r\n",
     "static": true,
     "longname": "D:/Developpement/patate-music-player/app/utils/time.js",
     "access": "public",
@@ -4443,24 +4459,27 @@
     "export": true,
     "importPath": "sandwich-player/patate-music-player/app/utils/time.js",
     "importStyle": "{formatMilliseconds}",
-    "description": "",
-    "lineNumber": 2,
+    "description": "formatMilliseconds - Format milliseconds to a string",
+    "lineNumber": 9,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "number"
         ],
         "spread": false,
         "optional": false,
         "name": "milliseconds",
-        "description": ""
+        "description": "The milliseconds"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
         "string"
-      ]
+      ],
+      "spread": false,
+      "description": "A formatted string"
     }
   },
   {

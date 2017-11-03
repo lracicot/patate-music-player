@@ -1,7 +1,7 @@
 {
-  "coverage": "48.85%",
+  "coverage": "49.77%",
   "expectCount": 219,
-  "actualCount": 107,
+  "actualCount": 109,
   "files": {
     "patate-music-player/app/App/actions/SetState.action.js": {
       "expectCount": 3,
@@ -36,13 +36,12 @@
     },
     "patate-music-player/app/configureStore.js": {
       "expectCount": 5,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
         8,
         9,
         12,
-        14,
-        16
+        14
       ]
     },
     "patate-music-player/app/Layout/actions/AppendSearchResults.action.js": {
@@ -297,10 +296,8 @@
     },
     "patate-music-player/app/routes.js": {
       "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        8
-      ]
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "patate-music-player/app/SourceList/actions/ConnectedSource.action.js": {
       "expectCount": 3,

@@ -10,7 +10,17 @@ import * as SourceListActions from './sourcelist.actions';
 // Custom components
 import Source from './components/source.component';
 
+/**
+  * SourceList - A component which show the list of sources and
+  * handle the connexion.
+  * @extends Component
+  */
 export class SourceList extends Component {
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     const mapSourceToComponent = source => (
       <Source

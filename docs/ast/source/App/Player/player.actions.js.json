@@ -193,7 +193,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 2,
               "end": 158,
               "loc": {
@@ -211,7 +211,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 240,
               "end": 390,
               "loc": {
@@ -230,7 +230,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 2,
             "end": 158,
             "loc": {
@@ -248,7 +248,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 240,
             "end": 390,
             "loc": {
@@ -430,7 +430,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 240,
               "end": 390,
               "loc": {
@@ -448,7 +448,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 460,
               "end": 610,
               "loc": {
@@ -467,7 +467,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 240,
             "end": 390,
             "loc": {
@@ -485,7 +485,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 460,
             "end": 610,
             "loc": {
@@ -667,7 +667,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 460,
               "end": 610,
               "loc": {
@@ -685,7 +685,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n ",
               "start": 680,
               "end": 914,
               "loc": {
@@ -704,7 +704,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 460,
             "end": 610,
             "loc": {
@@ -722,7 +722,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n ",
             "start": 680,
             "end": 914,
             "loc": {
@@ -977,7 +977,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n ",
               "start": 680,
               "end": 914,
               "loc": {
@@ -995,7 +995,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1019,
               "end": 1174,
               "loc": {
@@ -1014,7 +1014,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n ",
             "start": 680,
             "end": 914,
             "loc": {
@@ -1032,7 +1032,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1019,
             "end": 1174,
             "loc": {
@@ -1317,7 +1317,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1019,
               "end": 1174,
               "loc": {
@@ -1335,7 +1335,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1276,
               "end": 1433,
               "loc": {
@@ -1354,7 +1354,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1019,
             "end": 1174,
             "loc": {
@@ -1372,7 +1372,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1276,
             "end": 1433,
             "loc": {
@@ -1554,7 +1554,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1276,
               "end": 1433,
               "loc": {
@@ -1572,7 +1572,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1516,
               "end": 1666,
               "loc": {
@@ -1591,7 +1591,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1276,
             "end": 1433,
             "loc": {
@@ -1609,7 +1609,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1516,
             "end": 1666,
             "loc": {
@@ -1791,7 +1791,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1516,
               "end": 1666,
               "loc": {
@@ -1809,7 +1809,7 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1736,
               "end": 1886,
               "loc": {
@@ -1828,7 +1828,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1516,
             "end": 1666,
             "loc": {
@@ -1846,7 +1846,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1736,
             "end": 1886,
             "loc": {
@@ -2027,7 +2027,7 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+              "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
               "start": 1736,
               "end": 1886,
               "loc": {
@@ -2047,7 +2047,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+            "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
             "start": 1736,
             "end": 1886,
             "loc": {
@@ -2070,7 +2070,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 2,
       "end": 158,
       "loc": {
@@ -2086,7 +2086,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 240,
       "end": 390,
       "loc": {
@@ -2102,7 +2102,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 460,
       "end": 610,
       "loc": {
@@ -2118,7 +2118,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n ",
       "start": 680,
       "end": 914,
       "loc": {
@@ -2134,7 +2134,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1019,
       "end": 1174,
       "loc": {
@@ -2150,7 +2150,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1276,
       "end": 1433,
       "loc": {
@@ -2166,7 +2166,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1516,
       "end": 1666,
       "loc": {
@@ -2182,7 +2182,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1736,
       "end": 1886,
       "loc": {
@@ -2200,7 +2200,7 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 2,
       "end": 158,
       "loc": {
@@ -2606,7 +2606,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 240,
       "end": 390,
       "loc": {
@@ -3012,7 +3012,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 460,
       "end": 610,
       "loc": {
@@ -3418,7 +3418,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creator\r\n ",
       "start": 680,
       "end": 914,
       "loc": {
@@ -3902,7 +3902,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1019,
       "end": 1174,
       "loc": {
@@ -4441,7 +4441,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1276,
       "end": 1433,
       "loc": {
@@ -4847,7 +4847,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1516,
       "end": 1666,
       "loc": {
@@ -5253,7 +5253,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n ",
+      "value": "*\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creator\r\n ",
       "start": 1736,
       "end": 1886,
       "loc": {

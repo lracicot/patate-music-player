@@ -3,7 +3,7 @@
  * Creates an action named "TOGGLEPLAY" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function toggleplay() {
   return {
@@ -15,7 +15,7 @@ export function toggleplay() {
  * Creates an action named "PLAY" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function play() {
   return {
@@ -27,7 +27,7 @@ export function play() {
  * Creates an action named "STOP" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function stop() {
   return {
@@ -40,7 +40,7 @@ export function stop() {
  * the required data to execute the reducer action.
  *
  * @param audioStatus The currect status (time elapsed, etc.) of the dom player
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function playing(audioStatus) {
   return {
@@ -52,7 +52,7 @@ export function playing(audioStatus) {
 /**
  * Create an action to enqueue a list of tracks
  * @param {List} tracks - List of tracks to enqueue
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function enqueue(tracks = null) {
   return {
@@ -65,7 +65,7 @@ export function enqueue(tracks = null) {
  * Creates an action named "CLEAR_QUEUE" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function clearQueue() {
   return {
@@ -77,7 +77,7 @@ export function clearQueue() {
  * Creates an action named "NEXT" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function next() {
   return {
@@ -89,7 +89,7 @@ export function next() {
  * Creates an action named "PREV" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator the action creater
+ * @return ActionCreator the action creator
  */
 export function prev() {
   return {

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 723,
+  "end": 935,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 18,
+      "line": 25,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 723,
+    "end": 935,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 18,
+        "line": 25,
         "column": 0
       }
     },
@@ -1177,19 +1177,37 @@
               }
             }
           }
+        ],
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\r\n * configureStore - Create a store and set the correct configurations\r\n *\r\n * @param {Map} initialState The initial state of the application\r\n *\r\n * @return {Store} The store holding the state (Redux)\r\n ",
+            "start": 627,
+            "end": 837,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 0
+              },
+              "end": {
+                "line": 22,
+                "column": 3
+              }
+            }
+          }
         ]
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 627,
-        "end": 721,
+        "start": 839,
+        "end": 933,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 23,
             "column": 0
           },
           "end": {
-            "line": 17,
+            "line": 24,
             "column": 47
           }
         },
@@ -1197,80 +1215,82 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 634,
-          "end": 721,
+          "start": 846,
+          "end": 933,
           "loc": {
             "start": {
-              "line": 16,
+              "line": 23,
               "column": 7
             },
             "end": {
-              "line": 17,
+              "line": 24,
               "column": 47
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 640,
-              "end": 720,
+              "start": 852,
+              "end": 932,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 23,
                   "column": 13
                 },
                 "end": {
-                  "line": 17,
+                  "line": 24,
                   "column": 46
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 640,
-                "end": 654,
+                "start": 852,
+                "end": 866,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 23,
                     "column": 13
                   },
                   "end": {
-                    "line": 16,
+                    "line": 23,
                     "column": 27
                   },
                   "identifierName": "configureStore"
                 },
-                "name": "configureStore"
+                "name": "configureStore",
+                "leadingComments": null
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 657,
-                "end": 720,
+                "start": 869,
+                "end": 932,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 23,
                     "column": 30
                   },
                   "end": {
-                    "line": 17,
+                    "line": 24,
                     "column": 46
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 640,
-                  "end": 654,
+                  "start": 852,
+                  "end": 866,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 23,
                       "column": 13
                     },
                     "end": {
-                      "line": 16,
+                      "line": 23,
                       "column": 27
                     },
                     "identifierName": "configureStore"
                   },
-                  "name": "configureStore"
+                  "name": "configureStore",
+                  "leadingComments": null
                 },
                 "generator": false,
                 "expression": true,
@@ -1278,15 +1298,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 657,
-                    "end": 669,
+                    "start": 869,
+                    "end": 881,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 23,
                         "column": 30
                       },
                       "end": {
-                        "line": 16,
+                        "line": 23,
                         "column": 42
                       },
                       "identifierName": "initialState"
@@ -1296,29 +1316,29 @@
                 ],
                 "body": {
                   "type": "CallExpression",
-                  "start": 676,
-                  "end": 720,
+                  "start": 888,
+                  "end": 932,
                   "loc": {
                     "start": {
-                      "line": 17,
+                      "line": 24,
                       "column": 2
                     },
                     "end": {
-                      "line": 17,
+                      "line": 24,
                       "column": 46
                     }
                   },
                   "callee": {
                     "type": "Identifier",
-                    "start": 676,
-                    "end": 687,
+                    "start": 888,
+                    "end": 899,
                     "loc": {
                       "start": {
-                        "line": 17,
+                        "line": 24,
                         "column": 2
                       },
                       "end": {
-                        "line": 17,
+                        "line": 24,
                         "column": 13
                       },
                       "identifierName": "createStore"
@@ -1328,15 +1348,15 @@
                   "arguments": [
                     {
                       "type": "Identifier",
-                      "start": 688,
-                      "end": 695,
+                      "start": 900,
+                      "end": 907,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 24,
                           "column": 14
                         },
                         "end": {
-                          "line": 17,
+                          "line": 24,
                           "column": 21
                         },
                         "identifierName": "reducer"
@@ -1345,15 +1365,15 @@
                     },
                     {
                       "type": "Identifier",
-                      "start": 697,
-                      "end": 709,
+                      "start": 909,
+                      "end": 921,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 24,
                           "column": 23
                         },
                         "end": {
-                          "line": 17,
+                          "line": 24,
                           "column": 35
                         },
                         "identifierName": "initialState"
@@ -1362,15 +1382,15 @@
                     },
                     {
                       "type": "Identifier",
-                      "start": 711,
-                      "end": 719,
+                      "start": 923,
+                      "end": 931,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 24,
                           "column": 37
                         },
                         "end": {
-                          "line": 17,
+                          "line": 24,
                           "column": 45
                         },
                         "identifierName": "enhancer"
@@ -1379,13 +1399,49 @@
                     }
                   ]
                 }
-              }
+              },
+              "leadingComments": null
             }
           ],
           "kind": "const",
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\r\n * configureStore - Create a store and set the correct configurations\r\n *\r\n * @param {Map} initialState The initial state of the application\r\n *\r\n * @return {Store} The store holding the state (Redux)\r\n ",
+              "start": 627,
+              "end": 837,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 0
+                },
+                "end": {
+                  "line": 22,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
         },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\r\n * configureStore - Create a store and set the correct configurations\r\n *\r\n * @param {Map} initialState The initial state of the application\r\n *\r\n * @return {Store} The store holding the state (Redux)\r\n ",
+            "start": 627,
+            "end": 837,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 0
+              },
+              "end": {
+                "line": 22,
+                "column": 3
+              }
+            }
+          }
+        ],
         "exportKind": "value"
       }
     ],
@@ -1421,6 +1477,22 @@
         "end": {
           "line": 13,
           "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\r\n * configureStore - Create a store and set the correct configurations\r\n *\r\n * @param {Map} initialState The initial state of the application\r\n *\r\n * @return {Store} The store holding the state (Redux)\r\n ",
+      "start": 627,
+      "end": 837,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 22,
+          "column": 3
         }
       }
     }
@@ -3558,6 +3630,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\r\n * configureStore - Create a store and set the correct configurations\r\n *\r\n * @param {Map} initialState The initial state of the application\r\n *\r\n * @return {Store} The store holding the state (Redux)\r\n ",
+      "start": 627,
+      "end": 837,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 22,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "export",
         "keyword": "export",
@@ -3572,15 +3660,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 627,
-      "end": 633,
+      "start": 839,
+      "end": 845,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 23,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 23,
           "column": 6
         }
       }
@@ -3600,15 +3688,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 634,
-      "end": 639,
+      "start": 846,
+      "end": 851,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 23,
           "column": 7
         },
         "end": {
-          "line": 16,
+          "line": 23,
           "column": 12
         }
       }
@@ -3626,15 +3714,15 @@
         "binop": null
       },
       "value": "configureStore",
-      "start": 640,
-      "end": 654,
+      "start": 852,
+      "end": 866,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 23,
           "column": 13
         },
         "end": {
-          "line": 16,
+          "line": 23,
           "column": 27
         }
       }
@@ -3653,15 +3741,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 655,
-      "end": 656,
+      "start": 867,
+      "end": 868,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 23,
           "column": 28
         },
         "end": {
-          "line": 16,
+          "line": 23,
           "column": 29
         }
       }
@@ -3679,15 +3767,15 @@
         "binop": null
       },
       "value": "initialState",
-      "start": 657,
-      "end": 669,
+      "start": 869,
+      "end": 881,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 23,
           "column": 30
         },
         "end": {
-          "line": 16,
+          "line": 23,
           "column": 42
         }
       }
@@ -3705,15 +3793,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 670,
-      "end": 672,
+      "start": 882,
+      "end": 884,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 23,
           "column": 43
         },
         "end": {
-          "line": 16,
+          "line": 23,
           "column": 45
         }
       }
@@ -3731,15 +3819,15 @@
         "binop": null
       },
       "value": "createStore",
-      "start": 676,
-      "end": 687,
+      "start": 888,
+      "end": 899,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 13
         }
       }
@@ -3756,15 +3844,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 687,
-      "end": 688,
+      "start": 899,
+      "end": 900,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 13
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 14
         }
       }
@@ -3782,15 +3870,15 @@
         "binop": null
       },
       "value": "reducer",
-      "start": 688,
-      "end": 695,
+      "start": 900,
+      "end": 907,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 14
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 21
         }
       }
@@ -3808,15 +3896,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 695,
-      "end": 696,
+      "start": 907,
+      "end": 908,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 21
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 22
         }
       }
@@ -3834,15 +3922,15 @@
         "binop": null
       },
       "value": "initialState",
-      "start": 697,
-      "end": 709,
+      "start": 909,
+      "end": 921,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 23
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 35
         }
       }
@@ -3860,15 +3948,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 709,
-      "end": 710,
+      "start": 921,
+      "end": 922,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 35
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 36
         }
       }
@@ -3886,15 +3974,15 @@
         "binop": null
       },
       "value": "enhancer",
-      "start": 711,
-      "end": 719,
+      "start": 923,
+      "end": 931,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 37
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 45
         }
       }
@@ -3911,15 +3999,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 719,
-      "end": 720,
+      "start": 931,
+      "end": 932,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 45
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 46
         }
       }
@@ -3937,15 +4025,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 720,
-      "end": 721,
+      "start": 932,
+      "end": 933,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 24,
           "column": 46
         },
         "end": {
-          "line": 17,
+          "line": 24,
           "column": 47
         }
       }
@@ -3963,15 +4051,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 723,
-      "end": 723,
+      "start": 935,
+      "end": 935,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 25,
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 25,
           "column": 0
         }
       }

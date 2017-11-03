@@ -11,6 +11,9 @@ import SoundCloudProxy from './../src/model/SoundCloudProxy';
 import SpotifyProxy from './../src/model/SpotifyProxy';
 import JamendoProxy from './../src/model/JamendoProxy';
 
+/**
+  * Index - Open the application
+  */
 (async () => {
   const soundCloudProxy = new SoundCloudProxy();
   const spotifyProxy = new SpotifyProxy();

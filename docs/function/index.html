@@ -295,13 +295,14 @@ the required data to execute the reducer action.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-configureStore">configureStore</a></span></span><span class="code" data-ice="signature">(initialState: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-configureStore">configureStore</a></span></span><span class="code" data-ice="signature">(initialState: <span>Map</span>): <span>Store</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>configureStore - Create a store and set the correct configurations</p>
+</div>
       </div>
     </td>
     <td>
@@ -466,13 +467,14 @@ the required data to execute the reducer action.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-formatMilliseconds">formatMilliseconds</a></span></span><span class="code" data-ice="signature">(milliseconds: <span>*</span>): <span>string</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-formatMilliseconds">formatMilliseconds</a></span></span><span class="code" data-ice="signature">(milliseconds: <span>number</span>): <span>string</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>formatMilliseconds - Format milliseconds to a string</p>
+</div>
       </div>
     </td>
     <td>
@@ -614,13 +616,13 @@ the required data to execute the reducer action.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span><span class="code" data-ice="signature">(state: <span>Map</span>, action: <span>*</span>): <span>Map</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span><span class="code" data-ice="signature">(state: <span>Map</span>, action: <span>ActionCreator</span>): <span>Map</span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Execute an action and return the new state</p>
+        <div data-ice="description"><p>Reducer - Execute an action and return the new state</p>
 </div>
       </div>
     </td>
@@ -643,13 +645,14 @@ the required data to execute the reducer action.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-routes">routes</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-routes">routes</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/patate-music-player/app/App/app.container.js~App.html">App</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Routes - Render the appplication and manage the routes</p>
+</div>
       </div>
     </td>
     <td>
@@ -1074,7 +1077,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -1164,18 +1167,19 @@ the required data to execute the reducer action.</p>
     
     
     
-    <span class="code" data-ice="name">configureStore</span><span class="code" data-ice="signature">(initialState: <span>*</span>)</span>
+    <span class="code" data-ice="name">configureStore</span><span class="code" data-ice="signature">(initialState: <span>Map</span>): <span>Store</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/configureStore.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/configureStore.js.html#lineNumber23">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {configureStore} from &apos;<span><a href="file/patate-music-player/app/configureStore.js.html#lineNumber16">sandwich-player/patate-music-player/app/configureStore.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {configureStore} from &apos;<span><a href="file/patate-music-player/app/configureStore.js.html#lineNumber23">sandwich-player/patate-music-player/app/configureStore.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>configureStore - Create a store and set the correct configurations</p>
+</div>
 
   
 
@@ -1189,16 +1193,30 @@ the required data to execute the reducer action.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">initialState</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>Map</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The initial state of the application</p>
+</td>
     </tr>
 </tbody>
   </table>
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Store</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The store holding the state (Redux)</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1323,7 +1341,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -1580,18 +1598,19 @@ the required data to execute the reducer action.</p>
     
     
     
-    <span class="code" data-ice="name">formatMilliseconds</span><span class="code" data-ice="signature">(milliseconds: <span>*</span>): <span>string</span></span>
+    <span class="code" data-ice="name">formatMilliseconds</span><span class="code" data-ice="signature">(milliseconds: <span>number</span>): <span>string</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/utils/time.js.html#lineNumber2">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/utils/time.js.html#lineNumber9">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {formatMilliseconds} from &apos;<span><a href="file/patate-music-player/app/utils/time.js.html#lineNumber2">sandwich-player/patate-music-player/app/utils/time.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {formatMilliseconds} from &apos;<span><a href="file/patate-music-player/app/utils/time.js.html#lineNumber9">sandwich-player/patate-music-player/app/utils/time.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>formatMilliseconds - Format milliseconds to a string</p>
+</div>
 
   
 
@@ -1605,9 +1624,10 @@ the required data to execute the reducer action.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">milliseconds</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>number</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The milliseconds</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1620,7 +1640,8 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>string</span></td>
-          
+          <td class="return-desc" data-ice="returnDescription"><p>A formatted string</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1677,7 +1698,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -1735,7 +1756,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -1810,7 +1831,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -1868,7 +1889,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -1900,18 +1921,18 @@ the required data to execute the reducer action.</p>
     
     
     
-    <span class="code" data-ice="name">reducer</span><span class="code" data-ice="signature">(state: <span>Map</span>, action: <span>*</span>): <span>Map</span></span>
+    <span class="code" data-ice="name">reducer</span><span class="code" data-ice="signature">(state: <span>Map</span>, action: <span>ActionCreator</span>): <span>Map</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/reducer.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/reducer.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import reducer from &apos;<span><a href="file/patate-music-player/app/reducer.js.html#lineNumber14">sandwich-player/patate-music-player/app/reducer.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import reducer from &apos;<span><a href="file/patate-music-player/app/reducer.js.html#lineNumber16">sandwich-player/patate-music-player/app/reducer.js</a></span>&apos;</code></pre></div>
   
   
-  <div data-ice="description"><p>Execute an action and return the new state</p>
+  <div data-ice="description"><p>Reducer - Execute an action and return the new state</p>
 </div>
 
   
@@ -1933,7 +1954,7 @@ the required data to execute the reducer action.</p>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">action</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>ActionCreator</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>The action to execute</p>
 </td>
@@ -1981,25 +2002,39 @@ the required data to execute the reducer action.</p>
     
     
     
-    <span class="code" data-ice="name">routes</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">routes</span><span class="code" data-ice="signature">(): <span><a href="class/patate-music-player/app/App/app.container.js~App.html">App</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/patate-music-player/app/routes.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/patate-music-player/app/routes.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import routes from &apos;<span><a href="file/patate-music-player/app/routes.js.html#lineNumber8">sandwich-player/patate-music-player/app/routes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import routes from &apos;<span><a href="file/patate-music-player/app/routes.js.html#lineNumber13">sandwich-player/patate-music-player/app/routes.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Routes - Render the appplication and manage the routes</p>
+</div>
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/patate-music-player/app/App/app.container.js~App.html">App</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The application</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -2195,7 +2230,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>
@@ -2324,7 +2359,7 @@ the required data to execute the reducer action.</p>
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creator</p>
 </td>
         </tr>
       </tbody>

@@ -1,4 +1,11 @@
 
+/**
+ * formatMilliseconds - Format milliseconds to a string
+ *
+ * @param {number} milliseconds The milliseconds
+ *
+ * @return {string} A formatted string
+ */
 export function formatMilliseconds(milliseconds) {
   const hours = Math.floor(milliseconds / 3600000);
   milliseconds %= 3600000;

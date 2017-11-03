@@ -132,6 +132,13 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">patate-music-player/app/utils/time.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+/**
+ * formatMilliseconds - Format milliseconds to a string
+ *
+ * @param {number} milliseconds The milliseconds
+ *
+ * @return {string} A formatted string
+ */
 export function formatMilliseconds(milliseconds) {
   const hours = Math.floor(milliseconds / 3600000);
   milliseconds %= 3600000;

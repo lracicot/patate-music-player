@@ -5,6 +5,11 @@ import { PlayerContainer } from './Player/player.container';
 import { SourceListContainer } from './SourceList/sourcelist.container';
 import { PlaylistsListContainer } from './PlaylistsList/playlistslist.container';
 
+/**
+ * Routes - Render the appplication and manage the routes
+ *
+ * @return {App} The application
+ */
 export default () => (
   <App>
     <Switch>
