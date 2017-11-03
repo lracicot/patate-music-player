@@ -48,6 +48,43 @@ export default class SpotifyProxy {
     return this.status === 'CONNECTED';
   }
 
+  async searchTracks(query) {
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: this.accessToken,
+    };
+
+    const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });
+
+    const tracks = response.data.tracks.items;
+    if (tracks.length === 0) {
+      return null;
+    }
+
+    const songs = [];
+
+    tracks.forEach((track) => {
+      let artworkUrl = '';
+      const { images } = track.album;
+
+      if (images.length > 0) {
+        artworkUrl = images[0].url;
+      }
+
+      console.log(track.preview_url);
+
+      if (track.preview_url !== null) {
+        songs.push(new Song(
+          track.name,
+          track.preview_url,
+          artworkUrl,
+        ));
+      }
+    });
+
+    return songs;
+  }
+
   async loadRandomPlaylist() {
     return this.search('pop');
   }

@@ -4,6 +4,11 @@ export function toggleplay() {
     type: 'TOGGLEPLAY',
   };
 }
+export function play() {
+  return {
+    type: 'PLAY',
+  };
+}
 
 export function stop() {
   return {

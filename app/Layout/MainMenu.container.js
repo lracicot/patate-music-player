@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { autobind } from 'core-decorators';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
@@ -17,9 +16,13 @@ export class MainMenu extends Component {
     }
   }
 
-  onResultSelect(target, prop, value) {
+  onResultSelect(target, prop) {
+    const song = this.props.searchResults.find(e => prop.result.title === e.title);
+
     this.props.clearQueue();
+    this.props.enqueue(song);
     this.props.endSearch();
+    this.props.play();
   }
 
   onSearchChange(target, prop) {
@@ -50,10 +53,13 @@ MainMenu.propTypes = {
   sources: PropTypes.instanceOf(List).isRequired,
   searchQuery: PropTypes.string,
   search: PropTypes.func.isRequired,
+  play: PropTypes.func.isRequired,
+  enqueue: PropTypes.func.isRequired,
   searchResults: PropTypes.instanceOf(List),
   endSearch: PropTypes.func.isRequired,
   appendSearchResults: PropTypes.func.isRequired,
   clearSearchResults: PropTypes.func.isRequired,
+  clearQueue: PropTypes.func.isRequired,
 };
 
 MainMenu.defaultProps = {
@@ -67,8 +73,10 @@ const mapStateToProps = state => ({
   searchResults: state.get('searchResults'),
 });
 
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators({ LayoutActions, PlayerActions }, dispatch),
-});
-
-export const MainMenuContainer = connect(mapStateToProps, mapDispatchToProps)(MainMenu);
+export const MainMenuContainer = connect(
+  mapStateToProps,
+  Object.assign(
+    LayoutActions,
+    PlayerActions,
+  ),
+)(MainMenu);

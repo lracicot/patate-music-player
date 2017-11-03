@@ -100,6 +100,45 @@ describe('reducer', () => {
     expect(nextState.getIn(['playback', 'playStatus'])).to.equal(Sound.status.STOPPED);
   });
 
+  it('handles PLAY by setting playStatus to PLAYING when stopped', () => {
+    const state = fromJS({
+      playback: {
+        playStatus: Sound.status.STOPPED,
+      },
+      queue: List.of({ title: 'Test1' }),
+    });
+    const action = { type: 'PLAY' };
+    const nextState = reducer(state, action);
+
+    expect(nextState.getIn(['playback', 'playStatus'])).to.equal(Sound.status.PLAYING);
+  });
+
+  it('handles PLAY by setting playStatus to PLAYING when paused', () => {
+    const state = fromJS({
+      playback: {
+        playStatus: Sound.status.PAUSED,
+      },
+      queue: List.of({ title: 'Test1' }),
+    });
+    const action = { type: 'PLAY' };
+    const nextState = reducer(state, action);
+
+    expect(nextState.getIn(['playback', 'playStatus'])).to.equal(Sound.status.PLAYING);
+  });
+
+  it('handles PLAY by setting playStatus to PLAYING when playing', () => {
+    const state = fromJS({
+      playback: {
+        playStatus: Sound.status.PLAYING,
+      },
+      queue: List.of({ title: 'Test1' }),
+    });
+    const action = { type: 'PLAY' };
+    const nextState = reducer(state, action);
+
+    expect(nextState.getIn(['playback', 'playStatus'])).to.equal(Sound.status.PLAYING);
+  });
+
   it('handles STOP by setting playStatus to STOPPED ', () => {
     const state = fromJS({
       playback: {

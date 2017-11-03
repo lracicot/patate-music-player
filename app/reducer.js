@@ -12,6 +12,8 @@ export default function (state = Map(), action) {
     return PlayerActions.Enqueue.execute(state, action.tracks);
   case 'TOGGLEPLAY':
     return PlayerActions.TogglePlay.execute(state);
+  case 'PLAY':
+    return PlayerActions.Play.execute(state);
   case 'STOP':
     return PlayerActions.Stop.execute(state);
   case 'PLAYING':

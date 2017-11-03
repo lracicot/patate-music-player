@@ -37,6 +37,33 @@ export default class SoundCloudProxy {
     return `${url}?client_id=${clientId}`;
   }
 
+  async searchTracks(keywords) {
+    try {
+      const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);
+
+      const tracks = response.data;
+
+      console.log(tracks);
+      const songs = [];
+
+      tracks.forEach((track) => {
+        if (track.sharing === 'public') {
+          songs.push(new Song(
+            track.title,
+            track.stream_url,
+            track.artwork_url,
+          ));
+        }
+      });
+
+      return songs;
+    } catch (e) {
+      console.log(e);
+    }
+
+    return null;
+  }
+
   async loadRandomPlaylist() {
     return this.search('');
   }
