@@ -20,12 +20,28 @@ import Footer from './components/footer.component';
 // Utils
 import { formatMilliseconds } from '../utils/time';
 
+/**
+  * Player - A component who play the music
+  * @extends Component
+  */
 @autobind
 export class Player extends Component {
+  /**
+   * getPlayFromPosition - Get the position
+   *
+   * @return {number} the position
+   */
   getPlayFromPosition() {
     return this.props.playFromPosition || 0;
   }
 
+  /**
+   * xlArtwork - Return the url for the artwork is there is one
+   *
+   * @param {string} url The url
+   *
+   * @return {string} The formatted url
+   */
   xlArtwork(url) {
     if (url) {
       return url.replace(/large/, 't500x500');
@@ -33,6 +49,12 @@ export class Player extends Component {
     return null;
   }
 
+  /**
+   * handleSongPlaying - Dispatch the playing action while song is playing
+   *
+   * @param {Sound} audio The sound to handle
+   *
+   */
   handleSongPlaying(audio) {
     this.props.playing({
       elapsed: formatMilliseconds(audio.position),
@@ -41,10 +63,18 @@ export class Player extends Component {
     });
   }
 
+  /**
+   * handleSongFinished - Dispatch the next action when song finish
+   */
   handleSongFinished() {
     this.next();
   }
 
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     const patateStyle = {
       width: '500px',

@@ -1,19 +1,21 @@
 {
-  "coverage": "49.77%",
-  "expectCount": 219,
-  "actualCount": 109,
+  "coverage": "65.72%",
+  "expectCount": 213,
+  "actualCount": 140,
   "files": {
     "patate-music-player/app/App/actions/SetState.action.js": {
       "expectCount": 3,
       "actualCount": 2,
       "undocumentLines": [
-        15
+        20
       ]
     },
     "patate-music-player/app/App/app.actions.js": {
       "expectCount": 2,
-      "actualCount": 2,
-      "undocumentLines": []
+      "actualCount": 1,
+      "undocumentLines": [
+        2
+      ]
     },
     "patate-music-player/app/App/app.action_middleware.js": {
       "expectCount": 1,
@@ -24,10 +26,8 @@
     },
     "patate-music-player/app/App/app.container.js": {
       "expectCount": 3,
-      "actualCount": 2,
-      "undocumentLines": [
-        8
-      ]
+      "actualCount": 3,
+      "undocumentLines": []
     },
     "patate-music-player/app/App/root.container.js": {
       "expectCount": 1,
@@ -46,173 +46,135 @@
     },
     "patate-music-player/app/Layout/actions/AppendSearchResults.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        18
+        26
       ]
     },
     "patate-music-player/app/Layout/actions/ClearSearchResults.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        12
+        19
       ]
     },
     "patate-music-player/app/Layout/actions/EndSearch.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        2,
-        11
+        18
       ]
     },
     "patate-music-player/app/Layout/actions/Search.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        2,
-        11
+        18
       ]
     },
     "patate-music-player/app/Layout/components/mainMenu.component.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        8
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "patate-music-player/app/Layout/components/search.component.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        7
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "patate-music-player/app/Layout/layout.actions.js": {
       "expectCount": 4,
       "actualCount": 4,
       "undocumentLines": []
     },
-    "patate-music-player/app/Layout/layout.container.js": {
-      "expectCount": 6,
-      "actualCount": 3,
-      "undocumentLines": [
-        9,
-        41,
-        47
-      ]
-    },
     "patate-music-player/app/Layout/MainMenu.container.js": {
       "expectCount": 8,
-      "actualCount": 5,
+      "actualCount": 6,
       "undocumentLines": [
-        12,
-        70,
-        76
+        99,
+        105
       ]
     },
     "patate-music-player/app/Player/actions/ClearQueue.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        12
+        19
       ]
     },
     "patate-music-player/app/Player/actions/Enqueue.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        28
+        36
       ]
     },
     "patate-music-player/app/Player/actions/Next.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        24
+        31
       ]
     },
     "patate-music-player/app/Player/actions/Play.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        16
+        23
       ]
     },
     "patate-music-player/app/Player/actions/Playing.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        2,
-        13
+        21
       ]
     },
     "patate-music-player/app/Player/actions/Prev.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        2,
-        19
+        26
       ]
     },
     "patate-music-player/app/Player/actions/Stop.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        12
+        19
       ]
     },
     "patate-music-player/app/Player/actions/TogglePlay.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        19
+        26
       ]
     },
     "patate-music-player/app/Player/components/controls.component.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        6
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "patate-music-player/app/Player/components/details.component.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        7
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "patate-music-player/app/Player/components/footer.component.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        3
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "patate-music-player/app/Player/components/progress.component.js": {
       "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        7
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     },
     "patate-music-player/app/Player/components/search.component.js": {
       "expectCount": 3,
-      "actualCount": 2,
-      "undocumentLines": [
-        7
-      ]
+      "actualCount": 3,
+      "undocumentLines": []
     },
     "patate-music-player/app/Player/player.actions.js": {
       "expectCount": 8,
@@ -232,61 +194,52 @@
     },
     "patate-music-player/app/Player/player.container.js": {
       "expectCount": 8,
-      "actualCount": 5,
+      "actualCount": 6,
       "undocumentLines": [
-        24,
-        115,
-        127
+        145,
+        157
       ]
     },
     "patate-music-player/app/PlaylistsList/actions/UpdateSearch.helper.js": {
       "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        1,
-        7
+        19
       ]
     },
     "patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        9
+        20
       ]
     },
     "patate-music-player/app/PlaylistsList/components/playlist.component.js": {
       "expectCount": 4,
-      "actualCount": 3,
-      "undocumentLines": [
-        10
-      ]
+      "actualCount": 4,
+      "undocumentLines": []
     },
     "patate-music-player/app/PlaylistsList/playlistslist.actions.js": {
       "expectCount": 6,
-      "actualCount": 3,
+      "actualCount": 4,
       "undocumentLines": [
         3,
-        11,
         20
       ]
     },
     "patate-music-player/app/PlaylistsList/playlistslist.container.js": {
       "expectCount": 6,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        15,
-        16,
-        58,
-        64,
-        72
+        20,
+        67,
+        73,
+        81
       ]
     },
     "patate-music-player/app/reducer.js": {
@@ -301,18 +254,16 @@
     },
     "patate-music-player/app/SourceList/actions/ConnectedSource.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        1,
-        12
+        25
       ]
     },
     "patate-music-player/app/SourceList/actions/ConnectingSource.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        1,
-        12
+        23
       ]
     },
     "patate-music-player/app/SourceList/actions/Connexion.helper.js": {
@@ -322,36 +273,32 @@
     },
     "patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js": {
       "expectCount": 3,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        1,
-        13
+        25
       ]
     },
     "patate-music-player/app/SourceList/components/source.component.js": {
       "expectCount": 4,
-      "actualCount": 3,
-      "undocumentLines": [
-        11
-      ]
+      "actualCount": 4,
+      "undocumentLines": []
     },
     "patate-music-player/app/SourceList/sourcelist.actions.js": {
       "expectCount": 7,
       "actualCount": 4,
       "undocumentLines": [
         3,
-        11,
-        20
+        20,
+        39
       ]
     },
     "patate-music-player/app/SourceList/sourcelist.container.js": {
       "expectCount": 5,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        13,
-        36,
-        40,
-        47
+        46,
+        50,
+        57
       ]
     },
     "patate-music-player/app/utils/time.js": {

@@ -1,6 +1,15 @@
 import fetchPlaylists from './actions/UpdateSearch.helper';
 
 export const PLAYLIST_UPDATE_SEARCH_FIELD = 'PLAYLIST_UPDATE_SEARCH_FIELD';
+
+/**
+ * updateSearchField - Creates an action named "PLAYLIST_UPDATE_SEARCH_FIELD" with
+ * the required data to execute the reducer action
+ *
+ * @param {string} searchValue The search field
+ *
+ * @return {ActionCreator} The action creator
+ */
 function updateSearchField(searchValue) {
   return {
     type: PLAYLIST_UPDATE_SEARCH_FIELD,
@@ -9,6 +18,14 @@ function updateSearchField(searchValue) {
 }
 
 export const PLAYLIST_UPDATE_SEARCH_RESULTS = 'PLAYLIST_UPDATE_SEARCH_RESULTS';
+/**
+ * updateSearchResults - Creates an action named "PLAYLIST_UPDATE_SEARCH_RESULTS" with
+ * the required data to execute the reducer action
+ *
+ * @param {List} searchResults The search results
+ *
+ * @return {ActionCreator} The action creator
+ */
 function updateSearchResults(searchResults) {
   return {
     type: PLAYLIST_UPDATE_SEARCH_RESULTS,
@@ -16,7 +33,15 @@ function updateSearchResults(searchResults) {
   };
 }
 
-// https://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript
+
+/**
+ * flatten - Flatten an array of arrays of arrays of arrays of arrays.
+ * https://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript
+ *
+ * @param {Array} arr The array to be flattened
+ *
+ * @return {Array} Flattened arary
+ */
 function flatten(arr) {
   return arr.filter(x => x !== null).reduce(
     (flat, toFlatten) => flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten),
@@ -24,6 +49,14 @@ function flatten(arr) {
   );
 }
 
+/**
+ * updateSearch - Update the search and search in the sources
+ *
+ * @param {List} sources     List of sources to search within
+ * @param {string} searchValue The query
+ *
+ * @return {Promise} The promise to wait this action
+ */
 export function updateSearch(sources, searchValue) {
   return (dispatch) => {
     dispatch(updateSearchField(searchValue));

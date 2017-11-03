@@ -4,7 +4,16 @@ import { List } from 'immutable';
 import PropTypes from 'prop-types';
 
 
-export default class MainMenu extends PureComponent {
+/**
+  * SearchComponent - The serach component
+  * @extends PureComponent
+  */
+export default class SearchComponent extends PureComponent {
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     const { searchResults } = this.props;
     const results = searchResults.map(song => ({
@@ -21,12 +30,12 @@ export default class MainMenu extends PureComponent {
   }
 }
 
-MainMenu.propTypes = {
+SearchComponent.propTypes = {
   searchResults: PropTypes.instanceOf(List),
   onResultSelect: PropTypes.func.isRequired,
   onSearchChange: PropTypes.func.isRequired,
 };
 
-MainMenu.defaultProps = {
+SearchComponent.defaultProps = {
   searchResults: List(),
 };

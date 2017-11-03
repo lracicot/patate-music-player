@@ -1,9 +1,9 @@
 
 /**
- * This function creates an action named "APPEND_SEARCH_RESULTS" with
+ * appendSearchResults - This function creates an action named "APPEND_SEARCH_RESULTS" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator The action creator
+ * @return {ActionCreator} The action creator
  */
 export function appendSearchResults(results) {
   return {
@@ -13,10 +13,10 @@ export function appendSearchResults(results) {
 }
 
 /**
- * This function creates an action named "CLEAR_SEARCH_RESULTS" with
+ * clearSearchResults - This function creates an action named "CLEAR_SEARCH_RESULTS" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator The action creator
+ * @return {ActionCreator} The action creator
  */
 export function clearSearchResults() {
   return {
@@ -25,10 +25,12 @@ export function clearSearchResults() {
 }
 
 /**
- * This function creates an action named "SEARCH" with
+ * search 0 This function creates an action named "SEARCH" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator The action creator
+ * @param {string} keywords The keyowrds to search
+ *
+ * @return {ActionCreator} The action creator
  */
 export function search(keywords) {
   return {
@@ -38,10 +40,10 @@ export function search(keywords) {
 }
 
 /**
- * This function creates an action named "ENDSEARCH" with
+ * endSearch - This function creates an action named "ENDSEARCH" with
  * the required data to execute the reducer action.
  *
- * @return ActionCreator The action creator
+ * @return {ActionCreator} The action creator
  */
 export function endSearch() {
   return {

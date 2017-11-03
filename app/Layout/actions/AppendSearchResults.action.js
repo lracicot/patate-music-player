@@ -1,8 +1,16 @@
 import { List } from 'immutable';
 
+/**
+ * AppendSearchResults - The action which append the results
+ */
 class AppendSearchResults {
   /**
-   * Reduce the state
+   * execute - Execute the action
+   *
+   * @param {Map} state       The old state of the application
+   * @param {Array} results       The array of results to merge
+   *
+   * @return {Map} The new state of the application
    */
   execute(state, results) {
     let searchResults = List(results);

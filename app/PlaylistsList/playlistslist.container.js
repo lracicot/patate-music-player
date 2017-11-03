@@ -11,12 +11,21 @@ import * as PlaylistsListActions from './playlistslist.actions';
 // Custom components
 import PlaylistItem from './components/playlist.component';
 
+/**
+  * PlaylistsList - Display a panel to search and manage playlists
+  * @extends Component
+  */
 @autobind
 export class PlaylistsList extends Component {
   handleSearchChange = (e, { value }) => {
     this.props.dispatch(PlaylistsListActions.updateSearch(this.props.sources, value));
   }
 
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {ReactComponent} The rendered component
+   */
   render() {
     const mapPlaylistToComponent = playlist => (
       <PlaylistItem

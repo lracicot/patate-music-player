@@ -1,7 +1,14 @@
 
+/**
+ * Prev - The action which back the music
+ */
 class Prev {
   /**
-   * Reduce the state
+   * execute - Execute the action
+   *
+   * @param {Map} state       The old state of the application
+   *
+   * @return {Map} The new state of the application
    */
   execute(state) {
     if (state.get('history').size > 0) {

@@ -5,11 +5,20 @@ import { Grid } from 'semantic-ui-react';
 import { MainMenuContainer } from '../Layout/MainMenu.container';
 
 
+/**
+  * App - The main application component
+  * @extends Component
+  */
 export default class App extends Component {
   props: {
     children: Children
   };
 
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     return (
       <Grid>

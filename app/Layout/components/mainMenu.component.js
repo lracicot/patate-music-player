@@ -5,7 +5,16 @@ import { withRouter } from 'react-router-dom';
 import Search from './search.component';
 
 
+/**
+  * mainMenu - This is the main menu
+  * @extends PureComponent
+  */
 export default class mainMenu extends PureComponent {
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     const { activeItem } = this.props;
 

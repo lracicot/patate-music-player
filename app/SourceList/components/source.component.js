@@ -8,15 +8,34 @@ import SoundCloudProxy from './../../../src/model/SoundCloudProxy';
 import SpotifyProxy from './../../../src/model/SpotifyProxy';
 import JamendoProxy from './../../../src/model/JamendoProxy';
 
+/**
+ * Source - The source component representing a single source
+ * @extends PureComponent
+ */
 class Source extends PureComponent {
+  /**
+   * getButtonInteraction - get the text to display in the button
+   *
+   * @return {string} The text
+   */
   getButtonInteraction() {
     return this.props.proxy.status === 'DISCONNECTED' ? 'Connect' : 'Disconnect';
   }
 
+  /**
+   * isConnecting - Is the source currently connecting
+   *
+   * @return {boolean} Is connecting
+   */
   isConnecting() {
     return this.props.proxy.status === 'CONNECTING';
   }
 
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} The rendered component
+   */
   render() {
     return (
       <List.Item>

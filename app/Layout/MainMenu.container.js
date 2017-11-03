@@ -8,14 +8,27 @@ import Menu from './components/mainMenu.component';
 import * as LayoutActions from './layout.actions';
 import * as PlayerActions from '../Player/player.actions';
 
+/**
+  * MainMenu - The component for the side menu (this is a containing holding the menu)
+  * @extends Component
+  */
 @autobind
 export class MainMenu extends Component {
+  /**
+   * componentDidUpdate - Refresh on update
+   */
   componentDidUpdate() {
     if (this.props.searchResults.size === 0) {
       this.loadSearchResults(this.props.searchQuery);
     }
   }
 
+  /**
+   * onResultSelect - On the selection of a result
+   *
+   * @param {object} target The targeted selection
+   * @param {object} prop   The props
+   */
   onResultSelect(target, prop) {
     const song = this.props.searchResults.find(e => prop.result.title === e.title);
 
@@ -25,11 +38,22 @@ export class MainMenu extends Component {
     this.props.play();
   }
 
+  /**
+   * onSearchChange - On a change in the search
+   *
+   * @param {object} target The targeted selection
+   * @param {object} prop   The props
+   */
   onSearchChange(target, prop) {
     this.props.clearSearchResults();
     this.props.search(prop.value);
   }
 
+  /**
+   * loadSearchResults - Load search results
+   *
+   * @param {string} keywords search query
+   */
   loadSearchResults(keywords) {
     this.props.sources
       .filter(source => source.isConnected())
@@ -38,6 +62,11 @@ export class MainMenu extends Component {
       }));
   }
 
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     return (
       <Menu

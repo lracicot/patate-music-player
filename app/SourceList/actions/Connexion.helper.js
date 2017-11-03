@@ -1,6 +1,13 @@
 import Axios from 'axios';
 import Semaphore from 'semaphore-async-await';
 
+/**
+ * fetchAuthorizationCode - Fetch the authorization code
+ *
+ * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} source The source to authentify
+ *
+ * @return {string} The code
+ */
 export async function fetchAuthorizationCode(source) {
   let resultUrl = null;
 
@@ -37,6 +44,14 @@ export async function fetchAuthorizationCode(source) {
   return resultUrl;
 }
 
+/**
+ * fetchTokenCode - Fetch the access token
+ *
+ * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} source The source to access
+ * @param {type} strUrl The url to access the token
+ *
+ * @return {string} The token
+ */
 export async function fetchTokenCode(source, strUrl) {
   // const index = url.search('code=');
   const url = new URL(strUrl);

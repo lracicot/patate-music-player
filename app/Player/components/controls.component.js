@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 
 import ClassNames from 'classnames';
 
+/**
+ * Controls - The control component which handle the buttons to play, stop, etc.
+ * @extends PureComponent
+ */
 class Controls extends PureComponent {
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     const playPauseClass = ClassNames({
       'fa fa-play': this.props.playStatus !== 'PLAYING',

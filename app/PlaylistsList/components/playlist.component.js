@@ -6,8 +6,17 @@ import { autobind } from 'core-decorators';
 import { enqueue, clearQueue } from '../.././Player/player.actions';
 import Playlist from './../../../src/model/Playlist';
 
+/**
+ * PlaylistItem - Display a playlist in the playlistslist
+ * @extends PureComponent
+ */
 @autobind
 class PlaylistItem extends PureComponent {
+  /**
+   * getDescription - Get the description which is the number of tracks
+   *
+   * @return {string} the description of the playlist
+   */
   getDescription() {
     const size = this.props.playlist.songs.count();
     if (size > 1) {
@@ -17,11 +26,19 @@ class PlaylistItem extends PureComponent {
     return `${size} track`;
   }
 
+  /**
+   * handleOnClick - Dispatch actions on a click
+   */
   handleOnClick() {
     this.props.dispatch(clearQueue());
     this.props.dispatch(enqueue(this.props.playlist.songs));
   }
 
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     return (
       <List.Item onClick={this.handleOnClick}>

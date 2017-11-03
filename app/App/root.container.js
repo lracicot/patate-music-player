@@ -8,6 +8,13 @@ type RootType = {
   history: {}
 };
 
+/**
+ * Root - Render the root of the application
+ *
+ * @param {RootType} rootContainer         The root data to hold
+ *
+ * @return {ReactComponent} The rendered compoent
+ */
 export default function Root({ store, history }: RootType) {
   return (
     <Provider store={store}>

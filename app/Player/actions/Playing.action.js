@@ -1,7 +1,15 @@
 
+/**
+ * Playing - The action which update the music playing
+ */
 class Playing {
   /**
-   * Reduce the state
+   * execute - Execute the action
+   *
+   * @param {Map} state       The old state of the application
+   * @param {object} audioStatus  Data structure holding the status
+   *
+   * @return {Map} The new state of the application
    */
   execute(state, audioStatus) {
     return state.setIn(['playback', 'elapsed'], audioStatus.elapsed)

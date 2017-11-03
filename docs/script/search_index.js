@@ -96,27 +96,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "sandwich-player/patate-music-player/app/layout/layout.container.js~layout",
-    "class/patate-music-player/app/Layout/layout.container.js~Layout.html",
-    "<span>Layout</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.container.js</span>",
-    "class"
-  ],
-  [
-    "sandwich-player/patate-music-player/app/layout/layout.container.js~layoutcontainer",
-    "variable/index.html#static-variable-LayoutContainer",
-    "<span>LayoutContainer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.container.js</span>",
-    "variable"
-  ],
-  [
     "sandwich-player/patate-music-player/app/layout/mainmenu.container.js~mainmenu",
     "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html",
     "<span>MainMenu</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/MainMenu.container.js</span>",
-    "class"
-  ],
-  [
-    "sandwich-player/patate-music-player/app/layout/components/search.component.js~mainmenu",
-    "class/patate-music-player/app/Layout/components/search.component.js~MainMenu.html",
-    "<span>MainMenu</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/components/search.component.js</span>",
     "class"
   ],
   [
@@ -258,6 +240,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "sandwich-player/patate-music-player/app/layout/components/search.component.js~searchcomponent",
+    "class/patate-music-player/app/Layout/components/search.component.js~SearchComponent.html",
+    "<span>SearchComponent</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/components/search.component.js</span>",
+    "class"
+  ],
+  [
     "sandwich-player/patate-music-player/app/app/actions/setstate.action.js~setstate",
     "class/patate-music-player/app/App/actions/SetState.action.js~SetState.html",
     "<span>SetState</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/actions/SetState.action.js</span>",
@@ -318,9 +306,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchfield",
-    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField.html",
-    "<span>UpdateSearchField</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</span>",
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchresults",
+    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchResults.html",
+    "<span>UpdateSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</span>",
     "class"
   ],
   [
@@ -576,9 +564,9 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchfield",
-    "variable/index.html#static-variable-updateSearchField",
-    "<span>updateSearchField</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</span>",
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchresults",
+    "variable/index.html#static-variable-updateSearchResults",
+    "<span>updateSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</span>",
     "variable"
   ],
   [
@@ -744,9 +732,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "patate-music-player/app/layout/components/search.component.js~mainmenu#render",
-    "class/patate-music-player/app/Layout/components/search.component.js~MainMenu.html#instance-method-render",
-    "patate-music-player/app/Layout/components/search.component.js~MainMenu#render",
+    "patate-music-player/app/layout/components/search.component.js~searchcomponent#render",
+    "class/patate-music-player/app/Layout/components/search.component.js~SearchComponent.html#instance-method-render",
+    "patate-music-player/app/Layout/components/search.component.js~SearchComponent#render",
     "method"
   ],
   [
@@ -754,30 +742,6 @@ window.esdocSearchIndex = [
     "file/patate-music-player/app/Layout/layout.actions.js.html",
     "patate-music-player/app/Layout/layout.actions.js",
     "file"
-  ],
-  [
-    "patate-music-player/app/layout/layout.container.js",
-    "file/patate-music-player/app/Layout/layout.container.js.html",
-    "patate-music-player/app/Layout/layout.container.js",
-    "file"
-  ],
-  [
-    "patate-music-player/app/layout/layout.container.js~layout#componentdidupdate",
-    "class/patate-music-player/app/Layout/layout.container.js~Layout.html#instance-method-componentDidUpdate",
-    "patate-music-player/app/Layout/layout.container.js~Layout#componentDidUpdate",
-    "method"
-  ],
-  [
-    "patate-music-player/app/layout/layout.container.js~layout#loadsearchresults",
-    "class/patate-music-player/app/Layout/layout.container.js~Layout.html#instance-method-loadSearchResults",
-    "patate-music-player/app/Layout/layout.container.js~Layout#loadSearchResults",
-    "method"
-  ],
-  [
-    "patate-music-player/app/layout/layout.container.js~layout#render",
-    "class/patate-music-player/app/Layout/layout.container.js~Layout.html#instance-method-render",
-    "patate-music-player/app/Layout/layout.container.js~Layout#render",
-    "method"
   ],
   [
     "patate-music-player/app/player/actions/clearqueue.action.js",
@@ -1020,9 +984,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchfield#execute",
-    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField.html#instance-method-execute",
-    "patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField#execute",
+    "patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchresults#execute",
+    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchResults.html#instance-method-execute",
+    "patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchResults#execute",
     "method"
   ],
   [

@@ -1,9 +1,17 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-// Create Progress component class
+
+/**
+ * Progress - Create Progress component class
+ * @extends PureComponent
+ */
 class Progress extends PureComponent {
-  // Render method
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     return (
       <div className="progress">

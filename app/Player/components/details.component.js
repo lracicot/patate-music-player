@@ -2,8 +2,16 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 
+/**
+ * Details - Display the title
+ * @extends PureComponent
+ */
 class Details extends PureComponent {
-  // Render
+  /**
+   * render - Render the component
+   *
+   * @return {ReactComponent} Return the rendered component
+   */
   render() {
     return (
       <div className="details">
