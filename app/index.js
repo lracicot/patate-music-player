@@ -25,6 +25,7 @@ import JamendoProxy from './../src/model/JamendoProxy';
     history: Stack(),
     queue: List(),
     sources: List(sources),
+    playlistsFound: List(),
   }));
 
   render(

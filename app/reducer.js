@@ -2,6 +2,7 @@ import { Map } from 'immutable';
 import * as AppActions from './App/actions';
 import * as PlayerActions from './Player/actions';
 import * as SourceListActions from './SourceList/actions';
+import * as PlaylistsListActions from './PlaylistsList/actions';
 import * as LayoutActions from './Layout/actions';
 
 export default function (state = Map(), action) {
@@ -38,10 +39,10 @@ export default function (state = Map(), action) {
     return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);
   case 'CONNEXIONFAILEDSOURCE':
     return SourceListActions.ConnexionFailedSource.execute(state, action.proxy, action.error);
-  case 'TEST':
-    return (dispatch) => {
-      dispatch({ type: 'STOP' });
-    };
+  case 'PLAYLIST_UPDATE_SEARCH_FIELD':
+    return PlaylistsListActions.UpdateSearchField.execute(state, action.searchValue);
+  case 'PLAYLIST_UPDATE_SEARCH_RESULTS':
+    return PlaylistsListActions.UpdateSearchResults.execute(state, action.searchResults);
   default:
     console.log(action);
   }

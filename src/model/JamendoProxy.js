@@ -1,7 +1,9 @@
-// Axios for Ajax
+import { autobind } from 'core-decorators';
 import Axios from 'axios';
 
 import Song from './Song';
+
+import Playlist from './Playlist';
 
 const clientId = '58c2e328';
 
@@ -68,38 +70,47 @@ export default class JamendoProxy {
   }
 
   async loadRandomPlaylist() {
-    return this.search('pop');
+    return this.searchPlaylists('pop').get(0);
   }
 
-  async search(query) {
+  @autobind
+  async fetchPlaylistDetails(playlist) {
+    const { id } = playlist;
+
+    const response = await Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&id=${id}&track_type=albumtrack`);
+
+    if (response.data.results === undefined
+      || response.data.results.length === 0) {
+      return null;
+    }
+
+    const playlistData = response.data.results[0];
+    const { tracks, zip, name } = playlistData;
+
+    const songs = Object.keys(tracks).map((key) => {
+      const track = tracks[key];
+      return new Song(
+        track.name,
+        track.audio,
+        track.album_image,
+      );
+    });
+
+    return new Playlist(name, this.name, zip, this.logo, songs);
+  }
+
+  async searchPlaylists(query) {
+    let playlists = [];
     try {
       const response = await
-        Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&name=${query}&track_type=albumtrack`);
+        Axios.get(`https://api.jamendo.com/v3.0/playlists/?client_id=${clientId}&format=jsonpretty&limit=10&namesearch=${query}&track_type=albumtrack`);
 
-      const playlists = response.data.results;
-      if (playlists.length === 0) {
-        return null;
-      }
-
-      const songs = [];
-
-      const { tracks } = playlists[0];
-
-      Object.keys(tracks).forEach((key) => {
-        const track = tracks[key];
-        const song = new Song(
-          track.name,
-          track.audio,
-          track.album_image,
-        );
-        songs.push(song);
-      });
-
-      return songs;
+      const playlistsData = response.data.results;
+      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));
     } catch (e) {
       console.log(e);
     }
 
-    return null;
+    return playlists;
   }
 }

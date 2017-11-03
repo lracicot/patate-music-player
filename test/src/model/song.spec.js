@@ -18,8 +18,8 @@ describe('Song', () => {
 
     song = new Song(title, streamUrl, artworkUrl);
 
-    expect(song.title === title);
-    expect(song.streamUrl === streamUrl);
-    expect(song.artworkUrl === artworkUrl);
+    expect(song.title).to.equal(title);
+    expect(song.streamUrl).to.equal(streamUrl);
+    expect(song.artworkUrl).to.equal(artworkUrl);
   });
 });
