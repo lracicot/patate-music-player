@@ -1,7 +1,7 @@
 {
-  "coverage": "45.49%",
-  "expectCount": 222,
-  "actualCount": 101,
+  "coverage": "49.54%",
+  "expectCount": 218,
+  "actualCount": 108,
   "files": {
     "sandwich-player/app/App/actions/SetState.action.js": {
       "expectCount": 3,
@@ -95,12 +95,12 @@
       "undocumentLines": []
     },
     "sandwich-player/app/Layout/layout.container.js": {
-      "expectCount": 6,
-      "actualCount": 3,
+      "expectCount": 5,
+      "actualCount": 2,
       "undocumentLines": [
         9,
-        41,
-        47
+        37,
+        43
       ]
     },
     "sandwich-player/app/Player/actions/ClearQueue.action.js": {
@@ -176,10 +176,9 @@
     },
     "sandwich-player/app/Player/components/details.component.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        5,
-        7
+        5
       ]
     },
     "sandwich-player/app/Player/components/footer.component.js": {
@@ -191,10 +190,9 @@
     },
     "sandwich-player/app/Player/components/progress.component.js": {
       "expectCount": 2,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        5,
-        7
+        5
       ]
     },
     "sandwich-player/app/Player/components/search.component.js": {
@@ -225,8 +223,8 @@
       "actualCount": 5,
       "undocumentLines": [
         24,
-        115,
-        127
+        129,
+        141
       ]
     },
     "sandwich-player/app/PlaylistsList/actions/UpdateSearch.helper.js": {
@@ -274,9 +272,9 @@
       "undocumentLines": [
         15,
         16,
-        58,
-        64,
-        72
+        63,
+        69,
+        77
       ]
     },
     "sandwich-player/app/SourceList/actions/ConnectedSource.action.js": {
@@ -363,70 +361,61 @@
       "undocumentLines": []
     },
     "sandwich-player/src/model/JamendoProxy.js": {
-      "expectCount": 17,
-      "actualCount": 9,
+      "expectCount": 16,
+      "actualCount": 10,
       "undocumentLines": [
         8,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        21
+        20,
+        21,
+        22,
+        23,
+        36
       ]
     },
     "sandwich-player/src/model/Playlist.js": {
       "expectCount": 7,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
+        19,
+        20,
+        21,
+        22,
+        23
       ]
     },
     "sandwich-player/src/model/Song.js": {
       "expectCount": 5,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        1,
-        2,
-        3,
-        4,
-        5
+        15,
+        16,
+        17
       ]
     },
     "sandwich-player/src/model/SoundCloudProxy.js": {
-      "expectCount": 19,
+      "expectCount": 15,
       "actualCount": 9,
       "undocumentLines": [
         7,
-        9,
-        10,
-        11,
-        12,
         13,
         14,
         15,
         16,
-        23
+        17
       ]
     },
     "sandwich-player/src/model/SpotifyProxy.js": {
-      "expectCount": 16,
-      "actualCount": 9,
+      "expectCount": 18,
+      "actualCount": 10,
       "undocumentLines": [
         7,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        31
       ]
     }
   }

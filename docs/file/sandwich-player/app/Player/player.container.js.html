@@ -124,8 +124,8 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -159,6 +159,9 @@ export class Player extends Component {
     return this.props.playFromPosition || 0;
   }
 
+  /**
+   * Return the url for the artwork is there is one
+   */
   xlArtwork(url) {
     if (url) {
       return url.replace(/large/, &apos;t500x500&apos;);
@@ -166,6 +169,9 @@ export class Player extends Component {
     return null;
   }
 
+  /**
+   * Dispatch the playing action while song is playing
+   */
   handleSongPlaying(audio) {
     this.props.playing({
       elapsed: formatMilliseconds(audio.position),
@@ -174,10 +180,18 @@ export class Player extends Component {
     });
   }
 
+  /**
+   * Dispatch the next action when song finish
+   */
   handleSongFinished() {
     this.next();
   }
 
+  /**
+   * Renders the component to DOM elements
+   *
+   * @return {object} JSX
+   */
   render() {
     const patateStyle = {
       width: &apos;500px&apos;,

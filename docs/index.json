@@ -1102,7 +1102,7 @@
     "__docId__": 53,
     "kind": "file",
     "name": "sandwich-player/app/Layout/layout.container.js",
-    "content": "import React, { PureComponent } from 'react';\r\nimport { connect } from 'react-redux';\r\nimport PropTypes from 'prop-types';\r\nimport { List } from 'immutable';\r\n\r\nimport { SourceListContainer } from './../SourceList/sourcelist.container';\r\nimport { PlayerContainer } from './../Player/player.container';\r\n\r\nexport class Layout extends PureComponent {\r\n  componentDidUpdate() {\r\n    this.loadSearchResults();\r\n  }\r\n\r\n  loadSearchResults() {\r\n    // clearSearchResults();\r\n    this.props.sources\r\n      .filter(source => source.isConnected());\r\n    // .map(source => source.searchTracks().then((tracks) => {\r\n    //   appendSearchResults(List(tracks));\r\n    // }));\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <div className=\"container\">\r\n        <div className=\"fixed\">\r\n          <SourceListContainer />\r\n        </div>\r\n        <div className=\"flex-item\">\r\n          <PlayerContainer />\r\n        </div>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nLayout.propTypes = {\r\n  sources: PropTypes.instanceOf(List).isRequired,\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  sources: state.get('sources'),\r\n  search: state.get('search'),\r\n  searchResults: state.get('searchResults'),\r\n});\r\n\r\nexport const LayoutContainer = connect(mapStateToProps)(Layout);\r\n",
+    "content": "import React, { PureComponent } from 'react';\r\nimport { connect } from 'react-redux';\r\nimport PropTypes from 'prop-types';\r\nimport { List } from 'immutable';\r\n\r\nimport { SourceListContainer } from './../SourceList/sourcelist.container';\r\nimport { PlayerContainer } from './../Player/player.container';\r\n\r\nexport class Layout extends PureComponent {\r\n  componentDidUpdate() {\r\n    this.loadSearchResults();\r\n  }\r\n\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    return (\r\n      <div className=\"container\">\r\n        <div className=\"fixed\">\r\n          <SourceListContainer />\r\n        </div>\r\n        <div className=\"flex-item\">\r\n          <PlayerContainer />\r\n        </div>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nLayout.propTypes = {\r\n  sources: PropTypes.instanceOf(List).isRequired,\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  sources: state.get('sources'),\r\n  search: state.get('search'),\r\n  searchResults: state.get('searchResults'),\r\n});\r\n\r\nexport const LayoutContainer = connect(mapStateToProps)(Layout);\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Layout/layout.container.js",
     "access": "public",
@@ -1146,21 +1146,6 @@
   {
     "__docId__": 56,
     "kind": "method",
-    "name": "loadSearchResults",
-    "memberof": "sandwich-player/app/Layout/layout.container.js~Layout",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/app/Layout/layout.container.js~Layout#loadSearchResults",
-    "access": "public",
-    "description": "",
-    "lineNumber": 14,
-    "params": [],
-    "return": null
-  },
-  {
-    "__docId__": 57,
-    "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Layout/layout.container.js~Layout",
     "generator": false,
@@ -1168,17 +1153,20 @@
     "static": false,
     "longname": "sandwich-player/app/Layout/layout.container.js~Layout#render",
     "access": "public",
-    "description": "",
-    "lineNumber": 23,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 19,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 58,
+    "__docId__": 57,
     "kind": "function",
     "name": "mapStateToProps",
     "memberof": "sandwich-player/app/Layout/layout.container.js",
@@ -1191,7 +1179,7 @@
     "importPath": "sandwich-player/sandwich-player/app/Layout/layout.container.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 41,
+    "lineNumber": 37,
     "undocument": true,
     "params": [
       {
@@ -1205,7 +1193,7 @@
     "ignore": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 58,
     "kind": "variable",
     "name": "LayoutContainer",
     "memberof": "sandwich-player/app/Layout/layout.container.js",
@@ -1216,7 +1204,7 @@
     "importPath": "sandwich-player/sandwich-player/app/Layout/layout.container.js",
     "importStyle": "{LayoutContainer}",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 43,
     "undocument": true,
     "type": {
       "types": [
@@ -1225,7 +1213,7 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 59,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/ClearQueue.action.js",
     "content": "import { List } from 'immutable';\r\n\r\nclass ClearQueue {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    return state.set('queue', List());\r\n  }\r\n}\r\n\r\nexport default new ClearQueue();\r\n",
@@ -1236,7 +1224,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 61,
+    "__docId__": 60,
     "kind": "class",
     "name": "ClearQueue",
     "memberof": "sandwich-player/app/Player/actions/ClearQueue.action.js",
@@ -1253,7 +1241,7 @@
     "interface": false
   },
   {
-    "__docId__": 62,
+    "__docId__": 61,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/ClearQueue.action.js~ClearQueue",
@@ -1283,7 +1271,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 62,
     "kind": "variable",
     "name": "clearQueue",
     "memberof": "sandwich-player/app/Player/actions/ClearQueue.action.js",
@@ -1303,7 +1291,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 63,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/Enqueue.action.js",
     "content": "import { List } from 'immutable';\r\n\r\nclass Enqueue {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, tracks) {\r\n    if (tracks) {\r\n      let localTracks = tracks;\r\n      if (!List.isList(localTracks)) {\r\n        localTracks = List.of(localTracks);\r\n      }\r\n      return state.set(\r\n        'queue',\r\n        state.get('queue').concat(localTracks),\r\n      );\r\n    } else if (state.get('tracks').size > 0) {\r\n      return state.set(\r\n        'queue',\r\n        state.get('queue').push(state.getIn(['tracks', 0])),\r\n      );\r\n    }\r\n\r\n    return null;\r\n  }\r\n}\r\n\r\nexport default new Enqueue();\r\n",
@@ -1314,7 +1302,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 65,
+    "__docId__": 64,
     "kind": "class",
     "name": "Enqueue",
     "memberof": "sandwich-player/app/Player/actions/Enqueue.action.js",
@@ -1331,7 +1319,7 @@
     "interface": false
   },
   {
-    "__docId__": 66,
+    "__docId__": 65,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/Enqueue.action.js~Enqueue",
@@ -1371,7 +1359,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 66,
     "kind": "variable",
     "name": "enqueue",
     "memberof": "sandwich-player/app/Player/actions/Enqueue.action.js",
@@ -1391,7 +1379,7 @@
     }
   },
   {
-    "__docId__": 68,
+    "__docId__": 67,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/Next.action.js",
     "content": "import Sound from 'react-sound';\r\n\r\nclass Next {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    const currentTrack = state.get('queue').get(0);\r\n\r\n    if (state.get('queue').size === 1) {\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.STOPPED);\r\n    }\r\n\r\n    return state.set(\r\n      'queue',\r\n      state.get('queue').shift(),\r\n    ).set(\r\n      'history',\r\n      state.get('history').push(currentTrack),\r\n    );\r\n  }\r\n}\r\n\r\nexport default new Next();\r\n",
@@ -1402,7 +1390,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 69,
+    "__docId__": 68,
     "kind": "class",
     "name": "Next",
     "memberof": "sandwich-player/app/Player/actions/Next.action.js",
@@ -1419,7 +1407,7 @@
     "interface": false
   },
   {
-    "__docId__": 70,
+    "__docId__": 69,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/Next.action.js~Next",
@@ -1449,7 +1437,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 70,
     "kind": "variable",
     "name": "next",
     "memberof": "sandwich-player/app/Player/actions/Next.action.js",
@@ -1469,7 +1457,7 @@
     }
   },
   {
-    "__docId__": 72,
+    "__docId__": 71,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/Play.action.js",
     "content": "import Sound from 'react-sound';\r\n\r\nclass Play {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    if (state.get('queue').size > 0) {\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.PLAYING);\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new Play();\r\n",
@@ -1480,7 +1468,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 73,
+    "__docId__": 72,
     "kind": "class",
     "name": "Play",
     "memberof": "sandwich-player/app/Player/actions/Play.action.js",
@@ -1497,7 +1485,7 @@
     "interface": false
   },
   {
-    "__docId__": 74,
+    "__docId__": 73,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/Play.action.js~Play",
@@ -1527,7 +1515,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 74,
     "kind": "variable",
     "name": "play",
     "memberof": "sandwich-player/app/Player/actions/Play.action.js",
@@ -1547,7 +1535,7 @@
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 75,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/Playing.action.js",
     "content": "\r\nclass Playing {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state, audioStatus) {\r\n    return state.setIn(['playback', 'elapsed'], audioStatus.elapsed)\r\n      .setIn(['playback', 'total'], audioStatus.total)\r\n      .setIn(['playback', 'position'], audioStatus.position);\r\n  }\r\n}\r\n\r\nexport default new Playing();\r\n",
@@ -1558,7 +1546,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 77,
+    "__docId__": 76,
     "kind": "class",
     "name": "Playing",
     "memberof": "sandwich-player/app/Player/actions/Playing.action.js",
@@ -1575,7 +1563,7 @@
     "interface": false
   },
   {
-    "__docId__": 78,
+    "__docId__": 77,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/Playing.action.js~Playing",
@@ -1615,7 +1603,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 78,
     "kind": "variable",
     "name": "playing",
     "memberof": "sandwich-player/app/Player/actions/Playing.action.js",
@@ -1635,7 +1623,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 79,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/Prev.action.js",
     "content": "\r\nclass Prev {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    if (state.get('history').size > 0) {\r\n      const prevTrack = state.get('history').peek();\r\n\r\n      return state.set('history',\r\n        state.get('history').shift()).set('queue',\r\n        state.get('queue').insert(0, prevTrack));\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new Prev();\r\n",
@@ -1646,7 +1634,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 81,
+    "__docId__": 80,
     "kind": "class",
     "name": "Prev",
     "memberof": "sandwich-player/app/Player/actions/Prev.action.js",
@@ -1663,7 +1651,7 @@
     "interface": false
   },
   {
-    "__docId__": 82,
+    "__docId__": 81,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/Prev.action.js~Prev",
@@ -1693,7 +1681,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 82,
     "kind": "variable",
     "name": "prev",
     "memberof": "sandwich-player/app/Player/actions/Prev.action.js",
@@ -1713,7 +1701,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 83,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/Stop.action.js",
     "content": "import Sound from 'react-sound';\r\n\r\nclass Stop {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    return state.setIn(['playback', 'playStatus'], Sound.status.STOPPED);\r\n  }\r\n}\r\n\r\nexport default new Stop();\r\n",
@@ -1724,7 +1712,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 85,
+    "__docId__": 84,
     "kind": "class",
     "name": "Stop",
     "memberof": "sandwich-player/app/Player/actions/Stop.action.js",
@@ -1741,7 +1729,7 @@
     "interface": false
   },
   {
-    "__docId__": 86,
+    "__docId__": 85,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/Stop.action.js~Stop",
@@ -1771,7 +1759,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 86,
     "kind": "variable",
     "name": "stop",
     "memberof": "sandwich-player/app/Player/actions/Stop.action.js",
@@ -1791,7 +1779,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 87,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/TogglePlay.action.js",
     "content": "import Sound from 'react-sound';\r\n\r\nclass TogglePlay {\r\n  /**\r\n   * Reduce the state\r\n   */\r\n  execute(state) {\r\n    if (state.get('queue').size > 0) {\r\n      if (state.getIn(['playback', 'playStatus']) === Sound.status.PLAYING) {\r\n        return state.setIn(['playback', 'playStatus'], Sound.status.PAUSED);\r\n      }\r\n      return state.setIn(['playback', 'playStatus'], Sound.status.PLAYING);\r\n    }\r\n\r\n    return state;\r\n  }\r\n}\r\n\r\nexport default new TogglePlay();\r\n",
@@ -1802,7 +1790,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 89,
+    "__docId__": 88,
     "kind": "class",
     "name": "TogglePlay",
     "memberof": "sandwich-player/app/Player/actions/TogglePlay.action.js",
@@ -1819,7 +1807,7 @@
     "interface": false
   },
   {
-    "__docId__": 90,
+    "__docId__": 89,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/Player/actions/TogglePlay.action.js~TogglePlay",
@@ -1849,7 +1837,7 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 90,
     "kind": "variable",
     "name": "togglePlay",
     "memberof": "sandwich-player/app/Player/actions/TogglePlay.action.js",
@@ -1869,7 +1857,7 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 91,
     "kind": "file",
     "name": "sandwich-player/app/Player/actions/index.js",
     "content": "export Enqueue from './Enqueue.action';\r\nexport ClearQueue from './ClearQueue.action';\r\nexport TogglePlay from './TogglePlay.action';\r\nexport Stop from './Stop.action';\r\nexport Playing from './Playing.action';\r\nexport Next from './Next.action';\r\nexport Prev from './Prev.action';\r\nexport Play from './Play.action';\r\n",
@@ -1880,10 +1868,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 93,
+    "__docId__": 92,
     "kind": "file",
     "name": "sandwich-player/app/Player/components/controls.component.js",
-    "content": "import React, { PureComponent } from 'react';\r\nimport PropTypes from 'prop-types';\r\n\r\nimport ClassNames from 'classnames';\r\n\r\nclass Controls extends PureComponent {\r\n  render() {\r\n    const playPauseClass = ClassNames({\r\n      'fa fa-play': this.props.playStatus !== 'PLAYING',\r\n      'fa fa-pause': this.props.playStatus === 'PLAYING',\r\n    });\r\n\r\n    return (\r\n      <div className=\"player\">\r\n        <div className=\"player__backward\">\r\n          <button onClick={this.props.backward}><i className=\"fa fa-backward\" /></button>\r\n        </div>\r\n        <div className=\"player__main\">\r\n          <button onClick={this.props.togglePlay}><i className={playPauseClass} /></button>\r\n          <button onClick={this.props.stop}><i className=\"fa fa-stop\" /></button>\r\n        </div>\r\n        <div className=\"player__forward\">\r\n          <button onClick={this.props.next}><i className=\"fa fa-step-forward\" /></button>\r\n        </div>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nControls.propTypes = {\r\n  playStatus: PropTypes.string.isRequired,\r\n  backward: PropTypes.func.isRequired,\r\n  togglePlay: PropTypes.func.isRequired,\r\n  stop: PropTypes.func.isRequired,\r\n  next: PropTypes.func.isRequired,\r\n};\r\n\r\n// Export Controls\r\nexport default Controls;\r\n",
+    "content": "import React, { PureComponent } from 'react';\r\nimport PropTypes from 'prop-types';\r\n\r\nimport ClassNames from 'classnames';\r\n\r\nclass Controls extends PureComponent {\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    const playPauseClass = ClassNames({\r\n      'fa fa-play': this.props.playStatus !== 'PLAYING',\r\n      'fa fa-pause': this.props.playStatus === 'PLAYING',\r\n    });\r\n\r\n    return (\r\n      <div className=\"player\">\r\n        <div className=\"player__backward\">\r\n          <button onClick={this.props.backward}><i className=\"fa fa-backward\" /></button>\r\n        </div>\r\n        <div className=\"player__main\">\r\n          <button onClick={this.props.togglePlay}><i className={playPauseClass} /></button>\r\n          <button onClick={this.props.stop}><i className=\"fa fa-stop\" /></button>\r\n        </div>\r\n        <div className=\"player__forward\">\r\n          <button onClick={this.props.next}><i className=\"fa fa-step-forward\" /></button>\r\n        </div>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nControls.propTypes = {\r\n  playStatus: PropTypes.string.isRequired,\r\n  backward: PropTypes.func.isRequired,\r\n  togglePlay: PropTypes.func.isRequired,\r\n  stop: PropTypes.func.isRequired,\r\n  next: PropTypes.func.isRequired,\r\n};\r\n\r\n// Export Controls\r\nexport default Controls;\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/components/controls.component.js",
     "access": "public",
@@ -1891,7 +1879,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 94,
+    "__docId__": 93,
     "kind": "class",
     "name": "Controls",
     "memberof": "sandwich-player/app/Player/components/controls.component.js",
@@ -1910,7 +1898,7 @@
     ]
   },
   {
-    "__docId__": 95,
+    "__docId__": 94,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Player/components/controls.component.js~Controls",
@@ -1919,20 +1907,23 @@
     "static": false,
     "longname": "sandwich-player/app/Player/components/controls.component.js~Controls#render",
     "access": "public",
-    "description": "",
-    "lineNumber": 7,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 12,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 96,
+    "__docId__": 95,
     "kind": "file",
     "name": "sandwich-player/app/Player/components/details.component.js",
-    "content": "import React, { PureComponent } from 'react';\r\nimport PropTypes from 'prop-types';\r\n\r\n\r\nclass Details extends PureComponent {\r\n  // Render\r\n  render() {\r\n    return (\r\n      <div className=\"details\">\r\n        <h3>{this.props.title}</h3>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nDetails.propTypes = {\r\n  title: PropTypes.string.isRequired,\r\n};\r\n\r\n// Export\r\nexport default Details;\r\n",
+    "content": "import React, { PureComponent } from 'react';\r\nimport PropTypes from 'prop-types';\r\n\r\n\r\nclass Details extends PureComponent {\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    return (\r\n      <div className=\"details\">\r\n        <h3>{this.props.title}</h3>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nDetails.propTypes = {\r\n  title: PropTypes.string.isRequired,\r\n};\r\n\r\n// Export\r\nexport default Details;\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/components/details.component.js",
     "access": "public",
@@ -1940,7 +1931,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 97,
+    "__docId__": 96,
     "kind": "class",
     "name": "Details",
     "memberof": "sandwich-player/app/Player/components/details.component.js",
@@ -1959,7 +1950,7 @@
     ]
   },
   {
-    "__docId__": 98,
+    "__docId__": 97,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Player/components/details.component.js~Details",
@@ -1968,21 +1959,23 @@
     "static": false,
     "longname": "sandwich-player/app/Player/components/details.component.js~Details#render",
     "access": "public",
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 11,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 99,
+    "__docId__": 98,
     "kind": "file",
     "name": "sandwich-player/app/Player/components/footer.component.js",
-    "content": "import React, { PureComponent } from 'react';\r\n\r\nclass Footer extends PureComponent {\r\n  render() {\r\n    return (\r\n      <div className=\"footer\">\r\n        <p>Footer</p>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default Footer;\r\n",
+    "content": "import React, { PureComponent } from 'react';\r\n\r\nclass Footer extends PureComponent {\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    return (\r\n      <div className=\"footer\">\r\n        <p>Footer</p>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default Footer;\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/components/footer.component.js",
     "access": "public",
@@ -1990,7 +1983,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 100,
+    "__docId__": 99,
     "kind": "class",
     "name": "Footer",
     "memberof": "sandwich-player/app/Player/components/footer.component.js",
@@ -2009,7 +2002,7 @@
     ]
   },
   {
-    "__docId__": 101,
+    "__docId__": 100,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Player/components/footer.component.js~Footer",
@@ -2018,20 +2011,23 @@
     "static": false,
     "longname": "sandwich-player/app/Player/components/footer.component.js~Footer#render",
     "access": "public",
-    "description": "",
-    "lineNumber": 4,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 9,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 102,
+    "__docId__": 101,
     "kind": "file",
     "name": "sandwich-player/app/Player/components/progress.component.js",
-    "content": "import React, { PureComponent } from 'react';\r\nimport PropTypes from 'prop-types';\r\n\r\n// Create Progress component class\r\nclass Progress extends PureComponent {\r\n  // Render method\r\n  render() {\r\n    return (\r\n      <div className=\"progress\">\r\n        <span className=\"player__time-elapsed\">{this.props.elapsed}</span>\r\n        <progress\r\n          value={this.props.position}\r\n          max=\"1\"\r\n        />\r\n        <span className=\"player__time-total\">{this.props.total}</span>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nProgress.propTypes = {\r\n  elapsed: PropTypes.string,\r\n  position: PropTypes.number,\r\n  total: PropTypes.string,\r\n};\r\n\r\nProgress.defaultProps = {\r\n  elapsed: null,\r\n  position: null,\r\n  total: null,\r\n};\r\n\r\n// Export Progress\r\nexport default Progress;\r\n",
+    "content": "import React, { PureComponent } from 'react';\r\nimport PropTypes from 'prop-types';\r\n\r\n// Create Progress component class\r\nclass Progress extends PureComponent {\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    return (\r\n      <div className=\"progress\">\r\n        <span className=\"player__time-elapsed\">{this.props.elapsed}</span>\r\n        <progress\r\n          value={this.props.position}\r\n          max=\"1\"\r\n        />\r\n        <span className=\"player__time-total\">{this.props.total}</span>\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nProgress.propTypes = {\r\n  elapsed: PropTypes.string,\r\n  position: PropTypes.number,\r\n  total: PropTypes.string,\r\n};\r\n\r\nProgress.defaultProps = {\r\n  elapsed: null,\r\n  position: null,\r\n  total: null,\r\n};\r\n\r\n// Export Progress\r\nexport default Progress;\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/components/progress.component.js",
     "access": "public",
@@ -2039,7 +2035,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 103,
+    "__docId__": 102,
     "kind": "class",
     "name": "Progress",
     "memberof": "sandwich-player/app/Player/components/progress.component.js",
@@ -2058,7 +2054,7 @@
     ]
   },
   {
-    "__docId__": 104,
+    "__docId__": 103,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Player/components/progress.component.js~Progress",
@@ -2067,21 +2063,23 @@
     "static": false,
     "longname": "sandwich-player/app/Player/components/progress.component.js~Progress#render",
     "access": "public",
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 11,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 105,
+    "__docId__": 104,
     "kind": "file",
     "name": "sandwich-player/app/Player/components/search.component.js",
-    "content": "import React, { Component } from 'react';\r\n\r\n// Import React's Autocomplete component\r\nimport Autocomplete from 'react-autocomplete';\r\n\r\n// Create Search component class\r\nclass Search extends Component {\r\n  handleRenderItem(item, isHighlighted) {\r\n    // Some basic style\r\n    const listStyles = {\r\n      item: {\r\n        padding: '2px 6px',\r\n        cursor: 'default',\r\n      },\r\n\r\n      highlightedItem: {\r\n        color: 'white',\r\n        background: '#F38B72',\r\n        padding: '2px 6px',\r\n        cursor: 'default',\r\n      },\r\n    };\r\n\r\n    // Render list items\r\n    return (\r\n      <div\r\n        style={isHighlighted ? listStyles.highlightedItem : listStyles.item}\r\n        key={item.id}\r\n        id={item.id}\r\n      >{item.title}\r\n      </div>\r\n    );\r\n  }\r\n\r\n  render() {\r\n    // Return JSX via render()\r\n    return (\r\n      <div className=\"search\">\r\n        <Autocomplete\r\n          ref=\"autocomplete\"\r\n          inputProps={{ title: 'Title' }}\r\n          value={this.props.autoCompleteValue}\r\n          items={this.props.tracks}\r\n          getItemValue={item => item.title}\r\n          onSelect={this.props.handleSelect}\r\n          onChange={this.props.handleChange}\r\n          renderItem={this.handleRenderItem.bind(this)}\r\n        />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\n// Export Search\r\nexport default Search;\r\n",
+    "content": "import React, { Component } from 'react';\r\n\r\n// Import React's Autocomplete component\r\nimport Autocomplete from 'react-autocomplete';\r\n\r\n// Create Search component class\r\nclass Search extends Component {\r\n  handleRenderItem(item, isHighlighted) {\r\n    // Some basic style\r\n    const listStyles = {\r\n      item: {\r\n        padding: '2px 6px',\r\n        cursor: 'default',\r\n      },\r\n\r\n      highlightedItem: {\r\n        color: 'white',\r\n        background: '#F38B72',\r\n        padding: '2px 6px',\r\n        cursor: 'default',\r\n      },\r\n    };\r\n\r\n    // Render list items\r\n    return (\r\n      <div\r\n        style={isHighlighted ? listStyles.highlightedItem : listStyles.item}\r\n        key={item.id}\r\n        id={item.id}\r\n      >{item.title}\r\n      </div>\r\n    );\r\n  }\r\n\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    // Return JSX via render()\r\n    return (\r\n      <div className=\"search\">\r\n        <Autocomplete\r\n          ref=\"autocomplete\"\r\n          inputProps={{ title: 'Title' }}\r\n          value={this.props.autoCompleteValue}\r\n          items={this.props.tracks}\r\n          getItemValue={item => item.title}\r\n          onSelect={this.props.handleSelect}\r\n          onChange={this.props.handleChange}\r\n          renderItem={this.handleRenderItem.bind(this)}\r\n        />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\n// Export Search\r\nexport default Search;\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/components/search.component.js",
     "access": "public",
@@ -2089,7 +2087,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 106,
+    "__docId__": 105,
     "kind": "class",
     "name": "Search",
     "memberof": "sandwich-player/app/Player/components/search.component.js",
@@ -2108,7 +2106,7 @@
     ]
   },
   {
-    "__docId__": 107,
+    "__docId__": 106,
     "kind": "method",
     "name": "handleRenderItem",
     "memberof": "sandwich-player/app/Player/components/search.component.js~Search",
@@ -2148,7 +2146,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 107,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Player/components/search.component.js~Search",
@@ -2157,20 +2155,23 @@
     "static": false,
     "longname": "sandwich-player/app/Player/components/search.component.js~Search#render",
     "access": "public",
-    "description": "",
-    "lineNumber": 35,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 40,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 109,
+    "__docId__": 108,
     "kind": "file",
     "name": "sandwich-player/app/Player/player.actions.js",
-    "content": "\r\n/**\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function toggleplay() {\r\n  return {\r\n    type: 'TOGGLEPLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function play() {\r\n  return {\r\n    type: 'PLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function stop() {\r\n  return {\r\n    type: 'STOP',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n */\r\nexport function playing(audioStatus) {\r\n  return {\r\n    type: 'PLAYING',\r\n    audioStatus,\r\n  };\r\n}\r\n\r\n/**\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue.\r\n */\r\nexport function enqueue(tracks = null) {\r\n  return {\r\n    type: 'ENQUEUE',\r\n    tracks,\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function clearQueue() {\r\n  return {\r\n    type: 'CLEAR_QUEUE',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function next() {\r\n  return {\r\n    type: 'NEXT',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function prev() {\r\n  return {\r\n    type: 'PREV',\r\n  };\r\n}\r\n",
+    "content": "\r\n/**\r\n * Creates an action named \"TOGGLEPLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function toggleplay() {\r\n  return {\r\n    type: 'TOGGLEPLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAY\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function play() {\r\n  return {\r\n    type: 'PLAY',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"STOP\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function stop() {\r\n  return {\r\n    type: 'STOP',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PLAYING\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @param audioStatus The currect status (time elapsed, etc.) of the dom player\r\n * @return ActionCreator the action creater\r\n */\r\nexport function playing(audioStatus) {\r\n  return {\r\n    type: 'PLAYING',\r\n    audioStatus,\r\n  };\r\n}\r\n\r\n/**\r\n * Create an action to enqueue a list of tracks\r\n * @param {List} tracks - List of tracks to enqueue\r\n * @return ActionCreator the action creater\r\n */\r\nexport function enqueue(tracks = null) {\r\n  return {\r\n    type: 'ENQUEUE',\r\n    tracks,\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"CLEAR_QUEUE\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function clearQueue() {\r\n  return {\r\n    type: 'CLEAR_QUEUE',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"NEXT\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function next() {\r\n  return {\r\n    type: 'NEXT',\r\n  };\r\n}\r\n\r\n/**\r\n * Creates an action named \"PREV\" with\r\n * the required data to execute the reducer action.\r\n *\r\n * @return ActionCreator the action creater\r\n */\r\nexport function prev() {\r\n  return {\r\n    type: 'PREV',\r\n  };\r\n}\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/player.actions.js",
     "access": "public",
@@ -2178,7 +2179,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 110,
+    "__docId__": 109,
     "kind": "function",
     "name": "toggleplay",
     "memberof": "sandwich-player/app/Player/player.actions.js",
@@ -2203,7 +2204,7 @@
     "params": []
   },
   {
-    "__docId__": 111,
+    "__docId__": 110,
     "kind": "function",
     "name": "play",
     "memberof": "sandwich-player/app/Player/player.actions.js",
@@ -2228,7 +2229,7 @@
     "params": []
   },
   {
-    "__docId__": 112,
+    "__docId__": 111,
     "kind": "function",
     "name": "stop",
     "memberof": "sandwich-player/app/Player/player.actions.js",
@@ -2253,7 +2254,7 @@
     "params": []
   },
   {
-    "__docId__": 113,
+    "__docId__": 112,
     "kind": "function",
     "name": "playing",
     "memberof": "sandwich-player/app/Player/player.actions.js",
@@ -2289,7 +2290,7 @@
     }
   },
   {
-    "__docId__": 114,
+    "__docId__": 113,
     "kind": "function",
     "name": "enqueue",
     "memberof": "sandwich-player/app/Player/player.actions.js",
@@ -2302,7 +2303,7 @@
     "importPath": "sandwich-player/sandwich-player/app/Player/player.actions.js",
     "importStyle": "{enqueue}",
     "description": "Create an action to enqueue a list of tracks",
-    "lineNumber": 56,
+    "lineNumber": 57,
     "params": [
       {
         "nullable": null,
@@ -2312,17 +2313,20 @@
         "spread": false,
         "optional": false,
         "name": "tracks",
-        "description": "List of tracks to enqueue."
+        "description": "List of tracks to enqueue"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "{\"type\": string, \"tracks\": *}"
-      ]
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
     }
   },
   {
-    "__docId__": 115,
+    "__docId__": 114,
     "kind": "function",
     "name": "clearQueue",
     "memberof": "sandwich-player/app/Player/player.actions.js",
@@ -2335,7 +2339,32 @@
     "importPath": "sandwich-player/sandwich-player/app/Player/player.actions.js",
     "importStyle": "{clearQueue}",
     "description": "Creates an action named \"CLEAR_QUEUE\" with\nthe required data to execute the reducer action.",
-    "lineNumber": 69,
+    "lineNumber": 70,
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "ActionCreator the action creater"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 115,
+    "kind": "function",
+    "name": "next",
+    "memberof": "sandwich-player/app/Player/player.actions.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sandwich-player/app/Player/player.actions.js~next",
+    "access": "public",
+    "export": true,
+    "importPath": "sandwich-player/sandwich-player/app/Player/player.actions.js",
+    "importStyle": "{next}",
+    "description": "Creates an action named \"NEXT\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 82,
     "return": {
       "nullable": null,
       "types": [
@@ -2349,18 +2378,18 @@
   {
     "__docId__": 116,
     "kind": "function",
-    "name": "next",
+    "name": "prev",
     "memberof": "sandwich-player/app/Player/player.actions.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "sandwich-player/app/Player/player.actions.js~next",
+    "longname": "sandwich-player/app/Player/player.actions.js~prev",
     "access": "public",
     "export": true,
     "importPath": "sandwich-player/sandwich-player/app/Player/player.actions.js",
-    "importStyle": "{next}",
-    "description": "Creates an action named \"NEXT\" with\nthe required data to execute the reducer action.",
-    "lineNumber": 81,
+    "importStyle": "{prev}",
+    "description": "Creates an action named \"PREV\" with\nthe required data to execute the reducer action.",
+    "lineNumber": 94,
     "return": {
       "nullable": null,
       "types": [
@@ -2373,31 +2402,6 @@
   },
   {
     "__docId__": 117,
-    "kind": "function",
-    "name": "prev",
-    "memberof": "sandwich-player/app/Player/player.actions.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "sandwich-player/app/Player/player.actions.js~prev",
-    "access": "public",
-    "export": true,
-    "importPath": "sandwich-player/sandwich-player/app/Player/player.actions.js",
-    "importStyle": "{prev}",
-    "description": "Creates an action named \"PREV\" with\nthe required data to execute the reducer action.",
-    "lineNumber": 93,
-    "return": {
-      "nullable": null,
-      "types": [
-        "*"
-      ],
-      "spread": false,
-      "description": "ActionCreator the action creater"
-    },
-    "params": []
-  },
-  {
-    "__docId__": 118,
     "kind": "file",
     "name": "sandwich-player/app/Player/player.constants.js",
     "content": "export const PLAY = 'PLAY';\r\nexport const PAUSE = 'PAUSE';\r\nexport const STOP = 'STOP';\r\nexport const NEXT = 'NEXT';\r\nexport const PREV = 'PREV';\r\n// export const SET_TRACK = 'SET_TRACK';\r\n// export const ADD_TRACKS = 'ADD_TRACKS';\r\n",
@@ -2408,7 +2412,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 119,
+    "__docId__": 118,
     "kind": "variable",
     "name": "PLAY",
     "memberof": "sandwich-player/app/Player/player.constants.js",
@@ -2428,7 +2432,7 @@
     }
   },
   {
-    "__docId__": 120,
+    "__docId__": 119,
     "kind": "variable",
     "name": "PAUSE",
     "memberof": "sandwich-player/app/Player/player.constants.js",
@@ -2448,7 +2452,7 @@
     }
   },
   {
-    "__docId__": 121,
+    "__docId__": 120,
     "kind": "variable",
     "name": "STOP",
     "memberof": "sandwich-player/app/Player/player.constants.js",
@@ -2468,7 +2472,7 @@
     }
   },
   {
-    "__docId__": 122,
+    "__docId__": 121,
     "kind": "variable",
     "name": "NEXT",
     "memberof": "sandwich-player/app/Player/player.constants.js",
@@ -2488,7 +2492,7 @@
     }
   },
   {
-    "__docId__": 123,
+    "__docId__": 122,
     "kind": "variable",
     "name": "PREV",
     "memberof": "sandwich-player/app/Player/player.constants.js",
@@ -2508,10 +2512,10 @@
     }
   },
   {
-    "__docId__": 124,
+    "__docId__": 123,
     "kind": "file",
     "name": "sandwich-player/app/Player/player.container.js",
-    "content": "import React, { Component } from 'react';\r\n\r\n// Sound component\r\nimport Sound from 'react-sound';\r\n\r\nimport { autobind } from 'core-decorators';\r\nimport { connect } from 'react-redux';\r\nimport PropTypes from 'prop-types';\r\n\r\n// import * as AppActions from '../App/app.actions';\r\nimport * as PlayerActions from './player.actions';\r\n\r\n// Custom components\r\nimport Details from './components/details.component';\r\nimport Controls from './components/controls.component';\r\nimport Progress from './components/progress.component';\r\n//  import Search from './components/search.component';\r\nimport Footer from './components/footer.component';\r\n\r\n// Utils\r\nimport { formatMilliseconds } from '../utils/time';\r\n\r\n@autobind\r\nexport class Player extends Component {\r\n  getPlayFromPosition() {\r\n    return this.props.playFromPosition || 0;\r\n  }\r\n\r\n  xlArtwork(url) {\r\n    if (url) {\r\n      return url.replace(/large/, 't500x500');\r\n    }\r\n    return null;\r\n  }\r\n\r\n  handleSongPlaying(audio) {\r\n    this.props.playing({\r\n      elapsed: formatMilliseconds(audio.position),\r\n      total: formatMilliseconds(audio.duration),\r\n      position: audio.position / audio.duration,\r\n    });\r\n  }\r\n\r\n  handleSongFinished() {\r\n    this.next();\r\n  }\r\n\r\n  render() {\r\n    const patateStyle = {\r\n      width: '500px',\r\n      height: '500px',\r\n    };\r\n\r\n    patateStyle.backgroundImage = `linear-gradient(\r\n      rgba(0, 0, 0, 0.7),\r\n      rgba(0, 0, 0, 0.7)\r\n    ),\r\n    url(${this.xlArtwork(this.props.trackArtworkUrl)})`;\r\n\r\n    return (\r\n      <div className=\"patate_music\" style={patateStyle}>\r\n        <Details title={this.props.trackTitle} />\r\n        <Sound\r\n          url={this.props.trackStreamUrl}\r\n          playStatus={this.props.playStatus}\r\n          onPlaying={this.handleSongPlaying}\r\n          playFromPosition={this.getPlayFromPosition()}\r\n          onFinishedPlaying={this.handleSongFinished}\r\n        />\r\n        { this.props.playStatus }\r\n        <Controls\r\n          togglePlay={this.props.toggleplay}\r\n          stop={this.props.stop}\r\n          playStatus={this.props.playStatus}\r\n          next={this.props.next}\r\n          backward={this.props.prev}\r\n        />\r\n        <Progress\r\n          elapsed={this.props.elapsed}\r\n          total={this.props.total}\r\n          position={this.props.position}\r\n        />\r\n        <Footer />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nPlayer.propTypes = {\r\n  toggleplay: PropTypes.func.isRequired,\r\n  stop: PropTypes.func.isRequired,\r\n  next: PropTypes.func.isRequired,\r\n  prev: PropTypes.func.isRequired,\r\n  playing: PropTypes.func.isRequired,\r\n  elapsed: PropTypes.string,\r\n  total: PropTypes.string,\r\n  position: PropTypes.number,\r\n  playStatus: PropTypes.string,\r\n  playFromPosition: PropTypes.number.isRequired,\r\n  trackTitle: PropTypes.string,\r\n  trackStreamUrl: PropTypes.string,\r\n  trackArtworkUrl: PropTypes.string,\r\n};\r\n\r\nPlayer.defaultProps = {\r\n  trackArtworkUrl: '',\r\n  trackTitle: 'no title',\r\n  trackStreamUrl: '',\r\n  playStatus: Sound.status.STOPPED,\r\n  position: 0,\r\n  elapsed: '',\r\n  total: '',\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  track: state.get('queue').get(0),\r\n  trackArtworkUrl: state.get('queue').get(0) ? state.get('queue').get(0).artworkUrl : '',\r\n  trackTitle: state.get('queue').get(0) ? state.get('queue').get(0).title : '',\r\n  trackStreamUrl: state.get('queue').get(0) ? state.get('queue').get(0).streamUrl : '',\r\n  playStatus: state.getIn(['playback', 'playStatus']),\r\n  playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),\r\n  elapsed: state.getIn(['playback', 'elapsed']),\r\n  total: state.getIn(['playback', 'total']),\r\n  position: state.getIn(['playback', 'position']),\r\n});\r\n\r\nexport const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);\r\n",
+    "content": "import React, { Component } from 'react';\r\n\r\n// Sound component\r\nimport Sound from 'react-sound';\r\n\r\nimport { autobind } from 'core-decorators';\r\nimport { connect } from 'react-redux';\r\nimport PropTypes from 'prop-types';\r\n\r\n// import * as AppActions from '../App/app.actions';\r\nimport * as PlayerActions from './player.actions';\r\n\r\n// Custom components\r\nimport Details from './components/details.component';\r\nimport Controls from './components/controls.component';\r\nimport Progress from './components/progress.component';\r\n//  import Search from './components/search.component';\r\nimport Footer from './components/footer.component';\r\n\r\n// Utils\r\nimport { formatMilliseconds } from '../utils/time';\r\n\r\n@autobind\r\nexport class Player extends Component {\r\n  getPlayFromPosition() {\r\n    return this.props.playFromPosition || 0;\r\n  }\r\n\r\n  /**\r\n   * Return the url for the artwork is there is one\r\n   */\r\n  xlArtwork(url) {\r\n    if (url) {\r\n      return url.replace(/large/, 't500x500');\r\n    }\r\n    return null;\r\n  }\r\n\r\n  /**\r\n   * Dispatch the playing action while song is playing\r\n   */\r\n  handleSongPlaying(audio) {\r\n    this.props.playing({\r\n      elapsed: formatMilliseconds(audio.position),\r\n      total: formatMilliseconds(audio.duration),\r\n      position: audio.position / audio.duration,\r\n    });\r\n  }\r\n\r\n  /**\r\n   * Dispatch the next action when song finish\r\n   */\r\n  handleSongFinished() {\r\n    this.next();\r\n  }\r\n\r\n  /**\r\n   * Renders the component to DOM elements\r\n   *\r\n   * @return {object} JSX\r\n   */\r\n  render() {\r\n    const patateStyle = {\r\n      width: '500px',\r\n      height: '500px',\r\n    };\r\n\r\n    patateStyle.backgroundImage = `linear-gradient(\r\n      rgba(0, 0, 0, 0.7),\r\n      rgba(0, 0, 0, 0.7)\r\n    ),\r\n    url(${this.xlArtwork(this.props.trackArtworkUrl)})`;\r\n\r\n    return (\r\n      <div className=\"patate_music\" style={patateStyle}>\r\n        <Details title={this.props.trackTitle} />\r\n        <Sound\r\n          url={this.props.trackStreamUrl}\r\n          playStatus={this.props.playStatus}\r\n          onPlaying={this.handleSongPlaying}\r\n          playFromPosition={this.getPlayFromPosition()}\r\n          onFinishedPlaying={this.handleSongFinished}\r\n        />\r\n        { this.props.playStatus }\r\n        <Controls\r\n          togglePlay={this.props.toggleplay}\r\n          stop={this.props.stop}\r\n          playStatus={this.props.playStatus}\r\n          next={this.props.next}\r\n          backward={this.props.prev}\r\n        />\r\n        <Progress\r\n          elapsed={this.props.elapsed}\r\n          total={this.props.total}\r\n          position={this.props.position}\r\n        />\r\n        <Footer />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nPlayer.propTypes = {\r\n  toggleplay: PropTypes.func.isRequired,\r\n  stop: PropTypes.func.isRequired,\r\n  next: PropTypes.func.isRequired,\r\n  prev: PropTypes.func.isRequired,\r\n  playing: PropTypes.func.isRequired,\r\n  elapsed: PropTypes.string,\r\n  total: PropTypes.string,\r\n  position: PropTypes.number,\r\n  playStatus: PropTypes.string,\r\n  playFromPosition: PropTypes.number.isRequired,\r\n  trackTitle: PropTypes.string,\r\n  trackStreamUrl: PropTypes.string,\r\n  trackArtworkUrl: PropTypes.string,\r\n};\r\n\r\nPlayer.defaultProps = {\r\n  trackArtworkUrl: '',\r\n  trackTitle: 'no title',\r\n  trackStreamUrl: '',\r\n  playStatus: Sound.status.STOPPED,\r\n  position: 0,\r\n  elapsed: '',\r\n  total: '',\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  track: state.get('queue').get(0),\r\n  trackArtworkUrl: state.get('queue').get(0) ? state.get('queue').get(0).artworkUrl : '',\r\n  trackTitle: state.get('queue').get(0) ? state.get('queue').get(0).title : '',\r\n  trackStreamUrl: state.get('queue').get(0) ? state.get('queue').get(0).streamUrl : '',\r\n  playStatus: state.getIn(['playback', 'playStatus']),\r\n  playFromPosition: state.getIn(['playback', 'playFromPosition'], 0),\r\n  elapsed: state.getIn(['playback', 'elapsed']),\r\n  total: state.getIn(['playback', 'total']),\r\n  position: state.getIn(['playback', 'position']),\r\n});\r\n\r\nexport const PlayerContainer = connect(mapStateToProps, PlayerActions)(Player);\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/Player/player.container.js",
     "access": "public",
@@ -2519,7 +2523,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 125,
+    "__docId__": 124,
     "kind": "class",
     "name": "Player",
     "memberof": "sandwich-player/app/Player/player.container.js",
@@ -2544,7 +2548,7 @@
     ]
   },
   {
-    "__docId__": 126,
+    "__docId__": 125,
     "kind": "method",
     "name": "getPlayFromPosition",
     "memberof": "sandwich-player/app/Player/player.container.js~Player",
@@ -2563,7 +2567,7 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 126,
     "kind": "method",
     "name": "xlArtwork",
     "memberof": "sandwich-player/app/Player/player.container.js~Player",
@@ -2572,8 +2576,8 @@
     "static": false,
     "longname": "sandwich-player/app/Player/player.container.js~Player#xlArtwork",
     "access": "public",
-    "description": "",
-    "lineNumber": 29,
+    "description": "Return the url for the artwork is there is one ",
+    "lineNumber": 32,
     "params": [
       {
         "nullable": null,
@@ -2593,7 +2597,7 @@
     }
   },
   {
-    "__docId__": 128,
+    "__docId__": 127,
     "kind": "method",
     "name": "handleSongPlaying",
     "memberof": "sandwich-player/app/Player/player.container.js~Player",
@@ -2602,8 +2606,8 @@
     "static": false,
     "longname": "sandwich-player/app/Player/player.container.js~Player#handleSongPlaying",
     "access": "public",
-    "description": "",
-    "lineNumber": 36,
+    "description": "Dispatch the playing action while song is playing ",
+    "lineNumber": 42,
     "params": [
       {
         "nullable": null,
@@ -2619,7 +2623,7 @@
     "return": null
   },
   {
-    "__docId__": 129,
+    "__docId__": 128,
     "kind": "method",
     "name": "handleSongFinished",
     "memberof": "sandwich-player/app/Player/player.container.js~Player",
@@ -2628,13 +2632,13 @@
     "static": false,
     "longname": "sandwich-player/app/Player/player.container.js~Player#handleSongFinished",
     "access": "public",
-    "description": "",
-    "lineNumber": 44,
+    "description": "Dispatch the next action when song finish ",
+    "lineNumber": 53,
     "params": [],
     "return": null
   },
   {
-    "__docId__": 130,
+    "__docId__": 129,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/Player/player.container.js~Player",
@@ -2643,17 +2647,20 @@
     "static": false,
     "longname": "sandwich-player/app/Player/player.container.js~Player#render",
     "access": "public",
-    "description": "",
-    "lineNumber": 48,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 62,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 131,
+    "__docId__": 130,
     "kind": "function",
     "name": "mapStateToProps",
     "memberof": "sandwich-player/app/Player/player.container.js",
@@ -2666,7 +2673,7 @@
     "importPath": "sandwich-player/sandwich-player/app/Player/player.container.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 115,
+    "lineNumber": 129,
     "undocument": true,
     "params": [
       {
@@ -2680,7 +2687,7 @@
     "ignore": true
   },
   {
-    "__docId__": 132,
+    "__docId__": 131,
     "kind": "variable",
     "name": "PlayerContainer",
     "memberof": "sandwich-player/app/Player/player.container.js",
@@ -2691,7 +2698,7 @@
     "importPath": "sandwich-player/sandwich-player/app/Player/player.container.js",
     "importStyle": "{PlayerContainer}",
     "description": null,
-    "lineNumber": 127,
+    "lineNumber": 141,
     "undocument": true,
     "type": {
       "types": [
@@ -2700,7 +2707,7 @@
     }
   },
   {
-    "__docId__": 133,
+    "__docId__": 132,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/actions/UpdateSearch.helper.js",
     "content": "export default async function fetchPlaylists(sources, query) {\n  const promises = sources\n    .filter(x => x.isConnected())\n    .map(source => source.searchPlaylists(query));\n  return Promise.all(promises);\n}\n",
@@ -2711,7 +2718,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 134,
+    "__docId__": 133,
     "kind": "function",
     "name": "fetchPlaylists",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearch.helper.js",
@@ -2747,7 +2754,7 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 134,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/actions/UpdateSearchField.action.js",
     "content": "class UpdateSearchField {\n  execute(state, searchValue) {\n    return state.set('playlistSearch', searchValue);\n  }\n}\n\nexport default new UpdateSearchField();\n",
@@ -2758,7 +2765,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 136,
+    "__docId__": 135,
     "kind": "class",
     "name": "UpdateSearchField",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearchField.action.js",
@@ -2775,7 +2782,7 @@
     "interface": false
   },
   {
-    "__docId__": 137,
+    "__docId__": 136,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearchField.action.js~UpdateSearchField",
@@ -2815,7 +2822,7 @@
     }
   },
   {
-    "__docId__": 138,
+    "__docId__": 137,
     "kind": "variable",
     "name": "updateSearchField",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearchField.action.js",
@@ -2835,7 +2842,7 @@
     }
   },
   {
-    "__docId__": 139,
+    "__docId__": 138,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/actions/UpdateSearchResults.action.js",
     "content": "import { List } from 'immutable';\n\nclass UpdateSearchField {\n  execute(state, playlists) {\n    return state.set('playlistsFound', List(playlists));\n  }\n}\n\nexport default new UpdateSearchField();\n",
@@ -2846,7 +2853,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 140,
+    "__docId__": 139,
     "kind": "class",
     "name": "UpdateSearchField",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearchResults.action.js",
@@ -2863,7 +2870,7 @@
     "interface": false
   },
   {
-    "__docId__": 141,
+    "__docId__": 140,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField",
@@ -2903,7 +2910,7 @@
     }
   },
   {
-    "__docId__": 142,
+    "__docId__": 141,
     "kind": "variable",
     "name": "updateSearchField",
     "memberof": "sandwich-player/app/PlaylistsList/actions/UpdateSearchResults.action.js",
@@ -2923,7 +2930,7 @@
     }
   },
   {
-    "__docId__": 143,
+    "__docId__": 142,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/actions/index.js",
     "content": "export UpdateSearchField from './UpdateSearchField.action';\nexport UpdateSearchResults from './UpdateSearchResults.action';\n",
@@ -2934,7 +2941,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 144,
+    "__docId__": 143,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/components/playlist.component.js",
     "content": "import React, { PureComponent } from 'react';\nimport { List, Image } from 'semantic-ui-react';\nimport PropTypes from 'prop-types';\nimport { autobind } from 'core-decorators';\n\nimport { enqueue, clearQueue } from '../.././Player/player.actions';\nimport Playlist from './../../../src/model/Playlist';\n\n@autobind\nclass PlaylistItem extends PureComponent {\n  getDescription() {\n    const size = this.props.playlist.songs.count();\n    if (size > 1) {\n      return `${size} tracks`;\n    }\n\n    return `${size} track`;\n  }\n\n  handleOnClick() {\n    this.props.dispatch(clearQueue());\n    this.props.dispatch(enqueue(this.props.playlist.songs));\n  }\n\n  render() {\n    return (\n      <List.Item onClick={this.handleOnClick}>\n        <Image avatar src={this.props.playlist.art} />\n        <List.Content>\n          <List.Header as=\"a\">{this.props.playlist.name}</List.Header>\n          <List.Description as=\"a\">{this.getDescription()}</List.Description>\n        </List.Content>\n      </List.Item>\n    );\n  }\n}\n\nPlaylistItem.propTypes = {\n  playlist: PropTypes.instanceOf(Playlist).isRequired,\n  dispatch: PropTypes.func.isRequired,\n};\n\nexport default PlaylistItem;\n",
@@ -2945,7 +2952,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 145,
+    "__docId__": 144,
     "kind": "class",
     "name": "PlaylistItem",
     "memberof": "sandwich-player/app/PlaylistsList/components/playlist.component.js",
@@ -2970,7 +2977,7 @@
     ]
   },
   {
-    "__docId__": 146,
+    "__docId__": 145,
     "kind": "method",
     "name": "getDescription",
     "memberof": "sandwich-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem",
@@ -2989,7 +2996,7 @@
     }
   },
   {
-    "__docId__": 147,
+    "__docId__": 146,
     "kind": "method",
     "name": "handleOnClick",
     "memberof": "sandwich-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem",
@@ -3004,7 +3011,7 @@
     "return": null
   },
   {
-    "__docId__": 148,
+    "__docId__": 147,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem",
@@ -3023,7 +3030,7 @@
     }
   },
   {
-    "__docId__": 149,
+    "__docId__": 148,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
     "content": "import fetchPlaylists from './actions/UpdateSearch.helper';\n\nexport const PLAYLIST_UPDATE_SEARCH_FIELD = 'PLAYLIST_UPDATE_SEARCH_FIELD';\nfunction updateSearchField(searchValue) {\n  return {\n    type: PLAYLIST_UPDATE_SEARCH_FIELD,\n    searchValue,\n  };\n}\n\nexport const PLAYLIST_UPDATE_SEARCH_RESULTS = 'PLAYLIST_UPDATE_SEARCH_RESULTS';\nfunction updateSearchResults(searchResults) {\n  return {\n    type: PLAYLIST_UPDATE_SEARCH_RESULTS,\n    searchResults,\n  };\n}\n\n// https://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript\nfunction flatten(arr) {\n  return arr.filter(x => x !== null).reduce(\n    (flat, toFlatten) => flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten),\n    [],\n  );\n}\n\nexport function updateSearch(sources, searchValue) {\n  return (dispatch) => {\n    dispatch(updateSearchField(searchValue));\n    return fetchPlaylists(sources, searchValue)\n      .then(results => dispatch(updateSearchResults(flatten(results))));\n  };\n}\n",
@@ -3034,7 +3041,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 150,
+    "__docId__": 149,
     "kind": "variable",
     "name": "PLAYLIST_UPDATE_SEARCH_FIELD",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
@@ -3054,7 +3061,7 @@
     }
   },
   {
-    "__docId__": 151,
+    "__docId__": 150,
     "kind": "function",
     "name": "updateSearchField",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
@@ -3088,7 +3095,7 @@
     "ignore": true
   },
   {
-    "__docId__": 152,
+    "__docId__": 151,
     "kind": "variable",
     "name": "PLAYLIST_UPDATE_SEARCH_RESULTS",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
@@ -3108,7 +3115,7 @@
     }
   },
   {
-    "__docId__": 153,
+    "__docId__": 152,
     "kind": "function",
     "name": "updateSearchResults",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
@@ -3142,7 +3149,7 @@
     "ignore": true
   },
   {
-    "__docId__": 154,
+    "__docId__": 153,
     "kind": "function",
     "name": "flatten",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
@@ -3173,7 +3180,7 @@
     "ignore": true
   },
   {
-    "__docId__": 155,
+    "__docId__": 154,
     "kind": "function",
     "name": "updateSearch",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.actions.js",
@@ -3216,10 +3223,10 @@
     }
   },
   {
-    "__docId__": 156,
+    "__docId__": 155,
     "kind": "file",
     "name": "sandwich-player/app/PlaylistsList/playlistslist.container.js",
-    "content": "import React, { Component } from 'react';\nimport { Search, List as UIList } from 'semantic-ui-react';\nimport PropTypes from 'prop-types';\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\nimport { List } from 'immutable';\nimport { autobind } from 'core-decorators';\n\nimport * as PlaylistsListActions from './playlistslist.actions';\n\n// Custom components\nimport PlaylistItem from './components/playlist.component';\n\n@autobind\nexport class PlaylistsList extends Component {\n  handleSearchChange = (e, { value }) => {\n    this.props.dispatch(PlaylistsListActions.updateSearch(this.props.sources, value));\n  }\n\n  render() {\n    const mapPlaylistToComponent = playlist => (\n      <PlaylistItem\n        key={playlist.uri}\n        playlist={playlist}\n        dispatch={this.props.dispatch}\n      />\n    );\n    const listPlaylists = this.props.playlists.map(mapPlaylistToComponent);\n    return (\n      <div>\n        <Search\n          open={false}\n          onSearchChange={this.handleSearchChange}\n          value={this.props.currentSearch}\n        />\n        <UIList\n          divided\n          verticalAlign=\"middle\"\n        >\n          { listPlaylists }\n        </UIList>\n      </div>\n    );\n  }\n}\n\nPlaylistsList.propTypes = {\n  currentSearch: PropTypes.string,\n  playlists: PropTypes.instanceOf(List).isRequired,\n  sources: PropTypes.instanceOf(List).isRequired,\n  dispatch: PropTypes.func.isRequired,\n};\n\nPlaylistsList.defaultProps = {\n  currentSearch: '',\n};\n\nconst mapStateToProps = state => ({\n  currentSearch: state.get('playlistSearch'),\n  playlists: state.get('playlistsFound'),\n  sources: state.get('sources'),\n});\n\nconst mapDispatchToProps = (dispatch) => {\n  const customActions = {\n    dispatch,\n  };\n\n  return Object.assign(customActions, bindActionCreators(PlaylistsListActions, dispatch));\n};\n\nexport const PlaylistsListContainer = connect(\n  mapStateToProps,\n  mapDispatchToProps,\n)(PlaylistsList);\n",
+    "content": "import React, { Component } from 'react';\nimport { Search, List as UIList } from 'semantic-ui-react';\nimport PropTypes from 'prop-types';\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\nimport { List } from 'immutable';\nimport { autobind } from 'core-decorators';\n\nimport * as PlaylistsListActions from './playlistslist.actions';\n\n// Custom components\nimport PlaylistItem from './components/playlist.component';\n\n@autobind\nexport class PlaylistsList extends Component {\n  handleSearchChange = (e, { value }) => {\n    this.props.dispatch(PlaylistsListActions.updateSearch(this.props.sources, value));\n  }\n\n  /**\n   * Renders the component to DOM elements\n   *\n   * @return {object} JSX\n   */\n  render() {\n    const mapPlaylistToComponent = playlist => (\n      <PlaylistItem\n        key={playlist.uri}\n        playlist={playlist}\n        dispatch={this.props.dispatch}\n      />\n    );\n    const listPlaylists = this.props.playlists.map(mapPlaylistToComponent);\n    return (\n      <div>\n        <Search\n          open={false}\n          onSearchChange={this.handleSearchChange}\n          value={this.props.currentSearch}\n        />\n        <UIList\n          divided\n          verticalAlign=\"middle\"\n        >\n          { listPlaylists }\n        </UIList>\n      </div>\n    );\n  }\n}\n\nPlaylistsList.propTypes = {\n  currentSearch: PropTypes.string,\n  playlists: PropTypes.instanceOf(List).isRequired,\n  sources: PropTypes.instanceOf(List).isRequired,\n  dispatch: PropTypes.func.isRequired,\n};\n\nPlaylistsList.defaultProps = {\n  currentSearch: '',\n};\n\nconst mapStateToProps = state => ({\n  currentSearch: state.get('playlistSearch'),\n  playlists: state.get('playlistsFound'),\n  sources: state.get('sources'),\n});\n\nconst mapDispatchToProps = (dispatch) => {\n  const customActions = {\n    dispatch,\n  };\n\n  return Object.assign(customActions, bindActionCreators(PlaylistsListActions, dispatch));\n};\n\nexport const PlaylistsListContainer = connect(\n  mapStateToProps,\n  mapDispatchToProps,\n)(PlaylistsList);\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/app/PlaylistsList/playlistslist.container.js",
     "access": "public",
@@ -3227,7 +3234,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 157,
+    "__docId__": 156,
     "kind": "class",
     "name": "PlaylistsList",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.container.js",
@@ -3252,7 +3259,7 @@
     ]
   },
   {
-    "__docId__": 158,
+    "__docId__": 157,
     "kind": "member",
     "name": "handleSearchChange",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList",
@@ -3269,7 +3276,7 @@
     }
   },
   {
-    "__docId__": 159,
+    "__docId__": 158,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList",
@@ -3278,17 +3285,20 @@
     "static": false,
     "longname": "sandwich-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList#render",
     "access": "public",
-    "description": "",
-    "lineNumber": 20,
-    "params": [],
+    "description": "Renders the component to DOM elements ",
+    "lineNumber": 25,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "JSX"
+    },
+    "params": []
   },
   {
-    "__docId__": 160,
+    "__docId__": 159,
     "kind": "function",
     "name": "mapStateToProps",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.container.js",
@@ -3301,7 +3311,7 @@
     "importPath": "sandwich-player/sandwich-player/app/PlaylistsList/playlistslist.container.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 58,
+    "lineNumber": 63,
     "undocument": true,
     "params": [
       {
@@ -3315,7 +3325,7 @@
     "ignore": true
   },
   {
-    "__docId__": 161,
+    "__docId__": 160,
     "kind": "function",
     "name": "mapDispatchToProps",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.container.js",
@@ -3328,7 +3338,7 @@
     "importPath": "sandwich-player/sandwich-player/app/PlaylistsList/playlistslist.container.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 64,
+    "lineNumber": 69,
     "undocument": true,
     "params": [
       {
@@ -3346,7 +3356,7 @@
     "ignore": true
   },
   {
-    "__docId__": 162,
+    "__docId__": 161,
     "kind": "variable",
     "name": "PlaylistsListContainer",
     "memberof": "sandwich-player/app/PlaylistsList/playlistslist.container.js",
@@ -3357,7 +3367,7 @@
     "importPath": "sandwich-player/sandwich-player/app/PlaylistsList/playlistslist.container.js",
     "importStyle": "{PlaylistsListContainer}",
     "description": null,
-    "lineNumber": 72,
+    "lineNumber": 77,
     "undocument": true,
     "type": {
       "types": [
@@ -3366,7 +3376,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 162,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/actions/ConnectedSource.action.js",
     "content": "class ConnectedSource {\n  execute(state, proxy, accessToken) {\n    let sources = state.get('sources');\n    const sourceKey = sources.findKey(value => value.name === proxy.name);\n    const source = sources.get(sourceKey);\n\n    sources = sources.set(sourceKey, source.setAccessToken(accessToken));\n    return state.set('sources', sources);\n  }\n}\n\nexport default new ConnectedSource();\n",
@@ -3377,7 +3387,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 164,
+    "__docId__": 163,
     "kind": "class",
     "name": "ConnectedSource",
     "memberof": "sandwich-player/app/SourceList/actions/ConnectedSource.action.js",
@@ -3394,7 +3404,7 @@
     "interface": false
   },
   {
-    "__docId__": 165,
+    "__docId__": 164,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/SourceList/actions/ConnectedSource.action.js~ConnectedSource",
@@ -3444,7 +3454,7 @@
     }
   },
   {
-    "__docId__": 166,
+    "__docId__": 165,
     "kind": "variable",
     "name": "connectedSource",
     "memberof": "sandwich-player/app/SourceList/actions/ConnectedSource.action.js",
@@ -3464,7 +3474,7 @@
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 166,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/actions/ConnectingSource.action.js",
     "content": "class ConnectingSource {\n  execute(state, proxy) {\n    let sources = state.get('sources');\n    const sourceKey = sources.findKey(value => value.name === proxy.name);\n    const source = sources.get(sourceKey);\n\n    sources = sources.set(sourceKey, source.setStatus('CONNECTING'));\n    return state.set('sources', sources);\n  }\n}\n\nexport default new ConnectingSource();\n",
@@ -3475,7 +3485,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 168,
+    "__docId__": 167,
     "kind": "class",
     "name": "ConnectingSource",
     "memberof": "sandwich-player/app/SourceList/actions/ConnectingSource.action.js",
@@ -3492,7 +3502,7 @@
     "interface": false
   },
   {
-    "__docId__": 169,
+    "__docId__": 168,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/SourceList/actions/ConnectingSource.action.js~ConnectingSource",
@@ -3532,7 +3542,7 @@
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 169,
     "kind": "variable",
     "name": "connectingSource",
     "memberof": "sandwich-player/app/SourceList/actions/ConnectingSource.action.js",
@@ -3552,7 +3562,7 @@
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 170,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/actions/Connexion.helper.js",
     "content": "import Axios from 'axios';\r\nimport Semaphore from 'semaphore-async-await';\r\n\r\nexport async function fetchAuthorizationCode(source) {\r\n  let resultUrl = null;\r\n\r\n  const { remote } = window.require('electron');\r\n  const { BrowserWindow } = remote;\r\n\r\n  const mutex = new Semaphore(0);\r\n\r\n  let authWindow = new BrowserWindow({\r\n    width: 800,\r\n    height: 600,\r\n    show: false,\r\n    'node-integration': false,\r\n    'web-security': false,\r\n  });\r\n  authWindow.loadURL(source.authorizationUrl);\r\n  authWindow.show();\r\n  // 'will-navigate' is an event emitted when the window.location changes\r\n  // newUrl should contain the tokens you need\r\n  authWindow.webContents.on('will-navigate', (event, newUrl) => {\r\n    if (newUrl.startsWith(source.redirectUri)) {\r\n      resultUrl = newUrl;\r\n      authWindow.close();\r\n    }\r\n  });\r\n\r\n  authWindow.on('closed', () => {\r\n    authWindow = null;\r\n\r\n    mutex.signal();\r\n  });\r\n\r\n  await mutex.wait();\r\n  return resultUrl;\r\n}\r\n\r\nexport async function fetchTokenCode(source, strUrl) {\r\n  // const index = url.search('code=');\r\n  const url = new URL(strUrl);\r\n  const code = url.searchParams.get('code');\r\n  const tokenUri = source.getToken(code);\r\n  console.log(tokenUri);\r\n\r\n  const { requestConfig } = source;\r\n\r\n  const response = await Axios.post(tokenUri, null, requestConfig);\r\n  return response.data.access_token;\r\n}\r\n",
@@ -3563,7 +3573,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 172,
+    "__docId__": 171,
     "kind": "function",
     "name": "fetchAuthorizationCode",
     "memberof": "sandwich-player/app/SourceList/actions/Connexion.helper.js",
@@ -3596,7 +3606,7 @@
     }
   },
   {
-    "__docId__": 173,
+    "__docId__": 172,
     "kind": "function",
     "name": "fetchTokenCode",
     "memberof": "sandwich-player/app/SourceList/actions/Connexion.helper.js",
@@ -3639,7 +3649,7 @@
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 173,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/actions/ConnexionFailedSource.action.js",
     "content": "class ConnexionFailedSource {\n  execute(state, proxy, error) {\n    let sources = state.get('sources');\n    const sourceKey = sources.findKey(value => value.name === proxy.name);\n    const source = sources.get(sourceKey);\n\n    console.log(error);\n    sources = sources.set(sourceKey, source.setStatus('DISCONNECTED'));\n    return state.set('sources', sources);\n  }\n}\n\nexport default new ConnexionFailedSource();\n",
@@ -3650,7 +3660,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 175,
+    "__docId__": 174,
     "kind": "class",
     "name": "ConnexionFailedSource",
     "memberof": "sandwich-player/app/SourceList/actions/ConnexionFailedSource.action.js",
@@ -3667,7 +3677,7 @@
     "interface": false
   },
   {
-    "__docId__": 176,
+    "__docId__": 175,
     "kind": "method",
     "name": "execute",
     "memberof": "sandwich-player/app/SourceList/actions/ConnexionFailedSource.action.js~ConnexionFailedSource",
@@ -3717,7 +3727,7 @@
     }
   },
   {
-    "__docId__": 177,
+    "__docId__": 176,
     "kind": "variable",
     "name": "connexionFailedSource",
     "memberof": "sandwich-player/app/SourceList/actions/ConnexionFailedSource.action.js",
@@ -3737,7 +3747,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 177,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/actions/index.js",
     "content": "export ConnectingSource from './ConnectingSource.action';\r\nexport ConnexionFailedSource from './ConnexionFailedSource.action';\r\nexport ConnectedSource from './ConnectedSource.action';\r\n",
@@ -3748,7 +3758,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 179,
+    "__docId__": 178,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/components/source.component.js",
     "content": "import React, { PureComponent } from 'react';\r\nimport { Button, Image, List } from 'semantic-ui-react';\r\nimport PropTypes from 'prop-types';\r\n\r\nimport { toggleSourceConnexion } from '../sourcelist.actions';\r\n\r\nimport SoundCloudProxy from './../../../src/model/SoundCloudProxy';\r\nimport SpotifyProxy from './../../../src/model/SpotifyProxy';\r\nimport JamendoProxy from './../../../src/model/JamendoProxy';\r\n\r\nclass Source extends PureComponent {\r\n  getButtonInteraction() {\r\n    return this.props.proxy.status === 'DISCONNECTED' ? 'Connect' : 'Disconnect';\r\n  }\r\n\r\n  isConnecting() {\r\n    return this.props.proxy.status === 'CONNECTING';\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <List.Item>\r\n        <List.Content floated=\"right\">\r\n          <Button\r\n            onClick={() => this.props.dispatch(toggleSourceConnexion(this.props.proxy))}\r\n            content={this.getButtonInteraction()}\r\n            loading={this.isConnecting()}\r\n            disabled={this.isConnecting()}\r\n          />\r\n        </List.Content>\r\n        <Image avatar src={this.props.proxy.logo} />\r\n        <List.Content>\r\n          {this.props.proxy.name}\r\n        </List.Content>\r\n      </List.Item>\r\n    );\r\n  }\r\n}\r\n\r\nSource.propTypes = {\r\n  proxy: PropTypes.oneOfType(\r\n    [\r\n      PropTypes.instanceOf(SoundCloudProxy),\r\n      PropTypes.instanceOf(SpotifyProxy),\r\n      PropTypes.instanceOf(JamendoProxy),\r\n    ],\r\n  ).isRequired,\r\n  dispatch: PropTypes.func.isRequired,\r\n};\r\n\r\nexport default Source;\r\n",
@@ -3759,7 +3769,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 180,
+    "__docId__": 179,
     "kind": "class",
     "name": "Source",
     "memberof": "sandwich-player/app/SourceList/components/source.component.js",
@@ -3778,7 +3788,7 @@
     ]
   },
   {
-    "__docId__": 181,
+    "__docId__": 180,
     "kind": "method",
     "name": "getButtonInteraction",
     "memberof": "sandwich-player/app/SourceList/components/source.component.js~Source",
@@ -3797,7 +3807,7 @@
     }
   },
   {
-    "__docId__": 182,
+    "__docId__": 181,
     "kind": "method",
     "name": "isConnecting",
     "memberof": "sandwich-player/app/SourceList/components/source.component.js~Source",
@@ -3816,7 +3826,7 @@
     }
   },
   {
-    "__docId__": 183,
+    "__docId__": 182,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/SourceList/components/source.component.js~Source",
@@ -3835,7 +3845,7 @@
     }
   },
   {
-    "__docId__": 184,
+    "__docId__": 183,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/sourcelist.actions.js",
     "content": "import { fetchAuthorizationCode, fetchTokenCode } from './actions/Connexion.helper';\r\n\r\nexport const CONNECTING_SOURCE = 'CONNECTINGSOURCE';\r\nfunction connectingSource(proxy) {\r\n  return {\r\n    type: CONNECTING_SOURCE,\r\n    proxy,\r\n  };\r\n}\r\n\r\nexport const CONNECTED_SOURCE = 'CONNECTEDSOURCE';\r\nfunction connectedSource(proxy, accessToken) {\r\n  return {\r\n    type: CONNECTED_SOURCE,\r\n    proxy,\r\n    accessToken,\r\n  };\r\n}\r\n\r\nexport const CONNEXION_FAILED_SOURCE = 'CONNEXIONFAILEDSOURCE';\r\nfunction connexionFailedSource(proxy, error) {\r\n  return {\r\n    type: CONNEXION_FAILED_SOURCE,\r\n    proxy,\r\n    error,\r\n  };\r\n}\r\n\r\nexport function toggleSourceConnexion(proxy) {\r\n  return async (dispatch) => {\r\n    if (proxy.isConnected()) {\r\n      return dispatch(connexionFailedSource(proxy, null));\r\n    }\r\n\r\n    if (proxy.needsAuthentification()) {\r\n      dispatch(connectingSource(proxy));\r\n\r\n      try {\r\n        const authCode = await fetchAuthorizationCode(proxy);\r\n        const accessToken = await fetchTokenCode(proxy, authCode);\r\n\r\n        return dispatch(connectedSource(proxy, accessToken));\r\n      } catch (error) {\r\n        return dispatch(connexionFailedSource(proxy, error));\r\n      }\r\n    }\r\n\r\n    return dispatch(connectedSource(proxy, null));\r\n  };\r\n}\r\n",
@@ -3846,7 +3856,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 185,
+    "__docId__": 184,
     "kind": "variable",
     "name": "CONNECTING_SOURCE",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -3866,7 +3876,7 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 185,
     "kind": "function",
     "name": "connectingSource",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -3900,7 +3910,7 @@
     "ignore": true
   },
   {
-    "__docId__": 187,
+    "__docId__": 186,
     "kind": "variable",
     "name": "CONNECTED_SOURCE",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -3920,7 +3930,7 @@
     }
   },
   {
-    "__docId__": 188,
+    "__docId__": 187,
     "kind": "function",
     "name": "connectedSource",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -3964,7 +3974,7 @@
     "ignore": true
   },
   {
-    "__docId__": 189,
+    "__docId__": 188,
     "kind": "variable",
     "name": "CONNEXION_FAILED_SOURCE",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -3984,7 +3994,7 @@
     }
   },
   {
-    "__docId__": 190,
+    "__docId__": 189,
     "kind": "function",
     "name": "connexionFailedSource",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -4028,7 +4038,7 @@
     "ignore": true
   },
   {
-    "__docId__": 191,
+    "__docId__": 190,
     "kind": "function",
     "name": "toggleSourceConnexion",
     "memberof": "sandwich-player/app/SourceList/sourcelist.actions.js",
@@ -4061,7 +4071,7 @@
     }
   },
   {
-    "__docId__": 192,
+    "__docId__": 191,
     "kind": "file",
     "name": "sandwich-player/app/SourceList/sourcelist.container.js",
     "content": "import React, { Component } from 'react';\r\nimport { List as UIList } from 'semantic-ui-react';\r\nimport PropTypes from 'prop-types';\r\nimport { List } from 'immutable';\r\nimport { bindActionCreators } from 'redux';\r\nimport { connect } from 'react-redux';\r\n\r\nimport * as SourceListActions from './sourcelist.actions';\r\n\r\n// Custom components\r\nimport Source from './components/source.component';\r\n\r\nexport class SourceList extends Component {\r\n  render() {\r\n    const mapSourceToComponent = source => (\r\n      <Source\r\n        proxy={source}\r\n        key={source.name}\r\n        dispatch={this.props.dispatch}\r\n      />\r\n    );\r\n    const listSources = this.props.sources.map(mapSourceToComponent);\r\n    return (\r\n      <UIList divided verticalAlign=\"middle\">\r\n        {listSources}\r\n      </UIList>\r\n    );\r\n  }\r\n}\r\n\r\nSourceList.propTypes = {\r\n  sources: PropTypes.instanceOf(List).isRequired,\r\n  dispatch: PropTypes.func.isRequired,\r\n};\r\n\r\nconst mapStateToProps = state => ({\r\n  sources: state.get('sources'),\r\n});\r\n\r\nconst mapDispatchToProps = (dispatch) => {\r\n  const customActions = {\r\n    dispatch,\r\n  };\r\n  return Object.assign(customActions, bindActionCreators(SourceListActions, dispatch));\r\n};\r\n\r\nexport const SourceListContainer = connect(\r\n  mapStateToProps,\r\n  mapDispatchToProps,\r\n)(SourceList);\r\n",
@@ -4072,7 +4082,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 193,
+    "__docId__": 192,
     "kind": "class",
     "name": "SourceList",
     "memberof": "sandwich-player/app/SourceList/sourcelist.container.js",
@@ -4091,7 +4101,7 @@
     ]
   },
   {
-    "__docId__": 194,
+    "__docId__": 193,
     "kind": "method",
     "name": "render",
     "memberof": "sandwich-player/app/SourceList/sourcelist.container.js~SourceList",
@@ -4110,7 +4120,7 @@
     }
   },
   {
-    "__docId__": 195,
+    "__docId__": 194,
     "kind": "function",
     "name": "mapStateToProps",
     "memberof": "sandwich-player/app/SourceList/sourcelist.container.js",
@@ -4137,7 +4147,7 @@
     "ignore": true
   },
   {
-    "__docId__": 196,
+    "__docId__": 195,
     "kind": "function",
     "name": "mapDispatchToProps",
     "memberof": "sandwich-player/app/SourceList/sourcelist.container.js",
@@ -4168,7 +4178,7 @@
     "ignore": true
   },
   {
-    "__docId__": 197,
+    "__docId__": 196,
     "kind": "variable",
     "name": "SourceListContainer",
     "memberof": "sandwich-player/app/SourceList/sourcelist.container.js",
@@ -4188,7 +4198,7 @@
     }
   },
   {
-    "__docId__": 198,
+    "__docId__": 197,
     "kind": "file",
     "name": "sandwich-player/app/actions.js",
     "content": "\r\n\r\nexport * as AppActions from './App/actions';\r\nexport * as PlayerActions from './Player/actions';\r\nexport * as SourceListActions from './SourceList/actions';\r\n",
@@ -4199,7 +4209,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 199,
+    "__docId__": 198,
     "kind": "file",
     "name": "sandwich-player/app/configureStore.js",
     "content": "import { createStore, applyMiddleware, compose } from 'redux';\r\nimport thunk from 'redux-thunk';\r\nimport { createBrowserHistory } from 'history';\r\nimport { routerMiddleware } from 'react-router-redux';\r\nimport reducer from './reducer';\r\nimport actionMiddleware from './App/app.action_middleware';\r\n\r\nexport const history = createBrowserHistory();\r\nconst router = routerMiddleware(history);\r\n\r\n/* eslint-disable no-underscore-dangle */\r\nconst composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;\r\n/* eslint-enable */\r\nconst enhancer = composeEnhancers(applyMiddleware(thunk, router, actionMiddleware));\r\n\r\nexport const configureStore = initialState =>\r\n  createStore(reducer, initialState, enhancer);\r\n",
@@ -4210,7 +4220,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 200,
+    "__docId__": 199,
     "kind": "variable",
     "name": "history",
     "memberof": "sandwich-player/app/configureStore.js",
@@ -4230,7 +4240,7 @@
     }
   },
   {
-    "__docId__": 201,
+    "__docId__": 200,
     "kind": "variable",
     "name": "router",
     "memberof": "sandwich-player/app/configureStore.js",
@@ -4251,7 +4261,7 @@
     "ignore": true
   },
   {
-    "__docId__": 202,
+    "__docId__": 201,
     "kind": "variable",
     "name": "composeEnhancers",
     "memberof": "sandwich-player/app/configureStore.js",
@@ -4272,7 +4282,7 @@
     "ignore": true
   },
   {
-    "__docId__": 203,
+    "__docId__": 202,
     "kind": "variable",
     "name": "enhancer",
     "memberof": "sandwich-player/app/configureStore.js",
@@ -4293,7 +4303,7 @@
     "ignore": true
   },
   {
-    "__docId__": 204,
+    "__docId__": 203,
     "kind": "function",
     "name": "configureStore",
     "memberof": "sandwich-player/app/configureStore.js",
@@ -4319,7 +4329,7 @@
     "return": null
   },
   {
-    "__docId__": 205,
+    "__docId__": 204,
     "kind": "file",
     "name": "sandwich-player/app/index.js",
     "content": "// React libraries\r\nimport React from 'react';\r\nimport { render } from 'react-dom';\r\nimport { Stack, List } from 'immutable';\r\n\r\nimport Root from './App/root.container';\r\nimport { setState } from './App/app.actions';\r\nimport { configureStore, history } from './configureStore';\r\n\r\nimport SoundCloudProxy from './../src/model/SoundCloudProxy';\r\nimport SpotifyProxy from './../src/model/SpotifyProxy';\r\nimport JamendoProxy from './../src/model/JamendoProxy';\r\n\r\n(async () => {\r\n  const soundCloudProxy = new SoundCloudProxy();\r\n  const spotifyProxy = new SpotifyProxy();\r\n  const jamendoProxy = new JamendoProxy();\r\n  const sources = [soundCloudProxy, spotifyProxy, jamendoProxy];\r\n\r\n  const store = configureStore();\r\n\r\n  store.dispatch(setState({\r\n    playStatus: 'STOPPED',\r\n    tracks: List(),\r\n    history: Stack(),\r\n    queue: List(),\r\n    sources: List(sources),\r\n    playlistsFound: List(),\r\n  }));\r\n\r\n  render(\r\n    <Root store={store} history={history} />,\r\n    document.getElementById('root'),\r\n  );\r\n\r\n\r\n  if (module.hot) {\r\n    module.hot.accept('./containers/Root', () => {\r\n      const NextRoot = require('./App/root.container'); // eslint-disable-line global-require\r\n      render(\r\n        <NextRoot store={store} history={history} />,\r\n        document.getElementById('root'),\r\n      );\r\n    });\r\n  }\r\n})();\r\n",
@@ -4330,7 +4340,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 206,
+    "__docId__": 205,
     "kind": "file",
     "name": "sandwich-player/app/reducer.js",
     "content": "import { Map } from 'immutable';\r\nimport * as AppActions from './App/actions';\r\nimport * as PlayerActions from './Player/actions';\r\nimport * as SourceListActions from './SourceList/actions';\r\nimport * as PlaylistsListActions from './PlaylistsList/actions';\r\nimport * as LayoutActions from './Layout/actions';\r\n\r\n/**\r\n   * Execute an action and return the new state\r\n   * @param {Map} state - Current state of the application\r\n   * @param action - The action to execute\r\n   * @return {Map} - The new state of the application\r\n   */\r\nexport default function (state = Map(), action) {\r\n  switch (action.type) {\r\n  case 'SET_STATE':\r\n    return AppActions.SetState.execute(state, action.state);\r\n  case 'ENQUEUE':\r\n    return PlayerActions.Enqueue.execute(state, action.tracks);\r\n  case 'TOGGLEPLAY':\r\n    return PlayerActions.TogglePlay.execute(state);\r\n  case 'PLAY':\r\n    return PlayerActions.Play.execute(state);\r\n  case 'STOP':\r\n    return PlayerActions.Stop.execute(state);\r\n  case 'PLAYING':\r\n    return PlayerActions.Playing.execute(state, action.audioStatus);\r\n  case 'NEXT':\r\n    return PlayerActions.Next.execute(state);\r\n  case 'PREV':\r\n    return PlayerActions.Prev.execute(state);\r\n  case 'SEARCH':\r\n    return LayoutActions.Search.execute(state, action.keywords);\r\n  case 'ENDSEARCH':\r\n    return LayoutActions.EndSearch.execute(state);\r\n  case 'APPEND_SEARCH_RESULTS':\r\n    return LayoutActions.AppendSearchResults.execute(state, action.results);\r\n  case 'CLEAR_SEARCH_RESULTS':\r\n    return LayoutActions.ClearSearchResults.execute(state);\r\n  case 'CLEAR_QUEUE':\r\n    return PlayerActions.ClearQueue.execute(state);\r\n  case 'CONNECTINGSOURCE':\r\n    return SourceListActions.ConnectingSource.execute(state, action.proxy);\r\n  case 'CONNECTEDSOURCE':\r\n    return SourceListActions.ConnectedSource.execute(state, action.proxy, action.accessToken);\r\n  case 'CONNEXIONFAILEDSOURCE':\r\n    return SourceListActions.ConnexionFailedSource.execute(state, action.proxy, action.error);\r\n  case 'PLAYLIST_UPDATE_SEARCH_FIELD':\r\n    return PlaylistsListActions.UpdateSearchField.execute(state, action.searchValue);\r\n  case 'PLAYLIST_UPDATE_SEARCH_RESULTS':\r\n    return PlaylistsListActions.UpdateSearchResults.execute(state, action.searchResults);\r\n  default:\r\n    console.log(action);\r\n  }\r\n  return state;\r\n}\r\n",
@@ -4341,7 +4351,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 207,
+    "__docId__": 206,
     "kind": "function",
     "name": "reducer",
     "memberof": "sandwich-player/app/reducer.js",
@@ -4387,7 +4397,7 @@
     }
   },
   {
-    "__docId__": 208,
+    "__docId__": 207,
     "kind": "file",
     "name": "sandwich-player/app/routes.js",
     "content": "import React from 'react';\r\nimport { Route, Switch } from 'react-router';\r\nimport App from './App/app.container';\r\nimport { PlayerContainer } from './Player/player.container';\r\nimport { SourceListContainer } from './SourceList/sourcelist.container';\r\nimport { PlaylistsListContainer } from './PlaylistsList/playlistslist.container';\r\n\r\nexport default () => (\r\n  <App>\r\n    <Switch>\r\n      <Route exact path=\"/\" component={PlayerContainer} />\r\n      <Route exact path=\"/sources\" component={SourceListContainer} />\r\n      <Route exact path=\"/playlists\" component={PlaylistsListContainer} />\r\n      <Route path=\"*\" component={PlayerContainer} />\r\n    </Switch>\r\n  </App>\r\n);\r\n",
@@ -4398,7 +4408,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 209,
+    "__docId__": 208,
     "kind": "function",
     "name": "routes",
     "memberof": "sandwich-player/app/routes.js",
@@ -4417,7 +4427,7 @@
     "return": null
   },
   {
-    "__docId__": 210,
+    "__docId__": 209,
     "kind": "file",
     "name": "sandwich-player/app/utils/time.js",
     "content": "\r\nexport function formatMilliseconds(milliseconds) {\r\n  const hours = Math.floor(milliseconds / 3600000);\r\n  milliseconds %= 3600000;\r\n\r\n  const minutes = Math.floor(milliseconds / 60000);\r\n  milliseconds %= 60000;\r\n\r\n  const seconds = Math.floor(milliseconds / 1000);\r\n  milliseconds = Math.floor(milliseconds % 1000);\r\n\r\n  return `${(minutes < 10 ? '0' : '') + minutes}:${\r\n    seconds < 10 ? '0' : ''}${seconds}`;\r\n}\r\n",
@@ -4428,7 +4438,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 211,
+    "__docId__": 210,
     "kind": "function",
     "name": "formatMilliseconds",
     "memberof": "sandwich-player/app/utils/time.js",
@@ -4461,10 +4471,10 @@
     }
   },
   {
-    "__docId__": 212,
+    "__docId__": 211,
     "kind": "file",
     "name": "sandwich-player/src/model/JamendoProxy.js",
-    "content": "import { autobind } from 'core-decorators';\nimport Axios from 'axios';\n\nimport Song from './Song';\n\nimport Playlist from './Playlist';\n\nconst clientId = '58c2e328';\n\nexport default class JamendoProxy {\n  constructor() {\n    this.name = 'Jamendo';\n    this.logo = 'http://www.userlogos.org/files/logos/43932_aleksandr009/jamendo_1_1.png';\n    this.status = 'DISCONNECTED';\n    this.authorizationUrl = null;\n  }\n\n  setStatus(status) {\n    const proxy = new JamendoProxy();\n    proxy.status = status;\n    this.accessToken = null;\n    return proxy;\n  }\n\n  setAccessToken() {\n    const proxy = new JamendoProxy();\n    proxy.status = 'CONNECTED';\n    return proxy;\n  }\n\n  needsAuthentification() {\n    return false;\n  }\n\n  isConnected() {\n    return this.status === 'CONNECTED';\n  }\n\n  prepareUrl(url) {\n    return `${url}?client_id=${clientId}`;\n  }\n\n  async searchTracks(keywords) {\n    try {\n      const response = await\n        Axios.get(`https://api.jamendo.com/v3.0/tracks/?namesearch=${keywords}&client_id=${clientId}&format=jsonpretty&limit=200`);\n\n      const tracks = response.data.results;\n\n      if (tracks.length === 0) {\n        return null;\n      }\n\n      const songs = [];\n\n      tracks.forEach((track) => {\n        songs.push(new Song(\n          track.name,\n          track.audio,\n          track.album_image,\n        ));\n      });\n\n      return songs;\n    } catch (e) {\n      console.log(e);\n    }\n\n    return null;\n  }\n\n  async loadRandomPlaylist() {\n    return this.searchPlaylists('pop').get(0);\n  }\n\n  @autobind\n  async fetchPlaylistDetails(playlist) {\n    const { id } = playlist;\n\n    const response = await Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&id=${id}&track_type=albumtrack`);\n\n    if (response.data.results === undefined\n      || response.data.results.length === 0) {\n      return null;\n    }\n\n    const playlistData = response.data.results[0];\n    const { tracks, zip, name } = playlistData;\n\n    const songs = Object.keys(tracks).map((key) => {\n      const track = tracks[key];\n      return new Song(\n        track.name,\n        track.audio,\n        track.album_image,\n      );\n    });\n\n    return new Playlist(name, this.name, zip, this.logo, songs);\n  }\n\n  async searchPlaylists(query) {\n    let playlists = [];\n    try {\n      const response = await\n        Axios.get(`https://api.jamendo.com/v3.0/playlists/?client_id=${clientId}&format=jsonpretty&limit=10&namesearch=${query}&track_type=albumtrack`);\n\n      const playlistsData = response.data.results;\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\n    } catch (e) {\n      console.log(e);\n    }\n\n    return playlists;\n  }\n}\n",
+    "content": "import { autobind } from 'core-decorators';\nimport Axios from 'axios';\n\nimport Song from './Song';\n\nimport Playlist from './Playlist';\n\nconst clientId = '58c2e328';\n\n/**\n  * JamendoProxy - Proxy interface to Jamendo API (This class is immutable)\n  */\nexport default class JamendoProxy {\n  /**\n   * constructor - Construct the proxy\n   *\n   * @return {JamendoProxy} Returns the proxy\n   */\n  constructor() {\n    this.name = 'Jamendo';\n    this.logo = 'http://www.userlogos.org/files/logos/43932_aleksandr009/jamendo_1_1.png';\n    this.status = 'DISCONNECTED';\n    this.authorizationUrl = null;\n  }\n\n  /**\n   * setStatus - Change the status of the proxy to a new state\n   *\n   * @param {string} status The new status\n   *\n   * @return {JamendoProxy} The new proxy with the new status\n   */\n  setStatus(status) {\n    const proxy = new JamendoProxy();\n    proxy.status = status;\n    this.accessToken = null;\n    return proxy;\n  }\n\n  /**\n   * setAccessToken - Set the status to connected\n   *\n   * @return {JamendoProxy} Return the new connected proxy\n   */\n  setAccessToken() {\n    const proxy = new JamendoProxy();\n    proxy.status = 'CONNECTED';\n    return proxy;\n  }\n\n  /**\n   * needsAuthentification - Jamendo does not need a authentifation process\n   *\n   * @return {boolean} false\n   */\n  needsAuthentification() {\n    return false;\n  }\n\n  /**\n   * isConnected - Check if the proxy is connected\n   *\n   * @return {boolean} Is proxy connected\n   */\n  isConnected() {\n    return this.status === 'CONNECTED';\n  }\n\n  /**\n   * prepareUrl - Append the client id to an URL query\n   *\n   * @param {string} url The URL which will be appended\n   *\n   * @return {string} The appended URL\n   */\n  prepareUrl(url) {\n    return `${url}?client_id=${clientId}`;\n  }\n\n  /**\n   * searchTracks - Async function to get an array of tracks from keywords\n   *\n   * @param {string} keywords The searched name for the tracks\n   *\n   * @return {Array} An array of tracks\n   */\n  async searchTracks(keywords) {\n    try {\n      const response = await\n        Axios.get(`https://api.jamendo.com/v3.0/tracks/?namesearch=${keywords}&client_id=${clientId}&format=jsonpretty&limit=200`);\n\n      const tracks = response.data.results;\n\n      if (tracks.length === 0) {\n        return null;\n      }\n\n      const songs = [];\n\n      tracks.forEach((track) => {\n        songs.push(new Song(\n          track.name,\n          track.audio,\n          track.album_image,\n        ));\n      });\n\n      return songs;\n    } catch (e) {\n      console.log(e);\n    }\n\n    return null;\n  }\n\n  /**\n   * fetchPlaylistDetails - Fetch a playlist from an playlist ID\n   *\n   * @param {string} playlist The playlist ID\n   *\n   * @return {Playlist} The playlist\n   */\n  @autobind\n  async fetchPlaylistDetails(playlist) {\n    const { id } = playlist;\n\n    const response = await Axios.get(`https://api.jamendo.com/v3.0/playlists/tracks/?client_id=${clientId}&format=jsonpretty&limit=200&id=${id}&track_type=albumtrack`);\n\n    if (response.data.results === undefined\n      || response.data.results.length === 0) {\n      return null;\n    }\n\n    const playlistData = response.data.results[0];\n    const { tracks, zip, name } = playlistData;\n\n    const songs = Object.keys(tracks).map((key) => {\n      const track = tracks[key];\n      return new Song(\n        track.name,\n        track.audio,\n        track.album_image,\n      );\n    });\n\n    return new Playlist(name, this.name, zip, this.logo, songs);\n  }\n\n  /**\n   * searchPlaylists - Search a set of playlists from a query\n   *\n   * @param {string} query The query of the search\n   *\n   * @return {Array} The set of playlists\n   */\n  async searchPlaylists(query) {\n    let playlists = [];\n    try {\n      const response = await\n        Axios.get(`https://api.jamendo.com/v3.0/playlists/?client_id=${clientId}&format=jsonpretty&limit=10&namesearch=${query}&track_type=albumtrack`);\n\n      const playlistsData = response.data.results;\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\n    } catch (e) {\n      console.log(e);\n    }\n\n    return playlists;\n  }\n}\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/src/model/JamendoProxy.js",
     "access": "public",
@@ -4472,7 +4482,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 213,
+    "__docId__": 212,
     "kind": "variable",
     "name": "clientId",
     "memberof": "sandwich-player/src/model/JamendoProxy.js",
@@ -4493,7 +4503,7 @@
     "ignore": true
   },
   {
-    "__docId__": 214,
+    "__docId__": 213,
     "kind": "class",
     "name": "JamendoProxy",
     "memberof": "sandwich-player/src/model/JamendoProxy.js",
@@ -4503,13 +4513,12 @@
     "export": true,
     "importPath": "sandwich-player/sandwich-player/src/model/JamendoProxy.js",
     "importStyle": "JamendoProxy",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
+    "description": "JamendoProxy - Proxy interface to Jamendo API (This class is immutable)",
+    "lineNumber": 13,
     "interface": false
   },
   {
-    "__docId__": 215,
+    "__docId__": 214,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4518,12 +4527,19 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true
+    "description": "constructor - Construct the proxy",
+    "lineNumber": 19,
+    "return": {
+      "nullable": null,
+      "types": [
+        "JamendoProxy"
+      ],
+      "spread": false,
+      "description": "Returns the proxy"
+    }
   },
   {
-    "__docId__": 216,
+    "__docId__": 215,
     "kind": "member",
     "name": "name",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4531,7 +4547,24 @@
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#name",
     "access": "public",
     "description": null,
-    "lineNumber": 12,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 216,
+    "kind": "member",
+    "name": "logo",
+    "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#logo",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
     "undocument": true,
     "type": {
       "types": [
@@ -4542,13 +4575,13 @@
   {
     "__docId__": 217,
     "kind": "member",
-    "name": "logo",
+    "name": "status",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
     "static": false,
-    "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#logo",
+    "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#status",
     "access": "public",
     "description": null,
-    "lineNumber": 13,
+    "lineNumber": 22,
     "undocument": true,
     "type": {
       "types": [
@@ -4559,30 +4592,13 @@
   {
     "__docId__": 218,
     "kind": "member",
-    "name": "status",
-    "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#status",
-    "access": "public",
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 219,
-    "kind": "member",
     "name": "authorizationUrl",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#authorizationUrl",
     "access": "public",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 23,
     "undocument": true,
     "type": {
       "types": [
@@ -4591,7 +4607,7 @@
     }
   },
   {
-    "__docId__": 220,
+    "__docId__": 219,
     "kind": "method",
     "name": "setStatus",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4600,28 +4616,31 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#setStatus",
     "access": "public",
-    "description": "",
-    "lineNumber": 18,
+    "description": "setStatus - Change the status of the proxy to a new state ",
+    "lineNumber": 33,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "status",
-        "description": ""
+        "description": "The new status"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "JamendoProxy"
+      ],
+      "spread": false,
+      "description": "The new proxy with the new status"
     }
   },
   {
-    "__docId__": 221,
+    "__docId__": 220,
     "kind": "member",
     "name": "accessToken",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4629,7 +4648,7 @@
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#accessToken",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 36,
     "undocument": true,
     "type": {
       "types": [
@@ -4638,7 +4657,7 @@
     }
   },
   {
-    "__docId__": 222,
+    "__docId__": 221,
     "kind": "method",
     "name": "setAccessToken",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4647,17 +4666,20 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#setAccessToken",
     "access": "public",
-    "description": "",
-    "lineNumber": 25,
-    "params": [],
+    "description": "setAccessToken - Set the status to connected ",
+    "lineNumber": 45,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "JamendoProxy"
+      ],
+      "spread": false,
+      "description": "Return the new connected proxy"
+    },
+    "params": []
   },
   {
-    "__docId__": 223,
+    "__docId__": 222,
     "kind": "method",
     "name": "needsAuthentification",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4666,17 +4688,20 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#needsAuthentification",
     "access": "public",
-    "description": "",
-    "lineNumber": 31,
-    "params": [],
+    "description": "needsAuthentification - Jamendo does not need a authentifation process ",
+    "lineNumber": 56,
     "return": {
+      "nullable": null,
       "types": [
         "boolean"
-      ]
-    }
+      ],
+      "spread": false,
+      "description": "false"
+    },
+    "params": []
   },
   {
-    "__docId__": 224,
+    "__docId__": 223,
     "kind": "method",
     "name": "isConnected",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4685,17 +4710,20 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#isConnected",
     "access": "public",
-    "description": "",
-    "lineNumber": 35,
-    "params": [],
+    "description": "isConnected - Check if the proxy is connected ",
+    "lineNumber": 65,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Is proxy connected"
+    },
+    "params": []
   },
   {
-    "__docId__": 225,
+    "__docId__": 224,
     "kind": "method",
     "name": "prepareUrl",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4704,28 +4732,31 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#prepareUrl",
     "access": "public",
-    "description": "",
-    "lineNumber": 39,
+    "description": "prepareUrl - Append the client id to an URL query ",
+    "lineNumber": 76,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "url",
-        "description": ""
+        "description": "The URL which will be appended"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
         "string"
-      ]
+      ],
+      "spread": false,
+      "description": "The appended URL"
     }
   },
   {
-    "__docId__": 226,
+    "__docId__": 225,
     "kind": "method",
     "name": "searchTracks",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4734,47 +4765,31 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#searchTracks",
     "access": "public",
-    "description": "",
-    "lineNumber": 43,
+    "description": "searchTracks - Async function to get an array of tracks from keywords ",
+    "lineNumber": 87,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "keywords",
-        "description": ""
+        "description": "The searched name for the tracks"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "An array of tracks"
     }
   },
   {
-    "__docId__": 227,
-    "kind": "method",
-    "name": "loadRandomPlaylist",
-    "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#loadRandomPlaylist",
-    "access": "public",
-    "description": "",
-    "lineNumber": 72,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 228,
+    "__docId__": 226,
     "kind": "method",
     "name": "fetchPlaylistDetails",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4784,7 +4799,7 @@
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#fetchPlaylistDetails",
     "access": "public",
     "description": "",
-    "lineNumber": 77,
+    "lineNumber": 124,
     "params": [
       {
         "nullable": null,
@@ -4810,7 +4825,7 @@
     }
   },
   {
-    "__docId__": 229,
+    "__docId__": 227,
     "kind": "method",
     "name": "searchPlaylists",
     "memberof": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy",
@@ -4819,31 +4834,34 @@
     "static": false,
     "longname": "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#searchPlaylists",
     "access": "public",
-    "description": "",
-    "lineNumber": 102,
+    "description": "searchPlaylists - Search a set of playlists from a query ",
+    "lineNumber": 156,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "query",
-        "description": ""
+        "description": "The query of the search"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "The set of playlists"
     }
   },
   {
-    "__docId__": 230,
+    "__docId__": 228,
     "kind": "file",
     "name": "sandwich-player/src/model/Playlist.js",
-    "content": "import { List } from 'immutable';\n\nexport default class Playlist {\n  constructor(name, origin, uri, art, songs) {\n    this.name = name;\n    this.origin = origin;\n    this.uri = uri;\n    this.art = art;\n    this.songs = List(songs);\n  }\n}\n",
+    "content": "import { List } from 'immutable';\n\n/**\n * This class is a data structure to hold all relevant information\n * about a playlist\n */\nexport default class Playlist {\n  /**\n   * constructor - The constructor of this class\n   *\n   * @param  {string} name   The name of the playlist\n   * @param  {string} origin The name of the service\n   * @param  {string} uri    Unique ID of the playlist\n   * @param  {string} art    URL of the logo\n   * @param  {List} songs    List of songs\n   * @return {Playlist}      The constructed object\n   */\n  constructor(name, origin, uri, art, songs) {\n    this.name = name;\n    this.origin = origin;\n    this.uri = uri;\n    this.art = art;\n    this.songs = List(songs);\n  }\n}\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/src/model/Playlist.js",
     "access": "public",
@@ -4851,7 +4869,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 231,
+    "__docId__": 229,
     "kind": "class",
     "name": "Playlist",
     "memberof": "sandwich-player/src/model/Playlist.js",
@@ -4861,13 +4879,12 @@
     "export": true,
     "importPath": "sandwich-player/sandwich-player/src/model/Playlist.js",
     "importStyle": "Playlist",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "This class is a data structure to hold all relevant information\nabout a playlist",
+    "lineNumber": 7,
     "interface": false
   },
   {
-    "__docId__": 232,
+    "__docId__": 230,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
@@ -4876,12 +4893,71 @@
     "static": false,
     "longname": "sandwich-player/src/model/Playlist.js~Playlist#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true
+    "description": "constructor - The constructor of this class",
+    "lineNumber": 18,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "The name of the playlist"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "origin",
+        "description": "The name of the service"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uri",
+        "description": "Unique ID of the playlist"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "art",
+        "description": "URL of the logo"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "List"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "songs",
+        "description": "List of songs"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Playlist"
+      ],
+      "spread": false,
+      "description": "The constructed object"
+    }
   },
   {
-    "__docId__": 233,
+    "__docId__": 231,
     "kind": "member",
     "name": "name",
     "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
@@ -4889,7 +4965,41 @@
     "longname": "sandwich-player/src/model/Playlist.js~Playlist#name",
     "access": "public",
     "description": null,
-    "lineNumber": 5,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 232,
+    "kind": "member",
+    "name": "origin",
+    "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
+    "static": false,
+    "longname": "sandwich-player/src/model/Playlist.js~Playlist#origin",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 233,
+    "kind": "member",
+    "name": "uri",
+    "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
+    "static": false,
+    "longname": "sandwich-player/src/model/Playlist.js~Playlist#uri",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
     "undocument": true,
     "type": {
       "types": [
@@ -4900,13 +5010,13 @@
   {
     "__docId__": 234,
     "kind": "member",
-    "name": "origin",
+    "name": "art",
     "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
     "static": false,
-    "longname": "sandwich-player/src/model/Playlist.js~Playlist#origin",
+    "longname": "sandwich-player/src/model/Playlist.js~Playlist#art",
     "access": "public",
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 22,
     "undocument": true,
     "type": {
       "types": [
@@ -4917,13 +5027,13 @@
   {
     "__docId__": 235,
     "kind": "member",
-    "name": "uri",
+    "name": "songs",
     "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
     "static": false,
-    "longname": "sandwich-player/src/model/Playlist.js~Playlist#uri",
+    "longname": "sandwich-player/src/model/Playlist.js~Playlist#songs",
     "access": "public",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 23,
     "undocument": true,
     "type": {
       "types": [
@@ -4933,43 +5043,9 @@
   },
   {
     "__docId__": 236,
-    "kind": "member",
-    "name": "art",
-    "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
-    "static": false,
-    "longname": "sandwich-player/src/model/Playlist.js~Playlist#art",
-    "access": "public",
-    "description": null,
-    "lineNumber": 8,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 237,
-    "kind": "member",
-    "name": "songs",
-    "memberof": "sandwich-player/src/model/Playlist.js~Playlist",
-    "static": false,
-    "longname": "sandwich-player/src/model/Playlist.js~Playlist#songs",
-    "access": "public",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 238,
     "kind": "file",
     "name": "sandwich-player/src/model/Song.js",
-    "content": "export default class Song {\r\n  constructor(title, streamUrl, artworkUrl) {\r\n    this.title = title;\r\n    this.streamUrl = streamUrl;\r\n    this.artworkUrl = artworkUrl;\r\n  }\r\n}\r\n",
+    "content": "/**\r\n* Song - This song is a data structure holding information for a track\r\n*/\r\nexport default class Song {\r\n  /**\r\n   * constructor - Construct a song\r\n   *\r\n   * @param {string} title      Title of the song\r\n   * @param {string} streamUrl  Downloadable link of the song\r\n   * @param {string} artworkUrl Url of the picture linked to this song\r\n   *\r\n   * @return {Song} The constructed object\r\n   */\r\n  constructor(title, streamUrl, artworkUrl) {\r\n    this.title = title;\r\n    this.streamUrl = streamUrl;\r\n    this.artworkUrl = artworkUrl;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/src/model/Song.js",
     "access": "public",
@@ -4977,7 +5053,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 239,
+    "__docId__": 237,
     "kind": "class",
     "name": "Song",
     "memberof": "sandwich-player/src/model/Song.js",
@@ -4987,13 +5063,12 @@
     "export": true,
     "importPath": "sandwich-player/sandwich-player/src/model/Song.js",
     "importStyle": "Song",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "Song - This song is a data structure holding information for a track",
+    "lineNumber": 4,
     "interface": false
   },
   {
-    "__docId__": 240,
+    "__docId__": 238,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "sandwich-player/src/model/Song.js~Song",
@@ -5002,12 +5077,51 @@
     "static": false,
     "longname": "sandwich-player/src/model/Song.js~Song#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true
+    "description": "constructor - Construct a song",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "title",
+        "description": "Title of the song"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "streamUrl",
+        "description": "Downloadable link of the song"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "artworkUrl",
+        "description": "Url of the picture linked to this song"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Song"
+      ],
+      "spread": false,
+      "description": "The constructed object"
+    }
   },
   {
-    "__docId__": 241,
+    "__docId__": 239,
     "kind": "member",
     "name": "title",
     "memberof": "sandwich-player/src/model/Song.js~Song",
@@ -5015,7 +5129,41 @@
     "longname": "sandwich-player/src/model/Song.js~Song#title",
     "access": "public",
     "description": null,
-    "lineNumber": 3,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 240,
+    "kind": "member",
+    "name": "streamUrl",
+    "memberof": "sandwich-player/src/model/Song.js~Song",
+    "static": false,
+    "longname": "sandwich-player/src/model/Song.js~Song#streamUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 241,
+    "kind": "member",
+    "name": "artworkUrl",
+    "memberof": "sandwich-player/src/model/Song.js~Song",
+    "static": false,
+    "longname": "sandwich-player/src/model/Song.js~Song#artworkUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
     "undocument": true,
     "type": {
       "types": [
@@ -5025,43 +5173,9 @@
   },
   {
     "__docId__": 242,
-    "kind": "member",
-    "name": "streamUrl",
-    "memberof": "sandwich-player/src/model/Song.js~Song",
-    "static": false,
-    "longname": "sandwich-player/src/model/Song.js~Song#streamUrl",
-    "access": "public",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 243,
-    "kind": "member",
-    "name": "artworkUrl",
-    "memberof": "sandwich-player/src/model/Song.js~Song",
-    "static": false,
-    "longname": "sandwich-player/src/model/Song.js~Song#artworkUrl",
-    "access": "public",
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 244,
     "kind": "file",
     "name": "sandwich-player/src/model/SoundCloudProxy.js",
-    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '749ab993d24b4717afaeccd5308edbdc';\r\n\r\nexport default class SpotifyProxy {\r\n  constructor() {\r\n    this.name = 'Spotify';\r\n    this.logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.redirectUri = 'https://www.foo.bar/oauth2/callback';\r\n    this.authorizationUrl = 'https://accounts.spotify.com/authorize?client_id='.concat(clientId, '&response_type=code&redirect_uri=', this.redirectUri);\r\n    this.accessToken = null;\r\n\r\n    const headers = {\r\n      'Content-Type': 'application/x-www-form-urlencoded',\r\n      Authorization: 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=',\r\n    };\r\n\r\n    this.requestConfig = { headers };\r\n  }\r\n\r\n  getToken(code) {\r\n    return 'https://accounts.spotify.com/api/token?grant_type=authorization_code&code='.concat(code, '&redirect_uri=', this.redirectUri);\r\n  }\r\n\r\n  setStatus(status) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.status = status;\r\n    this.accessToken = null;\r\n    return proxy;\r\n  }\r\n\r\n  setAccessToken(token) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.accessToken = `Bearer ${token}`;\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  needsAuthentification() {\r\n    return true;\r\n  }\r\n\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  async searchTracks(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });\r\n\r\n    const tracks = response.data.tracks.items;\r\n    if (tracks.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const songs = [];\r\n\r\n    tracks.forEach((track) => {\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      console.log(track.preview_url);\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(new Song(\r\n          track.name,\r\n          track.preview_url,\r\n          artworkUrl,\r\n        ));\r\n      }\r\n    });\r\n\r\n    return songs;\r\n  }\r\n\r\n  async loadRandomPlaylist() {\r\n    return this.searchPlaylists('pop');\r\n  }\r\n\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n    console.log(playlist);\r\n\r\n    const tracksUrl = playlist.tracks.href;\r\n    const { name } = playlist;\r\n    const response = await Axios.get(tracksUrl, { headers });\r\n    const songs = [];\r\n\r\n    Object.keys(response.data.items).forEach((key) => {\r\n      const { track } = response.data.items[key];\r\n\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      const song = new Song(\r\n        track.name,\r\n        track.preview_url,\r\n        artworkUrl,\r\n      );\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(song);\r\n      }\r\n    });\r\n\r\n    return new Playlist(name, this.name, tracksUrl, this.logo, songs);\r\n  }\r\n\r\n  async searchPlaylists(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    let playlists = [];\r\n    try {\r\n      const response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });\r\n\r\n      const playlistsData = response.data.playlists.items;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
+    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '2f98992c40b8edf17423d93bda2e04ab';\r\n\r\n/**\r\n  * SoundCloudProxy - Proxy interface to SoundCloud API (This class is immutable)\r\n  */\r\nexport default class SoundCloudProxy {\r\n  constructor() {\r\n    this.name = 'SoundCloud';\r\n    this.logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.authorizationUrl = null;\r\n  }\r\n\r\n  /**\r\n   * setStatus - Change the status of the proxy to a new state\r\n   *\r\n   * @param {string} status The new status\r\n   *\r\n   * @return {SoundCloudProxy} The new proxy with the new status\r\n   */\r\n  setStatus(status) {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = status;\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * setAccessToken - Set the status to connected\r\n   *\r\n   * @return {SoundCloudProxy} Return the new connected proxy\r\n   */\r\n  setAccessToken() {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * needsAuthentification - SoundCloud does not need a authentifation process\r\n   *\r\n   * @return {boolean} false\r\n   */\r\n  needsAuthentification() {\r\n    return false;\r\n  }\r\n\r\n  /**\r\n   * isConnected - Check if the proxy is connected\r\n   *\r\n   * @return {boolean} Is proxy connected\r\n   */\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  /**\r\n   * prepareUrl - Append the client id to an URL query\r\n   *\r\n   * @param {string} url The URL which will be appended\r\n   *\r\n   * @return {string} The appended URL\r\n   */\r\n  prepareUrl(url) {\r\n    return `${url}?client_id=${clientId}`;\r\n  }\r\n\r\n  /**\r\n   * searchTracks - Async function to get an array of tracks from keywords\r\n   *\r\n   * @param {string} keywords The searched name for the tracks\r\n   *\r\n   * @return {Array} An array of tracks\r\n   */\r\n  async searchTracks(keywords) {\r\n    try {\r\n      const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);\r\n\r\n      const tracks = response.data;\r\n\r\n      console.log(tracks);\r\n      const songs = [];\r\n\r\n      tracks.forEach((track) => {\r\n        if (track.sharing === 'public') {\r\n          songs.push(new Song(\r\n            track.title,\r\n            this.prepareUrl(track.stream_url),\r\n            track.artwork_url,\r\n          ));\r\n        }\r\n      });\r\n\r\n      return songs;\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return null;\r\n  }\r\n\r\n  /**\r\n   * fetchPlaylistDetails - Fetch a playlist from an playlist ID\r\n   *\r\n   * @param {string} playlist The playlist ID\r\n   *\r\n   * @return {Playlist} The playlist\r\n   */\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const { tracks_uri, title, uri } = playlist;\r\n\r\n    const response = await Axios.get(this.prepareUrl(tracks_uri));\r\n\r\n    if (response.data === undefined\r\n      || response.data.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const tracks = response.data;\r\n\r\n    const songs = tracks.map(track =>\r\n      new Song(\r\n        track.title,\r\n        this.prepareUrl(track.stream_url),\r\n        track.artwork_url,\r\n      ));\r\n\r\n    return new Playlist(title, this.name, uri, this.logo, songs);\r\n  }\r\n\r\n  /**\r\n   * searchPlaylists - Search a set of playlists from a query\r\n   *\r\n   * @param {string} query The query of the search\r\n   *\r\n   * @return {Array} The set of playlists\r\n   */\r\n  async searchPlaylists(query) {\r\n    let playlists = [];\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.soundcloud.com/playlists?client_id=${clientId}&q=${query}`);\r\n\r\n      const playlistsData = response.data;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/src/model/SoundCloudProxy.js",
     "access": "public",
@@ -5069,7 +5183,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 245,
+    "__docId__": 243,
     "kind": "variable",
     "name": "clientId",
     "memberof": "sandwich-player/src/model/SoundCloudProxy.js",
@@ -5090,93 +5204,41 @@
     "ignore": true
   },
   {
-    "__docId__": 246,
+    "__docId__": 244,
     "kind": "class",
-    "name": "SpotifyProxy",
+    "name": "SoundCloudProxy",
     "memberof": "sandwich-player/src/model/SoundCloudProxy.js",
     "static": true,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "access": "public",
     "export": true,
     "importPath": "sandwich-player/sandwich-player/src/model/SoundCloudProxy.js",
-    "importStyle": "SpotifyProxy",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "importStyle": "SoundCloudProxy",
+    "description": "SoundCloudProxy - Proxy interface to SoundCloud API (This class is immutable)",
+    "lineNumber": 12,
     "interface": false
   },
   {
-    "__docId__": 247,
+    "__docId__": 245,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#constructor",
-    "access": "public",
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true
-  },
-  {
-    "__docId__": 248,
-    "kind": "member",
-    "name": "name",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#name",
-    "access": "public",
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 249,
-    "kind": "member",
-    "name": "logo",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#logo",
-    "access": "public",
-    "description": null,
-    "lineNumber": 12,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 250,
-    "kind": "member",
-    "name": "status",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#status",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#constructor",
     "access": "public",
     "description": null,
     "lineNumber": 13,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
+    "undocument": true
   },
   {
-    "__docId__": 251,
+    "__docId__": 246,
     "kind": "member",
-    "name": "redirectUri",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "name",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#redirectUri",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#name",
     "access": "public",
     "description": null,
     "lineNumber": 14,
@@ -5188,245 +5250,233 @@
     }
   },
   {
-    "__docId__": 252,
+    "__docId__": 247,
     "kind": "member",
-    "name": "authorizationUrl",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "logo",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#authorizationUrl",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#logo",
     "access": "public",
     "description": null,
     "lineNumber": 15,
     "undocument": true,
     "type": {
       "types": [
-        "*"
+        "string"
       ]
     }
   },
   {
-    "__docId__": 253,
+    "__docId__": 248,
     "kind": "member",
-    "name": "accessToken",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "status",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#accessToken",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#status",
     "access": "public",
     "description": null,
     "lineNumber": 16,
     "undocument": true,
     "type": {
       "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 249,
+    "kind": "member",
+    "name": "authorizationUrl",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#authorizationUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
         "*"
       ]
     }
   },
   {
-    "__docId__": 254,
-    "kind": "member",
-    "name": "requestConfig",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "__docId__": 250,
+    "kind": "method",
+    "name": "setStatus",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#requestConfig",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setStatus",
     "access": "public",
-    "description": null,
-    "lineNumber": 23,
-    "undocument": true,
-    "type": {
+    "description": "setStatus - Change the status of the proxy to a new state ",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "status",
+        "description": "The new status"
+      }
+    ],
+    "return": {
+      "nullable": null,
       "types": [
-        "{\"headers\": *}"
-      ]
+        "SoundCloudProxy"
+      ],
+      "spread": false,
+      "description": "The new proxy with the new status"
+    }
+  },
+  {
+    "__docId__": 251,
+    "kind": "method",
+    "name": "setAccessToken",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setAccessToken",
+    "access": "public",
+    "description": "setAccessToken - Set the status to connected ",
+    "lineNumber": 38,
+    "return": {
+      "nullable": null,
+      "types": [
+        "SoundCloudProxy"
+      ],
+      "spread": false,
+      "description": "Return the new connected proxy"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 252,
+    "kind": "method",
+    "name": "needsAuthentification",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#needsAuthentification",
+    "access": "public",
+    "description": "needsAuthentification - SoundCloud does not need a authentifation process ",
+    "lineNumber": 49,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "false"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 253,
+    "kind": "method",
+    "name": "isConnected",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#isConnected",
+    "access": "public",
+    "description": "isConnected - Check if the proxy is connected ",
+    "lineNumber": 58,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Is proxy connected"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 254,
+    "kind": "method",
+    "name": "prepareUrl",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#prepareUrl",
+    "access": "public",
+    "description": "prepareUrl - Append the client id to an URL query ",
+    "lineNumber": 69,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "The URL which will be appended"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The appended URL"
     }
   },
   {
     "__docId__": 255,
     "kind": "method",
-    "name": "getToken",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "name": "searchTracks",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
-    "async": false,
+    "async": true,
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#getToken",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchTracks",
     "access": "public",
-    "description": "",
-    "lineNumber": 26,
+    "description": "searchTracks - Async function to get an array of tracks from keywords ",
+    "lineNumber": 80,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
-        "name": "code",
-        "description": ""
+        "name": "keywords",
+        "description": "The searched name for the tracks"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "An array of tracks"
     }
   },
   {
     "__docId__": 256,
     "kind": "method",
-    "name": "setStatus",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#setStatus",
-    "access": "public",
-    "description": "",
-    "lineNumber": 30,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "status",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 258,
-    "kind": "method",
-    "name": "setAccessToken",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#setAccessToken",
-    "access": "public",
-    "description": "",
-    "lineNumber": 37,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "token",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 259,
-    "kind": "method",
-    "name": "needsAuthentification",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#needsAuthentification",
-    "access": "public",
-    "description": "",
-    "lineNumber": 44,
-    "params": [],
-    "return": {
-      "types": [
-        "boolean"
-      ]
-    }
-  },
-  {
-    "__docId__": 260,
-    "kind": "method",
-    "name": "isConnected",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#isConnected",
-    "access": "public",
-    "description": "",
-    "lineNumber": 48,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 261,
-    "kind": "method",
-    "name": "searchTracks",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchTracks",
-    "access": "public",
-    "description": "",
-    "lineNumber": 52,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "query",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 262,
-    "kind": "method",
-    "name": "loadRandomPlaylist",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#loadRandomPlaylist",
-    "access": "public",
-    "description": "",
-    "lineNumber": 89,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 263,
-    "kind": "method",
     "name": "fetchPlaylistDetails",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#fetchPlaylistDetails",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#fetchPlaylistDetails",
     "access": "public",
     "description": "",
-    "lineNumber": 94,
+    "lineNumber": 115,
     "params": [
       {
         "nullable": null,
@@ -5452,40 +5502,43 @@
     }
   },
   {
-    "__docId__": 264,
+    "__docId__": 257,
     "kind": "method",
     "name": "searchPlaylists",
-    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy",
+    "memberof": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchPlaylists",
+    "longname": "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchPlaylists",
     "access": "public",
-    "description": "",
-    "lineNumber": 129,
+    "description": "searchPlaylists - Search a set of playlists from a query ",
+    "lineNumber": 144,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "query",
-        "description": ""
+        "description": "The query of the search"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "The set of playlists"
     }
   },
   {
-    "__docId__": 265,
+    "__docId__": 258,
     "kind": "file",
     "name": "sandwich-player/src/model/SpotifyProxy.js",
-    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '2f98992c40b8edf17423d93bda2e04ab';\r\n\r\nexport default class SoundCloudProxy {\r\n  constructor() {\r\n    this.name = 'SoundCloud';\r\n    this.logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.authorizationUrl = null;\r\n  }\r\n\r\n  setStatus(status) {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = status;\r\n    return proxy;\r\n  }\r\n\r\n  setAccessToken() {\r\n    const proxy = new SoundCloudProxy();\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  needsAuthentification() {\r\n    return false;\r\n  }\r\n\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  prepareUrl(url) {\r\n    return `${url}?client_id=${clientId}`;\r\n  }\r\n\r\n  async searchTracks(keywords) {\r\n    try {\r\n      const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);\r\n\r\n      const tracks = response.data;\r\n\r\n      console.log(tracks);\r\n      const songs = [];\r\n\r\n      tracks.forEach((track) => {\r\n        if (track.sharing === 'public') {\r\n          songs.push(new Song(\r\n            track.title,\r\n            this.prepareUrl(track.stream_url),\r\n            track.artwork_url,\r\n          ));\r\n        }\r\n      });\r\n\r\n      return songs;\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return null;\r\n  }\r\n\r\n  async loadRandomPlaylist() {\r\n    return this.searchPlaylists('pop');\r\n  }\r\n\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const { tracks_uri, title, uri } = playlist;\r\n\r\n    const response = await Axios.get(this.prepareUrl(tracks_uri));\r\n\r\n    if (response.data === undefined\r\n      || response.data.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const tracks = response.data;\r\n\r\n    const songs = tracks.map(track =>\r\n      new Song(\r\n        track.title,\r\n        this.prepareUrl(track.stream_url),\r\n        track.artwork_url,\r\n      ));\r\n\r\n    return new Playlist(title, this.name, uri, this.logo, songs);\r\n  }\r\n\r\n  async searchPlaylists(query) {\r\n    let playlists = [];\r\n    try {\r\n      const response = await\r\n        Axios.get(`https://api.soundcloud.com/playlists?client_id=${clientId}&q=${query}`);\r\n\r\n      const playlistsData = response.data;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
+    "content": "import { autobind } from 'core-decorators';\r\nimport Axios from 'axios';\r\n\r\nimport Playlist from './Playlist';\r\nimport Song from './Song';\r\n\r\nconst clientId = '749ab993d24b4717afaeccd5308edbdc';\r\n\r\n/**\r\n  * SpotifyProxy - Proxy interface to Jamendo API (This class is immutable)\r\n  */\r\nexport default class SpotifyProxy {\r\n  /**\r\n   * constructor - Construct the proxy\r\n   *\r\n   * @return {SpotifyProxy} Returns the proxy\r\n   */\r\n  constructor() {\r\n    this.name = 'Spotify';\r\n    this.logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.png';\r\n    this.status = 'DISCONNECTED';\r\n    this.redirectUri = 'https://www.foo.bar/oauth2/callback';\r\n    this.authorizationUrl = 'https://accounts.spotify.com/authorize?client_id='.concat(clientId, '&response_type=code&redirect_uri=', this.redirectUri);\r\n    this.accessToken = null;\r\n\r\n    const headers = {\r\n      'Content-Type': 'application/x-www-form-urlencoded',\r\n      Authorization: 'Basic NzQ5YWI5OTNkMjRiNDcxN2FmYWVjY2Q1MzA4ZWRiZGM6NGI0MzVlNzIxYzNjNDcwY2FmODI4MjEzNTQwMjFjZjk=',\r\n    };\r\n\r\n    this.requestConfig = { headers };\r\n  }\r\n\r\n  /**\r\n   * getToken - Get the url to ask access token\r\n   *\r\n   * @param {string} code Authorization code\r\n   *\r\n   * @return {string} URL for get access token\r\n   */\r\n  getToken(code) {\r\n    return 'https://accounts.spotify.com/api/token?grant_type=authorization_code&code='.concat(code, '&redirect_uri=', this.redirectUri);\r\n  }\r\n\r\n  /**\r\n   * setStatus - Change the status of the proxy to a new state\r\n   *\r\n   * @param {string} status The new status\r\n   *\r\n   * @return {SpotifyProxy} The new proxy with the new status\r\n   */\r\n  setStatus(status) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.status = status;\r\n    this.accessToken = null;\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * setAccessToken - Set the status to connected\r\n   *\r\n   * @param {string} token Access token\r\n   *\r\n   * @return {SpotifyProxy} Return the new connected proxy\r\n   */\r\n  setAccessToken(token) {\r\n    const proxy = new SpotifyProxy();\r\n    proxy.accessToken = `Bearer ${token}`;\r\n    proxy.status = 'CONNECTED';\r\n    return proxy;\r\n  }\r\n\r\n  /**\r\n   * needsAuthentification - Spotify need an authentifation process\r\n   *\r\n   * @return {boolean} true\r\n   */\r\n  needsAuthentification() {\r\n    return true;\r\n  }\r\n\r\n  /**\r\n   * isConnected - Check if the proxy is connected\r\n   *\r\n   * @return {boolean} Is proxy connected\r\n   */\r\n  isConnected() {\r\n    return this.status === 'CONNECTED';\r\n  }\r\n\r\n  /**\r\n   * searchTracks - Async function to get an array of tracks from keywords\r\n   *\r\n   * @param {string} query The searched name for the tracks\r\n   *\r\n   * @return {Array} An array of tracks\r\n   */\r\n  async searchTracks(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });\r\n\r\n    const tracks = response.data.tracks.items;\r\n    if (tracks.length === 0) {\r\n      return null;\r\n    }\r\n\r\n    const songs = [];\r\n\r\n    tracks.forEach((track) => {\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      console.log(track.preview_url);\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(new Song(\r\n          track.name,\r\n          track.preview_url,\r\n          artworkUrl,\r\n        ));\r\n      }\r\n    });\r\n\r\n    return songs;\r\n  }\r\n\r\n  /**\r\n   * fetchPlaylistDetails - Fetch a playlist from an playlist ID\r\n   *\r\n   * @param {string} playlist The playlist ID\r\n   *\r\n   * @return {Playlist} The playlist\r\n   */\r\n  @autobind\r\n  async fetchPlaylistDetails(playlist) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n    console.log(playlist);\r\n\r\n    const tracksUrl = playlist.tracks.href;\r\n    const { name } = playlist;\r\n    const response = await Axios.get(tracksUrl, { headers });\r\n    const songs = [];\r\n\r\n    Object.keys(response.data.items).forEach((key) => {\r\n      const { track } = response.data.items[key];\r\n\r\n      let artworkUrl = '';\r\n      const { images } = track.album;\r\n      if (images.length > 0) {\r\n        artworkUrl = images[0].url;\r\n      }\r\n\r\n      const song = new Song(\r\n        track.name,\r\n        track.preview_url,\r\n        artworkUrl,\r\n      );\r\n\r\n      if (track.preview_url !== null) {\r\n        songs.push(song);\r\n      }\r\n    });\r\n\r\n    return new Playlist(name, this.name, tracksUrl, this.logo, songs);\r\n  }\r\n\r\n  /**\r\n   * searchPlaylists - Search a set of playlists from a query\r\n   *\r\n   * @param {string} query The query of the search\r\n   *\r\n   * @return {Array} The set of playlists\r\n   */\r\n  async searchPlaylists(query) {\r\n    const headers = {\r\n      'Content-Type': 'application/json',\r\n      Authorization: this.accessToken,\r\n    };\r\n\r\n    let playlists = [];\r\n    try {\r\n      const response = await Axios.get(`https://api.spotify.com/v1/search?type=playlist&q=${query}`, { headers });\r\n\r\n      const playlistsData = response.data.playlists.items;\r\n      playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));\r\n    } catch (e) {\r\n      console.log(e);\r\n    }\r\n\r\n    return playlists;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "/Users/master/sandwich-player/src/model/SpotifyProxy.js",
     "access": "public",
@@ -5493,7 +5546,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 266,
+    "__docId__": 259,
     "kind": "variable",
     "name": "clientId",
     "memberof": "sandwich-player/src/model/SpotifyProxy.js",
@@ -5514,281 +5567,348 @@
     "ignore": true
   },
   {
-    "__docId__": 267,
+    "__docId__": 260,
     "kind": "class",
-    "name": "SoundCloudProxy",
+    "name": "SpotifyProxy",
     "memberof": "sandwich-player/src/model/SpotifyProxy.js",
     "static": true,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "access": "public",
     "export": true,
     "importPath": "sandwich-player/sandwich-player/src/model/SpotifyProxy.js",
-    "importStyle": "SoundCloudProxy",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "importStyle": "SpotifyProxy",
+    "description": "SpotifyProxy - Proxy interface to Jamendo API (This class is immutable)",
+    "lineNumber": 12,
     "interface": false
   },
   {
-    "__docId__": 268,
+    "__docId__": 261,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#constructor",
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#constructor",
+    "access": "public",
+    "description": "constructor - Construct the proxy",
+    "lineNumber": 18,
+    "return": {
+      "nullable": null,
+      "types": [
+        "SpotifyProxy"
+      ],
+      "spread": false,
+      "description": "Returns the proxy"
+    }
+  },
+  {
+    "__docId__": 262,
+    "kind": "member",
+    "name": "name",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#name",
     "access": "public",
     "description": null,
-    "lineNumber": 10,
-    "undocument": true
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 263,
+    "kind": "member",
+    "name": "logo",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#logo",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 264,
+    "kind": "member",
+    "name": "status",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#status",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 265,
+    "kind": "member",
+    "name": "redirectUri",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#redirectUri",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 266,
+    "kind": "member",
+    "name": "authorizationUrl",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#authorizationUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 267,
+    "kind": "member",
+    "name": "accessToken",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#accessToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 268,
+    "kind": "member",
+    "name": "requestConfig",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#requestConfig",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"headers\": *}"
+      ]
+    }
   },
   {
     "__docId__": 269,
-    "kind": "member",
-    "name": "name",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#name",
-    "access": "public",
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 270,
-    "kind": "member",
-    "name": "logo",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#logo",
-    "access": "public",
-    "description": null,
-    "lineNumber": 12,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 271,
-    "kind": "member",
-    "name": "status",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#status",
-    "access": "public",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 272,
-    "kind": "member",
-    "name": "authorizationUrl",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#authorizationUrl",
-    "access": "public",
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 273,
     "kind": "method",
-    "name": "setStatus",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "name": "getToken",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#setStatus",
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#getToken",
     "access": "public",
-    "description": "",
-    "lineNumber": 17,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "status",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 274,
-    "kind": "method",
-    "name": "setAccessToken",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#setAccessToken",
-    "access": "public",
-    "description": "",
-    "lineNumber": 23,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 275,
-    "kind": "method",
-    "name": "needsAuthentification",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#needsAuthentification",
-    "access": "public",
-    "description": "",
-    "lineNumber": 29,
-    "params": [],
-    "return": {
-      "types": [
-        "boolean"
-      ]
-    }
-  },
-  {
-    "__docId__": 276,
-    "kind": "method",
-    "name": "isConnected",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#isConnected",
-    "access": "public",
-    "description": "",
-    "lineNumber": 33,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 277,
-    "kind": "method",
-    "name": "prepareUrl",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#prepareUrl",
-    "access": "public",
-    "description": "",
-    "lineNumber": 37,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "url",
-        "description": ""
-      }
-    ],
-    "return": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 278,
-    "kind": "method",
-    "name": "searchTracks",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchTracks",
-    "access": "public",
-    "description": "",
+    "description": "getToken - Get the url to ask access token ",
     "lineNumber": 41,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
-        "name": "keywords",
-        "description": ""
+        "name": "code",
+        "description": "Authorization code"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "string"
+      ],
+      "spread": false,
+      "description": "URL for get access token"
     }
   },
   {
-    "__docId__": 279,
+    "__docId__": 270,
     "kind": "method",
-    "name": "loadRandomPlaylist",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "name": "setStatus",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#setStatus",
+    "access": "public",
+    "description": "setStatus - Change the status of the proxy to a new state ",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "status",
+        "description": "The new status"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "SpotifyProxy"
+      ],
+      "spread": false,
+      "description": "The new proxy with the new status"
+    }
+  },
+  {
+    "__docId__": 272,
+    "kind": "method",
+    "name": "setAccessToken",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#setAccessToken",
+    "access": "public",
+    "description": "setAccessToken - Set the status to connected ",
+    "lineNumber": 66,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": "Access token"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "SpotifyProxy"
+      ],
+      "spread": false,
+      "description": "Return the new connected proxy"
+    }
+  },
+  {
+    "__docId__": 273,
+    "kind": "method",
+    "name": "needsAuthentification",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#needsAuthentification",
+    "access": "public",
+    "description": "needsAuthentification - Spotify need an authentifation process ",
+    "lineNumber": 78,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "true"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 274,
+    "kind": "method",
+    "name": "isConnected",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#isConnected",
+    "access": "public",
+    "description": "isConnected - Check if the proxy is connected ",
+    "lineNumber": 87,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Is proxy connected"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 275,
+    "kind": "method",
+    "name": "searchTracks",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#loadRandomPlaylist",
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#searchTracks",
     "access": "public",
-    "description": "",
-    "lineNumber": 68,
-    "params": [],
+    "description": "searchTracks - Async function to get an array of tracks from keywords ",
+    "lineNumber": 98,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "query",
+        "description": "The searched name for the tracks"
+      }
+    ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "An array of tracks"
     }
   },
   {
-    "__docId__": 280,
+    "__docId__": 276,
     "kind": "method",
     "name": "fetchPlaylistDetails",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#fetchPlaylistDetails",
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#fetchPlaylistDetails",
     "access": "public",
     "description": "",
-    "lineNumber": 73,
+    "lineNumber": 143,
     "params": [
       {
         "nullable": null,
@@ -5814,33 +5934,36 @@
     }
   },
   {
-    "__docId__": 281,
+    "__docId__": 277,
     "kind": "method",
     "name": "searchPlaylists",
-    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy",
+    "memberof": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchPlaylists",
+    "longname": "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#searchPlaylists",
     "access": "public",
-    "description": "",
-    "lineNumber": 95,
+    "description": "searchPlaylists - Search a set of playlists from a query ",
+    "lineNumber": 185,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "string"
         ],
         "spread": false,
         "optional": false,
         "name": "query",
-        "description": ""
+        "description": "The query of the search"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Array"
+      ],
+      "spread": false,
+      "description": "The set of playlists"
     }
   },
   {

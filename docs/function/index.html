@@ -124,8 +124,8 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/Song.js~Song.html">Song</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -353,7 +353,7 @@ the required data to execute the reducer action.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-enqueue">enqueue</a></span></span><span class="code" data-ice="signature">(tracks: <span>List</span>): {&quot;type&quot;: <span>string</span>, &quot;tracks&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-enqueue">enqueue</a></span></span><span class="code" data-ice="signature">(tracks: <span>List</span>): <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1052,11 +1052,11 @@ the required data to execute the reducer action.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber69">source</a></span></span>
+      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber70">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {clearQueue} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber69">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {clearQueue} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber70">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action named &quot;CLEAR_QUEUE&quot; with
@@ -1281,15 +1281,15 @@ the required data to execute the reducer action.</p>
     
     
     
-    <span class="code" data-ice="name">enqueue</span><span class="code" data-ice="signature">(tracks: <span>List</span>): {&quot;type&quot;: <span>string</span>, &quot;tracks&quot;: <span>*</span>}</span>
+    <span class="code" data-ice="name">enqueue</span><span class="code" data-ice="signature">(tracks: <span>List</span>): <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber56">source</a></span></span>
+      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {enqueue} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber56">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {enqueue} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber57">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Create an action to enqueue a list of tracks</p>
@@ -1309,7 +1309,7 @@ the required data to execute the reducer action.</p>
       <td data-ice="name" class="code" data-depth="0">tracks</td>
       <td data-ice="type" class="code"><span>List</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>List of tracks to enqueue.</p>
+      <td data-ice="description"><p>List of tracks to enqueue</p>
 </td>
     </tr>
 </tbody>
@@ -1322,8 +1322,9 @@ the required data to execute the reducer action.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType">{&quot;type&quot;: <span>string</span>, &quot;tracks&quot;: <span>*</span>}</td>
-          
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>ActionCreator the action creater</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1654,11 +1655,11 @@ the required data to execute the reducer action.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber81">source</a></span></span>
+      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber82">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {next} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber81">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {next} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber82">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action named &quot;NEXT&quot; with
@@ -1845,11 +1846,11 @@ the required data to execute the reducer action.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber93">source</a></span></span>
+      <span data-ice="source"><span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber94">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {prev} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber93">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {prev} from &apos;<span><a href="file/sandwich-player/app/Player/player.actions.js.html#lineNumber94">sandwich-player/sandwich-player/app/Player/player.actions.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action named &quot;PREV&quot; with

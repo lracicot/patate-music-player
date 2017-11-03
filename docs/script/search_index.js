@@ -270,9 +270,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "sandwich-player/sandwich-player/src/model/spotifyproxy.js~soundcloudproxy",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html",
-    "<span>SoundCloudProxy</span> <span class=\"search-result-import-path\">sandwich-player/sandwich-player/src/model/SpotifyProxy.js</span>",
+    "sandwich-player/sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html",
+    "<span>SoundCloudProxy</span> <span class=\"search-result-import-path\">sandwich-player/sandwich-player/src/model/SoundCloudProxy.js</span>",
     "class"
   ],
   [
@@ -294,9 +294,9 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "sandwich-player/sandwich-player/src/model/soundcloudproxy.js~spotifyproxy",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html",
-    "<span>SpotifyProxy</span> <span class=\"search-result-import-path\">sandwich-player/sandwich-player/src/model/SoundCloudProxy.js</span>",
+    "sandwich-player/sandwich-player/src/model/spotifyproxy.js~spotifyproxy",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html",
+    "<span>SpotifyProxy</span> <span class=\"search-result-import-path\">sandwich-player/sandwich-player/src/model/SpotifyProxy.js</span>",
     "class"
   ],
   [
@@ -768,12 +768,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "sandwich-player/app/layout/layout.container.js~layout#loadsearchresults",
-    "class/sandwich-player/app/Layout/layout.container.js~Layout.html#instance-method-loadSearchResults",
-    "sandwich-player/app/Layout/layout.container.js~Layout#loadSearchResults",
-    "method"
-  ],
-  [
     "sandwich-player/app/layout/layout.container.js~layout#render",
     "class/sandwich-player/app/Layout/layout.container.js~Layout.html#instance-method-render",
     "sandwich-player/app/Layout/layout.container.js~Layout#render",
@@ -1242,12 +1236,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "sandwich-player/src/model/jamendoproxy.js~jamendoproxy#loadrandomplaylist",
-    "class/sandwich-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-loadRandomPlaylist",
-    "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#loadRandomPlaylist",
-    "method"
-  ],
-  [
     "sandwich-player/src/model/jamendoproxy.js~jamendoproxy#logo",
     "class/sandwich-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-logo",
     "sandwich-player/src/model/JamendoProxy.js~JamendoProxy#logo",
@@ -1380,105 +1368,81 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#accesstoken",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-accessToken",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#accessToken",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#authorizationurl",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-authorizationUrl",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#authorizationUrl",
     "member"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#authorizationurl",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-authorizationUrl",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#authorizationUrl",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#constructor",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-constructor-constructor",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#constructor",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#fetchplaylistdetails",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-fetchPlaylistDetails",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#isconnected",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-isConnected",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#isConnected",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#logo",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-logo",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#logo",
     "member"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#constructor",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-constructor-constructor",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#constructor",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#fetchplaylistdetails",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-fetchPlaylistDetails",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#fetchPlaylistDetails",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#gettoken",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-getToken",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#getToken",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#isconnected",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-isConnected",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#isConnected",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#loadrandomplaylist",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-loadRandomPlaylist",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#loadRandomPlaylist",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#logo",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-logo",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#logo",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#name",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-name",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#name",
     "member"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#name",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-name",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#name",
-    "member"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#needsauthentification",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-needsAuthentification",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#needsAuthentification",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#needsauthentification",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-needsAuthentification",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#needsAuthentification",
     "method"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#redirecturi",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-redirectUri",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#redirectUri",
-    "member"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#requestconfig",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-requestConfig",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#requestConfig",
-    "member"
-  ],
-  [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#searchplaylists",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-searchPlaylists",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchPlaylists",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#prepareurl",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-prepareUrl",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#prepareUrl",
     "method"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#searchtracks",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-searchTracks",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchTracks",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#searchplaylists",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchPlaylists",
     "method"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#setaccesstoken",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-setAccessToken",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#setAccessToken",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#searchtracks",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-searchTracks",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#searchTracks",
     "method"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#setstatus",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-setStatus",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#setStatus",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#setaccesstoken",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setAccessToken",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setAccessToken",
     "method"
   ],
   [
-    "sandwich-player/src/model/soundcloudproxy.js~spotifyproxy#status",
-    "class/sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-status",
-    "sandwich-player/src/model/SoundCloudProxy.js~SpotifyProxy#status",
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#setstatus",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-method-setStatus",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#setStatus",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/soundcloudproxy.js~soundcloudproxy#status",
+    "class/sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html#instance-member-status",
+    "sandwich-player/src/model/SoundCloudProxy.js~SoundCloudProxy#status",
     "member"
   ],
   [
@@ -1488,87 +1452,99 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#authorizationurl",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-authorizationUrl",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#authorizationUrl",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#accesstoken",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-accessToken",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#accessToken",
     "member"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#constructor",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-constructor-constructor",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#constructor",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#fetchplaylistdetails",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-fetchPlaylistDetails",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#fetchPlaylistDetails",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#isconnected",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-isConnected",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#isConnected",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#loadrandomplaylist",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-loadRandomPlaylist",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#loadRandomPlaylist",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#logo",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-logo",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#logo",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#authorizationurl",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-authorizationUrl",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#authorizationUrl",
     "member"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#name",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-name",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#name",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#constructor",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-constructor-constructor",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#constructor",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#fetchplaylistdetails",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-fetchPlaylistDetails",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#gettoken",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-getToken",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#getToken",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#isconnected",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-isConnected",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#isConnected",
+    "method"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#logo",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-logo",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#logo",
     "member"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#needsauthentification",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-needsAuthentification",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#needsAuthentification",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#name",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-name",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#name",
+    "member"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#needsauthentification",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-needsAuthentification",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#needsAuthentification",
     "method"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#prepareurl",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-prepareUrl",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#prepareUrl",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#redirecturi",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-redirectUri",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#redirectUri",
+    "member"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#requestconfig",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-requestConfig",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#requestConfig",
+    "member"
+  ],
+  [
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#searchplaylists",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-searchPlaylists",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#searchPlaylists",
     "method"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#searchplaylists",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchPlaylists",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#searchtracks",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-searchTracks",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#searchTracks",
     "method"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#searchtracks",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-searchTracks",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchTracks",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#setaccesstoken",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-setAccessToken",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#setAccessToken",
     "method"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#setaccesstoken",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-setAccessToken",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#setAccessToken",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#setstatus",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-method-setStatus",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#setStatus",
     "method"
   ],
   [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#setstatus",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-setStatus",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#setStatus",
-    "method"
-  ],
-  [
-    "sandwich-player/src/model/spotifyproxy.js~soundcloudproxy#status",
-    "class/sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-status",
-    "sandwich-player/src/model/SpotifyProxy.js~SoundCloudProxy#status",
+    "sandwich-player/src/model/spotifyproxy.js~spotifyproxy#status",
+    "class/sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy.html#instance-member-status",
+    "sandwich-player/src/model/SpotifyProxy.js~SpotifyProxy#status",
     "member"
   ]
 ]
