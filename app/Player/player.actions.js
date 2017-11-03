@@ -23,6 +23,10 @@ export function playing(audioStatus) {
   };
 }
 
+/**
+   * Create an action to enqueue a list of tracks
+   * @param {List} tracks - List of tracks to enqueue.
+   */
 export function enqueue(tracks = null) {
   return {
     type: 'ENQUEUE',

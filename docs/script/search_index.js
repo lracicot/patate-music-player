@@ -1,284 +1,1574 @@
 window.esdocSearchIndex = [
   [
-    'src/.external-ecmascript.js~array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
-    'src/.external-ecmascript.js~Array',
-    'external',
+    "sandwich-player/patate-music-player/app/app/app.container.js~app",
+    "class/patate-music-player/app/App/app.container.js~App.html",
+    "<span>App</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/app.container.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~arraybuffer',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer',
-    'src/.external-ecmascript.js~ArrayBuffer',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/actions/appendsearchresults.action.js~appendsearchresults",
+    "class/patate-music-player/app/Layout/actions/AppendSearchResults.action.js~AppendSearchResults.html",
+    "<span>AppendSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/AppendSearchResults.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~boolean',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean',
-    'src/.external-ecmascript.js~Boolean',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/sourcelist.actions.js~connected_source",
+    "variable/index.html#static-variable-CONNECTED_SOURCE",
+    "<span>CONNECTED_SOURCE</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/sourcelist.actions.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~dataview',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
-    'src/.external-ecmascript.js~DataView',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/sourcelist.actions.js~connecting_source",
+    "variable/index.html#static-variable-CONNECTING_SOURCE",
+    "<span>CONNECTING_SOURCE</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/sourcelist.actions.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~date',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date',
-    'src/.external-ecmascript.js~Date',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/sourcelist.actions.js~connexion_failed_source",
+    "variable/index.html#static-variable-CONNEXION_FAILED_SOURCE",
+    "<span>CONNEXION_FAILED_SOURCE</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/sourcelist.actions.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~error',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error',
-    'src/.external-ecmascript.js~Error',
-    'external',
+    "sandwich-player/patate-music-player/app/player/actions/clearqueue.action.js~clearqueue",
+    "class/patate-music-player/app/Player/actions/ClearQueue.action.js~ClearQueue.html",
+    "<span>ClearQueue</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/ClearQueue.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~evalerror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError',
-    'src/.external-ecmascript.js~EvalError',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/actions/clearsearchresults.action.js~clearsearchresults",
+    "class/patate-music-player/app/Layout/actions/ClearSearchResults.action.js~ClearSearchResults.html",
+    "<span>ClearSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/ClearSearchResults.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~float32array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array',
-    'src/.external-ecmascript.js~Float32Array',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connectedsource.action.js~connectedsource",
+    "class/patate-music-player/app/SourceList/actions/ConnectedSource.action.js~ConnectedSource.html",
+    "<span>ConnectedSource</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/ConnectedSource.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~float64array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array',
-    'src/.external-ecmascript.js~Float64Array',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connectingsource.action.js~connectingsource",
+    "class/patate-music-player/app/SourceList/actions/ConnectingSource.action.js~ConnectingSource.html",
+    "<span>ConnectingSource</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/ConnectingSource.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~function',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function',
-    'src/.external-ecmascript.js~Function',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connexionfailedsource.action.js~connexionfailedsource",
+    "class/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js~ConnexionFailedSource.html",
+    "<span>ConnexionFailedSource</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~generator',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator',
-    'src/.external-ecmascript.js~Generator',
-    'external',
+    "sandwich-player/patate-music-player/app/player/components/controls.component.js~controls",
+    "class/patate-music-player/app/Player/components/controls.component.js~Controls.html",
+    "<span>Controls</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/components/controls.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~generatorfunction',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction',
-    'src/.external-ecmascript.js~GeneratorFunction',
-    'external',
+    "sandwich-player/patate-music-player/app/player/components/details.component.js~details",
+    "class/patate-music-player/app/Player/components/details.component.js~Details.html",
+    "<span>Details</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/components/details.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~infinity',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity',
-    'src/.external-ecmascript.js~Infinity',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/actions/endsearch.action.js~endsearch",
+    "class/patate-music-player/app/Layout/actions/EndSearch.action.js~EndSearch.html",
+    "<span>EndSearch</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/EndSearch.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~int16array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array',
-    'src/.external-ecmascript.js~Int16Array',
-    'external',
+    "sandwich-player/patate-music-player/app/player/actions/enqueue.action.js~enqueue",
+    "class/patate-music-player/app/Player/actions/Enqueue.action.js~Enqueue.html",
+    "<span>Enqueue</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Enqueue.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~int32array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array',
-    'src/.external-ecmascript.js~Int32Array',
-    'external',
+    "sandwich-player/patate-music-player/app/player/components/footer.component.js~footer",
+    "class/patate-music-player/app/Player/components/footer.component.js~Footer.html",
+    "<span>Footer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/components/footer.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~int8array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array',
-    'src/.external-ecmascript.js~Int8Array',
-    'external',
+    "sandwich-player/patate-music-player/src/model/jamendoproxy.js~jamendoproxy",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html",
+    "<span>JamendoProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/JamendoProxy.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~internalerror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError',
-    'src/.external-ecmascript.js~InternalError',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/layout.container.js~layout",
+    "class/patate-music-player/app/Layout/layout.container.js~Layout.html",
+    "<span>Layout</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.container.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~json',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON',
-    'src/.external-ecmascript.js~JSON',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/layout.container.js~layoutcontainer",
+    "variable/index.html#static-variable-LayoutContainer",
+    "<span>LayoutContainer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.container.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~map',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map',
-    'src/.external-ecmascript.js~Map',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/mainmenu.container.js~mainmenu",
+    "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html",
+    "<span>MainMenu</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/MainMenu.container.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~nan',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN',
-    'src/.external-ecmascript.js~NaN',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/components/search.component.js~mainmenu",
+    "class/patate-music-player/app/Layout/components/search.component.js~MainMenu.html",
+    "<span>MainMenu</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/components/search.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~number',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number',
-    'src/.external-ecmascript.js~Number',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/mainmenu.container.js~mainmenucontainer",
+    "variable/index.html#static-variable-MainMenuContainer",
+    "<span>MainMenuContainer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/MainMenu.container.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~object',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object',
-    'src/.external-ecmascript.js~Object',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.constants.js~next",
+    "variable/index.html#static-variable-NEXT",
+    "<span>NEXT</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.constants.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~promise',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
-    'src/.external-ecmascript.js~Promise',
-    'external',
+    "sandwich-player/patate-music-player/app/player/actions/next.action.js~next",
+    "class/patate-music-player/app/Player/actions/Next.action.js~Next.html",
+    "<span>Next</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Next.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~proxy',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy',
-    'src/.external-ecmascript.js~Proxy',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.constants.js~pause",
+    "variable/index.html#static-variable-PAUSE",
+    "<span>PAUSE</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.constants.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~rangeerror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError',
-    'src/.external-ecmascript.js~RangeError',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.constants.js~play",
+    "variable/index.html#static-variable-PLAY",
+    "<span>PLAY</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.constants.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~referenceerror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError',
-    'src/.external-ecmascript.js~ReferenceError',
-    'external',
+    "sandwich-player/patate-music-player/app/playlistslist/playlistslist.actions.js~playlist_update_search_field",
+    "variable/index.html#static-variable-PLAYLIST_UPDATE_SEARCH_FIELD",
+    "<span>PLAYLIST_UPDATE_SEARCH_FIELD</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/playlistslist.actions.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~reflect',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect',
-    'src/.external-ecmascript.js~Reflect',
-    'external',
+    "sandwich-player/patate-music-player/app/playlistslist/playlistslist.actions.js~playlist_update_search_results",
+    "variable/index.html#static-variable-PLAYLIST_UPDATE_SEARCH_RESULTS",
+    "<span>PLAYLIST_UPDATE_SEARCH_RESULTS</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/playlistslist.actions.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~regexp',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp',
-    'src/.external-ecmascript.js~RegExp',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.constants.js~prev",
+    "variable/index.html#static-variable-PREV",
+    "<span>PREV</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.constants.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~set',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
-    'src/.external-ecmascript.js~Set',
-    'external',
+    "sandwich-player/patate-music-player/app/player/actions/play.action.js~play",
+    "class/patate-music-player/app/Player/actions/Play.action.js~Play.html",
+    "<span>Play</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Play.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~string',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String',
-    'src/.external-ecmascript.js~String',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.container.js~player",
+    "class/patate-music-player/app/Player/player.container.js~Player.html",
+    "<span>Player</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.container.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~symbol',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol',
-    'src/.external-ecmascript.js~Symbol',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.container.js~playercontainer",
+    "variable/index.html#static-variable-PlayerContainer",
+    "<span>PlayerContainer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.container.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~syntaxerror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError',
-    'src/.external-ecmascript.js~SyntaxError',
-    'external',
+    "sandwich-player/patate-music-player/app/player/actions/playing.action.js~playing",
+    "class/patate-music-player/app/Player/actions/Playing.action.js~Playing.html",
+    "<span>Playing</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Playing.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~typeerror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError',
-    'src/.external-ecmascript.js~TypeError',
-    'external',
+    "sandwich-player/patate-music-player/src/model/playlist.js~playlist",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html",
+    "<span>Playlist</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/Playlist.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~urierror',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError',
-    'src/.external-ecmascript.js~URIError',
-    'external',
+    "sandwich-player/patate-music-player/app/playlistslist/components/playlist.component.js~playlistitem",
+    "class/patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem.html",
+    "<span>PlaylistItem</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/components/playlist.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~uint16array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array',
-    'src/.external-ecmascript.js~Uint16Array',
-    'external',
+    "sandwich-player/patate-music-player/app/playlistslist/playlistslist.container.js~playlistslist",
+    "class/patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList.html",
+    "<span>PlaylistsList</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/playlistslist.container.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~uint32array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array',
-    'src/.external-ecmascript.js~Uint32Array',
-    'external',
+    "sandwich-player/patate-music-player/app/playlistslist/playlistslist.container.js~playlistslistcontainer",
+    "variable/index.html#static-variable-PlaylistsListContainer",
+    "<span>PlaylistsListContainer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/playlistslist.container.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~uint8array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array',
-    'src/.external-ecmascript.js~Uint8Array',
-    'external',
+    "sandwich-player/patate-music-player/app/player/actions/prev.action.js~prev",
+    "class/patate-music-player/app/Player/actions/Prev.action.js~Prev.html",
+    "<span>Prev</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Prev.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~uint8clampedarray',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray',
-    'src/.external-ecmascript.js~Uint8ClampedArray',
-    'external',
+    "sandwich-player/patate-music-player/app/player/components/progress.component.js~progress",
+    "class/patate-music-player/app/Player/components/progress.component.js~Progress.html",
+    "<span>Progress</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/components/progress.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~weakmap',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap',
-    'src/.external-ecmascript.js~WeakMap',
-    'external',
+    "sandwich-player/patate-music-player/app/app/root.container.js~root",
+    "function/index.html#static-function-Root",
+    "<span>Root</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/root.container.js</span>",
+    "function"
   ],
   [
-    'src/.external-ecmascript.js~weakset',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet',
-    'src/.external-ecmascript.js~WeakSet',
-    'external',
+    "sandwich-player/patate-music-player/app/app/app.actions.js~set_state",
+    "variable/index.html#static-variable-SET_STATE",
+    "<span>SET_STATE</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/app.actions.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~boolean',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean',
-    'src/.external-ecmascript.js~boolean',
-    'external',
+    "sandwich-player/patate-music-player/app/player/player.constants.js~stop",
+    "variable/index.html#static-variable-STOP",
+    "<span>STOP</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.constants.js</span>",
+    "variable"
   ],
   [
-    'src/.external-ecmascript.js~function',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function',
-    'src/.external-ecmascript.js~function',
-    'external',
+    "sandwich-player/patate-music-player/app/layout/actions/search.action.js~search",
+    "class/patate-music-player/app/Layout/actions/Search.action.js~Search.html",
+    "<span>Search</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/Search.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~null',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null',
-    'src/.external-ecmascript.js~null',
-    'external',
+    "sandwich-player/patate-music-player/app/player/components/search.component.js~search",
+    "class/patate-music-player/app/Player/components/search.component.js~Search.html",
+    "<span>Search</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/components/search.component.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~number',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number',
-    'src/.external-ecmascript.js~number',
-    'external',
+    "sandwich-player/patate-music-player/app/app/actions/setstate.action.js~setstate",
+    "class/patate-music-player/app/App/actions/SetState.action.js~SetState.html",
+    "<span>SetState</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/actions/SetState.action.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~object',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object',
-    'src/.external-ecmascript.js~object',
-    'external',
+    "sandwich-player/patate-music-player/src/model/song.js~song",
+    "class/patate-music-player/src/model/Song.js~Song.html",
+    "<span>Song</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/Song.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~string',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String',
-    'src/.external-ecmascript.js~string',
-    'external',
+    "sandwich-player/patate-music-player/src/model/spotifyproxy.js~soundcloudproxy",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html",
+    "<span>SoundCloudProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/SpotifyProxy.js</span>",
+    "class"
   ],
   [
-    'src/.external-ecmascript.js~undefined',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined',
-    'src/.external-ecmascript.js~undefined',
-    'external',
+    "sandwich-player/patate-music-player/app/sourcelist/components/source.component.js~source",
+    "class/patate-music-player/app/SourceList/components/source.component.js~Source.html",
+    "<span>Source</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/components/source.component.js</span>",
+    "class"
   ],
-];
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/sourcelist.container.js~sourcelist",
+    "class/patate-music-player/app/SourceList/sourcelist.container.js~SourceList.html",
+    "<span>SourceList</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/sourcelist.container.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/sourcelist.container.js~sourcelistcontainer",
+    "variable/index.html#static-variable-SourceListContainer",
+    "<span>SourceListContainer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/sourcelist.container.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/src/model/soundcloudproxy.js~spotifyproxy",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html",
+    "<span>SpotifyProxy</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/src/model/SoundCloudProxy.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/stop.action.js~stop",
+    "class/patate-music-player/app/Player/actions/Stop.action.js~Stop.html",
+    "<span>Stop</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Stop.action.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/toggleplay.action.js~toggleplay",
+    "class/patate-music-player/app/Player/actions/TogglePlay.action.js~TogglePlay.html",
+    "<span>TogglePlay</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/TogglePlay.action.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchfield.action.js~updatesearchfield",
+    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js~UpdateSearchField.html",
+    "<span>UpdateSearchField</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchfield",
+    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField.html",
+    "<span>UpdateSearchField</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/app/app.action_middleware.js~app",
+    "function/index.html#static-function-app",
+    "<span>app</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/app.action_middleware.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/actions/appendsearchresults.action.js~appendsearchresults",
+    "variable/index.html#static-variable-appendSearchResults",
+    "<span>appendSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/AppendSearchResults.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/layout.actions.js~appendsearchresults",
+    "function/index.html#static-function-appendSearchResults",
+    "<span>appendSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/clearqueue.action.js~clearqueue",
+    "variable/index.html#static-variable-clearQueue",
+    "<span>clearQueue</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/ClearQueue.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~clearqueue",
+    "function/index.html#static-function-clearQueue",
+    "<span>clearQueue</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/actions/clearsearchresults.action.js~clearsearchresults",
+    "variable/index.html#static-variable-clearSearchResults",
+    "<span>clearSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/ClearSearchResults.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/layout.actions.js~clearsearchresults",
+    "function/index.html#static-function-clearSearchResults",
+    "<span>clearSearchResults</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/configurestore.js~configurestore",
+    "function/index.html#static-function-configureStore",
+    "<span>configureStore</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/configureStore.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connectedsource.action.js~connectedsource",
+    "variable/index.html#static-variable-connectedSource",
+    "<span>connectedSource</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/ConnectedSource.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connectingsource.action.js~connectingsource",
+    "variable/index.html#static-variable-connectingSource",
+    "<span>connectingSource</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/ConnectingSource.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connexionfailedsource.action.js~connexionfailedsource",
+    "variable/index.html#static-variable-connexionFailedSource",
+    "<span>connexionFailedSource</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/actions/endsearch.action.js~endsearch",
+    "variable/index.html#static-variable-endSearch",
+    "<span>endSearch</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/EndSearch.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/layout.actions.js~endsearch",
+    "function/index.html#static-function-endSearch",
+    "<span>endSearch</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/enqueue.action.js~enqueue",
+    "variable/index.html#static-variable-enqueue",
+    "<span>enqueue</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Enqueue.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~enqueue",
+    "function/index.html#static-function-enqueue",
+    "<span>enqueue</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connexion.helper.js~fetchauthorizationcode",
+    "function/index.html#static-function-fetchAuthorizationCode",
+    "<span>fetchAuthorizationCode</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/Connexion.helper.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearch.helper.js~fetchplaylists",
+    "function/index.html#static-function-fetchPlaylists",
+    "<span>fetchPlaylists</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearch.helper.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/actions/connexion.helper.js~fetchtokencode",
+    "function/index.html#static-function-fetchTokenCode",
+    "<span>fetchTokenCode</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/actions/Connexion.helper.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/utils/time.js~formatmilliseconds",
+    "function/index.html#static-function-formatMilliseconds",
+    "<span>formatMilliseconds</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/utils/time.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/configurestore.js~history",
+    "variable/index.html#static-variable-history",
+    "<span>history</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/configureStore.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/components/mainmenu.component.js~mainmenu",
+    "class/patate-music-player/app/Layout/components/mainMenu.component.js~mainMenu.html",
+    "<span>mainMenu</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/components/mainMenu.component.js</span>",
+    "class"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/next.action.js~next",
+    "variable/index.html#static-variable-next",
+    "<span>next</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Next.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~next",
+    "function/index.html#static-function-next",
+    "<span>next</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/play.action.js~play",
+    "variable/index.html#static-variable-play",
+    "<span>play</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Play.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~play",
+    "function/index.html#static-function-play",
+    "<span>play</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/playing.action.js~playing",
+    "variable/index.html#static-variable-playing",
+    "<span>playing</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Playing.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~playing",
+    "function/index.html#static-function-playing",
+    "<span>playing</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/prev.action.js~prev",
+    "variable/index.html#static-variable-prev",
+    "<span>prev</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Prev.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~prev",
+    "function/index.html#static-function-prev",
+    "<span>prev</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/reducer.js~reducer",
+    "function/index.html#static-function-reducer",
+    "<span>reducer</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/reducer.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/routes.js~routes",
+    "function/index.html#static-function-routes",
+    "<span>routes</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/routes.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/actions/search.action.js~search",
+    "variable/index.html#static-variable-search",
+    "<span>search</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/actions/Search.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/layout/layout.actions.js~search",
+    "function/index.html#static-function-search",
+    "<span>search</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Layout/layout.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/app/actions/setstate.action.js~setstate",
+    "variable/index.html#static-variable-setState",
+    "<span>setState</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/actions/SetState.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/app/app.actions.js~setstate",
+    "function/index.html#static-function-setState",
+    "<span>setState</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/App/app.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/stop.action.js~stop",
+    "variable/index.html#static-variable-stop",
+    "<span>stop</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/Stop.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~stop",
+    "function/index.html#static-function-stop",
+    "<span>stop</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/actions/toggleplay.action.js~toggleplay",
+    "variable/index.html#static-variable-togglePlay",
+    "<span>togglePlay</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/actions/TogglePlay.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/sourcelist/sourcelist.actions.js~togglesourceconnexion",
+    "function/index.html#static-function-toggleSourceConnexion",
+    "<span>toggleSourceConnexion</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/SourceList/sourcelist.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/player/player.actions.js~toggleplay",
+    "function/index.html#static-function-toggleplay",
+    "<span>toggleplay</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/Player/player.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/playlistslist/playlistslist.actions.js~updatesearch",
+    "function/index.html#static-function-updateSearch",
+    "<span>updateSearch</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/playlistslist.actions.js</span>",
+    "function"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchfield.action.js~updatesearchfield",
+    "variable/index.html#static-variable-updateSearchField",
+    "<span>updateSearchField</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js</span>",
+    "variable"
+  ],
+  [
+    "sandwich-player/patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchfield",
+    "variable/index.html#static-variable-updateSearchField",
+    "<span>updateSearchField</span> <span class=\"search-result-import-path\">sandwich-player/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</span>",
+    "variable"
+  ],
+  [
+    "patate-music-player/app/app/actions/setstate.action.js",
+    "file/patate-music-player/app/App/actions/SetState.action.js.html",
+    "patate-music-player/app/App/actions/SetState.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/app/actions/setstate.action.js~setstate#execute",
+    "class/patate-music-player/app/App/actions/SetState.action.js~SetState.html#instance-method-execute",
+    "patate-music-player/app/App/actions/SetState.action.js~SetState#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/app/actions/index.js",
+    "file/patate-music-player/app/App/actions/index.js.html",
+    "patate-music-player/app/App/actions/index.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/app/app.action_middleware.js",
+    "file/patate-music-player/app/App/app.action_middleware.js.html",
+    "patate-music-player/app/App/app.action_middleware.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/app/app.actions.js",
+    "file/patate-music-player/app/App/app.actions.js.html",
+    "patate-music-player/app/App/app.actions.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/app/app.container.js",
+    "file/patate-music-player/app/App/app.container.js.html",
+    "patate-music-player/app/App/app.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/app/app.container.js~app#props",
+    "class/patate-music-player/app/App/app.container.js~App.html#instance-member-props",
+    "patate-music-player/app/App/app.container.js~App#props",
+    "member"
+  ],
+  [
+    "patate-music-player/app/app/app.container.js~app#render",
+    "class/patate-music-player/app/App/app.container.js~App.html#instance-method-render",
+    "patate-music-player/app/App/app.container.js~App#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/app/root.container.js",
+    "file/patate-music-player/app/App/root.container.js.html",
+    "patate-music-player/app/App/root.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/mainmenu.container.js",
+    "file/patate-music-player/app/Layout/MainMenu.container.js.html",
+    "patate-music-player/app/Layout/MainMenu.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/mainmenu.container.js~mainmenu#componentdidupdate",
+    "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html#instance-method-componentDidUpdate",
+    "patate-music-player/app/Layout/MainMenu.container.js~MainMenu#componentDidUpdate",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/mainmenu.container.js~mainmenu#loadsearchresults",
+    "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html#instance-method-loadSearchResults",
+    "patate-music-player/app/Layout/MainMenu.container.js~MainMenu#loadSearchResults",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/mainmenu.container.js~mainmenu#onresultselect",
+    "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html#instance-method-onResultSelect",
+    "patate-music-player/app/Layout/MainMenu.container.js~MainMenu#onResultSelect",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/mainmenu.container.js~mainmenu#onsearchchange",
+    "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html#instance-method-onSearchChange",
+    "patate-music-player/app/Layout/MainMenu.container.js~MainMenu#onSearchChange",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/mainmenu.container.js~mainmenu#render",
+    "class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html#instance-method-render",
+    "patate-music-player/app/Layout/MainMenu.container.js~MainMenu#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/actions/appendsearchresults.action.js",
+    "file/patate-music-player/app/Layout/actions/AppendSearchResults.action.js.html",
+    "patate-music-player/app/Layout/actions/AppendSearchResults.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/actions/appendsearchresults.action.js~appendsearchresults#execute",
+    "class/patate-music-player/app/Layout/actions/AppendSearchResults.action.js~AppendSearchResults.html#instance-method-execute",
+    "patate-music-player/app/Layout/actions/AppendSearchResults.action.js~AppendSearchResults#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/actions/clearsearchresults.action.js",
+    "file/patate-music-player/app/Layout/actions/ClearSearchResults.action.js.html",
+    "patate-music-player/app/Layout/actions/ClearSearchResults.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/actions/clearsearchresults.action.js~clearsearchresults#execute",
+    "class/patate-music-player/app/Layout/actions/ClearSearchResults.action.js~ClearSearchResults.html#instance-method-execute",
+    "patate-music-player/app/Layout/actions/ClearSearchResults.action.js~ClearSearchResults#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/actions/endsearch.action.js",
+    "file/patate-music-player/app/Layout/actions/EndSearch.action.js.html",
+    "patate-music-player/app/Layout/actions/EndSearch.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/actions/endsearch.action.js~endsearch#execute",
+    "class/patate-music-player/app/Layout/actions/EndSearch.action.js~EndSearch.html#instance-method-execute",
+    "patate-music-player/app/Layout/actions/EndSearch.action.js~EndSearch#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/actions/search.action.js",
+    "file/patate-music-player/app/Layout/actions/Search.action.js.html",
+    "patate-music-player/app/Layout/actions/Search.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/actions/search.action.js~search#execute",
+    "class/patate-music-player/app/Layout/actions/Search.action.js~Search.html#instance-method-execute",
+    "patate-music-player/app/Layout/actions/Search.action.js~Search#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/actions/index.js",
+    "file/patate-music-player/app/Layout/actions/index.js.html",
+    "patate-music-player/app/Layout/actions/index.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/components/mainmenu.component.js",
+    "file/patate-music-player/app/Layout/components/mainMenu.component.js.html",
+    "patate-music-player/app/Layout/components/mainMenu.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/components/mainmenu.component.js~mainmenu#render",
+    "class/patate-music-player/app/Layout/components/mainMenu.component.js~mainMenu.html#instance-method-render",
+    "patate-music-player/app/Layout/components/mainMenu.component.js~mainMenu#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/components/search.component.js",
+    "file/patate-music-player/app/Layout/components/search.component.js.html",
+    "patate-music-player/app/Layout/components/search.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/components/search.component.js~mainmenu#render",
+    "class/patate-music-player/app/Layout/components/search.component.js~MainMenu.html#instance-method-render",
+    "patate-music-player/app/Layout/components/search.component.js~MainMenu#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/layout.actions.js",
+    "file/patate-music-player/app/Layout/layout.actions.js.html",
+    "patate-music-player/app/Layout/layout.actions.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/layout.container.js",
+    "file/patate-music-player/app/Layout/layout.container.js.html",
+    "patate-music-player/app/Layout/layout.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/layout/layout.container.js~layout#componentdidupdate",
+    "class/patate-music-player/app/Layout/layout.container.js~Layout.html#instance-method-componentDidUpdate",
+    "patate-music-player/app/Layout/layout.container.js~Layout#componentDidUpdate",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/layout.container.js~layout#loadsearchresults",
+    "class/patate-music-player/app/Layout/layout.container.js~Layout.html#instance-method-loadSearchResults",
+    "patate-music-player/app/Layout/layout.container.js~Layout#loadSearchResults",
+    "method"
+  ],
+  [
+    "patate-music-player/app/layout/layout.container.js~layout#render",
+    "class/patate-music-player/app/Layout/layout.container.js~Layout.html#instance-method-render",
+    "patate-music-player/app/Layout/layout.container.js~Layout#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/clearqueue.action.js",
+    "file/patate-music-player/app/Player/actions/ClearQueue.action.js.html",
+    "patate-music-player/app/Player/actions/ClearQueue.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/clearqueue.action.js~clearqueue#execute",
+    "class/patate-music-player/app/Player/actions/ClearQueue.action.js~ClearQueue.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/ClearQueue.action.js~ClearQueue#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/enqueue.action.js",
+    "file/patate-music-player/app/Player/actions/Enqueue.action.js.html",
+    "patate-music-player/app/Player/actions/Enqueue.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/enqueue.action.js~enqueue#execute",
+    "class/patate-music-player/app/Player/actions/Enqueue.action.js~Enqueue.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/Enqueue.action.js~Enqueue#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/next.action.js",
+    "file/patate-music-player/app/Player/actions/Next.action.js.html",
+    "patate-music-player/app/Player/actions/Next.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/next.action.js~next#execute",
+    "class/patate-music-player/app/Player/actions/Next.action.js~Next.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/Next.action.js~Next#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/play.action.js",
+    "file/patate-music-player/app/Player/actions/Play.action.js.html",
+    "patate-music-player/app/Player/actions/Play.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/play.action.js~play#execute",
+    "class/patate-music-player/app/Player/actions/Play.action.js~Play.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/Play.action.js~Play#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/playing.action.js",
+    "file/patate-music-player/app/Player/actions/Playing.action.js.html",
+    "patate-music-player/app/Player/actions/Playing.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/playing.action.js~playing#execute",
+    "class/patate-music-player/app/Player/actions/Playing.action.js~Playing.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/Playing.action.js~Playing#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/prev.action.js",
+    "file/patate-music-player/app/Player/actions/Prev.action.js.html",
+    "patate-music-player/app/Player/actions/Prev.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/prev.action.js~prev#execute",
+    "class/patate-music-player/app/Player/actions/Prev.action.js~Prev.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/Prev.action.js~Prev#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/stop.action.js",
+    "file/patate-music-player/app/Player/actions/Stop.action.js.html",
+    "patate-music-player/app/Player/actions/Stop.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/stop.action.js~stop#execute",
+    "class/patate-music-player/app/Player/actions/Stop.action.js~Stop.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/Stop.action.js~Stop#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/toggleplay.action.js",
+    "file/patate-music-player/app/Player/actions/TogglePlay.action.js.html",
+    "patate-music-player/app/Player/actions/TogglePlay.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/actions/toggleplay.action.js~toggleplay#execute",
+    "class/patate-music-player/app/Player/actions/TogglePlay.action.js~TogglePlay.html#instance-method-execute",
+    "patate-music-player/app/Player/actions/TogglePlay.action.js~TogglePlay#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/actions/index.js",
+    "file/patate-music-player/app/Player/actions/index.js.html",
+    "patate-music-player/app/Player/actions/index.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/components/controls.component.js",
+    "file/patate-music-player/app/Player/components/controls.component.js.html",
+    "patate-music-player/app/Player/components/controls.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/components/controls.component.js~controls#render",
+    "class/patate-music-player/app/Player/components/controls.component.js~Controls.html#instance-method-render",
+    "patate-music-player/app/Player/components/controls.component.js~Controls#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/components/details.component.js",
+    "file/patate-music-player/app/Player/components/details.component.js.html",
+    "patate-music-player/app/Player/components/details.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/components/details.component.js~details#render",
+    "class/patate-music-player/app/Player/components/details.component.js~Details.html#instance-method-render",
+    "patate-music-player/app/Player/components/details.component.js~Details#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/components/footer.component.js",
+    "file/patate-music-player/app/Player/components/footer.component.js.html",
+    "patate-music-player/app/Player/components/footer.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/components/footer.component.js~footer#render",
+    "class/patate-music-player/app/Player/components/footer.component.js~Footer.html#instance-method-render",
+    "patate-music-player/app/Player/components/footer.component.js~Footer#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/components/progress.component.js",
+    "file/patate-music-player/app/Player/components/progress.component.js.html",
+    "patate-music-player/app/Player/components/progress.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/components/progress.component.js~progress#render",
+    "class/patate-music-player/app/Player/components/progress.component.js~Progress.html#instance-method-render",
+    "patate-music-player/app/Player/components/progress.component.js~Progress#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/components/search.component.js",
+    "file/patate-music-player/app/Player/components/search.component.js.html",
+    "patate-music-player/app/Player/components/search.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/components/search.component.js~search#handlerenderitem",
+    "class/patate-music-player/app/Player/components/search.component.js~Search.html#instance-method-handleRenderItem",
+    "patate-music-player/app/Player/components/search.component.js~Search#handleRenderItem",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/components/search.component.js~search#render",
+    "class/patate-music-player/app/Player/components/search.component.js~Search.html#instance-method-render",
+    "patate-music-player/app/Player/components/search.component.js~Search#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/player.actions.js",
+    "file/patate-music-player/app/Player/player.actions.js.html",
+    "patate-music-player/app/Player/player.actions.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/player.constants.js",
+    "file/patate-music-player/app/Player/player.constants.js.html",
+    "patate-music-player/app/Player/player.constants.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/player.container.js",
+    "file/patate-music-player/app/Player/player.container.js.html",
+    "patate-music-player/app/Player/player.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/player/player.container.js~player#getplayfromposition",
+    "class/patate-music-player/app/Player/player.container.js~Player.html#instance-method-getPlayFromPosition",
+    "patate-music-player/app/Player/player.container.js~Player#getPlayFromPosition",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/player.container.js~player#handlesongfinished",
+    "class/patate-music-player/app/Player/player.container.js~Player.html#instance-method-handleSongFinished",
+    "patate-music-player/app/Player/player.container.js~Player#handleSongFinished",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/player.container.js~player#handlesongplaying",
+    "class/patate-music-player/app/Player/player.container.js~Player.html#instance-method-handleSongPlaying",
+    "patate-music-player/app/Player/player.container.js~Player#handleSongPlaying",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/player.container.js~player#render",
+    "class/patate-music-player/app/Player/player.container.js~Player.html#instance-method-render",
+    "patate-music-player/app/Player/player.container.js~Player#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/player/player.container.js~player#xlartwork",
+    "class/patate-music-player/app/Player/player.container.js~Player.html#instance-method-xlArtwork",
+    "patate-music-player/app/Player/player.container.js~Player#xlArtwork",
+    "method"
+  ],
+  [
+    "patate-music-player/app/playlistslist/actions/updatesearch.helper.js",
+    "file/patate-music-player/app/PlaylistsList/actions/UpdateSearch.helper.js.html",
+    "patate-music-player/app/PlaylistsList/actions/UpdateSearch.helper.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/actions/updatesearchfield.action.js",
+    "file/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js.html",
+    "patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/actions/updatesearchfield.action.js~updatesearchfield#execute",
+    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js~UpdateSearchField.html#instance-method-execute",
+    "patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js~UpdateSearchField#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/playlistslist/actions/updatesearchresults.action.js",
+    "file/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js.html",
+    "patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/actions/updatesearchresults.action.js~updatesearchfield#execute",
+    "class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField.html#instance-method-execute",
+    "patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchField#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/playlistslist/actions/index.js",
+    "file/patate-music-player/app/PlaylistsList/actions/index.js.html",
+    "patate-music-player/app/PlaylistsList/actions/index.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/components/playlist.component.js",
+    "file/patate-music-player/app/PlaylistsList/components/playlist.component.js.html",
+    "patate-music-player/app/PlaylistsList/components/playlist.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/components/playlist.component.js~playlistitem#getdescription",
+    "class/patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem.html#instance-method-getDescription",
+    "patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem#getDescription",
+    "method"
+  ],
+  [
+    "patate-music-player/app/playlistslist/components/playlist.component.js~playlistitem#handleonclick",
+    "class/patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem.html#instance-method-handleOnClick",
+    "patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem#handleOnClick",
+    "method"
+  ],
+  [
+    "patate-music-player/app/playlistslist/components/playlist.component.js~playlistitem#render",
+    "class/patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem.html#instance-method-render",
+    "patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/playlistslist/playlistslist.actions.js",
+    "file/patate-music-player/app/PlaylistsList/playlistslist.actions.js.html",
+    "patate-music-player/app/PlaylistsList/playlistslist.actions.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/playlistslist.container.js",
+    "file/patate-music-player/app/PlaylistsList/playlistslist.container.js.html",
+    "patate-music-player/app/PlaylistsList/playlistslist.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/playlistslist/playlistslist.container.js~playlistslist#handlesearchchange",
+    "class/patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList.html#instance-member-handleSearchChange",
+    "patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList#handleSearchChange",
+    "member"
+  ],
+  [
+    "patate-music-player/app/playlistslist/playlistslist.container.js~playlistslist#render",
+    "class/patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList.html#instance-method-render",
+    "patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connectedsource.action.js",
+    "file/patate-music-player/app/SourceList/actions/ConnectedSource.action.js.html",
+    "patate-music-player/app/SourceList/actions/ConnectedSource.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connectedsource.action.js~connectedsource#execute",
+    "class/patate-music-player/app/SourceList/actions/ConnectedSource.action.js~ConnectedSource.html#instance-method-execute",
+    "patate-music-player/app/SourceList/actions/ConnectedSource.action.js~ConnectedSource#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connectingsource.action.js",
+    "file/patate-music-player/app/SourceList/actions/ConnectingSource.action.js.html",
+    "patate-music-player/app/SourceList/actions/ConnectingSource.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connectingsource.action.js~connectingsource#execute",
+    "class/patate-music-player/app/SourceList/actions/ConnectingSource.action.js~ConnectingSource.html#instance-method-execute",
+    "patate-music-player/app/SourceList/actions/ConnectingSource.action.js~ConnectingSource#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connexion.helper.js",
+    "file/patate-music-player/app/SourceList/actions/Connexion.helper.js.html",
+    "patate-music-player/app/SourceList/actions/Connexion.helper.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connexionfailedsource.action.js",
+    "file/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js.html",
+    "patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/connexionfailedsource.action.js~connexionfailedsource#execute",
+    "class/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js~ConnexionFailedSource.html#instance-method-execute",
+    "patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js~ConnexionFailedSource#execute",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/actions/index.js",
+    "file/patate-music-player/app/SourceList/actions/index.js.html",
+    "patate-music-player/app/SourceList/actions/index.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/components/source.component.js",
+    "file/patate-music-player/app/SourceList/components/source.component.js.html",
+    "patate-music-player/app/SourceList/components/source.component.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/components/source.component.js~source#getbuttoninteraction",
+    "class/patate-music-player/app/SourceList/components/source.component.js~Source.html#instance-method-getButtonInteraction",
+    "patate-music-player/app/SourceList/components/source.component.js~Source#getButtonInteraction",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/components/source.component.js~source#isconnecting",
+    "class/patate-music-player/app/SourceList/components/source.component.js~Source.html#instance-method-isConnecting",
+    "patate-music-player/app/SourceList/components/source.component.js~Source#isConnecting",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/components/source.component.js~source#render",
+    "class/patate-music-player/app/SourceList/components/source.component.js~Source.html#instance-method-render",
+    "patate-music-player/app/SourceList/components/source.component.js~Source#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/sourcelist/sourcelist.actions.js",
+    "file/patate-music-player/app/SourceList/sourcelist.actions.js.html",
+    "patate-music-player/app/SourceList/sourcelist.actions.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/sourcelist.container.js",
+    "file/patate-music-player/app/SourceList/sourcelist.container.js.html",
+    "patate-music-player/app/SourceList/sourcelist.container.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/sourcelist/sourcelist.container.js~sourcelist#render",
+    "class/patate-music-player/app/SourceList/sourcelist.container.js~SourceList.html#instance-method-render",
+    "patate-music-player/app/SourceList/sourcelist.container.js~SourceList#render",
+    "method"
+  ],
+  [
+    "patate-music-player/app/actions.js",
+    "file/patate-music-player/app/actions.js.html",
+    "patate-music-player/app/actions.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/configurestore.js",
+    "file/patate-music-player/app/configureStore.js.html",
+    "patate-music-player/app/configureStore.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/index.js",
+    "file/patate-music-player/app/index.js.html",
+    "patate-music-player/app/index.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/reducer.js",
+    "file/patate-music-player/app/reducer.js.html",
+    "patate-music-player/app/reducer.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/routes.js",
+    "file/patate-music-player/app/routes.js.html",
+    "patate-music-player/app/routes.js",
+    "file"
+  ],
+  [
+    "patate-music-player/app/utils/time.js",
+    "file/patate-music-player/app/utils/time.js.html",
+    "patate-music-player/app/utils/time.js",
+    "file"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js",
+    "file/patate-music-player/src/model/JamendoProxy.js.html",
+    "patate-music-player/src/model/JamendoProxy.js",
+    "file"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#accesstoken",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-accessToken",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#accessToken",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#authorizationurl",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-authorizationUrl",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#authorizationUrl",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#constructor",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-constructor-constructor",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#fetchplaylistdetails",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-fetchPlaylistDetails",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#isconnected",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-isConnected",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#isConnected",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#loadrandomplaylist",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-loadRandomPlaylist",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#loadRandomPlaylist",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#logo",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-logo",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#logo",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#name",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-name",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#name",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#needsauthentification",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-needsAuthentification",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#needsAuthentification",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#prepareurl",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-prepareUrl",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#prepareUrl",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#searchplaylists",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-searchPlaylists",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#searchPlaylists",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#searchtracks",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-searchTracks",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#searchTracks",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#setaccesstoken",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-setAccessToken",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#setAccessToken",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#setstatus",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-method-setStatus",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#setStatus",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/jamendoproxy.js~jamendoproxy#status",
+    "class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html#instance-member-status",
+    "patate-music-player/src/model/JamendoProxy.js~JamendoProxy#status",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js",
+    "file/patate-music-player/src/model/Playlist.js.html",
+    "patate-music-player/src/model/Playlist.js",
+    "file"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js~playlist#art",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html#instance-member-art",
+    "patate-music-player/src/model/Playlist.js~Playlist#art",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js~playlist#constructor",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html#instance-constructor-constructor",
+    "patate-music-player/src/model/Playlist.js~Playlist#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js~playlist#name",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html#instance-member-name",
+    "patate-music-player/src/model/Playlist.js~Playlist#name",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js~playlist#origin",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html#instance-member-origin",
+    "patate-music-player/src/model/Playlist.js~Playlist#origin",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js~playlist#songs",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html#instance-member-songs",
+    "patate-music-player/src/model/Playlist.js~Playlist#songs",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/playlist.js~playlist#uri",
+    "class/patate-music-player/src/model/Playlist.js~Playlist.html#instance-member-uri",
+    "patate-music-player/src/model/Playlist.js~Playlist#uri",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/song.js",
+    "file/patate-music-player/src/model/Song.js.html",
+    "patate-music-player/src/model/Song.js",
+    "file"
+  ],
+  [
+    "patate-music-player/src/model/song.js~song#artworkurl",
+    "class/patate-music-player/src/model/Song.js~Song.html#instance-member-artworkUrl",
+    "patate-music-player/src/model/Song.js~Song#artworkUrl",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/song.js~song#constructor",
+    "class/patate-music-player/src/model/Song.js~Song.html#instance-constructor-constructor",
+    "patate-music-player/src/model/Song.js~Song#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/song.js~song#streamurl",
+    "class/patate-music-player/src/model/Song.js~Song.html#instance-member-streamUrl",
+    "patate-music-player/src/model/Song.js~Song#streamUrl",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/song.js~song#title",
+    "class/patate-music-player/src/model/Song.js~Song.html#instance-member-title",
+    "patate-music-player/src/model/Song.js~Song#title",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js",
+    "file/patate-music-player/src/model/SoundCloudProxy.js.html",
+    "patate-music-player/src/model/SoundCloudProxy.js",
+    "file"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#accesstoken",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-accessToken",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#accessToken",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#authorizationurl",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-authorizationUrl",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#authorizationUrl",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#constructor",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-constructor-constructor",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#fetchplaylistdetails",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-fetchPlaylistDetails",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#gettoken",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-getToken",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#getToken",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#isconnected",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-isConnected",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#isConnected",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#loadrandomplaylist",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-loadRandomPlaylist",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#loadRandomPlaylist",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#logo",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-logo",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#logo",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#name",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-name",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#name",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#needsauthentification",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-needsAuthentification",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#needsAuthentification",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#redirecturi",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-redirectUri",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#redirectUri",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#requestconfig",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-requestConfig",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#requestConfig",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#searchplaylists",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-searchPlaylists",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchPlaylists",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#searchtracks",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-searchTracks",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#searchTracks",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#setaccesstoken",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-setAccessToken",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#setAccessToken",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#setstatus",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-method-setStatus",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#setStatus",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/soundcloudproxy.js~spotifyproxy#status",
+    "class/patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy.html#instance-member-status",
+    "patate-music-player/src/model/SoundCloudProxy.js~SpotifyProxy#status",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js",
+    "file/patate-music-player/src/model/SpotifyProxy.js.html",
+    "patate-music-player/src/model/SpotifyProxy.js",
+    "file"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#authorizationurl",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-authorizationUrl",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#authorizationUrl",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#constructor",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-constructor-constructor",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#constructor",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#fetchplaylistdetails",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-fetchPlaylistDetails",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#fetchPlaylistDetails",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#isconnected",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-isConnected",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#isConnected",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#loadrandomplaylist",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-loadRandomPlaylist",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#loadRandomPlaylist",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#logo",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-logo",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#logo",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#name",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-name",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#name",
+    "member"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#needsauthentification",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-needsAuthentification",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#needsAuthentification",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#prepareurl",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-prepareUrl",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#prepareUrl",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#searchplaylists",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-searchPlaylists",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchPlaylists",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#searchtracks",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-searchTracks",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#searchTracks",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#setaccesstoken",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-setAccessToken",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#setAccessToken",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#setstatus",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-method-setStatus",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#setStatus",
+    "method"
+  ],
+  [
+    "patate-music-player/src/model/spotifyproxy.js~soundcloudproxy#status",
+    "class/patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy.html#instance-member-status",
+    "patate-music-player/src/model/SpotifyProxy.js~SoundCloudProxy#status",
+    "member"
+  ]
+]

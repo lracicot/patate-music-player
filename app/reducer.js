@@ -5,6 +5,12 @@ import * as SourceListActions from './SourceList/actions';
 import * as PlaylistsListActions from './PlaylistsList/actions';
 import * as LayoutActions from './Layout/actions';
 
+/**
+   * Execute an action and return the new state
+   * @param {Map} state - Current state of the application
+   * @param action - The action to execute
+   * @return {Map} - The new state of the application
+   */
 export default function (state = Map(), action) {
   switch (action.type) {
   case 'SET_STATE':
