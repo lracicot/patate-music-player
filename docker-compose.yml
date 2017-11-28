@@ -1,5 +1,14 @@
 version: '2'
 services:
+  music_server:
+    build: music_server
+    container_name: "music_server"
+    ports:
+      - 3000:3000
+    environment:
+      - MONGOURL=mongodb
+    links:
+      - mongodb
   auth_server:
     build: auth_server
     container_name: "auth_server"
