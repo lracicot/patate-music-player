@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="">
+  <title data-ice="title">Source | sandwich-player</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A minimal Electron application"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="sandwich-player"><meta property="twitter:description" content="A minimal Electron application"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app">app</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-configureStore">configureStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-routes">routes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-history">history</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-app">app/App</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/App/app.container.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-app">app</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setState">setState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Root">Root</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-app-actions">app/App/actions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/App/actions/SetState.action.js~SetState.html">SetState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-setState">setState</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-layout">app/Layout</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html">MainMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-appendSearchResults">appendSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-clearSearchResults">clearSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-endSearch">endSearch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-search">search</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MainMenuContainer">MainMenuContainer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-layout-actions">app/Layout/actions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/actions/AppendSearchResults.action.js~AppendSearchResults.html">AppendSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/actions/ClearSearchResults.action.js~ClearSearchResults.html">ClearSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/actions/EndSearch.action.js~EndSearch.html">EndSearch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/actions/Search.action.js~Search.html">Search</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-appendSearchResults">appendSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-clearSearchResults">clearSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-endSearch">endSearch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-search">search</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-layout-components">app/Layout/components</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/components/mainMenu.component.js~mainMenu.html">mainMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Layout/components/search.component.js~SearchComponent.html">SearchComponent</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-player">app/Player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/player.container.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-clearQueue">clearQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-enqueue">enqueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-next">next</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-play">play</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-playing">playing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prev">prev</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stop">stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toggleplay">toggleplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-NEXT">NEXT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PAUSE">PAUSE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PLAY">PLAY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PREV">PREV</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STOP">STOP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PlayerContainer">PlayerContainer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-player-actions">app/Player/actions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/ClearQueue.action.js~ClearQueue.html">ClearQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/Enqueue.action.js~Enqueue.html">Enqueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/Next.action.js~Next.html">Next</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/Play.action.js~Play.html">Play</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/Playing.action.js~Playing.html">Playing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/Prev.action.js~Prev.html">Prev</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/Stop.action.js~Stop.html">Stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/actions/TogglePlay.action.js~TogglePlay.html">TogglePlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-clearQueue">clearQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-enqueue">enqueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-next">next</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-play">play</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-playing">playing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-prev">prev</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-stop">stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-togglePlay">togglePlay</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-player-components">app/Player/components</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/components/controls.component.js~Controls.html">Controls</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/components/details.component.js~Details.html">Details</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/components/footer.component.js~Footer.html">Footer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/components/progress.component.js~Progress.html">Progress</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/Player/components/search.component.js~Search.html">Search</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-playlistslist">app/PlaylistsList</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList.html">PlaylistsList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateSearch">updateSearch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PLAYLIST_UPDATE_SEARCH_FIELD">PLAYLIST_UPDATE_SEARCH_FIELD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PLAYLIST_UPDATE_SEARCH_RESULTS">PLAYLIST_UPDATE_SEARCH_RESULTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PlaylistsListContainer">PlaylistsListContainer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-playlistslist-actions">app/PlaylistsList/actions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js~UpdateSearchField.html">UpdateSearchField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchResults.html">UpdateSearchResults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchPlaylists">fetchPlaylists</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-updateSearchField">updateSearchField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-updateSearchResults">updateSearchResults</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-playlistslist-components">app/PlaylistsList/components</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem.html">PlaylistItem</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-sourcelist">app/SourceList</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/SourceList/sourcelist.container.js~SourceList.html">SourceList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-toggleSourceConnexion">toggleSourceConnexion</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CONNECTED_SOURCE">CONNECTED_SOURCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CONNECTING_SOURCE">CONNECTING_SOURCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CONNEXION_FAILED_SOURCE">CONNEXION_FAILED_SOURCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SourceListContainer">SourceListContainer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-sourcelist-actions">app/SourceList/actions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/SourceList/actions/ConnectedSource.action.js~ConnectedSource.html">ConnectedSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/SourceList/actions/ConnectingSource.action.js~ConnectingSource.html">ConnectingSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js~ConnexionFailedSource.html">ConnexionFailedSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchAuthorizationCode">fetchAuthorizationCode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchTokenCode">fetchTokenCode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-connectedSource">connectedSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-connectingSource">connectingSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-connexionFailedSource">connexionFailedSource</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-sourcelist-components">app/SourceList/components</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/app/SourceList/components/source.component.js~Source.html">Source</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-utils">app/utils</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-formatMilliseconds">formatMilliseconds</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-model">src/model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">140/213</span></h1>
+
+<table class="files-summary" data-ice="files" data-use-coverage="true">
+  <thead>
+    <tr>
+      <td>File</td>
+      <td>Identifier</td>
+      <td class="coverage">Document</td>
+      <td style="display: none;">Size</td>
+      <td style="display: none;">Lines</td>
+      <td style="display: none;">Updated</td>
+    </tr>
+  </thead>
+  <tbody>
+    
+  <tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/App/actions/SetState.action.js.html#errorLines=20">patate-music-player/app/App/actions/SetState.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/App/actions/SetState.action.js~SetState.html">SetState</a></span>
+<span><a href="variable/index.html#static-variable-setState">setState</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">491 byte</td>
+      <td style="display: none;" data-ice="lines">20</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:43:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/App/actions/index.js.html">patate-music-player/app/App/actions/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">45 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:43:28 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/App/app.action_middleware.js.html#errorLines=1">patate-music-player/app/App/app.action_middleware.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-app">app</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/1</span></td>
+      <td style="display: none;" data-ice="size">57 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2017-10-01 14:50:20 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/App/app.actions.js.html#errorLines=2">patate-music-player/app/App/app.actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-SET_STATE">SET_STATE</a></span>
+<span><a href="function/index.html#static-function-setState">setState</a></span></td>
+      <td class="coverage"><span data-ice="coverage">50 %</span><span data-ice="coverageCount" class="coverage-count">1/2</span></td>
+      <td style="display: none;" data-ice="size">315 byte</td>
+      <td style="display: none;" data-ice="lines">14</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:42:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/App/app.container.js.html">patate-music-player/app/App/app.container.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/App/app.container.js~App.html">App</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">3/3</span></td>
+      <td style="display: none;" data-ice="size">790 byte</td>
+      <td style="display: none;" data-ice="lines">36</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:42:20 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/App/root.container.js.html">patate-music-player/app/App/root.container.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-Root">Root</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">613 byte</td>
+      <td style="display: none;" data-ice="lines">26</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:41:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/MainMenu.container.js.html#errorLines=105,99">patate-music-player/app/Layout/MainMenu.container.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/MainMenu.container.js~MainMenu.html">MainMenu</a></span>
+<span><a href="variable/index.html#static-variable-MainMenuContainer">MainMenuContainer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">75 %</span><span data-ice="coverageCount" class="coverage-count">6/8</span></td>
+      <td style="display: none;" data-ice="size">2934 byte</td>
+      <td style="display: none;" data-ice="lines">111</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:36:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/actions/AppendSearchResults.action.js.html#errorLines=26">patate-music-player/app/Layout/actions/AppendSearchResults.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/actions/AppendSearchResults.action.js~AppendSearchResults.html">AppendSearchResults</a></span>
+<span><a href="variable/index.html#static-variable-appendSearchResults">appendSearchResults</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">680 byte</td>
+      <td style="display: none;" data-ice="lines">26</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:39:15 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/actions/ClearSearchResults.action.js.html#errorLines=19">patate-music-player/app/Layout/actions/ClearSearchResults.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/actions/ClearSearchResults.action.js~ClearSearchResults.html">ClearSearchResults</a></span>
+<span><a href="variable/index.html#static-variable-clearSearchResults">clearSearchResults</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">431 byte</td>
+      <td style="display: none;" data-ice="lines">19</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:38:24 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/actions/EndSearch.action.js.html#errorLines=18">patate-music-player/app/Layout/actions/EndSearch.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/actions/EndSearch.action.js~EndSearch.html">EndSearch</a></span>
+<span><a href="variable/index.html#static-variable-endSearch">endSearch</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">362 byte</td>
+      <td style="display: none;" data-ice="lines">18</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:38:02 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/actions/Search.action.js.html#errorLines=18">patate-music-player/app/Layout/actions/Search.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/actions/Search.action.js~Search.html">Search</a></span>
+<span><a href="variable/index.html#static-variable-search">search</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">426 byte</td>
+      <td style="display: none;" data-ice="lines">18</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:37:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/actions/index.js.html">patate-music-player/app/Layout/actions/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">212 byte</td>
+      <td style="display: none;" data-ice="lines">4</td>
+      <td style="display: none;" data-ice="updated">2017-11-05 23:17:38 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/components/mainMenu.component.js.html">patate-music-player/app/Layout/components/mainMenu.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/components/mainMenu.component.js~mainMenu.html">mainMenu</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">1840 byte</td>
+      <td style="display: none;" data-ice="lines">76</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:36:39 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/components/search.component.js.html">patate-music-player/app/Layout/components/search.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Layout/components/search.component.js~SearchComponent.html">SearchComponent</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">1012 byte</td>
+      <td style="display: none;" data-ice="lines">41</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:35:28 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Layout/layout.actions.js.html">patate-music-player/app/Layout/layout.actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-appendSearchResults">appendSearchResults</a></span>
+<span><a href="function/index.html#static-function-clearSearchResults">clearSearchResults</a></span>
+<span><a href="function/index.html#static-function-endSearch">endSearch</a></span>
+<span><a href="function/index.html#static-function-search">search</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">4/4</span></td>
+      <td style="display: none;" data-ice="size">1224 byte</td>
+      <td style="display: none;" data-ice="lines">52</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:34:34 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/ClearQueue.action.js.html#errorLines=19">patate-music-player/app/Player/actions/ClearQueue.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/ClearQueue.action.js~ClearQueue.html">ClearQueue</a></span>
+<span><a href="variable/index.html#static-variable-clearQueue">clearQueue</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">399 byte</td>
+      <td style="display: none;" data-ice="lines">19</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:27:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/Enqueue.action.js.html#errorLines=36">patate-music-player/app/Player/actions/Enqueue.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/Enqueue.action.js~Enqueue.html">Enqueue</a></span>
+<span><a href="variable/index.html#static-variable-enqueue">enqueue</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">844 byte</td>
+      <td style="display: none;" data-ice="lines">36</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:27:19 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/Next.action.js.html#errorLines=31">patate-music-player/app/Player/actions/Next.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/Next.action.js~Next.html">Next</a></span>
+<span><a href="variable/index.html#static-variable-next">next</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">682 byte</td>
+      <td style="display: none;" data-ice="lines">31</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:26:39 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/Play.action.js.html#errorLines=23">patate-music-player/app/Player/actions/Play.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/Play.action.js~Play.html">Play</a></span>
+<span><a href="variable/index.html#static-variable-play">play</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">484 byte</td>
+      <td style="display: none;" data-ice="lines">23</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:26:23 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/Playing.action.js.html#errorLines=21">patate-music-player/app/Player/actions/Playing.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/Playing.action.js~Playing.html">Playing</a></span>
+<span><a href="variable/index.html#static-variable-playing">playing</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">595 byte</td>
+      <td style="display: none;" data-ice="lines">21</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:44:26 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/Prev.action.js.html#errorLines=26">patate-music-player/app/Player/actions/Prev.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/Prev.action.js~Prev.html">Prev</a></span>
+<span><a href="variable/index.html#static-variable-prev">prev</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">569 byte</td>
+      <td style="display: none;" data-ice="lines">26</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:25:50 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/Stop.action.js.html#errorLines=19">patate-music-player/app/Player/actions/Stop.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/Stop.action.js~Stop.html">Stop</a></span>
+<span><a href="variable/index.html#static-variable-stop">stop</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">414 byte</td>
+      <td style="display: none;" data-ice="lines">19</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:25:34 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/TogglePlay.action.js.html#errorLines=26">patate-music-player/app/Player/actions/TogglePlay.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/actions/TogglePlay.action.js~TogglePlay.html">TogglePlay</a></span>
+<span><a href="variable/index.html#static-variable-togglePlay">togglePlay</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">670 byte</td>
+      <td style="display: none;" data-ice="lines">26</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:30:44 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/actions/index.js.html">patate-music-player/app/Player/actions/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">316 byte</td>
+      <td style="display: none;" data-ice="lines">8</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 14:24:23 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/components/controls.component.js.html">patate-music-player/app/Player/components/controls.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/components/controls.component.js~Controls.html">Controls</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">1470 byte</td>
+      <td style="display: none;" data-ice="lines">48</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:20:48 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/components/details.component.js.html">patate-music-player/app/Player/components/details.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/components/details.component.js~Details.html">Details</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">547 byte</td>
+      <td style="display: none;" data-ice="lines">29</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:21:11 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/components/footer.component.js.html">patate-music-player/app/Player/components/footer.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/components/footer.component.js~Footer.html">Footer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">414 byte</td>
+      <td style="display: none;" data-ice="lines">22</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:21:42 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/components/progress.component.js.html">patate-music-player/app/Player/components/progress.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/components/progress.component.js~Progress.html">Progress</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">911 byte</td>
+      <td style="display: none;" data-ice="lines">42</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:21:53 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/components/search.component.js.html">patate-music-player/app/Player/components/search.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/components/search.component.js~Search.html">Search</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">3/3</span></td>
+      <td style="display: none;" data-ice="size">1728 byte</td>
+      <td style="display: none;" data-ice="lines">71</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:23:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/player.actions.js.html">patate-music-player/app/Player/player.actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-clearQueue">clearQueue</a></span>
+<span><a href="function/index.html#static-function-enqueue">enqueue</a></span>
+<span><a href="function/index.html#static-function-next">next</a></span>
+<span><a href="function/index.html#static-function-play">play</a></span>
+<span><a href="function/index.html#static-function-playing">playing</a></span>
+<span><a href="function/index.html#static-function-prev">prev</a></span>
+<span><a href="function/index.html#static-function-stop">stop</a></span>
+<span><a href="function/index.html#static-function-toggleplay">toggleplay</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">8/8</span></td>
+      <td style="display: none;" data-ice="size">2016 byte</td>
+      <td style="display: none;" data-ice="lines">98</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:19:54 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/player.constants.js.html#errorLines=1,2,3,4,5">patate-music-player/app/Player/player.constants.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-NEXT">NEXT</a></span>
+<span><a href="variable/index.html#static-variable-PAUSE">PAUSE</a></span>
+<span><a href="variable/index.html#static-variable-PLAY">PLAY</a></span>
+<span><a href="variable/index.html#static-variable-PREV">PREV</a></span>
+<span><a href="variable/index.html#static-variable-STOP">STOP</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/5</span></td>
+      <td style="display: none;" data-ice="size">233 byte</td>
+      <td style="display: none;" data-ice="lines">7</td>
+      <td style="display: none;" data-ice="updated">2017-11-05 21:45:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/Player/player.container.js.html#errorLines=145,157">patate-music-player/app/Player/player.container.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/Player/player.container.js~Player.html">Player</a></span>
+<span><a href="variable/index.html#static-variable-PlayerContainer">PlayerContainer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">75 %</span><span data-ice="coverageCount" class="coverage-count">6/8</span></td>
+      <td style="display: none;" data-ice="size">4438 byte</td>
+      <td style="display: none;" data-ice="lines">157</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:19:30 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/actions/UpdateSearch.helper.js.html">patate-music-player/app/PlaylistsList/actions/UpdateSearch.helper.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-fetchPlaylists">fetchPlaylists</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">418 byte</td>
+      <td style="display: none;" data-ice="lines">14</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:10:48 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js.html#errorLines=19">patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/PlaylistsList/actions/UpdateSearchField.action.js~UpdateSearchField.html">UpdateSearchField</a></span>
+<span><a href="variable/index.html#static-variable-updateSearchField">updateSearchField</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">469 byte</td>
+      <td style="display: none;" data-ice="lines">19</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:12:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js.html#errorLines=20">patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/PlaylistsList/actions/UpdateSearchResults.action.js~UpdateSearchResults.html">UpdateSearchResults</a></span>
+<span><a href="variable/index.html#static-variable-updateSearchResults">updateSearchResults</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">515 byte</td>
+      <td style="display: none;" data-ice="lines">20</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:12:27 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/actions/index.js.html">patate-music-player/app/PlaylistsList/actions/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">126 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2017-11-05 23:21:30 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/components/playlist.component.js.html">patate-music-player/app/PlaylistsList/components/playlist.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/PlaylistsList/components/playlist.component.js~PlaylistItem.html">PlaylistItem</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">4/4</span></td>
+      <td style="display: none;" data-ice="size">1621 byte</td>
+      <td style="display: none;" data-ice="lines">60</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:09:15 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/playlistslist.actions.js.html#errorLines=20,3">patate-music-player/app/PlaylistsList/playlistslist.actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-PLAYLIST_UPDATE_SEARCH_FIELD">PLAYLIST_UPDATE_SEARCH_FIELD</a></span>
+<span><a href="variable/index.html#static-variable-PLAYLIST_UPDATE_SEARCH_RESULTS">PLAYLIST_UPDATE_SEARCH_RESULTS</a></span>
+<span><a href="function/index.html#static-function-updateSearch">updateSearch</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">4/6</span></td>
+      <td style="display: none;" data-ice="size">1948 byte</td>
+      <td style="display: none;" data-ice="lines">66</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:07:23 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/PlaylistsList/playlistslist.container.js.html#errorLines=20,67,73,81">patate-music-player/app/PlaylistsList/playlistslist.container.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/PlaylistsList/playlistslist.container.js~PlaylistsList.html">PlaylistsList</a></span>
+<span><a href="variable/index.html#static-variable-PlaylistsListContainer">PlaylistsListContainer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">33 %</span><span data-ice="coverageCount" class="coverage-count">2/6</span></td>
+      <td style="display: none;" data-ice="size">2239 byte</td>
+      <td style="display: none;" data-ice="lines">84</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:03:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/actions/ConnectedSource.action.js.html#errorLines=25">patate-music-player/app/SourceList/actions/ConnectedSource.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/SourceList/actions/ConnectedSource.action.js~ConnectedSource.html">ConnectedSource</a></span>
+<span><a href="variable/index.html#static-variable-connectedSource">connectedSource</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">796 byte</td>
+      <td style="display: none;" data-ice="lines">25</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:01:57 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/actions/ConnectingSource.action.js.html#errorLines=23">patate-music-player/app/SourceList/actions/ConnectingSource.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/SourceList/actions/ConnectingSource.action.js~ConnectingSource.html">ConnectingSource</a></span>
+<span><a href="variable/index.html#static-variable-connectingSource">connectingSource</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">738 byte</td>
+      <td style="display: none;" data-ice="lines">23</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:00:07 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/actions/Connexion.helper.js.html">patate-music-player/app/SourceList/actions/Connexion.helper.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-fetchAuthorizationCode">fetchAuthorizationCode</a></span>
+<span><a href="function/index.html#static-function-fetchTokenCode">fetchTokenCode</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">1784 byte</td>
+      <td style="display: none;" data-ice="lines">66</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:01:20 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js.html#errorLines=25">patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/SourceList/actions/ConnexionFailedSource.action.js~ConnexionFailedSource.html">ConnexionFailedSource</a></span>
+<span><a href="variable/index.html#static-variable-connexionFailedSource">connexionFailedSource</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">2/3</span></td>
+      <td style="display: none;" data-ice="size">842 byte</td>
+      <td style="display: none;" data-ice="lines">25</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 18:02:07 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/actions/index.js.html">patate-music-player/app/SourceList/actions/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">185 byte</td>
+      <td style="display: none;" data-ice="lines">3</td>
+      <td style="display: none;" data-ice="updated">2017-10-02 00:14:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/components/source.component.js.html">patate-music-player/app/SourceList/components/source.component.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/SourceList/components/source.component.js~Source.html">Source</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">4/4</span></td>
+      <td style="display: none;" data-ice="size">1923 byte</td>
+      <td style="display: none;" data-ice="lines">70</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:57:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/sourcelist.actions.js.html#errorLines=20,3,39">patate-music-player/app/SourceList/sourcelist.actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-CONNECTED_SOURCE">CONNECTED_SOURCE</a></span>
+<span><a href="variable/index.html#static-variable-CONNECTING_SOURCE">CONNECTING_SOURCE</a></span>
+<span><a href="variable/index.html#static-variable-CONNEXION_FAILED_SOURCE">CONNEXION_FAILED_SOURCE</a></span>
+<span><a href="function/index.html#static-function-toggleSourceConnexion">toggleSourceConnexion</a></span></td>
+      <td class="coverage"><span data-ice="coverage">57 %</span><span data-ice="coverageCount" class="coverage-count">4/7</span></td>
+      <td style="display: none;" data-ice="size">2483 byte</td>
+      <td style="display: none;" data-ice="lines">85</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:51:51 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/SourceList/sourcelist.container.js.html#errorLines=46,50,57">patate-music-player/app/SourceList/sourcelist.container.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/app/SourceList/sourcelist.container.js~SourceList.html">SourceList</a></span>
+<span><a href="variable/index.html#static-variable-SourceListContainer">SourceListContainer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">40 %</span><span data-ice="coverageCount" class="coverage-count">2/5</span></td>
+      <td style="display: none;" data-ice="size">1549 byte</td>
+      <td style="display: none;" data-ice="lines">60</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:45:49 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/actions.js.html">patate-music-player/app/actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">162 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2017-11-05 18:26:19 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/configureStore.js.html#errorLines=12,14,8,9">patate-music-player/app/configureStore.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-configureStore">configureStore</a></span>
+<span><a href="variable/index.html#static-variable-history">history</a></span></td>
+      <td class="coverage"><span data-ice="coverage">20 %</span><span data-ice="coverageCount" class="coverage-count">1/5</span></td>
+      <td style="display: none;" data-ice="size">935 byte</td>
+      <td style="display: none;" data-ice="lines">24</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:42:13 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/index.js.html">patate-music-player/app/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1370 byte</td>
+      <td style="display: none;" data-ice="lines">49</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:40:56 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/reducer.js.html">patate-music-player/app/reducer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-reducer">reducer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">2333 byte</td>
+      <td style="display: none;" data-ice="lines">58</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:39:47 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/routes.js.html">patate-music-player/app/routes.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-routes">routes</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">780 byte</td>
+      <td style="display: none;" data-ice="lines">22</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:38:51 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/app/utils/time.js.html">patate-music-player/app/utils/time.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-formatMilliseconds">formatMilliseconds</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">586 byte</td>
+      <td style="display: none;" data-ice="lines">21</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:34:42 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/src/model/JamendoProxy.js.html#errorLines=20,21,22,23,36,8">patate-music-player/src/model/JamendoProxy.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/src/model/JamendoProxy.js~JamendoProxy.html">JamendoProxy</a></span></td>
+      <td class="coverage"><span data-ice="coverage">62 %</span><span data-ice="coverageCount" class="coverage-count">10/16</span></td>
+      <td style="display: none;" data-ice="size">4251 byte</td>
+      <td style="display: none;" data-ice="lines">170</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:30:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/src/model/Playlist.js.html#errorLines=19,20,21,22,23">patate-music-player/src/model/Playlist.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/src/model/Playlist.js~Playlist.html">Playlist</a></span></td>
+      <td class="coverage"><span data-ice="coverage">28 %</span><span data-ice="coverageCount" class="coverage-count">2/7</span></td>
+      <td style="display: none;" data-ice="size">726 byte</td>
+      <td style="display: none;" data-ice="lines">25</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 16:50:34 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/src/model/Song.js.html#errorLines=15,16,17">patate-music-player/src/model/Song.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/src/model/Song.js~Song.html">Song</a></span></td>
+      <td class="coverage"><span data-ice="coverage">40 %</span><span data-ice="coverageCount" class="coverage-count">2/5</span></td>
+      <td style="display: none;" data-ice="size">551 byte</td>
+      <td style="display: none;" data-ice="lines">19</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 16:56:17 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/src/model/SoundCloudProxy.js.html#errorLines=13,14,15,16,17,7">patate-music-player/src/model/SoundCloudProxy.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/src/model/SoundCloudProxy.js~SoundCloudProxy.html">SoundCloudProxy</a></span></td>
+      <td class="coverage"><span data-ice="coverage">60 %</span><span data-ice="coverageCount" class="coverage-count">9/15</span></td>
+      <td style="display: none;" data-ice="size">3902 byte</td>
+      <td style="display: none;" data-ice="lines">158</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:30:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/patate-music-player/src/model/SpotifyProxy.js.html#errorLines=19,20,21,22,23,24,31,7">patate-music-player/src/model/SpotifyProxy.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/patate-music-player/src/model/SpotifyProxy.js~SpotifyProxy.html">SpotifyProxy</a></span></td>
+      <td class="coverage"><span data-ice="coverage">55 %</span><span data-ice="coverageCount" class="coverage-count">10/18</span></td>
+      <td style="display: none;" data-ice="size">5306 byte</td>
+      <td style="display: none;" data-ice="lines">203</td>
+      <td style="display: none;" data-ice="updated">2017-11-06 17:32:28 (UTC)</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

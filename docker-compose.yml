@@ -1,0 +1,34 @@
+version: '2'
+services:
+  music_server:
+    build: music_server
+    container_name: "music_server"
+    ports:
+      - 3000:3000
+    environment:
+      - MONGOURL=mongodb
+    links:
+      - mongodb
+  auth_server:
+    build: auth_server
+    container_name: "auth_server"
+    ports:
+      - 3001:3001
+    environment:
+      - MONGOURL=mongodb
+    links:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - data:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null
+volumes:
+  data:
