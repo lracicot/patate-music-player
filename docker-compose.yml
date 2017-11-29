@@ -1,8 +1,8 @@
 version: '2'
 services:
-  music_server:
-    build: music_server
-    container_name: "music_server"
+  search_server:
+    build: search_server
+    container_name: "search_server"
     ports:
       - 3000:3000
     environment:
