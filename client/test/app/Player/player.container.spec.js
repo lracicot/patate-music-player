@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-dom/test-utils';
-import chai, { expect } from 'chai';
+import { expect } from 'chai';
 import { Player } from '../../../app/Player/player.container';
 
 

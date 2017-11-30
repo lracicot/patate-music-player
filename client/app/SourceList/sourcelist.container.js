@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { List as UIList } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { List } from 'immutable';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { List } from 'immutable';
 
 import * as SourceListActions from './sourcelist.actions';
 

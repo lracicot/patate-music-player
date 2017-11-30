@@ -27,6 +27,17 @@ import { formatMilliseconds } from '../utils/time';
 @autobind
 export class Player extends Component {
   /**
+   * componentWillMount - Execute before render()
+   *
+   * @return {void}
+   */
+  componentWillMount() {
+    if (this.props.accessToken === '' && this.props.history) {
+      this.props.history.push('/login');
+    }
+  }
+
+  /**
    * getPlayFromPosition - Get the position
    *
    * @return {number} the position
@@ -130,9 +141,12 @@ Player.propTypes = {
   trackTitle: PropTypes.string,
   trackStreamUrl: PropTypes.string,
   trackArtworkUrl: PropTypes.string,
+  accessToken: PropTypes.string,
+  history: PropTypes.object.isRequired,
 };
 
 Player.defaultProps = {
+  accessToken: '',
   trackArtworkUrl: '',
   trackTitle: 'no title',
   trackStreamUrl: '',
@@ -143,6 +157,7 @@ Player.defaultProps = {
 };
 
 const mapStateToProps = state => ({
+  accessToken: state.get('accessToken'),
   track: state.get('queue').get(0),
   trackArtworkUrl: state.get('queue').get(0) ? state.get('queue').get(0).artworkUrl : '',
   trackTitle: state.get('queue').get(0) ? state.get('queue').get(0).title : '',

@@ -311,7 +311,7 @@ describe('reducer', () => {
     expect(nextState.get('searchResults').size).to.equal(0);
   });
 
-  it('handles CLEAR_QUEUE by emptying the play queue ', () => {
+  it('handles CLEAR_QUEUE by emptying the play queue', () => {
     const state = fromJS({
       queue: List.of({ title: 'Test2' }),
     });
@@ -319,5 +319,27 @@ describe('reducer', () => {
     const nextState = reducer(state, action);
 
     expect(nextState.get('queue').size).to.equal(0);
+  });
+
+  it('handles FORM_ERROR by emptying the play queue', () => {
+    const error = 'This is an error';
+    const state = fromJS({
+      form_error: '',
+    });
+    const action = { type: 'FORM_ERROR', error };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('form_error')).to.equal(error);
+  });
+
+  it('handles LOGIN_SUCCESS by emptying the play queue', () => {
+    const accessToken = 'qwertyuiop';
+    const state = fromJS({
+      accessToken: '',
+    });
+    const action = { type: 'LOGIN_SUCCESS', accessToken };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('accessToken')).to.equal(accessToken);
   });
 });

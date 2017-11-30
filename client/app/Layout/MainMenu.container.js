@@ -95,6 +95,7 @@ MainMenu.propTypes = {
   appendSearchResults: PropTypes.func.isRequired,
   clearSearchResults: PropTypes.func.isRequired,
   clearQueue: PropTypes.func.isRequired,
+  accessToken: PropTypes.string.isRequired,
 };
 
 MainMenu.defaultProps = {
@@ -103,6 +104,7 @@ MainMenu.defaultProps = {
 };
 
 const mapStateToProps = state => ({
+  accessToken: state.get('accessToken') ? state.get('accessToken') : '',
   sources: state.get('sources'),
   searchQuery: state.get('searchQuery'),
   searchResults: state.get('searchResults'),
