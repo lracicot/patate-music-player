@@ -16,13 +16,17 @@ export default class mainMenu extends PureComponent {
    * @return {ReactComponent} Return the rendered component
    */
   render() {
-    const { activeItem } = this.props;
+    const { activeItem, accessToken } = this.props;
+
+    if (accessToken === '') {
+      return (<div />);
+    }
 
     const HomeLink = withRouter(({ history }) => (
       <Menu.Item
         name="home"
         active={activeItem === 'home'}
-        onClick={() => { history.push('/'); }}
+        onClick={() => { history.push('/player'); }}
       >
         Home
       </Menu.Item>
@@ -69,6 +73,7 @@ mainMenu.propTypes = {
   activeItem: PropTypes.string,
   onResultSelect: PropTypes.func.isRequired,
   onSearchChange: PropTypes.func.isRequired,
+  accessToken: PropTypes.string.isRequired,
 };
 
 mainMenu.defaultProps = {

@@ -27,7 +27,7 @@
         ],
         "linebreak-style": [
             "error",
-            "windows"
+            "unix"
         ],
         "react/jsx-filename-extension": [
             1, { "extensions": [".js", ".jsx"] }

@@ -4,6 +4,7 @@ import * as PlayerActions from './Player/actions';
 import * as SourceListActions from './SourceList/actions';
 import * as PlaylistsListActions from './PlaylistsList/actions';
 import * as LayoutActions from './Layout/actions';
+import * as LoginActions from './Login/actions';
 
 /**
  * Reducer - Execute an action and return the new state
@@ -51,8 +52,11 @@ export default function (state = Map(), action) {
     return PlaylistsListActions.UpdateSearchField.execute(state, action.searchValue);
   case 'PLAYLIST_UPDATE_SEARCH_RESULTS':
     return PlaylistsListActions.UpdateSearchResults.execute(state, action.searchResults);
+  case 'LOGIN_SUCCESS':
+    return LoginActions.Login.execute(state, action.accessToken);
+  case 'FORM_ERROR':
+    return LoginActions.FormError.execute(state, action.error);
   default:
-    console.log(action);
   }
   return state;
 }

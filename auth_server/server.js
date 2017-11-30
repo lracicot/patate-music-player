@@ -7,7 +7,6 @@
 const express    = require('express');        // call express
 const app        = express();                 // define our app using express
 const bodyParser = require('body-parser');
-const morgan     = require('morgan');
 const mongoose   = require('mongoose');
 const jwt        = require('jsonwebtoken'); // used to create, sign, and verify tokens
 const UserModel       = require('./app/models/user');
@@ -34,9 +33,6 @@ app.set('superSecret', secret); // secret variable
 // use body parser so we can get info from POST and/or URL parameters
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// use morgan to log requests to the console
-app.use(morgan('dev'));
 
 const verifyToken = async function(req, res, next) {
   var user = await User.findById(req.body.token);
@@ -65,7 +61,7 @@ router.post('/register', function(req, res) {
   user.save(function(err) {
     if (!err) {
       console.log('User saved successfully');
-      res.json({ success: true });
+      res.json({ success: true, token: user._id });
     }
 
     res.json({ success: false, error: 'username already taken' });

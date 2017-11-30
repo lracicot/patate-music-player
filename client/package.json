@@ -6,7 +6,7 @@
   "scripts": {
     "esdoc": "./node_modules/.bin/esdoc",
     "lint": "eslint .; exit 0",
-    "start": "electron main.js",
+    "start": "electron .",
     "watch": "watchify app/index.js -t babelify -o public/js/bundle.js --debug --verbose & electron .",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test-cov": "nyc --reporter=html mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
