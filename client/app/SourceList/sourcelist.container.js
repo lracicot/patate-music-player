@@ -9,7 +9,6 @@ import * as SourceListActions from './sourcelist.actions';
 
 // Custom components
 import Source from './components/source.component';
-
 /**
   * SourceList - A component which show the list of sources and
   * handle the connexion.
@@ -22,13 +21,24 @@ export class SourceList extends Component {
    * @return {ReactComponent} Return the rendered component
    */
   render() {
-    const mapSourceToComponent = source => (
-      <Source
-        proxy={source}
-        key={source.name}
-        dispatch={this.props.dispatch}
-      />
-    );
+    const { connectedSources } = this.props;
+    const mapSourceToComponent = (source) => {
+      const connectedSource = connectedSources.find(s => s.name === source.name);
+      let sourceId = '';
+      if (connectedSource) {
+        sourceId = connectedSource.id ? connectedSource.id : connectedSource._id;
+      }
+
+      return (
+        <Source
+          logo={source.logo}
+          name={source.name}
+          key={source.name}
+          isConnected={!!connectedSource}
+          sourceId={sourceId}
+          {...this.props}
+        />);
+    };
     const listSources = this.props.sources.map(mapSourceToComponent);
     return (
       <UIList divided verticalAlign="middle">
@@ -40,11 +50,15 @@ export class SourceList extends Component {
 
 SourceList.propTypes = {
   sources: PropTypes.instanceOf(List).isRequired,
+  connectedSources: PropTypes.instanceOf(List).isRequired,
   dispatch: PropTypes.func.isRequired,
+  accessToken: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({
   sources: state.get('sources'),
+  connectedSources: state.get('connectedSources'),
+  accessToken: state.get('accessToken'),
 });
 
 const mapDispatchToProps = (dispatch) => {

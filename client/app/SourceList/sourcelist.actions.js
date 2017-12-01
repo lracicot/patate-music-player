@@ -1,19 +1,24 @@
+import Axios from 'axios';
 import { fetchAuthorizationCode, fetchTokenCode } from './actions/Connexion.helper';
 
-export const CONNECTING_SOURCE = 'CONNECTINGSOURCE';
+import JamendoProxy from '../../src/model/JamendoProxy';
+import SoundCloudProxy from '../../src/model/SoundCloudProxy';
+import SpotifyProxy from '../../src/model/SpotifyProxy';
+
+export const DISCONNECT_SOURCE_SUCCESS = 'DISCONNECT_SOURCE_SUCCESS';
 
 /**
- * connectingSource - Creates an action named "CONNECTINGSOURCE" with
+ * disconnectSuccess - Creates an action named "DISCONNECT_SOURCE_SUCCESS" with
  * the required data to execute the reducer action
  *
- * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} proxy The proxy affected by the action
+ * @param {object} source The source affected by the action
  *
  * @return {ActionCreator} The action creator
  */
-function connectingSource(proxy) {
+function disconnectSuccess(source) {
   return {
-    type: CONNECTING_SOURCE,
-    proxy,
+    type: DISCONNECT_SOURCE_SUCCESS,
+    source,
   };
 }
 
@@ -23,16 +28,14 @@ export const CONNECTED_SOURCE = 'CONNECTEDSOURCE';
  * connectedSource - Creates an action named "CONNECTEDSOURCE" with
  * the required data to execute the reducer action
  *
- * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} proxy The proxy affected by the action
- * @param {string} accessToken The access token
+ * @param {object} source The source affected by the action
  *
  * @return {ActionCreator} The action creator
  */
-function connectedSource(proxy, accessToken) {
+function connectedSource(source) {
   return {
     type: CONNECTED_SOURCE,
-    proxy,
-    accessToken,
+    source,
   };
 }
 
@@ -41,45 +44,77 @@ export const CONNEXION_FAILED_SOURCE = 'CONNEXIONFAILEDSOURCE';
  * connexionFailedSource - Creates an action named "CONNEXIONFAILEDSOURCE" with
  * the required data to execute the reducer action
  *
- * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} proxy The proxy affected by the action
  * @param {string} error The reason of the failure
  *
  * @return {ActionCreator} The action creator
  */
-function connexionFailedSource(proxy, error) {
+function connexionFailedSource(error) {
   return {
     type: CONNEXION_FAILED_SOURCE,
-    proxy,
     error,
   };
 }
 
 /**
- * toggleSourceConnexion - Toggle the connexion of a source and dispatch the correct actions
+ * disconnect - Disconnect a source and dispatch the correct actions
  *
- * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} proxy The proxy affected by the action
+ * @param {string} sourceId The id of the source affected by the action
  *
  * @return {Promise} The promise to wait this action
  */
-export function toggleSourceConnexion(proxy) {
+export function disconnect(sourceId, userToken) {
   return async (dispatch) => {
-    if (proxy.isConnected()) {
-      return dispatch(connexionFailedSource(proxy, null));
-    }
+    // Actually remove the source
+    await Axios.delete(`http://localhost:3002/api/removeSource/${sourceId}`, {
+      headers: { token: userToken },
+    });
+
+    return dispatch(disconnectSuccess(sourceId));
+  };
+}
+
+/**
+ * connect - Connect a source and dispatch the correct actions
+ *
+ * @param {string} sourceName The name of the source affected by the action
+ * @param {string} userToken The name of the source affected by the action
+ *
+ * @return {Promise} The promise to wait this action
+ */
+export function connect(sourceName, userToken) {
+  return async (dispatch) => {
+    const proxy = ((name) => {
+      if (name === 'Jamendo') {
+        return new JamendoProxy();
+      } else if (name === 'SoundCloud') {
+        return new SoundCloudProxy();
+      }
+      return new SpotifyProxy();
+    })(sourceName);
+
+    let authCode = proxy.getAccessToken();
 
     if (proxy.needsAuthentification()) {
-      dispatch(connectingSource(proxy));
-
       try {
-        const authCode = await fetchAuthorizationCode(proxy);
-        const accessToken = await fetchTokenCode(proxy, authCode);
+        const authUrl = await fetchAuthorizationCode(proxy);
+        authCode = await fetchTokenCode(proxy, authUrl);
 
-        return dispatch(connectedSource(proxy, accessToken));
+        // Actually add the source
+        const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: authCode }, {
+          headers: { token: userToken },
+        });
+
+        return dispatch(connectedSource(response.data.source));
       } catch (error) {
-        return dispatch(connexionFailedSource(proxy, error));
+        return dispatch(connexionFailedSource(error));
       }
     }
 
-    return dispatch(connectedSource(proxy, null));
+    // Actually add the source
+    const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: authCode }, {
+      headers: { token: userToken },
+    });
+
+    return dispatch(connectedSource(response.data.source));
   };
 }

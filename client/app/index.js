@@ -2,23 +2,17 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Stack, List } from 'immutable';
+import Axios from 'axios';
 
 import Root from './App/root.container';
 import { setState } from './App/app.actions';
 import { configureStore, history } from './configureStore';
 
-import SoundCloudProxy from './../src/model/SoundCloudProxy';
-import SpotifyProxy from './../src/model/SpotifyProxy';
-import JamendoProxy from './../src/model/JamendoProxy';
-
 /**
   * Index - Open the application
   */
 (async () => {
-  const soundCloudProxy = new SoundCloudProxy();
-  const spotifyProxy = new SpotifyProxy();
-  const jamendoProxy = new JamendoProxy();
-  const sources = [soundCloudProxy, spotifyProxy, jamendoProxy];
+  const { data } = await Axios.get('http://localhost:3002/api/getAvailableSources');
 
   const store = configureStore();
 
@@ -27,8 +21,10 @@ import JamendoProxy from './../src/model/JamendoProxy';
     tracks: List(),
     history: Stack(),
     queue: List(),
-    sources: List(sources),
+    sources: List(data.sources),
+    connectedSources: [],
     playlistsFound: List(),
+    accessToken: '',
   }));
 
   render(

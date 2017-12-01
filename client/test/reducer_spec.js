@@ -342,4 +342,78 @@ describe('reducer', () => {
 
     expect(nextState.get('accessToken')).to.equal(accessToken);
   });
+
+  it('handles DISCONNECT_SOURCE_SUCCESS by removing the source', () => {
+    const sourceName = 'sourceName';
+    const state = fromJS({
+      connectedSources: List([{
+        name: sourceName,
+      }]),
+    });
+    const action = { type: 'DISCONNECT_SOURCE_SUCCESS', sourceName };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('connectedSources')).to.equal(List([]));
+  });
+
+  it('handles CONNECTED_SOURCE by adding the source', () => {
+    const state = fromJS({
+      connectedSources: List(),
+    });
+
+    const source = {
+      id: 'sourceId',
+      name: 'sourceName',
+    };
+    const action = { type: 'CONNECTEDSOURCE', source };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('connectedSources')).to.equal(List([source]));
+  });
+
+  it('handles CONNECTED_SOURCE by adding a second source', () => {
+    const connectedSources = List([{
+      id: 'sourceId1',
+      name: 'sourceName',
+    }]);
+    const state = fromJS({
+      connectedSources,
+    });
+
+    const source = {
+      id: 'sourceId2',
+      name: 'sourceName',
+    };
+
+    const action = { type: 'CONNECTEDSOURCE', source };
+    const nextState = reducer(state, action);
+
+    expect(
+      nextState.get('connectedSources'),
+    ).to.equal(
+      connectedSources.push(source),
+    );
+  });
+
+  it('handles CONNECTED_SOURCE by not adding the same source twice', () => {
+    const source = {
+      id: 'sourceId',
+      name: 'sourceName',
+    };
+    const state = fromJS({
+      connectedSources: List([source]),
+    });
+    const action = { type: 'CONNECTEDSOURCE', source };
+    const nextState = reducer(state, action);
+
+    expect(nextState.get('connectedSources')).to.equal(List([source]));
+  });
+
+  it('handles CONNEXION_FAILED_SOURCE by doing nothing', () => {
+    const state = fromJS({});
+    const action = { type: 'CONNEXIONFAILEDSOURCE' };
+    const nextState = reducer(state, action);
+
+    expect(nextState).to.equal(state);
+  });
 });

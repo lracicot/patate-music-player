@@ -70,6 +70,10 @@ export default class SpotifyProxy {
     return proxy;
   }
 
+  getAccessToken() {
+    return JSON.stringify({ accessToken: this.accessToken, clientId });
+  }
+
   /**
    * needsAuthentification - Spotify need an authentifation process
    *
