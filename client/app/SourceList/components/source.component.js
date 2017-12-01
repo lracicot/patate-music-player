@@ -16,6 +16,8 @@ class Source extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    console.log(this.state);
     const {
       isDisconnecting,
       isConnecting,
@@ -32,12 +34,12 @@ class Source extends PureComponent {
 
   connect(name) {
     this.setState({ isConnecting: true });
-    this.props.connect(name);
+    this.props.connect(name, this.props.accessToken);
   }
 
   disconnect(sourceId) {
     this.setState({ isDisconnecting: true });
-    this.props.disconnect(sourceId);
+    this.props.disconnect(sourceId, this.props.accessToken);
   }
 
   /**
@@ -100,6 +102,7 @@ Source.propTypes = {
   name: PropTypes.string.isRequired,
   isConnected: PropTypes.bool.isRequired,
   sourceId: PropTypes.string.isRequired,
+  accessToken: PropTypes.string.isRequired,
 };
 
 export default Source;

@@ -1,3 +1,4 @@
+import Axios from 'axios';
 import { fetchAuthorizationCode, fetchTokenCode } from './actions/Connexion.helper';
 
 import JamendoProxy from '../../src/model/JamendoProxy';
@@ -61,11 +62,14 @@ function connexionFailedSource(error) {
  *
  * @return {Promise} The promise to wait this action
  */
-export function disconnect(proxy) {
+export function disconnect(sourceId, userToken) {
   return async (dispatch) => {
     // Actually remove the source
+    await Axios.delete(`http://localhost:3002/api/removeSource/${sourceId}`, {
+      headers: { token: userToken },
+    });
 
-    return dispatch(disconnectSuccess(proxy));
+    return dispatch(disconnectSuccess(sourceId));
   };
 }
 
@@ -73,10 +77,11 @@ export function disconnect(proxy) {
  * connect - Connect a source and dispatch the correct actions
  *
  * @param {string} sourceName The name of the source affected by the action
+ * @param {string} userToken The name of the source affected by the action
  *
  * @return {Promise} The promise to wait this action
  */
-export function connect(sourceName) {
+export function connect(sourceName, userToken) {
   return async (dispatch) => {
     const proxy = ((name) => {
       if (name === 'Jamendo') {
@@ -87,26 +92,29 @@ export function connect(sourceName) {
       return new SpotifyProxy();
     })(sourceName);
 
-    const source = {
-      id: `sourceId123456${sourceName}`,
-      name: sourceName,
-      accessToken: 'dontcare',
-    };
+    let authCode = proxy.getAccessToken();
 
     if (proxy.needsAuthentification()) {
       try {
-        const authCode = await fetchAuthorizationCode(proxy);
-        const accessToken = await fetchTokenCode(proxy, authCode);
+        const authUrl = await fetchAuthorizationCode(proxy);
+        authCode = await fetchTokenCode(proxy, authUrl);
 
         // Actually add the source
-        // { name, accessToken }
+        const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: authCode }, {
+          headers: { token: userToken },
+        });
 
-        return dispatch(connectedSource(source));
+        return dispatch(connectedSource(response.data.source));
       } catch (error) {
         return dispatch(connexionFailedSource(error));
       }
     }
 
-    return dispatch(connectedSource(source));
+    // Actually add the source
+    const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: authCode }, {
+      headers: { token: userToken },
+    });
+
+    return dispatch(connectedSource(response.data.source));
   };
 }

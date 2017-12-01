@@ -51,37 +51,43 @@ router.get('/getAvailableSources', async function(req, res) {
 });
 
 router.get('/getSources', verifyToken, async function(req, res) {
-    res.json(req.user.sources);
+    res.json(req.user.sources.map(source => {
+      source.id = source._id
+      return source;
+    }));
 });
 
 router.post('/addSource', verifyToken, async function(req, res) {
+  const { name, accessToken } = req.body;
   const sourceAccess = new SourceAccess({
-    name: req.body.name,
-    accessToken: req.body.accessToken,
+    name,
+    accessToken,
   });
 
   req.user.sources.push(sourceAccess);
 
-  req.user.save(function(err) {
-    if (!err) {
+  req.user.save(function(error) {
+    if (!error) {
       console.log('SourceAccess saved successfully');
-      res.json({ success: true });
+      const source = req.user.sources.find(s => s.name === name);
+      source.id = source._id;
+      res.json({ success: true, source });
     }
 
-    res.json({ success: false });
+    res.json({ success: false, error });
   });
 });
 
-router.delete('/removeSource', verifyToken, async function(req, res) {
-  const sourceAccess = req.user.sources.id(req.body.sourceId).remove();
+router.delete('/removeSource/:sourceId', verifyToken, async function(req, res) {
+  const sourceAccess = req.user.sources.id(req.params.sourceId).remove();
 
-  req.user.save(function(err) {
-    if (!err) {
+  req.user.save(function(error) {
+    if (!error) {
       console.log('SourceAccess removed successfully');
       res.json({ success: true });
     }
 
-    res.json({ success: false });
+    res.json({ success: false, error });
   });
 });
 

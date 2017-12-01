@@ -13,7 +13,7 @@ class ConnectedSource {
    */
   execute(state, source) {
     if (state.get('connectedSources')
-      .find(s => s.id === source.id)) {
+      .find(s => s.id === source.id || s._id === source._id)) {
       return state;
     }
 

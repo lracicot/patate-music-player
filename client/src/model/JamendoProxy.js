@@ -37,6 +37,10 @@ export default class JamendoProxy {
     return proxy;
   }
 
+  getAccessToken() {
+    return clientId;
+  }
+
   /**
    * setAccessToken - Set the status to connected
    *

@@ -24,6 +24,7 @@ import { configureStore, history } from './configureStore';
     sources: List(data.sources),
     connectedSources: [],
     playlistsFound: List(),
+    accessToken: '',
   }));
 
   render(

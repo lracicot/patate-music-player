@@ -22,16 +22,23 @@ export class SourceList extends Component {
    */
   render() {
     const { connectedSources } = this.props;
-    const mapSourceToComponent = source => (
-      <Source
-        logo={source.logo}
-        name={source.name}
-        key={source.name}
-        isConnected={!!connectedSources.find(s => s.name === source.name)}
-        sourceId=""
-        {...this.props}
-      />
-    );
+    const mapSourceToComponent = (source) => {
+      const connectedSource = connectedSources.find(s => s.name === source.name);
+      let sourceId = '';
+      if (connectedSource) {
+        sourceId = connectedSource.id ? connectedSource.id : connectedSource._id;
+      }
+
+      return (
+        <Source
+          logo={source.logo}
+          name={source.name}
+          key={source.name}
+          isConnected={!!connectedSource}
+          sourceId={sourceId}
+          {...this.props}
+        />);
+    };
     const listSources = this.props.sources.map(mapSourceToComponent);
     return (
       <UIList divided verticalAlign="middle">
@@ -45,11 +52,13 @@ SourceList.propTypes = {
   sources: PropTypes.instanceOf(List).isRequired,
   connectedSources: PropTypes.instanceOf(List).isRequired,
   dispatch: PropTypes.func.isRequired,
+  accessToken: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({
   sources: state.get('sources'),
   connectedSources: state.get('connectedSources'),
+  accessToken: state.get('accessToken'),
 });
 
 const mapDispatchToProps = (dispatch) => {

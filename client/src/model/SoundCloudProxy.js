@@ -30,6 +30,10 @@ export default class SoundCloudProxy {
     return proxy;
   }
 
+  getAccessToken() {
+    return clientId;
+  }
+
   /**
    * setAccessToken - Set the status to connected
    *
