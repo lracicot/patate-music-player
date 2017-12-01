@@ -2,33 +2,42 @@ import React, { PureComponent } from 'react';
 import { Button, Image, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-import { toggleSourceConnexion } from '../sourcelist.actions';
-
-import SoundCloudProxy from './../../../src/model/SoundCloudProxy';
-import SpotifyProxy from './../../../src/model/SpotifyProxy';
-import JamendoProxy from './../../../src/model/JamendoProxy';
-
 /**
  * Source - The source component representing a single source
  * @extends PureComponent
  */
 class Source extends PureComponent {
-  /**
-   * getButtonInteraction - get the text to display in the button
-   *
-   * @return {string} The text
-   */
-  getButtonInteraction() {
-    return this.props.proxy.status === 'DISCONNECTED' ? 'Connect' : 'Disconnect';
+  constructor(props) {
+    super(props);
+    this.state = {
+      isConnecting: false,
+      isDisconnecting: false,
+    };
   }
 
-  /**
-   * isConnecting - Is the source currently connecting
-   *
-   * @return {boolean} Is connecting
-   */
-  isConnecting() {
-    return this.props.proxy.status === 'CONNECTING';
+  componentWillReceiveProps(nextProps) {
+    const {
+      isDisconnecting,
+      isConnecting,
+    } = this.state;
+
+    if (isDisconnecting && !nextProps.isConnected) {
+      this.setState({ isDisconnecting: false });
+    }
+
+    if (isConnecting && nextProps.isConnected) {
+      this.setState({ isConnecting: false });
+    }
+  }
+
+  connect(name) {
+    this.setState({ isConnecting: true });
+    this.props.connect(name);
+  }
+
+  disconnect(sourceId) {
+    this.setState({ isDisconnecting: true });
+    this.props.disconnect(sourceId);
   }
 
   /**
@@ -37,19 +46,47 @@ class Source extends PureComponent {
    * @return {ReactComponent} The rendered component
    */
   render() {
+    const {
+      logo,
+      name,
+      isConnected,
+      sourceId,
+    } = this.props;
+    const {
+      isDisconnecting,
+      isConnecting,
+    } = this.state;
+
+    let button;
+
+    if (isConnected) {
+      button = (
+        <Button
+          onClick={() => { this.disconnect(sourceId); }}
+          content="DISCONNECT"
+          loading={isDisconnecting}
+          disabled={isDisconnecting}
+        />
+      );
+    } else {
+      button = (
+        <Button
+          onClick={() => { this.connect(name); }}
+          content="CONNECT"
+          loading={isConnecting}
+          disabled={isConnecting}
+        />
+      );
+    }
+
     return (
       <List.Item>
         <List.Content floated="right">
-          <Button
-            onClick={() => this.props.dispatch(toggleSourceConnexion(this.props.proxy))}
-            content={this.getButtonInteraction()}
-            loading={this.isConnecting()}
-            disabled={this.isConnecting()}
-          />
+          {button}
         </List.Content>
-        <Image avatar src={this.props.proxy.logo} />
+        <Image avatar src={logo} />
         <List.Content>
-          {this.props.proxy.name}
+          {name}
         </List.Content>
       </List.Item>
     );
@@ -57,14 +94,12 @@ class Source extends PureComponent {
 }
 
 Source.propTypes = {
-  proxy: PropTypes.oneOfType(
-    [
-      PropTypes.instanceOf(SoundCloudProxy),
-      PropTypes.instanceOf(SpotifyProxy),
-      PropTypes.instanceOf(JamendoProxy),
-    ],
-  ).isRequired,
-  dispatch: PropTypes.func.isRequired,
+  disconnect: PropTypes.func.isRequired,
+  connect: PropTypes.func.isRequired,
+  logo: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isConnected: PropTypes.bool.isRequired,
+  sourceId: PropTypes.string.isRequired,
 };
 
 export default Source;

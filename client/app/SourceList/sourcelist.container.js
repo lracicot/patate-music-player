@@ -9,7 +9,6 @@ import * as SourceListActions from './sourcelist.actions';
 
 // Custom components
 import Source from './components/source.component';
-
 /**
   * SourceList - A component which show the list of sources and
   * handle the connexion.
@@ -22,11 +21,15 @@ export class SourceList extends Component {
    * @return {ReactComponent} Return the rendered component
    */
   render() {
+    const { connectedSources } = this.props;
     const mapSourceToComponent = source => (
       <Source
-        proxy={source}
+        logo={source.logo}
+        name={source.name}
         key={source.name}
-        dispatch={this.props.dispatch}
+        isConnected={!!connectedSources.find(s => s.name === source.name)}
+        sourceId=""
+        {...this.props}
       />
     );
     const listSources = this.props.sources.map(mapSourceToComponent);
@@ -40,11 +43,13 @@ export class SourceList extends Component {
 
 SourceList.propTypes = {
   sources: PropTypes.instanceOf(List).isRequired,
+  connectedSources: PropTypes.instanceOf(List).isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   sources: state.get('sources'),
+  connectedSources: state.get('connectedSources'),
 });
 
 const mapDispatchToProps = (dispatch) => {

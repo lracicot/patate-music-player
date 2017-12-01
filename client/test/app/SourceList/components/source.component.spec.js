@@ -30,42 +30,4 @@ describe('Source', () => {
 
     expect(buttons.length).to.equal(1);
   });
-
-  it('Is source connexion okay', () => {
-    expect(component.isConnecting()).to.equal(false);
-
-    const source = new SoundCloudProxy();
-    source.status = 'CONNECTING';
-    component = ReactTestUtils.renderIntoDocument(
-      <Source
-        proxy={source}
-        dispatch={() => 0}
-      />,
-    );
-
-    expect(component.isConnecting()).to.equal(true);
-  });
-
-  it('Is button text okay', () => {
-    expect(component.getButtonInteraction()).to.equal('Connect');
-
-    const source = new SoundCloudProxy();
-    source.status = 'CONNECTED';
-    component = ReactTestUtils.renderIntoDocument(
-      <Source
-        proxy={source}
-        dispatch={() => 0}
-      />,
-    );
-    expect(component.getButtonInteraction()).to.equal('Disconnect');
-
-    source.status = 'CONNECTING';
-    component = ReactTestUtils.renderIntoDocument(
-      <Source
-        proxy={source}
-        dispatch={() => 0}
-      />,
-    );
-    expect(component.getButtonInteraction()).to.equal('Disconnect');
-  });
 });

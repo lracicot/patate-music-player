@@ -7,18 +7,20 @@ class ConnectedSource {
    * execute - Execute the action
    *
    * @param {Map} state       The old state of the application
-   * @param {JamendoProxy|SpotifyProxy|SoundCloudProxy} proxy       The proxy affected by the action
-   * @param {string} accessToken The access token
+   * @param {object} source The source to add
    *
    * @return {Map} The new state of the application
    */
-  execute(state, proxy, accessToken) {
-    let sources = state.get('sources');
-    const sourceKey = sources.findKey(value => value.name === proxy.name);
-    const source = sources.get(sourceKey);
+  execute(state, source) {
+    if (state.get('connectedSources')
+      .find(s => s.id === source.id)) {
+      return state;
+    }
 
-    sources = sources.set(sourceKey, source.setAccessToken(accessToken));
-    return state.set('sources', sources);
+    return state.set(
+      'connectedSources',
+      state.get('connectedSources').push(source),
+    );
   }
 }
 

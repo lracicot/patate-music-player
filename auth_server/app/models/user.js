@@ -2,7 +2,7 @@ var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
 const SourceAccess = new Schema({
-    source: { type: String, required: true },
+    name: { type: String, required: true },
     accessToken: { type: String, required: true },
 });
 

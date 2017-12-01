@@ -61,11 +61,11 @@ export class MainMenu extends Component {
    * @param {string} keywords search query
    */
   loadSearchResults(keywords) {
-    this.props.sources
-      .filter(source => source.isConnected())
-      .map(source => source.searchTracks(keywords).then((tracks) => {
-        this.props.appendSearchResults(List(tracks));
-      }));
+    // this.props.sources
+    //   .filter(source => source.isConnected())
+    //   .map(source => source.searchTracks(keywords).then((tracks) => {
+    //     this.props.appendSearchResults(List(tracks));
+    //   }));
   }
 
   /**
