@@ -2,6 +2,7 @@
     "name": "search_server",
     "main": "server.js",
     "dependencies": {
+        "axios": "^0.17.1",
         "body-parser": "~1.0.1",
         "express": "~4.0.0",
         "jsonwebtoken": "^8.1.0",

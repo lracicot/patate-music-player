@@ -13,6 +13,7 @@ const jwt        = require('jsonwebtoken'); // used to create, sign, and verify 
 
 const UserModel       = require('./app/models/user');
 const searchTracks    = require('./app/api/searchTracks');
+const searchPlaylist    = require('./app/api/searchPlaylist');
 
 const User       = UserModel.User;
 const SourceAccess       = UserModel.SourceAccess;
@@ -27,7 +28,7 @@ mongoose.connection.on('error', function (err) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var mongoUrl = process.env.MONGOURL || 'localhost:27017/search_server';        // set our port
+var mongoUrl = process.env.MONGOURL || 'localhost:27017/auth_server';        // set our port
 
 var port = process.env.PORT || 3000;        // set our port
 var secret = process.env.APPSECRET || 'notSoSecretButEhWhatever';        // set our port
@@ -45,7 +46,7 @@ const verifyToken = async function(req, res, next) {
   var user = await User.findById(req.headers.token);
 
   if (user === null) {
-    res.status(403).send('Wrong token');
+    return res.status(403).send('Wrong token');
   }
 
   req.user = user;
@@ -57,10 +58,9 @@ const verifyToken = async function(req, res, next) {
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
-router.get('/searchTracks', verifyToken, searchTracks);
-router.get('/searchPlaylists', verifyToken, async function(req, res) {
-  res.json({ success: true });
-});
+
+router.get('/searchTracks/:query', verifyToken, searchTracks);
+router.get('/searchPlaylists/:query', verifyToken, searchPlaylist);
 
 
 // more routes for our API will happen here
