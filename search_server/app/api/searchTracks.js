@@ -28,6 +28,10 @@ async function searchTracks(req, res) {
     return res.json({ success: true, tracks: [] });
   }
 
+  if (tracks[0] === null) {
+    tracks.shift();
+  }
+
   // return the tracks
   res.json({ success: true, tracks });
 }
