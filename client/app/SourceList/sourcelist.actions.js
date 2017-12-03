@@ -39,6 +39,23 @@ function connectedSource(source) {
   };
 }
 
+export const LOAD_CONNECTED_SOUCES_SUCCESS = 'LOAD_CONNECTED_SOUCES_SUCCESS';
+
+/**
+ * loadConnectedSourcesSuccess - Creates an action named "LOAD_CONNECTED_SOUCES_SUCCESS" with
+ * the required data to execute the reducer action
+ *
+ * @param {object} sources The source affected by the action
+ *
+ * @return {ActionCreator} The action creator
+ */
+function loadConnectedSourcesSuccess(sources) {
+  return {
+    type: LOAD_CONNECTED_SOUCES_SUCCESS,
+    sources,
+  };
+}
+
 export const CONNEXION_FAILED_SOURCE = 'CONNEXIONFAILEDSOURCE';
 /**
  * connexionFailedSource - Creates an action named "CONNEXIONFAILEDSOURCE" with
@@ -92,15 +109,13 @@ export function connect(sourceName, userToken) {
       return new SpotifyProxy();
     })(sourceName);
 
-    let authCode = proxy.getAccessToken();
-
     if (proxy.needsAuthentification()) {
       try {
         const authUrl = await fetchAuthorizationCode(proxy);
-        authCode = await fetchTokenCode(proxy, authUrl);
+        await fetchTokenCode(proxy, authUrl);
 
         // Actually add the source
-        const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: authCode }, {
+        const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: proxy.getAccessToken() }, {
           headers: { token: userToken },
         });
 
@@ -110,11 +125,30 @@ export function connect(sourceName, userToken) {
       }
     }
 
+    const accessToken = proxy.getAccessToken();
+
     // Actually add the source
-    const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: authCode }, {
+    const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken }, {
       headers: { token: userToken },
     });
 
     return dispatch(connectedSource(response.data.source));
+  };
+}
+
+/**
+ * loadConnectedSources - Load connected sources and dispatch the correct actions
+ *
+ * @param {string} userToken The name of the source affected by the action
+ *
+ * @return {Promise} The promise to wait this action
+ */
+export function loadConnectedSources(userToken) {
+  return async (dispatch) => {
+    const { data } = await Axios.get('http://localhost:3002/api/getSources', {
+      headers: { token: userToken },
+    });
+
+    return dispatch(loadConnectedSourcesSuccess(data));
   };
 }

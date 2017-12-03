@@ -3,6 +3,20 @@ const Song = require('../models/Song');
 const Playlist = require('../models/Playlist');
 
 let clientId = '';
+const name = 'SoundCloud';
+const logo = 'https://developers.soundcloud.com/assets/logo_big_black-4fbe88aa0bf28767bbfc65a08c828c76.png';
+
+
+/**
+ * prepareUrl - Append the client id to an URL query
+ *
+ * @param {string} url The URL which will be appended
+ *
+ * @return {string} The appended URL
+ */
+function prepareUrl(url) {
+  return `${url}?client_id=${clientId}`;
+}
 
 /**
  * searchTracks - Async function to get an array of tracks from keywords
@@ -11,7 +25,8 @@ let clientId = '';
  *
  * @return {Array} An array of tracks
  */
-async searchTracks(keywords, clientId) {
+async function searchTracks(keywords, token) {
+  clientId = token;
   try {
     const response = await Axios.get(`https://api.soundcloud.com/tracks?client_id=${clientId}&q=${keywords}`);
 
@@ -22,8 +37,8 @@ async searchTracks(keywords, clientId) {
       if (track.sharing === 'public') {
         songs.push(new Song(
           track.title,
-          this.prepareUrl(track.stream_url),
-          track.artwork_url,
+          prepareUrl(track.stream_url),
+          track.artwork_url
         ));
       }
     });
@@ -43,10 +58,10 @@ async searchTracks(keywords, clientId) {
  *
  * @return {Playlist} The playlist
  */
-async fetchPlaylistDetails(playlist) {
+async function fetchPlaylistDetails(playlist) {
   const { tracks_uri, title, uri } = playlist;
 
-  const response = await Axios.get(this.prepareUrl(tracks_uri));
+  const response = await Axios.get(prepareUrl(tracks_uri));
 
   if (response.data === undefined
     || response.data.length === 0) {
@@ -58,11 +73,11 @@ async fetchPlaylistDetails(playlist) {
   const songs = tracks.map(track =>
     new Song(
       track.title,
-      this.prepareUrl(track.stream_url),
-      track.artwork_url,
+      prepareUrl(track.stream_url),
+      track.artwork_url
     ));
 
-  return new Playlist(title, this.name, uri, this.logo, songs);
+  return new Playlist(title, name, uri, logo, songs);
 }
 
 /**
@@ -72,7 +87,7 @@ async fetchPlaylistDetails(playlist) {
  *
  * @return {Array} The set of playlists
  */
-async searchPlaylists(query, token) {
+async function searchPlaylists(query, token) {
   clientId = token;
   let playlists = [];
   try {
@@ -80,7 +95,7 @@ async searchPlaylists(query, token) {
       Axios.get(`https://api.soundcloud.com/playlists?client_id=${clientId}&q=${query}`);
 
     const playlistsData = response.data;
-    playlists = await Promise.all(playlistsData.map(this.fetchPlaylistDetails));
+    playlists = await Promise.all(playlistsData.map(fetchPlaylistDetails));
   } catch (e) {
     console.log(e);
   }

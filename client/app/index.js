@@ -22,7 +22,7 @@ import { configureStore, history } from './configureStore';
     history: Stack(),
     queue: List(),
     sources: List(data.sources),
-    connectedSources: [],
+    connectedSources: List(),
     playlistsFound: List(),
     accessToken: '',
   }));

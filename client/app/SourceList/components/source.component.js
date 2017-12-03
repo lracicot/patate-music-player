@@ -16,8 +16,6 @@ class Source extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-    console.log(this.state);
     const {
       isDisconnecting,
       isConnecting,

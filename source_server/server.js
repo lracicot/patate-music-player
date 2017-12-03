@@ -50,11 +50,8 @@ router.get('/getAvailableSources', async function(req, res) {
     });
 });
 
-router.get('/getSources', verifyToken, async function(req, res) {
-    res.json(req.user.sources.map(source => {
-      source.id = source._id
-      return source;
-    }));
+router.get('/getSources', verifyToken, function(req, res) {
+    res.json(req.user.sources);
 });
 
 router.post('/addSource', verifyToken, async function(req, res) {

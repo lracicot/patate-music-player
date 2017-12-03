@@ -15,6 +15,9 @@ import Source from './components/source.component';
   * @extends Component
   */
 export class SourceList extends Component {
+  componentWillMount() {
+    this.props.loadConnectedSources(this.props.accessToken);
+  }
   /**
    * render - Render the component
    *
@@ -51,6 +54,7 @@ export class SourceList extends Component {
 SourceList.propTypes = {
   sources: PropTypes.instanceOf(List).isRequired,
   connectedSources: PropTypes.instanceOf(List).isRequired,
+  loadConnectedSources: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,
   accessToken: PropTypes.string.isRequired,
 };

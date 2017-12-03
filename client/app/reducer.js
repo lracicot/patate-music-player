@@ -46,6 +46,8 @@ export default function (state = Map(), action) {
     return SourceListActions.ConnectingSource.execute(state, action.proxy);
   case 'CONNECTEDSOURCE':
     return SourceListActions.ConnectedSource.execute(state, action.source);
+  case 'LOAD_CONNECTED_SOUCES_SUCCESS':
+    return SourceListActions.LoadConnectedSourceSuccess.execute(state, action.sources);
   case 'DISCONNECT_SOURCE_SUCCESS':
     return SourceListActions.DisconnectSourceSuccess.execute(state, action.name);
   case 'CONNEXIONFAILEDSOURCE':
