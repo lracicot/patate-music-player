@@ -38,7 +38,7 @@ export class MainMenu extends Component {
     const song = this.props.searchResults.find(e => prop.result.title === e.title);
 
     this.props.clearQueue();
-    this.props.enqueue(song);
+    this.props.enqueue([song]);
     this.props.endSearch();
     this.props.play();
 

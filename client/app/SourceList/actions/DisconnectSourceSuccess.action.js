@@ -14,7 +14,7 @@ class DisconnectSourceSuccess {
   execute(state, name) {
     return state.set('connectedSources',
       state.get('connectedSources').filter(source =>
-        source.name === name));
+        source.name !== name));
   }
 }
 

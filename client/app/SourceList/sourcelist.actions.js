@@ -15,10 +15,10 @@ export const DISCONNECT_SOURCE_SUCCESS = 'DISCONNECT_SOURCE_SUCCESS';
  *
  * @return {ActionCreator} The action creator
  */
-function disconnectSuccess(source) {
+function disconnectSuccess(name) {
   return {
     type: DISCONNECT_SOURCE_SUCCESS,
-    source,
+    name,
   };
 }
 
@@ -79,14 +79,14 @@ function connexionFailedSource(error) {
  *
  * @return {Promise} The promise to wait this action
  */
-export function disconnect(sourceId, userToken) {
+export function disconnect(sourceId, name, userToken) {
   return async (dispatch) => {
     // Actually remove the source
     await Axios.delete(`http://localhost:3002/api/removeSource/${sourceId}`, {
       headers: { token: userToken },
     });
 
-    return dispatch(disconnectSuccess(sourceId));
+    return dispatch(disconnectSuccess(name));
   };
 }
 
@@ -100,7 +100,7 @@ export function disconnect(sourceId, userToken) {
  */
 export function connect(sourceName, userToken) {
   return async (dispatch) => {
-    let proxy = ((name) => {
+    const proxy = ((name) => {
       if (name === 'Jamendo') {
         return new JamendoProxy();
       } else if (name === 'SoundCloud') {
@@ -109,15 +109,18 @@ export function connect(sourceName, userToken) {
       return new SpotifyProxy();
     })(sourceName);
 
-    if (proxy.needsAuthentification()) {
+    if (proxy.authorizationUrl !== null) {
       try {
         const authUrl = await fetchAuthorizationCode(proxy);
         const authCode = await fetchTokenCode(proxy, authUrl);
 
-        proxy = proxy.setAccessToken(authCode);
+        proxy.setAccessToken(authCode);
 
         // Actually add the source
-        const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: proxy.getAccessToken() }, {
+        const response = await Axios.post('http://localhost:3002/api/addSource', {
+          name: sourceName,
+          accessToken: proxy.accessToken,
+        }, {
           headers: { token: userToken },
         });
 
@@ -127,10 +130,11 @@ export function connect(sourceName, userToken) {
       }
     }
 
-    const accessToken = proxy.getAccessToken();
-
     // Actually add the source
-    const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken }, {
+    const response = await Axios.post('http://localhost:3002/api/addSource', {
+      name: sourceName,
+      accessToken: proxy.accessToken,
+    }, {
       headers: { token: userToken },
     });
 

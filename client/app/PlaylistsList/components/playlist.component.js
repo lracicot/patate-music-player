@@ -22,7 +22,8 @@ class PlaylistItem extends PureComponent {
    * @return {string} the description of the playlist
    */
   getDescription() {
-    const size = this.props.playlist.songs.count();
+    const { playlist } = this.props;
+    const size = playlist.songs.length;
     if (size > 1) {
       return `${size} tracks`;
     }
@@ -34,11 +35,12 @@ class PlaylistItem extends PureComponent {
    * handleOnClick - Dispatch actions on a click
    */
   handleOnClick() {
-    this.props.dispatch(clearQueue());
-    this.props.dispatch(enqueue(this.props.playlist.songs));
-    this.props.dispatch(play());
+    const { dispatch, playlist } = this.props;
+    dispatch(clearQueue());
+    dispatch(enqueue(playlist.songs));
+    dispatch(play());
 
-    this.context.router.history.push('/');
+    this.context.router.history.push('/player');
   }
 
   /**
@@ -60,7 +62,7 @@ class PlaylistItem extends PureComponent {
 }
 
 PlaylistItem.propTypes = {
-  playlist: PropTypes.instanceOf(Playlist).isRequired,
+  playlist: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 

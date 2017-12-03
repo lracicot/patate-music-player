@@ -18,7 +18,8 @@ import PlaylistItem from './components/playlist.component';
 @autobind
 export class PlaylistsList extends Component {
   handleSearchChange = (e, { value }) => {
-    this.props.dispatch(PlaylistsListActions.updateSearch(this.props.sources, value));
+    const { dispatch, accessToken } = this.props;
+    dispatch(PlaylistsListActions.updateSearch(value, accessToken));
   }
 
   /**
@@ -27,20 +28,21 @@ export class PlaylistsList extends Component {
    * @return {ReactComponent} The rendered component
    */
   render() {
+    const { dispatch, playlists, currentSearch } = this.props;
     const mapPlaylistToComponent = playlist => (
       <PlaylistItem
         key={playlist.uri}
         playlist={playlist}
-        dispatch={this.props.dispatch}
+        dispatch={dispatch}
       />
     );
-    const listPlaylists = this.props.playlists.map(mapPlaylistToComponent);
+    const listPlaylists = playlists.map(mapPlaylistToComponent);
     return (
       <div>
         <Search
           open={false}
           onSearchChange={this.handleSearchChange}
-          value={this.props.currentSearch}
+          value={currentSearch}
         />
         <UIList
           divided
@@ -56,8 +58,8 @@ export class PlaylistsList extends Component {
 PlaylistsList.propTypes = {
   currentSearch: PropTypes.string,
   playlists: PropTypes.instanceOf(List).isRequired,
-  sources: PropTypes.instanceOf(List).isRequired,
   dispatch: PropTypes.func.isRequired,
+  accessToken: PropTypes.string.isRequired,
 };
 
 PlaylistsList.defaultProps = {
@@ -67,7 +69,7 @@ PlaylistsList.defaultProps = {
 const mapStateToProps = state => ({
   currentSearch: state.get('playlistSearch'),
   playlists: state.get('playlistsFound'),
-  sources: state.get('sources'),
+  accessToken: state.get('accessToken'),
 });
 
 const mapDispatchToProps = (dispatch) => {
