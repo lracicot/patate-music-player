@@ -100,7 +100,7 @@ export function disconnect(sourceId, userToken) {
  */
 export function connect(sourceName, userToken) {
   return async (dispatch) => {
-    const proxy = ((name) => {
+    let proxy = ((name) => {
       if (name === 'Jamendo') {
         return new JamendoProxy();
       } else if (name === 'SoundCloud') {
@@ -112,7 +112,9 @@ export function connect(sourceName, userToken) {
     if (proxy.needsAuthentification()) {
       try {
         const authUrl = await fetchAuthorizationCode(proxy);
-        await fetchTokenCode(proxy, authUrl);
+        const authCode = await fetchTokenCode(proxy, authUrl);
+
+        proxy = proxy.setAccessToken(authCode);
 
         // Actually add the source
         const response = await Axios.post('http://localhost:3002/api/addSource', { name: sourceName, accessToken: proxy.getAccessToken() }, {

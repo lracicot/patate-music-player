@@ -3,6 +3,7 @@ const Song = require('../models/Song');
 const Playlist = require('../models/Playlist');
 
 let clientId = '';
+let accessToken = '';
 const name = 'Spotify';
 const logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.png';
 
@@ -15,11 +16,11 @@ const logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.
  * @return {Array} An array of tracks
  */
 async function searchTracks(query, token) {
-  console.log(token);
-  clientId = token;
+  clientId = JSON.parse(token).clientId;
+  accessToken = JSON.parse(token).accessToken;
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: clientId,
+    Authorization: accessToken,
   };
 
   const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });
@@ -61,7 +62,7 @@ async function searchTracks(query, token) {
 async function fetchPlaylistDetails(playlist) {
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: clientId
+    Authorization: accessToken
   };
   console.log(playlist);
 
@@ -101,10 +102,11 @@ async function fetchPlaylistDetails(playlist) {
  * @return {Array} The set of playlists
  */
 async function searchPlaylists(query, token) {
-  clientId = token;
+  clientId = JSON.parse(token).clientId;
+  accessToken = JSON.parse(token).accessToken;
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: clientId,
+    Authorization: accessToken,
   };
 
   let playlists = [];
