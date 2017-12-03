@@ -1,15 +1,5 @@
 version: '2'
 services:
-  search_server:
-    build: search_server
-    container_name: "search_server"
-    ports:
-      - 3000:3000
-    environment:
-      - MONGOURL=mongodb
-    links:
-      - mongodb
-
   auth_server:
     build: auth_server
     container_name: "auth_server"
@@ -20,6 +10,18 @@ services:
     links:
       - mongodb
 
+  search_server:
+    build: search_server
+    container_name: "search_server"
+    ports:
+      - 3000:3000
+    environment:
+      - MONGOURL=mongodb
+      - AUTHURL=http://auth_server:3001
+    links:
+      - mongodb
+      - auth_server
+
   source_server:
     build: source_server
     container_name: "source_server"
@@ -27,8 +29,10 @@ services:
       - 3002:3002
     environment:
       - MONGOURL=mongodb
+      - AUTHURL=http://auth_server:3001
     links:
       - mongodb
+      - auth_server
 
   mongodb:
     image: mongo:latest

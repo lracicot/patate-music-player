@@ -1,14 +1,16 @@
 const express    = require('express');
 const bodyParser = require('body-parser');
 const mongoose   = require('mongoose');
-const UserModel  = require('./app/models/user');
-const User       = UserModel.User;
-const SourceAccess = UserModel.SourceAccess;
+const Axios      = require('axios');
+
+const SourceAccess = require('./app/models/user').SourceAccess;
+const User = require('./app/models/user').User;
 
 mongoose.connection.on('error', function (err) {
   console.log('Could not connect to mongo server!', err);
 });
 
+const authUrl = process.env.AUTHURL || 'http://localhost:3001';
 const mongoUrl = process.env.MONGOURL || 'localhost:27017/auth_server';
 mongoose.connect('mongodb://' + mongoUrl, { useMongoClient: true });
 
@@ -22,11 +24,13 @@ app.use(bodyParser.json());
 app.set('superSecret', secret);
 
 const verifyToken = async function(req, res, next) {
-  req.user = await User.findById(req.headers.token);
+  const { data } = await Axios.get(authUrl + '/api/getUser/' + req.headers.token);
 
-  if (req.user === null) {
-    res.status(403).send('Wrong token');
+  if (data.success === false) {
+    return res.status(403).send('Wrong token');
   }
+
+  req.user = data.user;
 
   next();
 }
@@ -61,12 +65,14 @@ router.post('/addSource', verifyToken, async function(req, res) {
     accessToken,
   });
 
-  req.user.sources.push(sourceAccess);
+  const user = await User.findById(req.user._id);
 
-  req.user.save(function(error) {
+  user.sources.push(sourceAccess);
+
+  user.save(function(error) {
     if (!error) {
       console.log('SourceAccess saved successfully');
-      const source = req.user.sources.find(s => s.name === name);
+      const source = user.sources.find(s => s.name === name);
       source.id = source._id;
       res.json({ success: true, source });
     }
@@ -76,9 +82,10 @@ router.post('/addSource', verifyToken, async function(req, res) {
 });
 
 router.delete('/removeSource/:sourceId', verifyToken, async function(req, res) {
-  const sourceAccess = req.user.sources.id(req.params.sourceId).remove();
+  const user = await User.findById(req.user._id);
 
-  req.user.save(function(error) {
+  user.sources.id(req.params.sourceId).remove();
+  user.save(function(error) {
     if (!error) {
       console.log('SourceAccess removed successfully');
       res.json({ success: true });
@@ -92,4 +99,3 @@ router.delete('/removeSource/:sourceId', verifyToken, async function(req, res) {
 app.use('/api', router);
 
 app.listen(port);
-console.log('Magic happens on port ' + port);
