@@ -1,4 +1,6 @@
 const Jamendo = require('../sources/jamendo');
+const SoundCloud = require('../sources/soundcloud');
+const Spotify = require('../sources/spotify');
 
 
 async function searchPlaylist(req, res) {
@@ -9,6 +11,14 @@ async function searchPlaylist(req, res) {
 
     if (source.name === 'Jamendo') {
       search = Jamendo.searchPlaylists;
+    }
+
+    if (source.name === 'SoundCloud') {
+      search = SoundCloud.searchPlaylists;
+    }
+
+    if (source.name === 'Spotify') {
+      search = Spotify.searchPlaylists;
     }
 
     playlists = playlists.concat(await search(req.params.query, source.accessToken));

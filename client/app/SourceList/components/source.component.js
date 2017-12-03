@@ -16,12 +16,16 @@ class Source extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-    console.log(this.state);
     const {
       isDisconnecting,
       isConnecting,
     } = this.state;
+
+    const { name } = this.props;
+
+    if (name !== nextProps.name) {
+      return;
+    }
 
     if (isDisconnecting && !nextProps.isConnected) {
       this.setState({ isDisconnecting: false });
@@ -37,9 +41,9 @@ class Source extends PureComponent {
     this.props.connect(name, this.props.accessToken);
   }
 
-  disconnect(sourceId) {
+  disconnect(sourceId, name) {
     this.setState({ isDisconnecting: true });
-    this.props.disconnect(sourceId, this.props.accessToken);
+    this.props.disconnect(sourceId, name, this.props.accessToken);
   }
 
   /**
@@ -64,7 +68,7 @@ class Source extends PureComponent {
     if (isConnected) {
       button = (
         <Button
-          onClick={() => { this.disconnect(sourceId); }}
+          onClick={() => { this.disconnect(sourceId, name); }}
           content="DISCONNECT"
           loading={isDisconnecting}
           disabled={isDisconnecting}

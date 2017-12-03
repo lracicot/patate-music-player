@@ -32,8 +32,10 @@ export class Player extends Component {
    * @return {void}
    */
   componentWillMount() {
-    if (this.props.accessToken === '' && this.props.history) {
-      this.props.history.push('/login');
+    const { accessToken, history } = this.props;
+
+    if (accessToken === '' && history) {
+      history.push('/login');
     }
   }
 

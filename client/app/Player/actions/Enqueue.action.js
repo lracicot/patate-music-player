@@ -16,7 +16,9 @@ class Enqueue {
     if (tracks) {
       let localTracks = tracks;
       if (!List.isList(localTracks)) {
-        localTracks = List.of(localTracks);
+        console.log(typeof localTracks);
+        console.log(localTracks);
+        localTracks = List(localTracks);
       }
       return state.set(
         'queue',

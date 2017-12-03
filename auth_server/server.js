@@ -52,6 +52,18 @@ router.post('/login', async function(req, res) {
   res.json({ success: false });
 });
 
+router.get('/getUser/:token', async function(req, res) {
+  try {
+    const user = await User.findById(req.params.token);
+
+    if (user !== null) {
+      res.json({ success: true, user });
+    }
+  } catch (e) {
+    res.json({ success: false });
+  }
+});
+
 
 app.use('/api', router);
 

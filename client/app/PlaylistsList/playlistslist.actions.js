@@ -1,4 +1,4 @@
-import fetchPlaylists from './actions/UpdateSearch.helper';
+import Axios from 'axios';
 
 export const PLAYLIST_UPDATE_SEARCH_FIELD = 'PLAYLIST_UPDATE_SEARCH_FIELD';
 
@@ -52,15 +52,18 @@ function flatten(arr) {
 /**
  * updateSearch - Update the search and search in the sources
  *
- * @param {List} sources     List of sources to search within
  * @param {string} searchValue The query
+ * @param {string} accessToken The access token
  *
  * @return {Promise} The promise to wait this action
  */
-export function updateSearch(sources, searchValue) {
+export function updateSearch(searchValue, accessToken) {
   return (dispatch) => {
     dispatch(updateSearchField(searchValue));
-    return fetchPlaylists(sources, searchValue)
-      .then(results => dispatch(updateSearchResults(flatten(results))));
+    return Axios.get(`http://localhost:3000/api/searchPlaylists/${searchValue}`, {
+      headers: { token: accessToken },
+    }).then(
+      results => dispatch(updateSearchResults(flatten(results.data.playlists))),
+    );
   };
 }
