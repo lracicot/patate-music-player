@@ -1,0 +1,5 @@
+exclude:
+- /client/docs/script/.*
+component_depth: 1
+languages:
+- javascript
