@@ -24,6 +24,10 @@ async function searchTracks(req, res) {
     tracks = tracks.concat(await search(req.params.query, source.accessToken));
   }
 
+  if (tracks[0] === null && tracks.length === 1) {
+    return res.json({ success: true, tracks: [] });
+  }
+
   // return the tracks
   res.json({ success: true, tracks });
 }

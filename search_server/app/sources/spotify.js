@@ -64,7 +64,6 @@ async function fetchPlaylistDetails(playlist) {
     'Content-Type': 'application/json',
     Authorization: accessToken
   };
-  console.log(playlist);
 
   const tracksUrl = playlist.tracks.href;
   const { name } = playlist;

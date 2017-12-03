@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { autobind } from 'core-decorators';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
+import Axios from 'axios';
 
 import Menu from './components/mainMenu.component';
 import * as LayoutActions from './layout.actions';
@@ -41,7 +42,7 @@ export class MainMenu extends Component {
     this.props.endSearch();
     this.props.play();
 
-    this.context.router.history.push('/');
+    this.context.router.history.push('/player');
   }
 
   /**
@@ -60,12 +61,15 @@ export class MainMenu extends Component {
    *
    * @param {string} keywords search query
    */
-  loadSearchResults(keywords) {
-    // this.props.sources
-    //   .filter(source => source.isConnected())
-    //   .map(source => source.searchTracks(keywords).then((tracks) => {
-    //     this.props.appendSearchResults(List(tracks));
-    //   }));
+  async loadSearchResults(keywords) {
+    const { accessToken } = this.props;
+    if (keywords && keywords !== '') {
+      const { data } = await Axios.get(`http://localhost:3000/api/searchTracks/${keywords}`, {
+        headers: { token: accessToken },
+      });
+
+      this.props.appendSearchResults(List(data.tracks));
+    }
   }
 
   /**
