@@ -16,40 +16,45 @@ const logo = 'https://developer.spotify.com/wp-content/uploads/2016/07/icon2@2x.
  * @return {Array} An array of tracks
  */
 async function searchTracks(query, token) {
-  clientId = JSON.parse(token).clientId;
-  accessToken = JSON.parse(token).accessToken;
-  const headers = {
-    'Content-Type': 'application/json',
-    Authorization: accessToken,
-  };
+  try {
+    clientId = JSON.parse(token).clientId;
+    accessToken = JSON.parse(token).accessToken;
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: accessToken,
+    };
 
-  const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });
+    const response = await Axios.get(`https://api.spotify.com/v1/search?type=track&q=${query}`, { headers });
 
-  const tracks = response.data.tracks.items;
-  if (tracks.length === 0) {
-    return null;
+    const tracks = response.data.tracks.items;
+    if (tracks.length === 0) {
+      return null;
+    }
+
+    const songs = [];
+
+    tracks.forEach((track) => {
+      let artworkUrl = '';
+      const { images } = track.album;
+
+      if (images.length > 0) {
+        artworkUrl = images[0].url;
+      }
+
+      if (track.preview_url !== null) {
+        songs.push(new Song(
+          track.name,
+          track.preview_url,
+          artworkUrl
+        ));
+      }
+    });
+
+
+    return songs;
+  } catch (e) {
+    console.log(e);
   }
-
-  const songs = [];
-
-  tracks.forEach((track) => {
-    let artworkUrl = '';
-    const { images } = track.album;
-
-    if (images.length > 0) {
-      artworkUrl = images[0].url;
-    }
-
-    if (track.preview_url !== null) {
-      songs.push(new Song(
-        track.name,
-        track.preview_url,
-        artworkUrl
-      ));
-    }
-  });
-
-  return songs;
 }
 
 /**

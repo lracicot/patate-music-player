@@ -7,15 +7,12 @@ import { autobind } from 'core-decorators';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-// import * as AppActions from '../App/app.actions';
 import * as PlayerActions from './player.actions';
 
 // Custom components
 import Details from './components/details.component';
 import Controls from './components/controls.component';
 import Progress from './components/progress.component';
-//  import Search from './components/search.component';
-import Footer from './components/footer.component';
 
 // Utils
 import { formatMilliseconds } from '../utils/time';
@@ -110,7 +107,6 @@ export class Player extends Component {
           playFromPosition={this.getPlayFromPosition()}
           onFinishedPlaying={this.handleSongFinished}
         />
-        { this.props.playStatus }
         <Controls
           togglePlay={this.props.toggleplay}
           stop={this.props.stop}
@@ -123,7 +119,6 @@ export class Player extends Component {
           total={this.props.total}
           position={this.props.position}
         />
-        <Footer />
       </div>
     );
   }
